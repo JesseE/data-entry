@@ -90,6 +90,38 @@ label {
 /**
  * GRID
 */
+/* line 7, sass/ui/_scaffolding.scss */
+.container {
+  position: relative;
+  width: 100%;
+  background-color: darkgrey;
+  float: left;
+  margin: 0 auto;
+}
+
+/* line 10, sass/ui/_scaffolding.scss */
+.block-list {
+  margin: 0 auto;
+  width: 60%;
+}
+
+/* line 13, sass/ui/_scaffolding.scss */
+.block-item {
+  height: 300px;
+  width: 300px;
+  background: lightblue;
+  color: grey;
+  float: left;
+  margin: 1em;
+}
+
+/* line 16, sass/ui/_scaffolding.scss */
+.about {
+  width: 100%;
+  background-color: lightcoral;
+  float: left;
+}
+
 /*------------------------------------*\
     $GRID
 \*------------------------------------*/
@@ -154,7 +186,7 @@ a:hover {
 /*------------------------------------*\
     $OTHER
 \*------------------------------------*/
-/* line 101, sass/ui/_typography.scss */
+/* line 102, sass/ui/_typography.scss */
 strong,
 .bold {
   font-weight: bold;
@@ -239,65 +271,65 @@ body {
   color: black;
 }
 
-/* line 32, sass/ui/_color.scss */
+/* line 33, sass/ui/_color.scss */
 .color-twitter,
 .hover-color-twitter:hover {
   color: #63cdf7;
 }
 
-/* line 35, sass/ui/_color.scss */
+/* line 36, sass/ui/_color.scss */
 .color-linkedin,
 .hover-color-linkedin:hover {
   color: #00659b;
 }
 
-/* line 38, sass/ui/_color.scss */
+/* line 39, sass/ui/_color.scss */
 .color-facebook,
 .hover-color-facebook:hover {
   color: #3b5895;
 }
 
-/* line 41, sass/ui/_color.scss */
+/* line 42, sass/ui/_color.scss */
 .color-google,
 .hover-color-google:hover {
   color: #ff0017;
 }
 
-/* line 44, sass/ui/_color.scss */
+/* line 45, sass/ui/_color.scss */
 .color-mail,
 .hover-color-mail:hover {
   color: #6cba16;
 }
 
-/* line 48, sass/ui/_color.scss */
+/* line 50, sass/ui/_color.scss */
 .color1,
 .hover-color1:hover,
 .hover-color1.active {
   color: #d70014 !important;
 }
 
-/* line 52, sass/ui/_color.scss */
+/* line 54, sass/ui/_color.scss */
 .color2,
 .hover-color2:hover,
 .hover-color2.active {
   color: #2f7dc4 !important;
 }
 
-/* line 56, sass/ui/_color.scss */
+/* line 58, sass/ui/_color.scss */
 .color3,
 .hover-color3:hover,
 .hover-color3.active {
   color: #6cba16 !important;
 }
 
-/* line 60, sass/ui/_color.scss */
+/* line 62, sass/ui/_color.scss */
 .color4,
 .hover-color4:hover,
 .hover-color4.active {
   color: #ffa501 !important;
 }
 
-/* line 64, sass/ui/_color.scss */
+/* line 66, sass/ui/_color.scss */
 .color5,
 .hover-color5:hover,
 .hover-color5.active {
@@ -372,7 +404,7 @@ body {
   background-color: #8a2ca1;
 }
 
-/* line 92, sass/ui/_color.scss */
+/* line 100, sass/ui/_color.scss */
 .bg-gray4,
 .bg-gray5,
 .bg-gray6,
@@ -422,6 +454,26 @@ body {
 /*------------------------------------*\
     $LOGO
 \*------------------------------------*/
+/* line 15, sass/ui/_header.scss */
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 800px;
+  background-color: grey;
+}
+
+/* line 18, sass/ui/_header.scss */
+.header__bg {
+  position: relative;
+  top: 25%;
+  width: 56%;
+  height: 50%;
+  margin: 0 20%;
+  background-color: white;
+}
+
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
@@ -432,6 +484,35 @@ body {
 /*------------------------------------*\
     $NAV PRIMARY
 \*------------------------------------*/
+/* line 17, sass/ui/_navs.scss */
+.nav {
+  z-index: 2;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  background-color: white;
+}
+/* line 18, sass/ui/_navs.scss */
+.nav ul {
+  position: relative;
+  width: 50%;
+  margin: 0 20%;
+  padding: 20px 0;
+}
+/* line 19, sass/ui/_navs.scss */
+.nav li {
+  float: left;
+  width: 100px;
+  list-style-type: none;
+}
+/* line 20, sass/ui/_navs.scss */
+.nav li a {
+  text-decoration: none;
+}
+
 /*------------------------------------*\
     $NAV MOBILE
 \*------------------------------------*/
@@ -448,7 +529,7 @@ body {
 /*------------------------------------*\
     $OVERRIDES
 \*------------------------------------*/
-/* line 20, sass/ui/_forms.scss */
+/* line 23, sass/ui/_forms.scss */
 input[type=text]:active,
 input[type=text]:focus,
 input[type=password]:active,
@@ -471,12 +552,12 @@ input[type=password]:focus {
   position: relative;
   display: inline-block;
 }
-/* line 69, sass/ui/_forms.scss */
+/* line 70, sass/ui/_forms.scss */
 .field-with-errors label,
 .field-with-errors .label {
   color: #ffa501;
 }
-/* line 74, sass/ui/_forms.scss */
+/* line 77, sass/ui/_forms.scss */
 .field-with-errors input,
 .field-with-errors .select2-container .select2-choice,
 .field-with-errors .select2-container-multi .select2-choices {
@@ -520,6 +601,15 @@ input[type=password]:focus {
 /**
  * FOOTER
 */
+/* line 9, sass/ui/_footer.scss */
+.footer {
+  float: left;
+  height: 500px;
+  width: 100%;
+  background-color: lightgrey;
+  color: grey;
+}
+
 /*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
