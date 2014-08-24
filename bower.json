@@ -2,7 +2,10 @@
   "name": "portfolio",
   "version": "0.0.0",
   "dependencies": {
-    "modernizr": "~2.6.2"
+    "modernizr": "~2.6.2",
+    "jquery": "~2.1.1"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "jquery": "~2.1.1"
+  }
 }

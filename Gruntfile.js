@@ -41,7 +41,6 @@ module.exports = function (grunt) {
                 }
             },
         },
-
         // Clean Config
         clean: {
             dist: {
@@ -58,17 +57,17 @@ module.exports = function (grunt) {
         },
 
         // Hint Config
-        jshint: {
-            options: {
-                jshintrc: '.jshintrc'
-            },
-            all: [
-                'Gruntfile.js',
-                'assets/scripts/**/*.js',
-                '!assets/scripts/vendor/*',
-                'test/spec/**/*.js'
-            ]
-        },
+        // jshint: {
+        //     options: {
+        //         jshintrc: '.jshintrc'
+        //     },
+        //     all: [
+        //         'Gruntfile.js',
+        //         'assets/scripts/**/*.js',
+        //         '!assets/scripts/vendor/*',
+        //         'test/spec/**/*.js'
+        //     ]
+        // },
 
         // Sass Config
         sass: {
@@ -89,7 +88,13 @@ module.exports = function (grunt) {
                 }]
             }
         },
-
+        concat: {
+            jquery: {
+                files: {
+                    'assets/scripts/vendor/jquery/jquery.js': ['bower_components/jquery/jquery.js']
+                }
+            }
+        },
         // Express Config
         express: {
             options: {
@@ -101,7 +106,6 @@ module.exports = function (grunt) {
                 }
             }
         },
-
         // Open Config
         // open: {
         //     site: {
@@ -250,15 +254,17 @@ module.exports = function (grunt) {
             ]
         },
     });
-
+    
     // Register Tasks
     // Workon
-    grunt.registerTask('workon', 'Start working on this project.', [
-        'jshint',
+
+    grunt.registerTask('run', 'Start working on this project.', [
+        // 'jshint',
         'sass:dev',
         'express:dev',
         // 'open:site',
         // 'open:editor',
+        'concat',
         'watch'
     ]);
 

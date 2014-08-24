@@ -91,6 +91,11 @@ label {
  * GRID
 */
 /* line 7, sass/ui/_scaffolding.scss */
+* {
+  font-family: "helvetica";
+}
+
+/* line 10, sass/ui/_scaffolding.scss */
 .container {
   position: relative;
   width: 100%;
@@ -98,20 +103,20 @@ label {
   float: left;
   margin: 0 auto;
 }
-/* line 9, sass/ui/_scaffolding.scss */
+/* line 12, sass/ui/_scaffolding.scss */
 .container h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 
-/* line 11, sass/ui/_scaffolding.scss */
+/* line 14, sass/ui/_scaffolding.scss */
 .block-list {
   margin: 0 auto;
   width: 60%;
 }
 
-/* line 14, sass/ui/_scaffolding.scss */
+/* line 17, sass/ui/_scaffolding.scss */
 .block-item {
   height: 300px;
   width: 300px;
@@ -121,17 +126,31 @@ label {
   margin: 1em;
 }
 
-/* line 17, sass/ui/_scaffolding.scss */
+/* line 20, sass/ui/_scaffolding.scss */
 .about {
   width: 100%;
   background-color: lightcoral;
   float: left;
 }
-/* line 19, sass/ui/_scaffolding.scss */
+/* line 22, sass/ui/_scaffolding.scss */
 .about h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
+}
+
+/* line 24, sass/ui/_scaffolding.scss */
+.bitches {
+  width: 100%;
+  height: 50px;
+  color: red;
+  background-color: green;
+}
+
+/* line 27, sass/ui/_scaffolding.scss */
+.sletjes {
+  color: beige;
+  font-size: 72px;
 }
 
 /*------------------------------------*\
@@ -203,11 +222,7 @@ a:hover {
 /*------------------------------------*\
     $OTHER
 \*------------------------------------*/
-<<<<<<< HEAD
-/* line 102, sass/ui/_typography.scss */
-=======
-/* line 103, sass/ui/_typography.scss */
->>>>>>> 81869f5915162362dfed52196ad42e3598a81d3d
+/* line 104, sass/ui/_typography.scss */
 strong,
 .bold {
   font-weight: bold;
@@ -494,8 +509,18 @@ body {
   margin: 0 20%;
   background-color: black;
 }
+@media (max-width: 48em) {
+  /* line 18, sass/ui/_header.scss */
+  .header__bg {
+    position: relative;
+    top: 6%;
+    width: 100%;
+    height: 45%;
+    margin: 0;
+  }
+}
 
-/* line 21, sass/ui/_header.scss */
+/* line 22, sass/ui/_header.scss */
 .header__brand {
   width: 100%;
   height: 100%;
@@ -526,7 +551,17 @@ body {
   background-color: white;
   box-shadow: 1px 1px 5px grey;
 }
-/* line 18, sass/ui/_navs.scss */
+@media (max-width: 48em) {
+  /* line 19, sass/ui/_navs.scss */
+  .nav .nav__button {
+    left: 25px;
+  }
+  /* line 20, sass/ui/_navs.scss */
+  .nav ul {
+    display: none;
+  }
+}
+/* line 22, sass/ui/_navs.scss */
 .nav ul {
   position: relative;
   width: 50%;
@@ -534,7 +569,7 @@ body {
   padding: 0px 20px;
   height: 100%;
 }
-/* line 19, sass/ui/_navs.scss */
+/* line 23, sass/ui/_navs.scss */
 .nav li {
   float: left;
   height: 60px;
@@ -543,21 +578,47 @@ body {
   padding: 0 20px;
   line-height: 55px;
 }
-/* line 20, sass/ui/_navs.scss */
+/* line 24, sass/ui/_navs.scss */
 .nav li:hover {
   background-color: grey;
   color: white;
 }
-/* line 21, sass/ui/_navs.scss */
+/* line 25, sass/ui/_navs.scss */
 .nav li a {
   display: block;
   height: 60px;
   width: 100%;
   text-decoration: none;
 }
-/* line 22, sass/ui/_navs.scss */
+/* line 26, sass/ui/_navs.scss */
 .nav li a:hover {
   color: white;
+}
+
+/* line 30, sass/ui/_navs.scss */
+.nav__button {
+  position: absolute;
+  left: 15%;
+  padding: 5px;
+}
+
+/* line 32, sass/ui/_navs.scss */
+.nav__button-container {
+  width: 100px;
+  height: 50px;
+  background: white;
+}
+
+/* line 34, sass/ui/_navs.scss */
+.nav__button-bar {
+  width: 65px;
+  height: 10px;
+  margin: 10px 0;
+  background: grey;
+}
+/* line 35, sass/ui/_navs.scss */
+.nav__button-bar:first-child {
+  margin: 0 0 10px 0;
 }
 
 /*------------------------------------*\

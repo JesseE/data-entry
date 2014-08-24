@@ -5,7 +5,46 @@
  * MIXINS
 */
 
+$bp-massive: 1800px;
+$bp-wide: 1350px;
+$bp-large: 1024px;
+$bp-med: 768px;
+$bp-phone-port: 320px;
+// -------------
+// Media Queries
+// -------------
+// Base Font Size
+// From our _variables.scss partial
+$base-font-size: 16px;
+// -------------
+// Media Queries
+// -------------
+@mixin mediaquery($point) {
+  // Very large screens 1800px +
+  @if $point == massive {
+    @media (min-width: $bp-massive / $base-font-size + 'em') { @content; }
+  }
 
+  // Wide screens 1350px+
+  @if $point == wide {
+    @media (min-width: $bp-wide / $base-font-size + 'em') { @content; }
+  }
+
+  // 1024px+
+  @if $point == large {
+    @media (min-width: $bp-large / $base-font-size + 'em') { @content; }
+  }
+
+  // 768px+
+  @if $point == med {
+    @media (max-width: $bp-med / $base-font-size + 'em') { @content; }
+  }
+
+  // Retina Screens
+  @if $point == retina {
+    @media (-webkit-min-device-pixel-ratio: 1.3), (min-device-pixel-ratio: 1.3) { @content; }
+  }
+}
 
 
 

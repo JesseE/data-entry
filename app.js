@@ -43,7 +43,7 @@ if (process.env.NODE_ENV === 'production') {
 
     // Locate the views
     app.set('views', __dirname + '/views');
-    
+
     // Locate the assets
     app.use(express.static(__dirname + '/assets'));
 }
@@ -58,7 +58,7 @@ app.set('view engine', 'handlebars');
  */
 // Index Page
 app.get('/', function(request, response, next) {
-    response.render('index');
+    response.render('head');
 });
 
 

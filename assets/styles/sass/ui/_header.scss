@@ -17,7 +17,8 @@
 }
 .header__bg{
 	position:relative; top: 25%; width: 56%; height: 50%; margin: 0 20%; background-color: black;
+	@include mediaquery (med) {	position: relative;top: 6%;width: 100%;height: 45%;margin: 0;}
 }
 .header__brand{
     width: 100%; height: 100%; background-position: center center; background-image: url(../../../images/placeholder-1.png); background-repeat:no-repeat;
-}
+}    
