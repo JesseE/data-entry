@@ -96,12 +96,8 @@ label {
 }
 
 /* line 10, sass/ui/_scaffolding.scss */
-html {
+html, body {
   width: 100%;
-}
-
-/* line 11, sass/ui/_scaffolding.scss */
-body {
   margin: 0;
 }
 
@@ -540,6 +536,7 @@ body {
   /* line 15, sass/ui/_header.scss */
   .header {
     height: 400px;
+    width: 100%;
   }
 }
 
