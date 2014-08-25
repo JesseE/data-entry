@@ -827,7 +827,13 @@ input[type=password]:focus {
 /**
  * FOOTER
 */
-/* line 9, sass/ui/_footer.scss */
+/* line 8, sass/ui/_footer.scss */
+footer.menu-active {
+  float: right;
+  width: 70%;
+}
+
+/* line 11, sass/ui/_footer.scss */
 .footer {
   float: left;
   height: 500px;
@@ -835,7 +841,7 @@ input[type=password]:focus {
   background-color: lightgrey;
   color: grey;
 }
-/* line 11, sass/ui/_footer.scss */
+/* line 13, sass/ui/_footer.scss */
 .footer h1 {
   width: 100%;
   margin: 0 auto;
