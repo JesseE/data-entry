@@ -592,16 +592,24 @@ body {
   box-shadow: 1px 1px 5px grey;
 }
 @media (max-width: 48em) {
-  /* line 19, sass/ui/_navs.scss */
+  /* line 17, sass/ui/_navs.scss */
+  .nav {
+    opacity: 0.75;
+  }
+  /* line 20, sass/ui/_navs.scss */
+  .nav:hover {
+    opacity: 1;
+  }
+  /* line 21, sass/ui/_navs.scss */
   .nav .nav__button {
     left: 25px;
   }
-  /* line 20, sass/ui/_navs.scss */
+  /* line 22, sass/ui/_navs.scss */
   .nav ul {
     display: none;
   }
 }
-/* line 22, sass/ui/_navs.scss */
+/* line 24, sass/ui/_navs.scss */
 .nav ul {
   position: relative;
   width: 50%;
@@ -609,7 +617,7 @@ body {
   padding: 0px 20px;
   height: 100%;
 }
-/* line 23, sass/ui/_navs.scss */
+/* line 25, sass/ui/_navs.scss */
 .nav li {
   float: left;
   height: 60px;
@@ -618,45 +626,45 @@ body {
   padding: 0 20px;
   line-height: 55px;
 }
-/* line 24, sass/ui/_navs.scss */
+/* line 26, sass/ui/_navs.scss */
 .nav li:hover {
   background-color: grey;
   color: white;
 }
-/* line 25, sass/ui/_navs.scss */
+/* line 27, sass/ui/_navs.scss */
 .nav li a {
   display: block;
   height: 60px;
   width: 100%;
   text-decoration: none;
 }
-/* line 26, sass/ui/_navs.scss */
+/* line 28, sass/ui/_navs.scss */
 .nav li a:hover {
   color: white;
 }
 
-/* line 30, sass/ui/_navs.scss */
+/* line 32, sass/ui/_navs.scss */
 .nav__button {
   position: absolute;
   left: 15%;
   padding: 5px;
 }
 
-/* line 32, sass/ui/_navs.scss */
+/* line 34, sass/ui/_navs.scss */
 .nav__button-container {
   width: 100px;
   height: 50px;
   background: white;
 }
 
-/* line 34, sass/ui/_navs.scss */
+/* line 36, sass/ui/_navs.scss */
 .nav__button-bar {
   width: 65px;
   height: 10px;
   margin: 10px 0;
   background: grey;
 }
-/* line 35, sass/ui/_navs.scss */
+/* line 37, sass/ui/_navs.scss */
 .nav__button-bar:first-child {
   margin: 0 0 10px 0;
 }

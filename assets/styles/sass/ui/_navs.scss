@@ -16,6 +16,8 @@
 
 .nav {  z-index: 2; position: fixed; top: 0; left:0; margin:0; width:100%; height: 60px; background-color: white; box-shadow: 1px 1px 5px grey;
   @include bp(med) {
+  	opacity: 0.75;
+  	&:hover{opacity:1;}
   	.nav__button { left: 25px;}
 	ul{display:none;}
   }
