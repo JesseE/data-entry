@@ -13,7 +13,7 @@ html,body{
 }
 section.menu-active{
 	@include bp (med){
-		width: 80%; float:right;
+		width: 70%; float:right;
 	}
 }
 .container{
