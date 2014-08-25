@@ -14,10 +14,11 @@
 \*------------------------------------*/
 .header{
 	position: relative;	top: 0;	left:0;	width: 100%; height: 800px; background-color: #C3C3C3;
+	@include bp (med) { height: 400px; }
 }
 .header__bg{
 	position:relative; top: 25%; width: 56%; height: 50%; margin: 0 20%; background-color: black;
-	@include mediaquery (med) {	position: relative;top: 6%;width: 100%;height: 45%;margin: 0;}
+	@include bp (med) {	position: relative;top: 50px;width: 100%;height: 100%;margin: 0;}
 }
 .header__brand{
     width: 100%; height: 100%; background-position: center center; background-image: url(../../../images/placeholder-1.png); background-repeat:no-repeat;

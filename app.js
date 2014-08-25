@@ -58,7 +58,8 @@ app.set('view engine', 'handlebars');
  */
 // Index Page
 app.get('/', function(request, response, next) {
-    response.render('head');
+    response.render('index'); 
+       
 });
 
 

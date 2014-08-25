@@ -19,7 +19,7 @@ $base-font-size: 16px;
 // -------------
 // Media Queries
 // -------------
-@mixin mediaquery($point) {
+@mixin bp($point) {
   // Very large screens 1800px +
   @if $point == massive {
     @media (min-width: $bp-massive / $base-font-size + 'em') { @content; }
