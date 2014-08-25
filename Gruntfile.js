@@ -93,14 +93,6 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        concat: {
-            jquery: {
-                files: {
-                    'assets/scripts/vendor/jquery/jquery.min.js': ['bower_components/jquery/dist/jquery.min.js']
-
-                }
-            }
-        },
         // Express Config
         express: {
             options: {
@@ -271,7 +263,7 @@ module.exports = function (grunt) {
         // 'open:site',
         // 'open:editor',
 
-        'concat',
+        // 'concat',
         'watch'
     ]);
 

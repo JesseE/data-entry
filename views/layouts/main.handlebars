@@ -36,14 +36,12 @@
         </header>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
-
-        
+        <![endif]-->      
         {{{ body }}}
-
         <!-- build:js(assets) scripts/scripts.js -->
         <!-- endbuild -->
-        <script type="text/javascript" src="/scripts/vendor/jquery/jquery.js"></script>
+        <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="/assets/bower_components/d3/d3.min.js"></script>
         <script type="text/javascript" src="/assets/scripts/main.js"></script>
         <footer class="footer">
             <h1>footer</h1>
@@ -54,8 +52,6 @@
         </footer>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
-
-
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
             function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
             e=o.createElement(i);r=o.getElementsByTagName(i)[0];
