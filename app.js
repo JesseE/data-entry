@@ -1,4 +1,3 @@
-'use strict';
 
 /*
  * Express Dependencies
@@ -45,7 +44,9 @@ if (process.env.NODE_ENV === 'production') {
     app.set('views', __dirname + '/views');
 
     // Locate the assets
+    app.use(express.static(__dirname + '/')); 
     app.use(express.static(__dirname + '/assets'));
+
 }
 
 // Set Handlebars
@@ -58,8 +59,9 @@ app.set('view engine', 'handlebars');
  */
 // Index Page
 app.get('/', function(request, response, next) {
+
     response.render('index'); 
-       
+
 });
 
 

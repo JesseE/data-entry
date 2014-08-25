@@ -607,9 +607,14 @@ body {
   /* line 22, sass/ui/_navs.scss */
   .nav ul {
     display: none;
+    margin: 0;
+  }
+  /* line 23, sass/ui/_navs.scss */
+  .nav ul li {
+    width: 100%;
   }
 }
-/* line 24, sass/ui/_navs.scss */
+/* line 26, sass/ui/_navs.scss */
 .nav ul {
   position: relative;
   width: 50%;
@@ -617,7 +622,7 @@ body {
   padding: 0px 20px;
   height: 100%;
 }
-/* line 25, sass/ui/_navs.scss */
+/* line 27, sass/ui/_navs.scss */
 .nav li {
   float: left;
   height: 60px;
@@ -626,45 +631,45 @@ body {
   padding: 0 20px;
   line-height: 55px;
 }
-/* line 26, sass/ui/_navs.scss */
+/* line 28, sass/ui/_navs.scss */
 .nav li:hover {
   background-color: grey;
   color: white;
 }
-/* line 27, sass/ui/_navs.scss */
+/* line 29, sass/ui/_navs.scss */
 .nav li a {
   display: block;
   height: 60px;
   width: 100%;
   text-decoration: none;
 }
-/* line 28, sass/ui/_navs.scss */
+/* line 30, sass/ui/_navs.scss */
 .nav li a:hover {
   color: white;
 }
 
-/* line 32, sass/ui/_navs.scss */
+/* line 34, sass/ui/_navs.scss */
 .nav__button {
   position: absolute;
   left: 15%;
   padding: 5px;
 }
 
-/* line 34, sass/ui/_navs.scss */
+/* line 36, sass/ui/_navs.scss */
 .nav__button-container {
   width: 100px;
   height: 50px;
   background: white;
 }
 
-/* line 36, sass/ui/_navs.scss */
+/* line 38, sass/ui/_navs.scss */
 .nav__button-bar {
   width: 65px;
   height: 10px;
   margin: 10px 0;
   background: grey;
 }
-/* line 37, sass/ui/_navs.scss */
+/* line 39, sass/ui/_navs.scss */
 .nav__button-bar:first-child {
   margin: 0 0 10px 0;
 }

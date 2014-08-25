@@ -41,6 +41,11 @@ module.exports = function (grunt) {
                 }
             },
         },
+         scripts: {
+                files: [
+                    'assets/scripts/**/*.js',
+                ],
+            },
         // Clean Config
         clean: {
             dist: {
@@ -91,7 +96,8 @@ module.exports = function (grunt) {
         concat: {
             jquery: {
                 files: {
-                    'assets/scripts/vendor/jquery/jquery.js': ['bower_components/jquery/jquery.js']
+                    'assets/scripts/vendor/jquery/jquery.min.js': ['bower_components/jquery/dist/jquery.min.js']
+
                 }
             }
         },
@@ -102,7 +108,7 @@ module.exports = function (grunt) {
             },
             dev: {
                 options: {
-                    script: 'app.js'
+                    script: 'app.js',
                 }
             }
         },
@@ -264,6 +270,7 @@ module.exports = function (grunt) {
         'express:dev',
         // 'open:site',
         // 'open:editor',
+
         'concat',
         'watch'
     ]);

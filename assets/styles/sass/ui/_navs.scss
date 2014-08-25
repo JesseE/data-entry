@@ -19,7 +19,9 @@
   	opacity: 0.75;
   	&:hover{opacity:1;}
   	.nav__button { left: 10px;}
-	ul{display:none;}
+	ul{display:none; margin:0;
+		li{width: 100%;}
+	}
   }
 	ul{ position: relative; width: 50%; margin: 0 20%; padding: 0px 20px; height: 100%;}
 	li{ float: left; height: 60px; width: 100px; list-style-type: none; padding: 0 20px; line-height: 55px;
