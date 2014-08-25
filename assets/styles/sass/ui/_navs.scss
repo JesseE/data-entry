@@ -18,7 +18,7 @@
   @include bp(med) {
   	opacity: 0.75;
   	&:hover{opacity:1;}
-  	.nav__button { left: 25px;}
+  	.nav__button { left: 10px;}
 	ul{display:none;}
   }
 	ul{ position: relative; width: 50%; margin: 0 20%; padding: 0px 20px; height: 100%;}
