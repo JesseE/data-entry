@@ -16,9 +16,9 @@
 
 .nav {  z-index: 2; position: fixed; top: 0; left:0; margin:0; width:125px; height: 100%; background-color: white; box-shadow: 1px 1px 5px grey;
   @include bp(med) {
-  	opacity: 0.75; width: 100%; height: 60px;
+  	width: 100%; height: 60px;
   	&:hover{opacity:1;}
-  	.nav__button { left: 10px;}
+  	.nav__button { left: 0px;}
 	ul{display:block; margin:0; height: 100%; background: white;
 		li{width: 100%;background: white;}
 	}
@@ -31,12 +31,17 @@
 		}
 	}
 }
-.nav--off-window{ width: 25%;background: white;opacity: 1;position: fixed;height: 100%;z-index: 2;box-shadow: 1px 1px 12px black; 
+.nav--off-window{ display:none;width: 25%;background: white;opacity: 1;position: fixed;height: 100%;z-index: 2;box-shadow: 1px 1px 12px black; text-align:center;
+	@include bp(med){
+		width: 33%;
+	}
 	ul{
-		margin: 100px 0; padding: 0;
+		margin: 100px 0; padding: 0;text-align:center;
 		li{ padding: 25px; list-style-type:none;
+			&:hover{background:lightblue; a{color: white;}}
 			a{
 			text-decoration: none;	
+
 			}
 		}
 	}
