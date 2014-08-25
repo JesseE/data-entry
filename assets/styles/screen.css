@@ -96,11 +96,16 @@ label {
 }
 
 /* line 10, sass/ui/_scaffolding.scss */
+html {
+  width: 100%;
+}
+
+/* line 11, sass/ui/_scaffolding.scss */
 body {
   margin: 0;
 }
 
-/* line 13, sass/ui/_scaffolding.scss */
+/* line 14, sass/ui/_scaffolding.scss */
 .container {
   position: relative;
   width: 100%;
@@ -108,21 +113,21 @@ body {
   float: left;
   margin: 0 auto;
 }
-/* line 15, sass/ui/_scaffolding.scss */
+/* line 16, sass/ui/_scaffolding.scss */
 .container h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 
-/* line 17, sass/ui/_scaffolding.scss */
+/* line 18, sass/ui/_scaffolding.scss */
 .block-list {
   width: 100%;
   height: 500px;
   margin: 0 auto;
 }
 
-/* line 20, sass/ui/_scaffolding.scss */
+/* line 21, sass/ui/_scaffolding.scss */
 .block-item {
   height: 100%;
   width: 20%;
@@ -133,19 +138,19 @@ body {
   /*border:1px solid #086db5;*/
   background-image: url(../../images/placeholder-image.jpg);
 }
-/* line 22, sass/ui/_scaffolding.scss */
+/* line 23, sass/ui/_scaffolding.scss */
 .block-item:hover {
   background-color: grey;
   opacity: 0.5;
 }
 
-/* line 24, sass/ui/_scaffolding.scss */
+/* line 25, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   margin: 0 auto;
   width: 60%;
 }
 
-/* line 27, sass/ui/_scaffolding.scss */
+/* line 28, sass/ui/_scaffolding.scss */
 .block-item--tools {
   height: 300px;
   width: 300px;
@@ -158,20 +163,20 @@ body {
   background-image: url(../../images/placeholder-image.jpg);
 }
 
-/* line 30, sass/ui/_scaffolding.scss */
+/* line 31, sass/ui/_scaffolding.scss */
 .about {
   width: 100%;
   background-color: lightcoral;
   float: left;
 }
-/* line 32, sass/ui/_scaffolding.scss */
+/* line 33, sass/ui/_scaffolding.scss */
 .about h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 
-/* line 34, sass/ui/_scaffolding.scss */
+/* line 35, sass/ui/_scaffolding.scss */
 .bitches {
   width: 100%;
   height: 50px;
@@ -179,7 +184,7 @@ body {
   background-color: green;
 }
 
-/* line 37, sass/ui/_scaffolding.scss */
+/* line 38, sass/ui/_scaffolding.scss */
 .sletjes {
   color: beige;
   font-size: 72px;
