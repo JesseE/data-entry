@@ -34,7 +34,7 @@
 }
 .nav--off-window{ display:none;width: 150px;background: white;opacity: 1;position: fixed;height: 100%;z-index: 2;box-shadow: 1px 1px 5px grey; text-align:center;
 	@include bp(med){
-		width: 100px;
+		width: 20%;float:left;
 	}
 	ul{
 		margin: 120px 0; padding: 0;text-align:center;

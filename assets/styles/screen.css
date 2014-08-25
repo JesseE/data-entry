@@ -101,7 +101,15 @@ html, body {
   margin: 0;
 }
 
-/* line 14, sass/ui/_scaffolding.scss */
+@media (max-width: 48em) {
+  /* line 14, sass/ui/_scaffolding.scss */
+  section.menu-active {
+    width: 80%;
+    float: right;
+  }
+}
+
+/* line 19, sass/ui/_scaffolding.scss */
 .container {
   position: relative;
   width: 100%;
@@ -109,21 +117,21 @@ html, body {
   float: left;
   margin: 0 auto;
 }
-/* line 16, sass/ui/_scaffolding.scss */
+/* line 21, sass/ui/_scaffolding.scss */
 .container h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 
-/* line 18, sass/ui/_scaffolding.scss */
+/* line 23, sass/ui/_scaffolding.scss */
 .block-list {
   width: 100%;
   height: 500px;
   margin: 0 auto;
 }
 
-/* line 21, sass/ui/_scaffolding.scss */
+/* line 26, sass/ui/_scaffolding.scss */
 .block-item {
   height: 100%;
   width: 20%;
@@ -134,19 +142,19 @@ html, body {
   /*border:1px solid #086db5;*/
   background-image: url(../../images/placeholder-image.jpg);
 }
-/* line 23, sass/ui/_scaffolding.scss */
+/* line 28, sass/ui/_scaffolding.scss */
 .block-item:hover {
   background-color: grey;
   opacity: 0.5;
 }
 
-/* line 25, sass/ui/_scaffolding.scss */
+/* line 30, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   margin: 0 auto;
   width: 60%;
 }
 
-/* line 28, sass/ui/_scaffolding.scss */
+/* line 33, sass/ui/_scaffolding.scss */
 .block-item--tools {
   height: 300px;
   width: 300px;
@@ -159,20 +167,20 @@ html, body {
   background-image: url(../../images/placeholder-image.jpg);
 }
 
-/* line 31, sass/ui/_scaffolding.scss */
+/* line 36, sass/ui/_scaffolding.scss */
 .about {
   width: 100%;
   background-color: lightcoral;
   float: left;
 }
-/* line 33, sass/ui/_scaffolding.scss */
+/* line 38, sass/ui/_scaffolding.scss */
 .about h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 
-/* line 35, sass/ui/_scaffolding.scss */
+/* line 40, sass/ui/_scaffolding.scss */
 .bitches {
   width: 100%;
   height: 50px;
@@ -180,7 +188,7 @@ html, body {
   background-color: green;
 }
 
-/* line 38, sass/ui/_scaffolding.scss */
+/* line 43, sass/ui/_scaffolding.scss */
 .sletjes {
   color: beige;
   font-size: 72px;
@@ -523,7 +531,15 @@ body {
 /*------------------------------------*\
     $LOGO
 \*------------------------------------*/
-/* line 15, sass/ui/_header.scss */
+@media (max-width: 48em) {
+  /* line 15, sass/ui/_header.scss */
+  header.menu-active {
+    width: 80%;
+    float: right;
+  }
+}
+
+/* line 20, sass/ui/_header.scss */
 .header {
   position: relative;
   top: 0;
@@ -533,14 +549,14 @@ body {
   background-color: #C3C3C3;
 }
 @media (max-width: 48em) {
-  /* line 15, sass/ui/_header.scss */
+  /* line 20, sass/ui/_header.scss */
   .header {
     height: 460px;
     width: 100%;
   }
 }
 
-/* line 19, sass/ui/_header.scss */
+/* line 24, sass/ui/_header.scss */
 .header__bg {
   position: relative;
   top: 25%;
@@ -550,7 +566,7 @@ body {
   background-color: black;
 }
 @media (max-width: 48em) {
-  /* line 19, sass/ui/_header.scss */
+  /* line 24, sass/ui/_header.scss */
   .header__bg {
     position: relative;
     top: 60px;
@@ -560,7 +576,7 @@ body {
   }
 }
 
-/* line 23, sass/ui/_header.scss */
+/* line 28, sass/ui/_header.scss */
 .header__brand {
   width: 100%;
   height: 100%;
@@ -669,7 +685,8 @@ body {
 @media (max-width: 48em) {
   /* line 35, sass/ui/_navs.scss */
   .nav--off-window {
-    width: 100px;
+    width: 20%;
+    float: left;
   }
 }
 /* line 39, sass/ui/_navs.scss */
