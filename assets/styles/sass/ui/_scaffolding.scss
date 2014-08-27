@@ -24,14 +24,15 @@ section.menu-active{
 	width: 100%; height: 500px; margin: 0 auto;
 }
 .block-item{
-	height: 100%; width:20%; background: lightblue; color: grey;margin: 0 auto;float:left;/*border:1px solid #086db5;*/background-image: url(../../images/placeholder-image.jpg);
+	height: 100%; width:20%; background: lightblue; color: grey;margin: 0 auto;float:left;/*border:1px solid #086db5;*/
 	&:hover{background-color:grey; opacity: 0.5;}
 }
 .block-list--tools-container{
-	margin:0 auto; width: 60%;	
+	// margin:0 auto; width: 60%;
+	margin:0 auto; width: 100%;	
 }
 .block-item--tools{
-	height: 300px; width:300px; background: lightblue; color: grey;float:left; margin:1em;border:1px solid white;transform:rotate(45deg);background-image: url(../../images/placeholder-image.jpg);
+	height: 300px; width:300px; background: lightblue; color: grey;float:left; margin:2em;border:1px solid white;transform:rotate(45deg);background-image: url(../../images/placeholder-image.jpg);
 }
 .about{
 	width: 100%; background-color: lightcoral; float:left;
