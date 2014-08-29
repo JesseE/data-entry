@@ -58,15 +58,31 @@ app.set('view engine', 'handlebars');
  * Routes
  */
 // Index Page
+
+
+
 app.get('/', function(request, response, next) {
-
     response.render('index'); 
-
+});
+app.get('/post-1', function(request, response, next) {
+    response.render('partials/item'); 
+});
+app.get('/post-2', function(request, response, next) {
+    response.render('partials/item'); 
+});
+app.get('/post-3', function(request, response, next) {
+    response.render('partials/item'); 
+});
+app.get('/post-4', function(request, response, next) {
+    response.render('partials/item'); 
+});
+app.get('/post-5', function(request, response, next) {
+    response.render('partials/item'); 
 });
 
 
 /*
  * Start it up
  */
-app.listen(process.env.PORT || port);
+app.listen(process.env.PORT || port );
 console.log('Express started on port ' + port);

@@ -35,3 +35,38 @@ $('.block-item').click(function(){
 		break;
 	}
 });
+var postid = [];
+var posts = [
+		post = {
+			name:'Datavisualisation',
+			paragraph: 'bitches bitch like to bitch about those bitches',
+			images:'bitches bitch'
+		},
+		post = {
+			name:'Resizer',
+			paragraph: 'bitches bitch like to bitch about those bitches',
+			images:'bitches bitch'
+		},
+		post = {
+			name:'Melkweg',
+			paragraph: 'bitches bitch like to bitch about those bitches',
+			images:'bitches bitch'
+		},
+		post = {
+			name:'Score app',
+			paragraph: 'bitches bitch like to bitch about those bitches',
+			images:'bitches bitch'
+		},
+		post = {
+			name:'Eikema reintegratie',
+			paragraph: 'bitches bitch like to bitch about those bitches',
+			images:'bitches bitch'
+		}
+	];
+
+	for (var i = 0, len = posts.length; i < len; i++) {
+		posts[i];
+		console.log(post[i]);
+		postid.push(posts[i]);
+		console.log(posts[1].name);
+	}; 
