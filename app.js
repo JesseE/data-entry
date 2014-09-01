@@ -58,14 +58,11 @@ app.set('view engine', 'handlebars');
  * Routes
  */
 // Index Page
-
-
-
 app.get('/', function(request, response, next) {
     response.render('index'); 
 });
 app.get('/post-1', function(request, response, next) {
-    response.render('partials/item'); 
+    
 });
 app.get('/post-2', function(request, response, next) {
     response.render('partials/item'); 
