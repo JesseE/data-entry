@@ -128,4 +128,3 @@ var postid = [];
 // // what i want
 // // [ {name: author, name: author, name: author, name: author} ]
 // console.log(author);
-

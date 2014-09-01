@@ -5,7 +5,7 @@
  * GRID
 */
 * {
-	font-family: "helvetica";
+	font-family: "helvetica","Arial";
 }
 html,body{
 	width: 100%;
@@ -17,15 +17,29 @@ section.menu-active{
 	}
 }
 .container{
-	position: relative;width: 100%; background-color: darkgrey; float: left; margin: 0 auto;
+	position: relative; float: left; margin: 0 auto; width: 100%; background-color: darkgrey; 
 	h1 { width: 100%; margin: 0 auto; color: white; }
 }
 .block-list{
-	width: 100%; height: 500px; margin: 0 auto;
+	width: 100%; height: 600px; margin: 100px auto;
 }
-.block-item{
-	height: 100%; width:20%; background: lightblue; color: grey;margin: 0 auto;float:left;/*border:1px solid #086db5;*/
-	&:hover{background-color:grey; opacity: 0.5;}
+.block-item {
+	display:none;float: left;margin: 10px auto; height: 100%; width:12.6666%; background: grey; color: white;/*border:1px solid #086db5;*/
+	&:hover{background: crimson;}
+	@include bp (med) {
+		width: 33%;
+	}
+}
+
+.block-image {
+	img{width: 250px; height: 250px; position:relative;}
+	&.even{top:200px;margin-left: 75px;}
+	&.odd{top:0px;margin-left: 75px;}
+	transform: rotate(45deg);
+	position:relative; float: left;	margin: 10px auto;
+}
+.block-text {
+	float:left; display:none;
 }
 .block-list--tools-container{
 	// margin:0 auto; width: 60%;
@@ -35,7 +49,7 @@ section.menu-active{
 	height: 300px; width:300px; background: lightblue; color: grey;float:left; margin:2em;border:1px solid white;transform:rotate(45deg);background-image: url(../../images/placeholder-image.jpg);
 }
 .about{
-	width: 100%; background-color: lightcoral; float:left;
+	float:left; width: 100%; background-color: lightblue;
 	h1 { width: 100%; margin: 0 auto; color: white; }
 }
 .bitches{
