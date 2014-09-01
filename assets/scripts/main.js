@@ -63,28 +63,13 @@ var postid = [];
 // 			images:'bitches bitch'
 // 		}
 // 	];
-var posts = [
-	{
-		name:'Datavisualisation',
-		paragraph: 'bitches bitch like to bitch about those bitches',
-		images:'bitches bitch'
-	},
-	{
-		name:'Resizer',
-		paragraph: 'bitches bitch like to bitch about those bitches',
-		images:'bitches bitch'
-	}
-];
-var html = template(posts);
-var source = $('#item-template').html();
-var template = Handlebars.compile(source);
 
-for (var i = 0, len = posts.length; i < len; i++) {
-	posts[i];
-	console.log(post[i]);
-	postid.push(posts[i]);
-	console.log(posts[1].name);
-}; 
+// for (var i = 0, len = posts.length; i < len; i++) {
+// 	posts[i];
+// 	console.log(post[i]);
+// 	postid.push(posts[i]);
+// 	console.log(posts[1].name);
+// }; 
 
 // setTimeout('window.location.reload();', 60000);
 // var source = $('datavis-template').html();

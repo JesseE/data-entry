@@ -62,19 +62,39 @@ app.get('/', function(request, response, next) {
     response.render('index'); 
 });
 app.get('/post-1', function(request, response, next) {
-    
+    response.render('partials/item' ,{
+        helpers:{
+            title: function () { return 'Datavisualisatie'; },
+            paragraph: function () { return 'bitches bitch like to Datavisualisatie bitch about those bitches';}
+    }});
 });
 app.get('/post-2', function(request, response, next) {
-    response.render('partials/item'); 
+    response.render('partials/item',{
+        helpers:{
+            title: function () { return 'Resizer'; },
+            paragraph: function () { return 'bitches bitch like to RESIZE bitch about those bitches';}
+    }}); 
 });
 app.get('/post-3', function(request, response, next) {
-    response.render('partials/item'); 
+    response.render('partials/item',{
+        helpers:{
+            title: function () { return 'Melkweg'; },
+            paragraph: function () { return 'bitches bitch like to Melkweg bitch about those bitches';}
+    }}); 
 });
 app.get('/post-4', function(request, response, next) {
-    response.render('partials/item'); 
+    response.render('partials/item',{
+        helpers:{
+            title: function () { return 'Score App'; },
+            paragraph: function () { return 'bitches bitch like to Score App bitch about those bitches';}
+    }}); 
 });
 app.get('/post-5', function(request, response, next) {
-    response.render('partials/item'); 
+    response.render('partials/item',{
+        helpers:{
+            title: function () { return 'Eikema Reintegratie'; },
+            paragraph: function () { return 'bitches bitch like to Eikema Reintegratie bitch about those bitches';}
+    }}); 
 });
 
 
