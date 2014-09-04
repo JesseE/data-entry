@@ -187,11 +187,11 @@ html, body {
   /* line 39, sass/ui/_scaffolding.scss */
   .block-image {
     -webkit-clip-path: polygon(0px 125.5px, 125.5px 250px, 250px 125.5px, 125.5px 0px);
-    margin: 0 25%;
+    margin: 0 10%;
   }
   /* line 46, sass/ui/_scaffolding.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
-    margin: 0 25%;
+    margin: 0 10%;
   }
 }
 @media (min-width: 48em) {

@@ -41,9 +41,9 @@ section.menu-active{
 	position:relative; float: left;	
 	@include bp (med) {
 		-webkit-clip-path: polygon(0px 125.5px, 125.5px 250px, 250px 125.5px, 125.5px 0px);
-		margin: 0 5%;
+		margin: 0 10%;
 		// &.fourth,&.fifth,&.sixth{ margin: 0 70px;}
-		&.fourth,&.fifth,&.sixth{margin: 0 5%;}
+		&.fourth,&.fifth,&.sixth{margin: 0 10%;}
 
 	}
 	@include bp (min-med){
