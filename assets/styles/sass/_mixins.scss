@@ -34,10 +34,14 @@ $base-font-size: 16px;
   @if $point == large {
     @media (min-width: $bp-large / $base-font-size + 'em') { @content; }
   }
+  
 
   // 768px+
   @if $point == med {
     @media (max-width: $bp-med / $base-font-size + 'em') { @content; }
+  }
+  @if $point == min-med {
+    @media (min-width: $bp-med / $base-font-size + 'em') { @content; }
   }
 
   // Retina Screens

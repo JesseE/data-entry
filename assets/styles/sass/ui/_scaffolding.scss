@@ -22,6 +22,10 @@ section.menu-active{
 }
 .block-list{
 	width: 100%; height: 600px; margin: 100px auto;
+	@include bp (med){width: 100%;}
+	@include bp (min-med){margin:10%;}
+	@include bp (large){width: 93%;}
+	@include bp (wide){width: 85%;}
 }
 .block-item {
 	display:none;float: left;margin: 10px auto; height: 100%; width:12.6666%; background: grey; color: white;/*border:1px solid #086db5;*/
@@ -30,48 +34,38 @@ section.menu-active{
 		width: 33%;
 	}
 }
-// .bla{
-// top: 225px;
-// /* margin-left: 75px; */
-// left: -138px;
-// }
-// .blo{
-// 	top:0px;
-// left: -275px;
-// }
-// .bli{
-// top: 225px;
-// left: -415px;
-// }
-// .blu{
-// top: -399px;
-// left: 940px;
-// }
-// .ble{
-// 	top: -175px;
-// 	left: 800px;
-// }
-
 //this has to be refactored
 
-.fourth{
-	margin: -200px 187px;
-}
-.fifth{
-	margin: -200px 563px;
-}
-.sixth{
-	margin: -200px 938px;
-}
 .block-image {
 	-webkit-clip-path: polygon(0px 187.5px, 187.5px 375px, 375px 187.5px, 187.5px 0px);
-	img{width: 375px; height: 375px; position:relative; top: -10px; margin: 10px auto;}
-	@include bp(med){ 
-		&.fourth,&.fith,&.sixth{ margin: 10px auto;}
-	}
-	// &.even{top:200px;margin-left: 75px;}
-	// &.odd{top:0px;margin-left: 75px;}
 	position:relative; float: left;	
+	@include bp (med) {
+		-webkit-clip-path: polygon(0px 125.5px, 125.5px 250px, 250px 125.5px, 125.5px 0px);
+		margin: 0 20%;
+		// &.fourth,&.fifth,&.sixth{ margin: 0 70px;}
+		&.fourth,&.fifth,&.sixth{margin: 0 20%;}
+
+	}
+	@include bp (min-med){
+		&.fourth,&.fifth,&.sixth{margin: 0;}
+	}
+	@include bp (large){
+				&.fourth,&.fifth,&.sixth{margin: 0;}
+		// &.fourth{margin: -200px 187px;}
+		// &.fifth{margin: -200px 563px;}
+		// &.sixth{margin: -200px 938px;}
+	}
+	@include bp (wide){
+		&.fourth{margin: -200px 187px;}
+		&.fifth{margin: -200px 563px;}
+		&.sixth{margin: -200px 938px;}
+	}
+	img{
+		width: 375px; height: 375px; position:relative; top: -10px; margin: 10px auto;
+		@include bp (med) {
+			width: 250px; height: 250px;
+		}
+	}
 }
 .block-text {
 	float:left; display:none;
@@ -81,7 +75,7 @@ section.menu-active{
 	margin:0 auto; width: 100%;	
 }
 .block-item--tools{
-	height: 300px; width:300px; background: lightblue; color: grey;float:left; margin:2em;border:1px solid white;transform:rotate(45deg);background-image: url(../../images/placeholder-image.jpg);
+	height: 300px; width:300px; background: lightblue; color: grey;float: left; margin:2em;border:1px solid white;transform:rotate(45deg);background-image: url(../../images/placeholder-image.jpg);
 }
 .about{
 	float:left; width: 100%; background-color: lightblue;
