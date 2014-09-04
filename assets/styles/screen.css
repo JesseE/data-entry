@@ -153,64 +153,55 @@ html, body {
   }
 }
 
-/* line 33, sass/ui/_scaffolding.scss */
-.bla {
-  top: 225px;
-  /* margin-left: 75px; */
-  left: -138px;
+/* line 57, sass/ui/_scaffolding.scss */
+.fourth {
+  margin: -200px 187px;
 }
 
-/* line 38, sass/ui/_scaffolding.scss */
-.blo {
-  top: 0px;
-  left: -275px;
+/* line 60, sass/ui/_scaffolding.scss */
+.fifth {
+  margin: -200px 563px;
 }
 
-/* line 42, sass/ui/_scaffolding.scss */
-.bli {
-  top: 225px;
-  left: -415px;
+/* line 63, sass/ui/_scaffolding.scss */
+.sixth {
+  margin: -200px 938px;
 }
 
-/* line 46, sass/ui/_scaffolding.scss */
-.blu {
-  top: -399px;
-  left: 940px;
-}
-
-/* line 50, sass/ui/_scaffolding.scss */
-.ble {
-  top: -175px;
-  left: 800px;
-}
-
-/* line 54, sass/ui/_scaffolding.scss */
+/* line 66, sass/ui/_scaffolding.scss */
 .block-image {
   -webkit-clip-path: polygon(0px 187.5px, 187.5px 375px, 375px 187.5px, 187.5px 0px);
   position: relative;
   float: left;
-  margin: 10px auto;
 }
-/* line 56, sass/ui/_scaffolding.scss */
+/* line 68, sass/ui/_scaffolding.scss */
 .block-image img {
   width: 375px;
   height: 375px;
   position: relative;
+  top: -10px;
+  margin: 10px auto;
+}
+@media (max-width: 48em) {
+  /* line 70, sass/ui/_scaffolding.scss */
+  .block-image.fourth, .block-image.fith, .block-image.sixth {
+    margin: 10px auto;
+  }
 }
 
-/* line 61, sass/ui/_scaffolding.scss */
+/* line 76, sass/ui/_scaffolding.scss */
 .block-text {
   float: left;
   display: none;
 }
 
-/* line 64, sass/ui/_scaffolding.scss */
+/* line 79, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 68, sass/ui/_scaffolding.scss */
+/* line 83, sass/ui/_scaffolding.scss */
 .block-item--tools {
   height: 300px;
   width: 300px;
@@ -223,20 +214,20 @@ html, body {
   background-image: url(../../images/placeholder-image.jpg);
 }
 
-/* line 71, sass/ui/_scaffolding.scss */
+/* line 86, sass/ui/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
   background-color: lightblue;
 }
-/* line 73, sass/ui/_scaffolding.scss */
+/* line 88, sass/ui/_scaffolding.scss */
 .about h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 
-/* line 75, sass/ui/_scaffolding.scss */
+/* line 90, sass/ui/_scaffolding.scss */
 .bitches {
   width: 100%;
   height: 50px;
@@ -244,7 +235,7 @@ html, body {
   background-color: green;
 }
 
-/* line 78, sass/ui/_scaffolding.scss */
+/* line 93, sass/ui/_scaffolding.scss */
 .sletjes {
   color: beige;
   font-size: 72px;

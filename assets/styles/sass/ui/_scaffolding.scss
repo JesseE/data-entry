@@ -30,33 +30,48 @@ section.menu-active{
 		width: 33%;
 	}
 }
-.bla{
-top: 225px;
-/* margin-left: 75px; */
-left: -138px;
+// .bla{
+// top: 225px;
+// /* margin-left: 75px; */
+// left: -138px;
+// }
+// .blo{
+// 	top:0px;
+// left: -275px;
+// }
+// .bli{
+// top: 225px;
+// left: -415px;
+// }
+// .blu{
+// top: -399px;
+// left: 940px;
+// }
+// .ble{
+// 	top: -175px;
+// 	left: 800px;
+// }
+
+//this has to be refactored
+
+.fourth{
+	margin: -200px 187px;
 }
-.blo{
-	top:0px;
-left: -275px;
+.fifth{
+	margin: -200px 563px;
 }
-.bli{
-top: 225px;
-left: -415px;
-}
-.blu{
-top: -399px;
-left: 940px;
-}
-.ble{
-	top: -175px;
-	left: 800px;
+.sixth{
+	margin: -200px 938px;
 }
 .block-image {
 	-webkit-clip-path: polygon(0px 187.5px, 187.5px 375px, 375px 187.5px, 187.5px 0px);
-	img{width: 375px; height: 375px; position:relative;}
+	img{width: 375px; height: 375px; position:relative; top: -10px; margin: 10px auto;}
+	@include bp(med){ 
+		&.fourth,&.fith,&.sixth{ margin: 10px auto;}
+	}
 	// &.even{top:200px;margin-left: 75px;}
 	// &.odd{top:0px;margin-left: 75px;}
-	position:relative; float: left;	margin: 10px auto;
+	position:relative; float: left;	
 }
 .block-text {
 	float:left; display:none;
