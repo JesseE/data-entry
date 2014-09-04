@@ -115,7 +115,7 @@ html, body {
   float: left;
   margin: 0 auto;
   width: 100%;
-  background-color: darkgrey;
+  background-color: crimson;
 }
 /* line 21, sass/ui/_scaffolding.scss */
 .container h1 {
@@ -145,13 +145,14 @@ html, body {
 @media (min-width: 64em) {
   /* line 23, sass/ui/_scaffolding.scss */
   .block-list {
-    width: 93%;
+    width: 88%;
   }
 }
 @media (min-width: 84.375em) {
   /* line 23, sass/ui/_scaffolding.scss */
   .block-list {
     width: 85%;
+    margin: 0 10%;
   }
 }
 
@@ -177,16 +178,23 @@ html, body {
   }
 }
 
-/* line 39, sass/ui/_scaffolding.scss */
+/* line 38, sass/ui/_scaffolding.scss */
 .block-image {
-  -webkit-clip-path: polygon(0px 187.5px, 187.5px 375px, 375px 187.5px, 187.5px 0px);
+  -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
   position: relative;
   float: left;
 }
+/* line 39, sass/ui/_scaffolding.scss */
+.block-image:hover {
+  opacity: 0.75;
+}
+/* line 40, sass/ui/_scaffolding.scss */
+.block-image:hover .block-item {
+  display: block;
+}
 @media (max-width: 48em) {
-  /* line 39, sass/ui/_scaffolding.scss */
+  /* line 38, sass/ui/_scaffolding.scss */
   .block-image {
-    -webkit-clip-path: polygon(0px 125.5px, 125.5px 250px, 250px 125.5px, 125.5px 0px);
     margin: 0 10%;
   }
   /* line 46, sass/ui/_scaffolding.scss */
@@ -195,60 +203,81 @@ html, body {
   }
 }
 @media (min-width: 48em) {
-  /* line 50, sass/ui/_scaffolding.scss */
+  /* line 49, sass/ui/_scaffolding.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
+  /* line 52, sass/ui/_scaffolding.scss */
+  .block-image.fourth {
+    margin: -115px 0 0 130px;
+  }
   /* line 53, sass/ui/_scaffolding.scss */
-  .block-image.fourth, .block-image.fifth, .block-image.sixth {
-    margin: 0;
+  .block-image.fifth {
+    margin: -115px 0 0 260px;
+  }
+  /* line 54, sass/ui/_scaffolding.scss */
+  .block-image.sixth {
+    margin: -264px 0 0 390px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 59, sass/ui/_scaffolding.scss */
+  /* line 57, sass/ui/_scaffolding.scss */
   .block-image.fourth {
-    margin: -200px 187px;
+    margin: -175px 0 0 188px;
   }
-  /* line 60, sass/ui/_scaffolding.scss */
+  /* line 58, sass/ui/_scaffolding.scss */
   .block-image.fifth {
-    margin: -200px 563px;
+    margin: -379px 563px;
   }
-  /* line 61, sass/ui/_scaffolding.scss */
+  /* line 59, sass/ui/_scaffolding.scss */
   .block-image.sixth {
-    margin: -200px 938px;
+    margin: -378px 938px;
   }
 }
-/* line 63, sass/ui/_scaffolding.scss */
+/* line 61, sass/ui/_scaffolding.scss */
 .block-image img {
   width: 375px;
   height: 375px;
   position: relative;
-  top: -10px;
-  margin: 10px auto;
+  margin: 0px auto;
 }
 @media (max-width: 48em) {
-  /* line 63, sass/ui/_scaffolding.scss */
+  /* line 61, sass/ui/_scaffolding.scss */
   .block-image img {
     width: 250px;
     height: 250px;
   }
 }
+@media (min-width: 64em) {
+  /* line 61, sass/ui/_scaffolding.scss */
+  .block-image img {
+    width: 260px;
+    height: 260px;
+  }
+}
+@media (min-width: 84.375em) {
+  /* line 61, sass/ui/_scaffolding.scss */
+  .block-image img {
+    width: 375px;
+    height: 375px;
+  }
+}
 
-/* line 70, sass/ui/_scaffolding.scss */
+/* line 76, sass/ui/_scaffolding.scss */
 .block-text {
   float: left;
   display: none;
 }
 
-/* line 73, sass/ui/_scaffolding.scss */
+/* line 79, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 77, sass/ui/_scaffolding.scss */
+/* line 83, sass/ui/_scaffolding.scss */
 .block-item--tools {
   height: 300px;
   width: 300px;
@@ -261,20 +290,20 @@ html, body {
   background-image: url(../../images/placeholder-image.jpg);
 }
 
-/* line 80, sass/ui/_scaffolding.scss */
+/* line 86, sass/ui/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
   background-color: lightblue;
 }
-/* line 82, sass/ui/_scaffolding.scss */
+/* line 88, sass/ui/_scaffolding.scss */
 .about h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 
-/* line 84, sass/ui/_scaffolding.scss */
+/* line 90, sass/ui/_scaffolding.scss */
 .bitches {
   width: 100%;
   height: 50px;
@@ -282,7 +311,7 @@ html, body {
   background-color: green;
 }
 
-/* line 87, sass/ui/_scaffolding.scss */
+/* line 93, sass/ui/_scaffolding.scss */
 .sletjes {
   color: beige;
   font-size: 72px;

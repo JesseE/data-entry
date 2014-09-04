@@ -31,10 +31,13 @@ $base-font-size: 16px;
   }
 
   // 1024px+
+  @if $point == max-large {
+    @media (max-width: $bp-large / $base-font-size + 'em') { @content; }
+  }
   @if $point == large {
     @media (min-width: $bp-large / $base-font-size + 'em') { @content; }
   }
-  
+
 
   // 768px+
   @if $point == med {
