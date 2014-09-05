@@ -18,7 +18,7 @@ header.menu-active{
 	}
 }
 .header{
-	position: relative;	top: 0;	left:0;	width: 100%; height: 800px; background-color: #C3C3C3;
+	position: relative;	top: 0;	left:0;	width: 100%; height: 800px; background-color: white;
 	@include bp (med) { height: 460px; width: 100%;}
 }
 .header__bg{

@@ -14,7 +14,7 @@
     $NAV PRIMARY
 \*------------------------------------*/
 
-.nav {  z-index: 2; position: fixed; top: 10px; left:10px; margin:0; width:125px; height: 110px; background-color: white; 
+.nav {  z-index: 2; position: fixed; top: 10px; left:10px; margin:0; width:125px; height: 110px; background-color: #383d3f; 
   	ul{ position: relative;width: 50%;margin: 100px 0;padding: 0px 15px;height: 100%;
 		li{ float: left; height: 60px; width: 100px; list-style-type: none; padding: 0 20px; line-height: 55px;
 			&:hover{ background-color: grey; color: white;}
@@ -24,22 +24,37 @@
 		}
 	}		
 	@include bp(med) { 
-		top: 0; left: 0;width: 100%; height: 60px;
+		top: 0; left: 0;width: 93px; height: 70px;
 	  	&:hover{opacity:1;}
-	  	.nav__button { left: 0px; top:0;}
+	  	.nav__button { left: 0px; top:0; margin: 5px 8px;}
 		ul{display:block; margin:0; height: 100%; background: white;
 			li{width: 100%;background: white;}
 		}
 	}	
 }
-.nav--off-window{ display:none;width: 100%;background: white;opacity: 1;position: fixed;height: 120px;z-index: 2;box-shadow: 1px 1px 5px grey; text-align:center;
+.nav--off-window{ display:none;
+	width: 148px;
+background: #383d3f;
+opacity: 1;
+position: fixed;
+height: 100%;
+z-index: 2;
+box-shadow: 1px 1px 5px grey;
+text-align: center;
+	// width: 100%;background: white;opacity: 1;position: fixed;height: 120px;z-index: 2;box-shadow: 1px 1px 5px grey; text-align:center;
 	@include bp(med){
 		width: 30%;float:left;
 	}
 	ul{
-		margin: 30px 0; padding: 0;text-align:center;
-		li{ padding: 25px; list-style-type:none;display:inline-block;
-			&:hover{background:lightblue; a{color: white;}}
+		margin: 100% 0; padding: 0;text-align:center;
+		li{ 
+			padding: 25px 0;
+list-style-type: none;
+display: inline-block;
+color: white;
+width: 100%;
+text-align: center;
+			&:hover{background:white; color:grey;}
 			a{
 			text-decoration: none;	
 
@@ -47,11 +62,12 @@
 		}
 	}
 }
+.nav__list{ margin-top:100%;}
 .nav__button{	position:absolute; left: 25px; top: 25px;padding: 5px;}
 
-.nav__button-container{ height: 50px; background: white;}
+.nav__button-container{ height: 50px; background: #383d3f;}
 
-.nav__button-bar{ width: 65px;  height: 10px; margin:10px 0;background:grey;
+.nav__button-bar{ width: 65px;  height: 10px; margin:10px 0;background:white;
 	&:first-child{ margin: 0 0 10px 0;}
 }
 /*------------------------------------*\
