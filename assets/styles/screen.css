@@ -115,7 +115,7 @@ html, body {
   float: left;
   margin: 0 auto;
   width: 100%;
-  background-color: crimson;
+  background-color: white;
 }
 /* line 21, sass/ui/_scaffolding.scss */
 .container h1 {
@@ -321,27 +321,35 @@ html, body {
 
 /* line 95, sass/ui/_scaffolding.scss */
 .block-container__item-container {
+  background: #e76e66;
+  border-right: 2px solid white;
   float: left;
   width: 30%;
 }
-/* line 99, sass/ui/_scaffolding.scss */
+/* line 100, sass/ui/_scaffolding.scss */
 .block-container__item-container img {
   float: right;
+  margin: 25px;
 }
 
-/* line 102, sass/ui/_scaffolding.scss */
+/* line 103, sass/ui/_scaffolding.scss */
 .block-description {
   float: left;
   width: 50%;
-  margin: 8%;
+  /* margin: 8%; */
+  height: 403px;
+  padding-left: 100px;
+  background: #e76e66;
+  line-height: 71px;
+  border-left: 9px solid white;
 }
-/* line 106, sass/ui/_scaffolding.scss */
+/* line 112, sass/ui/_scaffolding.scss */
 .block-description h1 {
-  color: black;
+  color: white;
 }
-/* line 107, sass/ui/_scaffolding.scss */
+/* line 113, sass/ui/_scaffolding.scss */
 .block-description p {
-  color: black;
+  color: white;
 }
 
 /*------------------------------------*\
