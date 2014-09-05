@@ -283,56 +283,76 @@ html, body {
   margin: 2em;
   border: 1px solid white;
 }
+@media (max-width: 48em) {
+  /* line 82, sass/ui/_scaffolding.scss */
+  .block-item--tools {
+    width: 85%;
+  }
+}
 
-/* line 86, sass/ui/_scaffolding.scss */
+/* line 89, sass/ui/_scaffolding.scss */
 .block-item--tools__image img {
   width: 100px;
   height: 100px;
 }
 
-/* line 88, sass/ui/_scaffolding.scss */
+/* line 91, sass/ui/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
   background-color: #086db5;
 }
-/* line 90, sass/ui/_scaffolding.scss */
+/* line 93, sass/ui/_scaffolding.scss */
 .about h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
-/* line 91, sass/ui/_scaffolding.scss */
+/* line 94, sass/ui/_scaffolding.scss */
 .about p {
   color: white;
 }
 
-/* line 93, sass/ui/_scaffolding.scss */
+/* line 96, sass/ui/_scaffolding.scss */
 .block-container {
   width: 100%;
 }
 
-/* line 94, sass/ui/_scaffolding.scss */
+/* line 97, sass/ui/_scaffolding.scss */
 .block-container__item {
   width: 100%;
   margin: 0 auto;
   background: lightgrey;
 }
 
-/* line 95, sass/ui/_scaffolding.scss */
+/* line 98, sass/ui/_scaffolding.scss */
 .block-container__item-container {
   background: #e76e66;
   border-right: 2px solid white;
   float: left;
   width: 30%;
 }
-/* line 100, sass/ui/_scaffolding.scss */
+@media (max-width: 48em) {
+  /* line 98, sass/ui/_scaffolding.scss */
+  .block-container__item-container {
+    width: 100%;
+    margin: 68px 0 0 0;
+  }
+}
+/* line 107, sass/ui/_scaffolding.scss */
 .block-container__item-container img {
   float: right;
   margin: 25px;
 }
+@media (max-width: 48em) {
+  /* line 107, sass/ui/_scaffolding.scss */
+  .block-container__item-container img {
+    float: none;
+    margin: 25px 23%;
+  }
+}
 
-/* line 103, sass/ui/_scaffolding.scss */
+/* line 115, sass/ui/_scaffolding.scss */
 .block-description {
   float: left;
   width: 50%;
@@ -343,11 +363,22 @@ html, body {
   line-height: 71px;
   border-left: 9px solid white;
 }
-/* line 112, sass/ui/_scaffolding.scss */
+@media (max-width: 48em) {
+  /* line 115, sass/ui/_scaffolding.scss */
+  .block-description {
+    width: 81%;
+    float: left;
+    margin: 8%;
+    min-height: 400px;
+    padding-left: 39px;
+    line-height: 30px;
+  }
+}
+/* line 132, sass/ui/_scaffolding.scss */
 .block-description h1 {
   color: white;
 }
-/* line 113, sass/ui/_scaffolding.scss */
+/* line 133, sass/ui/_scaffolding.scss */
 .block-description p {
   color: white;
 }
@@ -999,13 +1030,18 @@ input[type=password]:focus {
   width: 100%;
   margin: 0 auto;
   color: white;
+  padding: 20px;
 }
 /* line 11, sass/ui/_footer.scss */
+.footer p {
+  padding: 20px;
+}
+/* line 12, sass/ui/_footer.scss */
 .footer iframe {
   width: 100%;
   height: 500px;
 }
-/* line 14, sass/ui/_footer.scss */
+/* line 15, sass/ui/_footer.scss */
 .footer .maps {
   background: lightgrey;
   height: 500px;

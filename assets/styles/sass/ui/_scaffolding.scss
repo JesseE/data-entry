@@ -81,6 +81,9 @@ section.menu-active{
 }
 .block-item--tools{
 	height: 200px; width:45%; background: #086db5; color: grey;float: left; margin:2em;border:1px solid white;
+	@include bp (med){
+		width: 85%;
+	}
 }
 .block-item--tools__image{
 	img{width: 100px;height:100px;}
@@ -97,18 +100,35 @@ section.menu-active{
 	border-right: 2px solid white;
 	float:left;
 	width:30%;
-	img{float:right;margin: 25px;}	
+	@include bp(med) {
+		width: 100%;
+		margin: 68px 0 0 0;
+	}
+	img{float:right;margin: 25px;
+		@include bp(med){
+			float:none;
+			margin: 25px 23%;
+		}
+	}	
 
 }
 .block-description{
-float: left;
-width: 50%;
-/* margin: 8%; */
-height: 403px;
-padding-left: 100px;
-background: #e76e66;
-line-height: 71px;
-border-left: 9px solid white;
+	float: left;
+	width: 50%;
+	/* margin: 8%; */
+	height: 403px;
+	padding-left: 100px;
+	background: #e76e66;
+	line-height: 71px;
+	border-left: 9px solid white;
+	@include bp(med){
+		width: 81%;
+		float: left;
+		margin: 8%;
+		min-height: 400px;
+		padding-left: 39px;
+		line-height: 30px;
+	}
 	h1{color:white;}
 	p{color:white;}
 }
