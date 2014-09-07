@@ -186,7 +186,7 @@ html, body {
 }
 /* line 39, sass/ui/_scaffolding.scss */
 .block-image:hover {
-  opacity: 0.75;
+  opacity: 0.8;
 }
 @media (max-width: 48em) {
   /* line 38, sass/ui/_scaffolding.scss */
@@ -277,7 +277,7 @@ html, body {
 .block-item--tools {
   height: 200px;
   width: 45%;
-  background: #086db5;
+  background: #C0D1D8;
   color: grey;
   float: left;
   margin: 2em;
@@ -322,12 +322,13 @@ html, body {
 .about {
   float: left;
   width: 100%;
-  background-color: white;
+  background-color: #527B8B;
+  text-align: center;
 }
 /* line 97, sass/ui/_scaffolding.scss */
 .about h1 {
-  margin: 0 auto;
-  color: grey;
+  margin: 30px auto;
+  color: white;
 }
 /* line 98, sass/ui/_scaffolding.scss */
 .about p {
@@ -1058,6 +1059,7 @@ input[type=password]:focus {
   width: 100%;
   background-color: #344E58;
   color: white;
+  text-align: center;
 }
 /* line 10, sass/ui/_footer.scss */
 .footer h1 {

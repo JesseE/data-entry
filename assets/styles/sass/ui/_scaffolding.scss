@@ -36,7 +36,7 @@ section.menu-active{
 }
 //this has to be refactored
 .block-image {
-	&:hover{opacity:0.75;}
+	&:hover{opacity:0.8;}
 	position:relative; float: left; -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);	
 	@include bp (med) {
 		margin: 0 10%;
@@ -78,7 +78,7 @@ section.menu-active{
 	margin:0 auto; width: 100%;	
 }
 .block-item--tools{
-	height: 200px; width:45%; background: #086db5; color: grey;float: left; margin:2em;border:1px solid white;
+	height: 200px; width:45%; background: #C0D1D8; color: grey;float: left; margin:2em;border:1px solid white;
 	@include bp (med){
 		width: 85%;
 	}
@@ -93,8 +93,8 @@ section.menu-active{
 	p{padding:10px;}
 }
 .about{
-	float:left; width: 100%; background-color: white;
-	h1 { margin: 0 auto; color: grey;}
+	float:left; width: 100%; background-color: #527B8B; text-align:center;
+	h1 { margin: 30px auto; color: white; }
 	p{color:grey;}
 }
 .block-container{width:100%;}
@@ -121,6 +121,7 @@ section.menu-active{
 .block-list__tools-item{
 	div{height:10px;margin: 10px;background: crimson;}
 }
+
 
 /*------------------------------------*\
     $GRID

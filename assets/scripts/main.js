@@ -35,48 +35,83 @@ $('.block-item').click(function(){
 		break;
 	}
 });
-var stats = [ 
-	{
-		name: 'Git',
-		score: 70
-	},
-	{
-		name: 'SASS',
-		score: 50
-	},
-	{
-		name: 'Node.js',
-		score: 90
-	},
-	{
-		name: 'Express.js',
-		score: 30
-	},
-	{
-		name: 'javascript',
-		score: 40
-	},
-];
-var dataStats= [];
-for (var i = 0, len = stats.length; i < len; i++) {
-	dataStats.push(stats[i]);
-}
 
+// var stats = [ 
+// 	{
+// 		name: 'Git', 
+// 		score: 70
+// 	},
+// 	{
+// 		name: 'SASS',
+// 		score: 50
+// 	},
+// 	{
+// 		name: 'Node.js',
+// 		score: 90
+// 	},
+// 	{
+// 		name: 'Express.js',
+// 		score: 30
+// 	},
+// 	{
+// 		name: 'javascript',
+// 		score: 40
+// 	},
+// ];
+// var dataStats= [];
+// for (var i = 0, len = stats.length; i < len; i++) {
+// 	dataStats.push(stats[i]);
+// }
+// var scoreStats = [];
+// for (var i = 0, len = dataStats.length; i < len; i++) {
+// 	scoreStats.push(dataStats[i].score);
+	
+// }
+
+// var STATSC = [50, 30, 60, 70];
+
+// var x = d3.scale.linear()
+//     .domain([ 0, d3.max(STATSC)])
+//     .range([ 0, 500]);
+
+// console.log(STATSC);
+
+// 	  d3.select(".about")
+// 		.selectAll("div")
+// 			.data(STATSC)
+// 		.enter().append("div")
+// 			.style("width", function(d) {return x(d) + "px";})
+// 			.style("height", "10px")
+// 			.style("margin", "1em")
+// 			.style("background","#344E58");
+var data = [4, 8, 15, 16, 23, 42];
+
+var width = 420,
+    barHeight = 20;
 
 var x = d3.scale.linear()
-    .domain([ 0, d3.max(dataStats)])
-    .range([ 0, 500]);
-var scoreStats = [];
-for (var i = 0, len = dataStats.length; i < len; i++) {
-	scoreStats.push(dataStats[i].score);
-	
-}
-console.log(scoreStats);
-d3.select(".block-list__tools-item")
-		.selectAll("div")
-			.data(scoreStats)
-		.enter().append("div")
-			.style("width", function(d) {return x(d) + "px"});
+    .domain([0, d3.max(data)])
+    .range([0, width]);
+
+var chart = d3.select(".about")
+    .attr("width", width)
+    .attr("height", barHeight * data.length);
+
+var bar = chart.selectAll("g")
+    .data(data)
+  .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+
+bar.append("rect")
+    .attr("width", x)
+    .attr("height", barHeight - 1);
+
+bar.append("text")
+    .attr("x", function(d) { return x(d) - 3; })
+    .attr("y", barHeight / 2)
+    .attr("dy", ".35em")
+    .text(function(d) { return d; });
+
 // var x = d3.scale.linear()
 //     .domain([ 0, d3.max(allValues)])
 //     .range([ 0, 250]);
