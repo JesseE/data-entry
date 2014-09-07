@@ -36,10 +36,8 @@ section.menu-active{
 }
 //this has to be refactored
 .block-image {
-	&:hover{opacity:0.75;
-	}
-	-webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
-	position:relative; float: left;	
+	&:hover{opacity:0.75;}
+	position:relative; float: left; -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);	
 	@include bp (med) {
 		margin: 0 10%;
 		&.fourth,&.fifth,&.sixth{margin: 0 10%;}
@@ -86,52 +84,44 @@ section.menu-active{
 	}
 }
 .block-item--tools__image{
+	float:left; width: 25%;
 	img{width: 100px;height:100px;}
 }
+.block-item--tools__text{
+	width: 60%;float: right;background: #505759;height: 100%;
+	h1{padding:10px;border-bottom:1px solid grey;}
+	p{padding:10px;}
+}
 .about{
-	float:left; width: 100%; background-color: #086db5;
-	h1 { width: 100%; margin: 0 auto; color: white; }
-	p{color:white;}
+	float:left; width: 100%; background-color: white;
+	h1 { margin: 0 auto; color: grey;}
+	p{color:grey;}
 }
 .block-container{width:100%;}
 .block-container__item{width: 100%;margin: 0 auto;background:lightgrey;}
-.block-container__item-container{
-	background: #e76e66;
-	border-right: 2px solid white;
-	float:left;
-	width:30%;
+.block-container__item-container{ float: left; width:30%; background: #C0D1D8; border-right: 2px solid white; 
 	@include bp(med) {
-		width: 100%;
-		margin: 68px 0 0 0;
+		width: 100%; margin: 68px 0 0 0;
 	}
-	img{float:right;margin: 25px;
+	img{ float: right;margin: 25px;
 		@include bp(med){
-			float:none;
-			margin: 25px 23%;
+			float:none;	margin: 25px 23%;
 		}
 	}	
 
 }
 .block-description{
-	float: left;
-	width: 50%;
-	/* margin: 8%; */
-	height: 403px;
-	padding-left: 100px;
-	background: #e76e66;
-	line-height: 71px;
-	border-left: 9px solid white;
+	float: left; width: 50%;/* margin: 8%; */height: 403px;	padding-left: 100px; background: #527B8B; line-height: 71px; border-left: 9px solid white;
 	@include bp(med){
-		width: 81%;
-		float: left;
-		margin: 8%;
-		min-height: 400px;
-		padding-left: 39px;
-		line-height: 30px;
+		float: left; width: 81%; margin: 8%; min-height: 400px;	padding-left: 39px;	line-height: 30px;
 	}
 	h1{color:white;}
 	p{color:white;}
 }
+.block-list__tools-item{
+	div{height:10px;margin: 10px;background: crimson;}
+}
+
 /*------------------------------------*\
     $GRID
 \*------------------------------------*/

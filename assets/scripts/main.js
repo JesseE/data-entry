@@ -35,47 +35,48 @@ $('.block-item').click(function(){
 		break;
 	}
 });
-var postid = [];
-// var posts = [
-// 		post = {
-// 			name:'Datavisualisation',
-// 			paragraph: 'bitches bitch like to bitch about those bitches',
-// 			images:'bitches bitch'
-// 		},
-// 		post = {
-// 			name:'Resizer',
-// 			paragraph: 'bitches bitch like to bitch about those bitches',
-// 			images:'bitches bitch'
-// 		},
-// 		post = {
-// 			name:'Melkweg',
-// 			paragraph: 'bitches bitch like to bitch about those bitches',
-// 			images:'bitches bitch'
-// 		},
-// 		post = {
-// 			name:'Score app',
-// 			paragraph: 'bitches bitch like to bitch about those bitches',
-// 			images:'bitches bitch'
-// 		},
-// 		post = {
-// 			name:'Eikema reintegratie',
-// 			paragraph: 'bitches bitch like to bitch about those bitches',
-// 			images:'bitches bitch'
-// 		}
-// 	];
+var stats = [ 
+	{
+		name: 'Git',
+		score: 70
+	},
+	{
+		name: 'SASS',
+		score: 50
+	},
+	{
+		name: 'Node.js',
+		score: 90
+	},
+	{
+		name: 'Express.js',
+		score: 30
+	},
+	{
+		name: 'javascript',
+		score: 40
+	},
+];
+var dataStats= [];
+for (var i = 0, len = stats.length; i < len; i++) {
+	dataStats.push(stats[i]);
+}
 
-// for (var i = 0, len = posts.length; i < len; i++) {
-// 	posts[i];
-// 	console.log(post[i]);
-// 	postid.push(posts[i]);
-// 	console.log(posts[1].name);
-// }; 
 
-// setTimeout('window.location.reload();', 60000);
-// var source = $('datavis-template').html();
-// var template = Handlebars.compile(source);
-// var data = added;
-
+var x = d3.scale.linear()
+    .domain([ 0, d3.max(dataStats)])
+    .range([ 0, 500]);
+var scoreStats = [];
+for (var i = 0, len = dataStats.length; i < len; i++) {
+	scoreStats.push(dataStats[i].score);
+	
+}
+console.log(scoreStats);
+d3.select(".block-list__tools-item")
+		.selectAll("div")
+			.data(scoreStats)
+		.enter().append("div")
+			.style("width", function(d) {return x(d) + "px"});
 // var x = d3.scale.linear()
 //     .domain([ 0, d3.max(allValues)])
 //     .range([ 0, 250]);
