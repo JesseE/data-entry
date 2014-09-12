@@ -15,27 +15,29 @@
         <!-- endbuild -->
     </head>
     <body>
-        <nav class="nav--off-window">
-                <ul class="nav__list">
-                    <a href="/"><li class="active">Home</li></a>
-                    <a href="/"><li>About</li></a>
-                    <a href="/"><li>Contact</li></a>
-                </ul>
-            </nav>
-        <header class="header">
-            <nav class="nav">
-                <div class="nav__button">
-                    <div class="nav__button-container">
-                        <div class="nav__button-bar"></div>
-                        <div class="nav__button-bar"></div>
-                        <div class="nav__button-bar"></div>
-                    </div>
-                </div>
-            </nav>
-            <div class="header__bg">
-                <div class="header__brand"></div>
+<nav class="nav--off-window">
+        <ul class="nav__list">
+            <a href="/"><li class="active">Home</li></a>
+            <a href="/"><li>About</li></a>
+            <a href="/"><li>Contact</li></a>
+        </ul>
+    </nav>
+<header class="header">
+    <nav class="nav">
+        <div class="nav__button">
+            <div class="nav__button-container">
+                <div class="nav__button-bar"></div>
+                <div class="nav__button-bar"></div>
+                <div class="nav__button-bar"></div>
             </div>
-        </header>
+        </div>
+    </nav>
+    {{#if headbg}}
+    <div class="header__bg">
+        <div class="header__brand"></div>
+    </div>
+    {{/if}}
+</header>
         <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->      

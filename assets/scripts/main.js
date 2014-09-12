@@ -16,100 +16,69 @@ $('.nav').click(function(){
 	}
 });
 var mode = 2;
-$('.block-item').click(function(){	
-	var id = $(this).attr('id');
+// $('.block-item').click(function(){	
+// 	var id = $(this).attr('id');
 	
-	console.log(id + '  the value = '+ mode);
+// 	console.log(id + '  the value = '+ mode);
 	
-	switch (mode) {
-		case 2:	
-			$('.block-item').hide();
-			$(this).show();
-			console.log('vanish');
-			mode = 3;
-		break;
-		case 3:
-		$('.block-item').show();
-			console.log('appear');
-			mode = 2;
-		break;
-	}
-});
+// 	switch (mode) {
+// 		case 2:	
+// 			$('.block-item').hide();
+// 			$(this).show();
+// 			console.log('vanish');
+// 			mode = 3;
+// 		break;
+// 		case 3:
+// 		$('.block-item').show();
+// 			console.log('appear');
+// 			mode = 2;
+// 		break;
+// 	}
+// });
 
-// var stats = [ 
-// 	{
-// 		name: 'Git', 
-// 		score: 70
-// 	},
-// 	{
-// 		name: 'SASS',
-// 		score: 50
-// 	},
-// 	{
-// 		name: 'Node.js',
-// 		score: 90
-// 	},
-// 	{
-// 		name: 'Express.js',
-// 		score: 30
-// 	},
-// 	{
-// 		name: 'javascript',
-// 		score: 40
-// 	},
-// ];
-// var dataStats= [];
-// for (var i = 0, len = stats.length; i < len; i++) {
-// 	dataStats.push(stats[i]);
-// }
-// var scoreStats = [];
-// for (var i = 0, len = dataStats.length; i < len; i++) {
-// 	scoreStats.push(dataStats[i].score);
-	
-// }
+var data = [
+	{name: "GIT", score: 4},
+ 	{name: "Javascript", score: 8},
+  	{name: "SASS", score: 8},
+   	{name: "Node", score: 16}
+];
 
-// var STATSC = [50, 30, 60, 70];
-
-// var x = d3.scale.linear()
-//     .domain([ 0, d3.max(STATSC)])
-//     .range([ 0, 500]);
-
-// console.log(STATSC);
-
-// 	  d3.select(".about")
-// 		.selectAll("div")
-// 			.data(STATSC)
-// 		.enter().append("div")
-// 			.style("width", function(d) {return x(d) + "px";})
-// 			.style("height", "10px")
-// 			.style("margin", "1em")
-// 			.style("background","#344E58");
-var data = [4, 8, 15, 16, 23, 42];
+var dataScore = [];
+var dataName = [];
+for (var i = 0, len = data.length; i < len; i ++){
+	data[i];
+	dataScore.push(data[i].score);
+	dataName.push(data[i].name);
+}
+console.log(dataName);
 
 var width = 420,
     barHeight = 20;
 
 var x = d3.scale.linear()
-    .domain([0, d3.max(data)])
+    .domain([0, d3.max(dataScore)])
     .range([0, width]);
 
-var chart = d3.select(".about")
+var chart = d3.select(".block-list--tools-container")
     .attr("width", width)
-    .attr("height", barHeight * data.length);
+    .attr("height", barHeight * dataScore.length);
 
 var bar = chart.selectAll("g")
-    .data(data)
+    .data(dataScore)
   .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; });
+    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
+    .attr("fill", "white");
 
 bar.append("rect")
     .attr("width", x)
     .attr("height", barHeight - 1);
 
 bar.append("text")
-    .attr("x", function(d) { return x(d) - 3; })
+    .attr("x", function(d) { return -100; })
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
+    .attr("class", "block-list--tools-container__bar")
+    .data(dataName)
     .text(function(d) { return d; });
 
 // var x = d3.scale.linear()

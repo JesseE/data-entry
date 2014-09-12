@@ -37,7 +37,7 @@ section.menu-active{
 //this has to be refactored
 .block-image {
 	&:hover{opacity:0.8;}
-	position:relative; float: left; -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);	
+	position:relative; float: left; -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);-moz-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
 	@include bp (med) {
 		margin: 0 10%;
 		&.fourth,&.fifth,&.sixth{margin: 0 10%;}
@@ -98,8 +98,8 @@ section.menu-active{
 	p{color:grey;}
 }
 .block-container{width:100%;}
-.block-container__item{width: 100%;margin: 0 auto;background:lightgrey;}
-.block-container__item-container{ float: left; width:30%; background: #C0D1D8; border-right: 2px solid white; 
+.block-container__item{width: 80%;margin: 0 auto;background:lightgrey;}
+.block-container__item-image{ float: left; width:30%; margin:10px; background: #C0D1D8; border-right: 2px solid white; 
 	@include bp(med) {
 		width: 100%; margin: 68px 0 0 0;
 	}
@@ -121,7 +121,11 @@ section.menu-active{
 .block-list__tools-item{
 	div{height:10px;margin: 10px;background: crimson;}
 }
-
+.block-list--tools-container{
+	float: right;
+	margin: 50px auto;
+	width: 50%;
+}
 
 /*------------------------------------*\
     $GRID
