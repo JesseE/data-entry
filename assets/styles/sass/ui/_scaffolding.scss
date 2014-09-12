@@ -101,7 +101,7 @@ section.menu-active{
 .block-container__item{width: 80%;margin: 0 auto;background:lightgrey;}
 .block-container__item-image{ float: left; width:30%; margin:10px; background: #C0D1D8; border-right: 2px solid white; 
 	@include bp(med) {
-		width: 100%; margin: 68px 0 0 0;
+		width: 100%; margin: 10px 0 0 0;
 	}
 	img{ float: right;margin: 25px;
 		@include bp(med){
@@ -111,9 +111,9 @@ section.menu-active{
 
 }
 .block-description{
-	float: left; width: 50%;/* margin: 8%; */height: 403px;	padding-left: 100px; background: #527B8B; line-height: 71px; border-left: 9px solid white;
+	float: left; width: 50%;margin: 10px; height: 403px; padding-left: 100px; background: #527B8B; line-height: 71px; border-left: 9px solid white;
 	@include bp(med){
-		float: left; width: 81%; margin: 8%; min-height: 400px;	padding-left: 39px;	line-height: 30px;
+		float: left; width: 81%;  min-height: 400px;	padding-left: 39px;	line-height: 30px;
 	}
 	h1{color:white;}
 	p{color:white;}
@@ -122,9 +122,10 @@ section.menu-active{
 	div{height:10px;margin: 10px;background: crimson;}
 }
 .block-list--tools-container{
-	float: right;
-	margin: 50px auto;
-	width: 50%;
+	float: right; margin: 50px auto; width: 50%;
+	@include bp (med) {
+		margin: 10px auto; width: 90%;	
+	}
 }
 
 /*------------------------------------*\
