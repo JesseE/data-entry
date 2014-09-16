@@ -40,7 +40,7 @@ var header = {'user-agent': 'node.js'};
 var commitsHash = [];
 var commitContainer = [];
 var gitStats = [];
-commitsHash.length = 20;
+commitsHash.length = 30;
 
 getAllCommits();
 
@@ -79,23 +79,23 @@ app.get('/', function(request, response, next) {
         maps: true,
         helpers:{
             added: function() {
-                if(gitStats.length > 15) {
+                if(gitStats.length > 25) {
                     var added = [];
                     for ( var i = 0, len = gitStats.length; i < len; i ++ ){
                         added.push(gitStats[i].additions);
                     };
-                    if(added.length > 15){
+                    if(added.length > 25){
                         return added;
                     }
                 }
             },
             removed: function() {
-                if(gitStats.length > 15) {
+                if(gitStats.length > 25) {
                     var removed = [];
                     for(var i = 0, len = gitStats.length; i < len; i ++ ){
                         removed.push(gitStats[i].deletions);
                     }
-                    if(removed.length > 15) {
+                    if(removed.length > 25) {
                         return removed;
                     }
 

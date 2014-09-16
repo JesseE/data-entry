@@ -94,7 +94,7 @@ section.menu-active{
 }
 .about{
 	float:left; width: 100%; background-color: #527B8B; text-align:center;
-	h1 { margin: 30px auto; color: white; }
+	h1 { margin: 30px auto;float:left;width:100%; color: white; }
 	p{color:grey;}
 }
 .block-container{width:100%;}
@@ -127,7 +127,31 @@ section.menu-active{
 		margin: 10px auto; width: 90%;	
 	}
 }
-.added {background-color: black; height: 10px;}
+.git-feed{
+	float:left;
+	width: 100%;
+	height: 900px;
+	margin-left:-200px;
+	transform:rotate(90deg);
+	@include bp(med){
+		transform: rotate(0deg);
+		height: 420px;
+		margin-left:0;
+	}	
+}
+.removed{
+	transform:rotate(180deg);
+	@include bp(med){
+		width:40%;
+	}
+}
+.added{
+	@include bp(med){
+		width: 40%;
+	}
+}
+
+.git-feed.added rect{background-color: black; }
 /*------------------------------------*\
     $GRID
 \*------------------------------------*/

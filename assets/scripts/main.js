@@ -81,7 +81,7 @@ bar.append("text")
     .data(dataName)
     .text(function(d) { return d; });
 
-var gitData =  JSON.stringify(dataZ);
+var gitData = addData;
 console.log(gitData);
 
 var x2 = d3.scale.linear()
@@ -100,6 +100,26 @@ var barB = chartZ.selectAll("g")
 
 barB.append("rect")
     .attr("width", x2)
+    .attr("height", barHeight - 1);
+
+var gitData2 = removedData;
+var minWidth = 420;
+var x3 = d3.scale.linear()
+    .domain([0,d3.max(gitData2)])
+    .range([0,minWidth ]);
+
+var chartX = d3.select(".git-feed .removed")
+    .attr("width", 420)
+    .attr("height", barHeight * gitData2.length);
+
+var barC = chartX.selectAll("g")
+    .data(gitData2)
+  .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
+    .attr("fill", "white");
+
+barC.append("rect")
+    .attr("width", x3)
     .attr("height", barHeight - 1);
 
 // var x = d3.scale.linear()
