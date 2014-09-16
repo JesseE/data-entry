@@ -441,30 +441,30 @@ html, body {
   /* line 130, sass/ui/_scaffolding.scss */
   .git-feed {
     transform: rotate(0deg);
-    height: 420px;
+    height: 500px;
     margin-left: 0;
   }
 }
 
-/* line 142, sass/ui/_scaffolding.scss */
+/* line 136, sass/ui/_scaffolding.scss */
 .removed {
   transform: rotate(180deg);
 }
 @media (max-width: 48em) {
-  /* line 142, sass/ui/_scaffolding.scss */
+  /* line 136, sass/ui/_scaffolding.scss */
   .removed {
     width: 40%;
   }
 }
 
 @media (max-width: 48em) {
-  /* line 148, sass/ui/_scaffolding.scss */
+  /* line 142, sass/ui/_scaffolding.scss */
   .added {
     width: 40%;
   }
 }
 
-/* line 154, sass/ui/_scaffolding.scss */
+/* line 148, sass/ui/_scaffolding.scss */
 .git-feed.added rect {
   background-color: black;
 }
