@@ -1075,6 +1075,7 @@ body {
   .nav--secundairy {
     float: left;
     width: 30%;
+    left: 100px;
   }
 }
 /* line 59, sass/ui/_navs.scss */
