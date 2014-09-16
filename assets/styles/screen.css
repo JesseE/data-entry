@@ -1074,17 +1074,22 @@ body {
   /* line 55, sass/ui/_navs.scss */
   .nav--secundairy {
     float: left;
-    width: 30%;
-    left: 100px;
+    width: 40%;
+  }
+  /* line 58, sass/ui/_navs.scss */
+  .nav--secundairy .nav__list {
+    left: 85px;
+    top: -250px;
+    width: 100%;
   }
 }
-/* line 59, sass/ui/_navs.scss */
+/* line 60, sass/ui/_navs.scss */
 .nav--secundairy ul {
   margin: 100% 0;
   padding: 0;
   text-align: center;
 }
-/* line 61, sass/ui/_navs.scss */
+/* line 62, sass/ui/_navs.scss */
 .nav--secundairy ul li {
   display: inline-block;
   width: 100%;
@@ -1093,22 +1098,22 @@ body {
   list-style-type: none;
   text-align: center;
 }
-/* line 63, sass/ui/_navs.scss */
+/* line 64, sass/ui/_navs.scss */
 .nav--secundairy ul li:hover {
   background: white;
   color: grey;
 }
-/* line 64, sass/ui/_navs.scss */
+/* line 65, sass/ui/_navs.scss */
 .nav--secundairy ul li a {
   text-decoration: none;
 }
 
-/* line 69, sass/ui/_navs.scss */
+/* line 70, sass/ui/_navs.scss */
 .nav__list {
   margin-top: 100%;
 }
 
-/* line 70, sass/ui/_navs.scss */
+/* line 71, sass/ui/_navs.scss */
 .nav__button {
   position: absolute;
   left: 25px;
@@ -1116,20 +1121,20 @@ body {
   padding: 5px;
 }
 
-/* line 72, sass/ui/_navs.scss */
+/* line 73, sass/ui/_navs.scss */
 .nav__button-container {
   height: 50px;
   background: #383d3f;
 }
 
-/* line 74, sass/ui/_navs.scss */
+/* line 75, sass/ui/_navs.scss */
 .nav__button-bar {
   width: 65px;
   height: 10px;
   margin: 10px 0;
   background: white;
 }
-/* line 75, sass/ui/_navs.scss */
+/* line 76, sass/ui/_navs.scss */
 .nav__button-bar:first-child {
   margin: 0 0 10px 0;
 }
