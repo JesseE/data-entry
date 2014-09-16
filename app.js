@@ -9,7 +9,7 @@ var port = 3000;
 var express = require('express');
 var router = express.Router();
 var unirest = require('unirest');
-var exphbs = require('express-handlebars');
+var exphbs = require('express3-handlebars');
 
 // For gzip compression
 app.use(express.compress());
