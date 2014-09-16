@@ -17,7 +17,7 @@
     <body>
 <nav class="nav--off-window">
         <ul class="nav__list">
-            <a href="/"><li class="active">Home</li></a>
+            <a href="/#projects" class="active"><li class="active">Projects</li></a>
             <a href="#about-me"><li>About</li></a>
             <a href="#contact"><li>Contact</li></a>
         </ul>
@@ -32,6 +32,16 @@
             </div>
         </div>
     </nav>
+    <nav class="nav--secundairy">
+        <ul class="nav__list">
+            <a href="/post-1" class="active"><li>Datavisualisatie</li></a>
+            <a href="/post-2" class="active"><li>Resizer</li></a>
+            <a href="/post-3" class="active"><li>Melkweg</li></a>
+            <a href="/post-4" class="active"><li>Score App</li></a>
+            <a href="/post-5" class="active"><li>Eikema Reintegratie</li></a>
+            <a href="/post-6" class="active"><li>Klassiekwijzer</li></a>
+        </ul>
+    </nav>
     {{#if headbg}}
     <div class="header__bg">
         <div class="header__brand"></div>
@@ -42,7 +52,7 @@
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->      
         {{{ body }}}
-        <footer class="footer" id="contact">
+        <footer class="banner--footer" id="contact">
             <h1>Contact</h1>
             <p>Kopje koffie samen drinken?</p>
             {{#if maps}}

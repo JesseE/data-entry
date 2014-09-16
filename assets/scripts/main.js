@@ -15,6 +15,22 @@ $('.nav').click(function(){
 			break;
 	}
 });
+$('a.active').hover(function(){
+    switch (value) {
+        case 0 :
+            $('.nav--secundairy').hide();
+            $('header, section, footer').removeClass('menu-active');
+            value = 1;
+            console.log('show');
+            break;
+        case 1 :
+            $('.nav--secundairy').show();
+            $('header, section, footer').addClass('menu-active');
+            value = 0;
+            console.log('hide');
+            break;
+    }
+});
 var mode = 2;
 // $('.block-item').click(function(){	
 // 	var id = $(this).attr('id');
@@ -52,7 +68,7 @@ for (var i = 0, len = data.length; i < len; i ++){
 }
 console.log(dataName);
 
-var width = 420,
+var width = 320,
     barHeight = 20;
 
 var x = d3.scale.linear()
@@ -74,7 +90,7 @@ bar.append("rect")
     .attr("height", barHeight - 1);
 
 bar.append("text")
-    .attr("x", function(d) { return -100; })
+    .attr("x", function(d) { return  width-500; })
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
     .attr("class", "block-list--tools-container__bar")
@@ -103,13 +119,13 @@ barB.append("rect")
     .attr("height", barHeight - 1);
 
 var gitData2 = removedData;
-var minWidth = 420;
+var minWidth = 320;
 var x3 = d3.scale.linear()
     .domain([0,d3.max(gitData2)])
     .range([0,minWidth ]);
 
 var chartX = d3.select(".git-feed .removed")
-    .attr("width", 420)
+    .attr("width", 320)
     .attr("height", barHeight * gitData2.length);
 
 var barC = chartX.selectAll("g")
