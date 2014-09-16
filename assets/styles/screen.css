@@ -440,7 +440,7 @@ html, body {
 @media (max-width: 48em) {
   /* line 130, sass/ui/_scaffolding.scss */
   .git-feed {
-    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
     height: 500px;
     margin-left: 0;
   }
