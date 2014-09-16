@@ -352,7 +352,7 @@ html, body {
 .block-container__item-image {
   float: left;
   width: 30%;
-  margin: 10px;
+  /*margin:10px;*/
   background: #C0D1D8;
   border-right: 2px solid white;
 }
@@ -425,6 +425,12 @@ html, body {
     margin: 10px auto;
     width: 90%;
   }
+}
+
+/* line 130, sass/ui/_scaffolding.scss */
+.added {
+  background-color: black;
+  height: 10px;
 }
 
 /*------------------------------------*\

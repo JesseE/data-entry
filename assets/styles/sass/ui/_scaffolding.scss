@@ -99,7 +99,7 @@ section.menu-active{
 }
 .block-container{width:100%;}
 .block-container__item{width: 80%;margin: 0 auto;background:lightgrey;}
-.block-container__item-image{ float: left; width:30%; margin:10px; background: #C0D1D8; border-right: 2px solid white; 
+.block-container__item-image{ float: left; width:30%; /*margin:10px;*/ background: #C0D1D8; border-right: 2px solid white; 
 	@include bp(med) {
 		width: 100%; margin: 10px 0 0 0;
 	}
@@ -127,7 +127,7 @@ section.menu-active{
 		margin: 10px auto; width: 90%;	
 	}
 }
-
+.added {background-color: black; height: 10px;}
 /*------------------------------------*\
     $GRID
 \*------------------------------------*/

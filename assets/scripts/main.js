@@ -81,6 +81,27 @@ bar.append("text")
     .data(dataName)
     .text(function(d) { return d; });
 
+var gitData =  JSON.stringify(dataZ);
+console.log(gitData);
+
+var x2 = d3.scale.linear()
+    .domain([0, d3.max(gitData)])
+    .range([0, width]);
+
+var chartZ = d3.select(".git-feed .added")
+    .attr("width", width)
+    .attr("height", barHeight * gitData.length);
+
+var barB = chartZ.selectAll("g")
+    .data(gitData)
+  .enter().append("g")
+    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
+    .attr("fill", "white");
+
+barB.append("rect")
+    .attr("width", x2)
+    .attr("height", barHeight - 1);
+
 // var x = d3.scale.linear()
 //     .domain([ 0, d3.max(allValues)])
 //     .range([ 0, 250]);
