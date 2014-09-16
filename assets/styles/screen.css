@@ -1069,13 +1069,11 @@ body {
   .nav--secundairy {
     float: left;
     width: 40%;
-    left: 85px;
-    top: -250px;
   }
   /* line 58, sass/ui/_navs.scss */
-  .nav--secundairy .nav__list li {
+  .nav--secundairy .nav__list {
     left: 85px;
-    top: -250px;
+    top: -180px;
     width: 100%;
   }
 }
