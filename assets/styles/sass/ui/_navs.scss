@@ -55,7 +55,7 @@
 .nav--secundairy{display:none;z-index: 2; top: 0; left: 115px;position: fixed; width: 165px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
 	@include bp(med){
 		float: left; width: 40%;
-		.nav__list li{left: 85px; top: -250px; width: 100%}
+		.nav__list{left: 85px; top: -250px; width: 100%}
 	}
 	ul{
 		margin: 100% 0; padding: 0;text-align:center;
