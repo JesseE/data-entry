@@ -15,70 +15,70 @@
         <!-- endbuild -->
     </head>
     <body>
-<nav class="nav--off-window">
+    <nav class="nav--off-window">
         <ul class="nav__list">
             <a href="/#projects" class="active"><li class="active">Projects</li></a>
             <a href="/#about-me"><li>About</li></a>
             <a href="/#contact"><li>Contact</li></a>
         </ul>
     </nav>
-<header class="header">
-    <nav class="nav">
-        <div class="nav__button">
-            <div class="nav__button-container">
-                <div class="nav__button-bar"></div>
-                <div class="nav__button-bar"></div>
-                <div class="nav__button-bar"></div>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__button">
+                <div class="nav__button-container">
+                    <div class="nav__button-bar"></div>
+                    <div class="nav__button-bar"></div>
+                    <div class="nav__button-bar"></div>
+                </div>
             </div>
+        </nav>
+        <nav class="nav--secundairy">
+            <ul class="nav__list">
+                <a href="/post-1" class="active"><li>Datavisualisatie</li></a>
+                <a href="/post-2" class="active"><li>Resizer</li></a>
+                <a href="/post-3" class="active"><li>Melkweg</li></a>
+                <a href="/post-4" class="active"><li>Score App</li></a>
+                <a href="/post-5" class="active"><li>Eikema Reintegratie</li></a>
+                <a href="/post-6" class="active"><li>Klassiekwijzer</li></a>
+            </ul>
+        </nav>
+        {{#if headbg}}
+        <div class="header__bg">
+            <div class="header__brand"></div>
         </div>
-    </nav>
-    <nav class="nav--secundairy">
-        <ul class="nav__list">
-            <a href="/post-1" class="active"><li>Datavisualisatie</li></a>
-            <a href="/post-2" class="active"><li>Resizer</li></a>
-            <a href="/post-3" class="active"><li>Melkweg</li></a>
-            <a href="/post-4" class="active"><li>Score App</li></a>
-            <a href="/post-5" class="active"><li>Eikema Reintegratie</li></a>
-            <a href="/post-6" class="active"><li>Klassiekwijzer</li></a>
-        </ul>
-    </nav>
-    {{#if headbg}}
-    <div class="header__bg">
-        <div class="header__brand"></div>
-    </div>
-    {{/if}}
-</header>
-        <!--[if lt IE 10]>
-            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->      
-        {{{ body }}}
-        <footer class="banner--footer" id="contact">
-            <h1>Contact</h1>
-            <p>Kopje koffie samen drinken?</p>
-            {{#if maps}}
-            <div class="maps">    
-                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.136148872208!2d4.919222299999995!3d52.34981589999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60978b3449359%3A0xd2cfacd67f71c1e7!2sEerste+Ringdijkstraat%2C+1097+Amsterdam!5e0!3m2!1snl!2snl!4v1409873535465" width="800" height="600" frameborder="0" style="border:0"></iframe>
-            </div>
-            {{/if}}
-        </footer>
-         <!-- build:js(assets) scripts/scripts.js -->
-        <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="/assets/bower_components/d3/d3.min.js"></script>
-        <script type="text/javascript"> 
-            var addData = [{{added}}];
-            var removedData = [{{removed}}];
-        </script>
-        <script type="text/javascript" src="/assets/scripts/main.js"></script>
-        <!-- endbuild -->
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+        {{/if}}
+    </header>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->      
+    {{{ body }}}
+    <footer class="banner--footer" id="contact">
+        <h1>Contact</h1>
+        <p>Kopje koffie drinken?</p>
+        {{#if maps}}
+        <div class="maps">    
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.136148872208!2d4.919222299999995!3d52.34981589999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60978b3449359%3A0xd2cfacd67f71c1e7!2sEerste+Ringdijkstraat%2C+1097+Amsterdam!5e0!3m2!1snl!2snl!4v1409873535465" width="800" height="600" frameborder="0" style="border:0"></iframe>
+        </div>
+        {{/if}}
+    </footer>
+     <!-- build:js(assets) scripts/scripts.js -->
+    <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/assets/bower_components/d3/d3.min.js"></script>
+    <script type="text/javascript"> 
+        var addData = [{{added}}];
+        var removedData = [{{removed}}];
+    </script>
+    <script type="text/javascript" src="/assets/scripts/main.js"></script>
+    <!-- endbuild -->
+    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+    <script>
+        (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+        function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+        e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+        e.src='//www.google-analytics.com/analytics.js';
+        r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+        ga('create','UA-XXXXX-X');ga('send','pageview');
+    </script>
 
     </body>
 </html>

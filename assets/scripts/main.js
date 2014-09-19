@@ -97,6 +97,9 @@ bar.append("text")
     .data(dataName)
     .text(function(d) { return d; });
 
+
+
+
 var gitData = addData;
 console.log(gitData);
 
