@@ -473,6 +473,8 @@ html, body {
 
 /* line 139, sass/ui/_scaffolding.scss */
 .git-feed__description {
+  position: relative;
+  z-index: 0;
   transform: rotate(-90deg);
 }
 @media (max-width: 48em) {
@@ -481,13 +483,13 @@ html, body {
     transform: rotate(0deg);
   }
 }
-/* line 144, sass/ui/_scaffolding.scss */
+/* line 145, sass/ui/_scaffolding.scss */
 .git-feed__description h2 {
   margin: 100px;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 144, sass/ui/_scaffolding.scss */
+  /* line 145, sass/ui/_scaffolding.scss */
   .git-feed__description h2 {
     margin: 10px;
     color: white;
@@ -497,20 +499,27 @@ html, body {
   }
 }
 
+/* line 152, sass/ui/_scaffolding.scss */
+svg.removed {
+  position: relative;
+  z-index: 1;
+}
 @media (max-width: 48em) {
-  /* line 151, sass/ui/_scaffolding.scss */
-  .removed {
+  /* line 152, sass/ui/_scaffolding.scss */
+  svg.removed {
     width: 40%;
   }
 }
 
-/* line 157, sass/ui/_scaffolding.scss */
-.added {
+/* line 158, sass/ui/_scaffolding.scss */
+svg.added {
+  position: relative;
+  z-index: 1;
   transform: rotate(180deg);
 }
 @media (max-width: 48em) {
-  /* line 157, sass/ui/_scaffolding.scss */
-  .added {
+  /* line 158, sass/ui/_scaffolding.scss */
+  svg.added {
     width: 40%;
   }
 }

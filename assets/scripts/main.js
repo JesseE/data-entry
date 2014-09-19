@@ -1,3 +1,4 @@
+// nav functionality
 var value = 0;
 $('.nav').click(function(){
 	switch (value) {
@@ -32,25 +33,8 @@ $('a.active').hover(function(){
     }
 });
 var mode = 2;
-// $('.block-item').click(function(){	
-// 	var id = $(this).attr('id');
-	
-// 	console.log(id + '  the value = '+ mode);
-	
-// 	switch (mode) {
-// 		case 2:	
-// 			$('.block-item').hide();
-// 			$(this).show();
-// 			console.log('vanish');
-// 			mode = 3;
-// 		break;
-// 		case 3:
-// 		$('.block-item').show();
-// 			console.log('appear');
-// 			mode = 2;
-// 		break;
-// 	}
-// });
+
+// skills visualisation
 
 var data = [
 	{name: "GIT", score: 4},
@@ -97,8 +81,7 @@ bar.append("text")
     .data(dataName)
     .text(function(d) { return d; });
 
-
-
+// git activity visualisation
 
 var gitData = addData;
 console.log(gitData);
@@ -115,7 +98,16 @@ var barB = chartZ.selectAll("g")
     .data(gitData)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
-    .attr("fill", "white");
+    .attr("fill", "white")
+        .on("mouseover", function(d) {
+        console.log(this);
+        d3.select(this)
+            .style("fill", "#71B0C2")
+    })
+    .on("mouseout", function(d) {
+        d3.select(this)
+            .style("fill", "white")
+    });
 
 barB.append("rect")
     .attr("width", x2)
@@ -135,61 +127,22 @@ var barC = chartX.selectAll("g")
     .data(gitData2)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
-    .attr("fill", "white");
+    .attr("fill", "white")
+    .on("mouseover", function(d) {
+        console.log(this);
+        d3.select(this)
+            .style("fill", "#A61B0C")
+            .append("div")
+            .text(function(d){ return "comment:" + d;})
+    })
+    .on("mouseout", function(d) {
+        d3.select(this)
+            .style("fill", "white")
+
+        d3.selectAll("g div")
+            .remove();
+    });
 
 barC.append("rect")
     .attr("width", x3)
     .attr("height", barHeight - 1);
-
-// var x = d3.scale.linear()
-//     .domain([ 0, d3.max(allValues)])
-//     .range([ 0, 250]);
-
-//   d3.select(".removed")
-//   .selectAll("div")
-//     .data(additions)
-//   .enter().append("div")
-//     .style("width", function(d) {  return x(d) + "px"; })
-//      .on("mouseover", function(d){
-//         d3.select(this)
-//           .append("span")
-//           .style("position","absolute")
-//           .style("color","white")
-//           .text(function(d){ return "lines added: "+ d + "author:" + author;})
-//     })
-//     .on("mouseout", function(d){
-//         d3.selectAll("span")
-//           .remove();
-//     });
-
-// d3.select(".added")
-//   .selectAll("div")
-//     .data(removals)
-//   .enter().append("div")
-//     .style("width", function(d) { return x(d) + "px"; })
-//     .on("mouseover", function(d){
-//       d3.select(this)
-//         .append("span")
-//         .style("position","absolute")
-//         .style("color","white")
-//         .text(function(d) { return "lines removed: "+ d;});
-//     })
-//     .on("mouseout", function(d){
-//       d3.selectAll("span")
-//         .remove();
-//     });
-
-// // d3.select(".author")
-// //   .selectAll("div")
-// //     .data(author)
-// //   .enter().append("p");
-
-// // console.log('comments' + comments);
-// console.log('added ' + additions);
-// console.log('removed ' + removals);
-// console.log('all' + allValues);
-// // this didnt work because it wasnt renderd as an string.
-// // the fix was to create a string out of the variables author.
-// // what i want
-// // [ {name: author, name: author, name: author, name: author} ]
-// console.log(author);
