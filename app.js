@@ -39,22 +39,23 @@ var header = {'user-agent': 'node.js'};
 var commitsHash = [];
 var commitContainer = [];
 var gitStats = [];
-commitsHash.length = 24;
+var gitMessage = [];
+commitsHash.length = 30;
 
 getAllCommits();
-
+// get all commit hashes
 function getAllCommits (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?sha=master').auth({
     user: username,
     pass: password,
     sendImmediately: true
 }).headers(header).end(function(response){
     for(var i = 0, len = commitsHash.length; i < len; i ++ ){
-        commitContainer.push(response.body[i].sha);    
+        commitContainer.push(response.body[i].sha);
     }
     getAllStats();    
     });
 };
-
+//addtions deletions total adjustments in a commit
 function getAllStats () { 
     for(var i = 0, len = commitsHash.length; i < len; i ++ ){
         unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
@@ -65,8 +66,20 @@ function getAllStats () {
             gitStats.push(response.body.stats);   
         });
     };
+    getAllMessage();
 };
-
+// commit comments
+function getAllMessage () { 
+    for(var i = 0, len = commitsHash.length; i < len; i ++ ){
+        unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
+            user: username,
+            pass: password,
+            sendImmediately: true
+        }).headers(header).end(function(response){
+            gitMessage.push(response.body.commit.message); 
+        });
+    };
+};
 /*
  * Routes
  */
@@ -98,6 +111,11 @@ app.get('/', function(request, response, next) {
                         return removed;
                     }
 
+                }
+            },
+            comments: function() {
+                if(gitMessage.length > 19){
+                    return gitMessage;
                 }
             },
             title: function () { return 'Jesse Eikema'; },

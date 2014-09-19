@@ -132,13 +132,14 @@ var barC = chartX.selectAll("g")
         console.log(this);
         d3.select(this)
             .style("fill", "#A61B0C")
-            .append("div")
-            .text(function(d){ return "comment:" + d;})
+            .append("div span")
+            .style("color","white")
+            .style("width", 100)
+            .text(function(d){ return "comment:" + d +addedComments;});
     })
     .on("mouseout", function(d) {
         d3.select(this)
             .style("fill", "white")
-
         d3.selectAll("g div")
             .remove();
     });
