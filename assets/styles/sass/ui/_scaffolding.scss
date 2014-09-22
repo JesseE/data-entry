@@ -27,7 +27,7 @@ section.menu-active{
 	@include bp (wide){width: 85%;margin:100px 10%;}
 }
 .block-item {
-	display:block;float: left;margin: 10px auto; height: 100%; width:12.6666%; background: grey; color: white;
+	display:none;float: left;margin: 10px auto; height: 100%; width:12.6666%; background: grey; color: white;
 	&:hover{background: crimson;}
 	@include bp (med) {
 		width: 33%;
