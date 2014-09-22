@@ -985,7 +985,7 @@ body {
   .nav {
     top: 0;
     left: 0;
-    width: 93px;
+    width: 25%;
     height: 70px;
   }
   /* line 33, sass/ui/_navs.scss */
@@ -996,7 +996,7 @@ body {
   .nav .nav__button {
     left: 0px;
     top: 0;
-    margin: 5px 8px;
+    margin: 5px 1qpx;
   }
   /* line 35, sass/ui/_navs.scss */
   .nav ul {
@@ -1076,6 +1076,8 @@ body {
   .nav--secundairy {
     float: right;
     width: 30%;
+    top: 0px;
+    height: 100%;
     left: 25%;
   }
 }

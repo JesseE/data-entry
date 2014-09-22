@@ -29,9 +29,9 @@
 		}
 	}		
 	@include bp(med) { 
-		top: 0; left: 0;width: 93px; height: 70px;
+		top: 0; left: 0;width: 25%; height: 70px;
 	  	&:hover{opacity:1;}
-	  	.nav__button { left: 0px; top:0; margin: 5px 8px;}
+	  	.nav__button { left: 0px; top:0; margin: 5px 1qpx;}
 		ul{display:block; margin:0; height: 100%; background: white;
 			li{width: 100%; background: white;}
 		}
@@ -54,7 +54,7 @@
 } 
 .nav--secundairy{display:none;z-index: 2; top: 0; left: 115px; position: fixed; width: 165px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
 	@include bp(med){
-		float: right; width: 30%; left: 25%;
+		float: right; width: 30%; top: 0px; height: 100%;left: 25%;
 	}
 	ul{
 		padding: 0;text-align:center;
