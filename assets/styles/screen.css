@@ -155,7 +155,7 @@ html, body {
 
 /* line 29, sass/ui/_scaffolding.scss */
 .block-item {
-  display: none;
+  display: block;
   float: left;
   margin: 10px auto;
   height: 100%;
