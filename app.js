@@ -119,7 +119,7 @@ app.get('/', function(request, response, next) {
                 }
             },
             title: function () { return 'Jesse Eikema'; },
-            paragraph: function () { return 'bitches bitch like to RESIZE bitch about those bitches'; }
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.'; }
     }});
 });
 
@@ -128,7 +128,7 @@ app.get('/post-1', function(request, response, next) {
     response.render('partials/item' ,{
         helpers:{
             title: function () { return 'Datavisualisatie'},
-            paragraph: function () { return 'bitches bitch like to Datavisualisatie bitch about those bitches';},
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image.jpg"}
     }});
 });
@@ -136,7 +136,7 @@ app.get('/post-2', function(request, response, next) {
     response.render('partials/item',{
         helpers:{
             title: function () { return 'Resizer'; },
-            paragraph: function () { return 'bitches bitch like to RESIZE bitch about those bitches';},
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image-2.jpg"}
     }}); 
 });
@@ -144,7 +144,7 @@ app.get('/post-3', function(request, response, next) {
     response.render('partials/item',{
         helpers:{
             title: function () { return 'Melkweg'; },
-            paragraph: function () { return 'bitches bitch like to Melkweg bitch about those bitches';},
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image-3.jpg"}
     }}); 
 });
@@ -152,7 +152,7 @@ app.get('/post-4', function(request, response, next) {
     response.render('partials/item',{
         helpers:{
             title: function () { return 'Score App'; },
-            paragraph: function () { return 'bitches bitch like to Score App bitch about those bitches';},
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image-4.jpg"}
     }}); 
 });
@@ -160,7 +160,7 @@ app.get('/post-5', function(request, response, next) {
     response.render('partials/item',{
         helpers:{
             title: function () { return 'Eikema Reintegratie'; },
-            paragraph: function () { return 'bitches bitch like to Eikema Reintegratie bitch about those bitches';},
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image-5.jpg"}
     }}); 
 });
@@ -168,7 +168,7 @@ app.get('/post-6', function(request, response, next) {
     response.render('partials/item',{
         helpers:{
             title: function () { return 'Klassiekwijzer'; },
-            paragraph: function () { return 'bitches bitch like to Eikema Reintegratie bitch about those bitches';},
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image-6.jpg"}
     }}); 
 });
