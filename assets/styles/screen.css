@@ -155,7 +155,7 @@ html, body {
 
 /* line 29, sass/ui/_scaffolding.scss */
 .block-item {
-  display: none;
+  display: block;
   float: left;
   margin: 10px auto;
   height: 100%;
@@ -175,6 +175,20 @@ html, body {
 }
 
 /* line 36, sass/ui/_scaffolding.scss */
+.block-text {
+  float: left;
+  display: block;
+}
+/* line 38, sass/ui/_scaffolding.scss */
+.block-text h1 {
+  color: black;
+}
+/* line 39, sass/ui/_scaffolding.scss */
+.block-text p {
+  color: black;
+}
+
+/* line 41, sass/ui/_scaffolding.scss */
 .banner {
   float: left;
   height: 100px;
@@ -184,7 +198,7 @@ html, body {
   color: white;
   text-align: center;
 }
-/* line 38, sass/ui/_scaffolding.scss */
+/* line 43, sass/ui/_scaffolding.scss */
 .banner h1 {
   width: 100%;
   margin: 0 auto;
@@ -192,16 +206,16 @@ html, body {
   padding: 20px;
   line-height: 50px;
 }
-/* line 39, sass/ui/_scaffolding.scss */
+/* line 44, sass/ui/_scaffolding.scss */
 .banner p {
   padding: 20px;
 }
 @media (max-width: 48em) {
-  /* line 36, sass/ui/_scaffolding.scss */
+  /* line 41, sass/ui/_scaffolding.scss */
   .banner {
     margin-bottom: 0;
   }
-  /* line 41, sass/ui/_scaffolding.scss */
+  /* line 46, sass/ui/_scaffolding.scss */
   .banner h1 {
     padding: 0;
     line-height: 100px;
@@ -209,68 +223,68 @@ html, body {
 }
 
 @-moz-document url-prefix() {
-  /* line 47, sass/ui/_scaffolding.scss */
+  /* line 52, sass/ui/_scaffolding.scss */
   .block-image {
     margin: 0 !important;
   }
 }
 
-/* line 52, sass/ui/_scaffolding.scss */
+/* line 56, sass/ui/_scaffolding.scss */
 .block-image {
   position: relative;
   float: left;
   -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
   -moz-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
 }
-/* line 53, sass/ui/_scaffolding.scss */
+/* line 57, sass/ui/_scaffolding.scss */
 .block-image:hover {
   opacity: 0.8;
 }
 @media (max-width: 48em) {
-  /* line 52, sass/ui/_scaffolding.scss */
+  /* line 56, sass/ui/_scaffolding.scss */
   .block-image {
     margin: 0 20%;
   }
-  /* line 57, sass/ui/_scaffolding.scss */
+  /* line 61, sass/ui/_scaffolding.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0 20%;
   }
 }
 @media (min-width: 48em) {
-  /* line 60, sass/ui/_scaffolding.scss */
+  /* line 64, sass/ui/_scaffolding.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
-  /* line 63, sass/ui/_scaffolding.scss */
+  /* line 67, sass/ui/_scaffolding.scss */
   .block-image.fourth {
     margin: -115px 0 0 130px;
   }
-  /* line 64, sass/ui/_scaffolding.scss */
+  /* line 68, sass/ui/_scaffolding.scss */
   .block-image.fifth {
     margin: -115px 0 0 260px;
   }
-  /* line 65, sass/ui/_scaffolding.scss */
+  /* line 69, sass/ui/_scaffolding.scss */
   .block-image.sixth {
     margin: -264px 0 0 390px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 68, sass/ui/_scaffolding.scss */
+  /* line 72, sass/ui/_scaffolding.scss */
   .block-image.fourth {
     margin: -175px 0 0 188px;
   }
-  /* line 69, sass/ui/_scaffolding.scss */
+  /* line 73, sass/ui/_scaffolding.scss */
   .block-image.fifth {
     margin: -379px 563px;
   }
-  /* line 70, sass/ui/_scaffolding.scss */
+  /* line 74, sass/ui/_scaffolding.scss */
   .block-image.sixth {
     margin: -378px 938px;
   }
 }
-/* line 72, sass/ui/_scaffolding.scss */
+/* line 76, sass/ui/_scaffolding.scss */
 .block-image img {
   width: 375px;
   height: 375px;
@@ -278,40 +292,34 @@ html, body {
   margin: 0px auto;
 }
 @media (max-width: 48em) {
-  /* line 72, sass/ui/_scaffolding.scss */
+  /* line 76, sass/ui/_scaffolding.scss */
   .block-image img {
     width: 250px;
     height: 250px;
   }
 }
 @media (min-width: 64em) {
-  /* line 72, sass/ui/_scaffolding.scss */
+  /* line 76, sass/ui/_scaffolding.scss */
   .block-image img {
     width: 260px;
     height: 260px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 72, sass/ui/_scaffolding.scss */
+  /* line 76, sass/ui/_scaffolding.scss */
   .block-image img {
     width: 375px;
     height: 375px;
   }
 }
 
-/* line 85, sass/ui/_scaffolding.scss */
-.block-text {
-  float: left;
-  display: none;
-}
-
-/* line 88, sass/ui/_scaffolding.scss */
+/* line 89, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 91, sass/ui/_scaffolding.scss */
+/* line 92, sass/ui/_scaffolding.scss */
 .block-item--tools {
   height: 200px;
   width: 45%;
@@ -322,72 +330,72 @@ html, body {
   border: 1px solid white;
 }
 @media (max-width: 48em) {
-  /* line 91, sass/ui/_scaffolding.scss */
+  /* line 92, sass/ui/_scaffolding.scss */
   .block-item--tools {
     width: 85%;
   }
 }
 
-/* line 97, sass/ui/_scaffolding.scss */
+/* line 98, sass/ui/_scaffolding.scss */
 .block-item--tools__image {
   float: left;
   width: 25%;
 }
-/* line 99, sass/ui/_scaffolding.scss */
+/* line 100, sass/ui/_scaffolding.scss */
 .block-item--tools__image img {
   width: 100px;
   height: 100px;
 }
 
-/* line 101, sass/ui/_scaffolding.scss */
+/* line 102, sass/ui/_scaffolding.scss */
 .block-item--tools__text {
   width: 60%;
   float: right;
   background: #505759;
   height: 100%;
 }
-/* line 103, sass/ui/_scaffolding.scss */
+/* line 104, sass/ui/_scaffolding.scss */
 .block-item--tools__text h1 {
   padding: 10px;
   border-bottom: 1px solid grey;
 }
-/* line 104, sass/ui/_scaffolding.scss */
+/* line 105, sass/ui/_scaffolding.scss */
 .block-item--tools__text p {
   padding: 10px;
 }
 
-/* line 106, sass/ui/_scaffolding.scss */
+/* line 107, sass/ui/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
   background-color: #527B8B;
   text-align: center;
 }
-/* line 108, sass/ui/_scaffolding.scss */
+/* line 109, sass/ui/_scaffolding.scss */
 .about h1 {
   margin: 30px auto;
   float: left;
   width: 100%;
   color: white;
 }
-/* line 109, sass/ui/_scaffolding.scss */
+/* line 110, sass/ui/_scaffolding.scss */
 .about p {
   color: grey;
 }
 
-/* line 111, sass/ui/_scaffolding.scss */
+/* line 112, sass/ui/_scaffolding.scss */
 .block-container {
   width: 100%;
 }
 
-/* line 112, sass/ui/_scaffolding.scss */
+/* line 113, sass/ui/_scaffolding.scss */
 .block-container__item {
   width: 80%;
   margin: 0 auto;
   background: lightgrey;
 }
 
-/* line 113, sass/ui/_scaffolding.scss */
+/* line 114, sass/ui/_scaffolding.scss */
 .block-container__item-image {
   float: left;
   width: 30%;
@@ -395,26 +403,26 @@ html, body {
   border-right: 2px solid white;
 }
 @media (max-width: 48em) {
-  /* line 113, sass/ui/_scaffolding.scss */
+  /* line 114, sass/ui/_scaffolding.scss */
   .block-container__item-image {
     width: 100%;
     margin: 10px 0 0 0;
   }
 }
-/* line 117, sass/ui/_scaffolding.scss */
+/* line 118, sass/ui/_scaffolding.scss */
 .block-container__item-image img {
   float: right;
   margin: 25px;
 }
 @media (max-width: 48em) {
-  /* line 117, sass/ui/_scaffolding.scss */
+  /* line 118, sass/ui/_scaffolding.scss */
   .block-container__item-image img {
     float: none;
     margin: 25px 23%;
   }
 }
 
-/* line 123, sass/ui/_scaffolding.scss */
+/* line 124, sass/ui/_scaffolding.scss */
 .block-description {
   float: left;
   width: 50%;
@@ -426,7 +434,7 @@ html, body {
   border-left: 9px solid white;
 }
 @media (max-width: 48em) {
-  /* line 123, sass/ui/_scaffolding.scss */
+  /* line 124, sass/ui/_scaffolding.scss */
   .block-description {
     float: left;
     width: 81%;
@@ -435,37 +443,37 @@ html, body {
     line-height: 30px;
   }
 }
-/* line 128, sass/ui/_scaffolding.scss */
+/* line 129, sass/ui/_scaffolding.scss */
 .block-description h1 {
   color: white;
 }
-/* line 129, sass/ui/_scaffolding.scss */
+/* line 130, sass/ui/_scaffolding.scss */
 .block-description p {
   color: white;
 }
 
-/* line 132, sass/ui/_scaffolding.scss */
+/* line 133, sass/ui/_scaffolding.scss */
 .block-list__tools-item div {
   height: 10px;
   margin: 10px;
   background: crimson;
 }
 
-/* line 134, sass/ui/_scaffolding.scss */
+/* line 135, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   float: right;
   margin: 50px auto;
   width: 50%;
 }
 @media (max-width: 48em) {
-  /* line 134, sass/ui/_scaffolding.scss */
+  /* line 135, sass/ui/_scaffolding.scss */
   .block-list--tools-container {
     margin: 10px auto;
     width: 90%;
   }
 }
 
-/* line 140, sass/ui/_scaffolding.scss */
+/* line 141, sass/ui/_scaffolding.scss */
 .git-feed {
   float: left;
   width: 100%;
@@ -474,7 +482,7 @@ html, body {
   transform: rotate(90deg);
 }
 @media (max-width: 48em) {
-  /* line 140, sass/ui/_scaffolding.scss */
+  /* line 141, sass/ui/_scaffolding.scss */
   .git-feed {
     transform: rotate(0deg);
     height: 625px;
@@ -483,25 +491,25 @@ html, body {
   }
 }
 
-/* line 146, sass/ui/_scaffolding.scss */
+/* line 147, sass/ui/_scaffolding.scss */
 .git-feed__description {
   position: relative;
   z-index: 0;
   transform: rotate(-90deg);
 }
 @media (max-width: 48em) {
-  /* line 146, sass/ui/_scaffolding.scss */
+  /* line 147, sass/ui/_scaffolding.scss */
   .git-feed__description {
     transform: rotate(0deg);
   }
 }
-/* line 152, sass/ui/_scaffolding.scss */
+/* line 153, sass/ui/_scaffolding.scss */
 .git-feed__description h2 {
   margin: 100px;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 152, sass/ui/_scaffolding.scss */
+  /* line 153, sass/ui/_scaffolding.scss */
   .git-feed__description h2 {
     margin: 10px;
     color: white;
@@ -511,26 +519,26 @@ html, body {
   }
 }
 
-/* line 159, sass/ui/_scaffolding.scss */
+/* line 160, sass/ui/_scaffolding.scss */
 svg.removed {
   position: relative;
   z-index: 1;
 }
 @media (max-width: 48em) {
-  /* line 159, sass/ui/_scaffolding.scss */
+  /* line 160, sass/ui/_scaffolding.scss */
   svg.removed {
     width: 40%;
   }
 }
 
-/* line 165, sass/ui/_scaffolding.scss */
+/* line 166, sass/ui/_scaffolding.scss */
 svg.added {
   position: relative;
   z-index: 1;
   transform: rotate(180deg);
 }
 @media (max-width: 48em) {
-  /* line 165, sass/ui/_scaffolding.scss */
+  /* line 166, sass/ui/_scaffolding.scss */
   svg.added {
     width: 40%;
   }
@@ -1062,7 +1070,7 @@ body {
   display: none;
   z-index: 2;
   top: 0;
-  left: 115px;
+  left: 148px;
   position: fixed;
   width: 165px;
   height: 100%;
