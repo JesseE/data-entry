@@ -1,3 +1,0 @@
-RewriteEngine on
-RewriteCond %{HTTP_HOST} ^jesseeikema\.nl$ [NC]
-RewriteRule ^(.*)$ http://www.jesseeikema.nl/$1 [R=301,L]
