@@ -485,6 +485,7 @@ html, body {
   /* line 141, sass/ui/_scaffolding.scss */
   .git-feed {
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
     height: 625px;
     margin-left: 0;
     margin-top: 25px;
@@ -503,13 +504,13 @@ html, body {
     transform: rotate(0deg);
   }
 }
-/* line 153, sass/ui/_scaffolding.scss */
+/* line 152, sass/ui/_scaffolding.scss */
 .git-feed__description h2 {
   margin: 100px;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 153, sass/ui/_scaffolding.scss */
+  /* line 152, sass/ui/_scaffolding.scss */
   .git-feed__description h2 {
     margin: 10px;
     color: white;
@@ -519,29 +520,92 @@ html, body {
   }
 }
 
-/* line 160, sass/ui/_scaffolding.scss */
+/* line 159, sass/ui/_scaffolding.scss */
 svg.removed {
   position: relative;
   z-index: 1;
 }
 @media (max-width: 48em) {
-  /* line 160, sass/ui/_scaffolding.scss */
+  /* line 159, sass/ui/_scaffolding.scss */
   svg.removed {
     width: 40%;
   }
 }
 
-/* line 166, sass/ui/_scaffolding.scss */
+/* line 165, sass/ui/_scaffolding.scss */
 svg.added {
   position: relative;
   z-index: 1;
   transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
 }
 @media (max-width: 48em) {
-  /* line 166, sass/ui/_scaffolding.scss */
+  /* line 165, sass/ui/_scaffolding.scss */
   svg.added {
     width: 40%;
   }
+}
+
+/* line 171, sass/ui/_scaffolding.scss */
+.timeline {
+  width: 100%;
+  background: white;
+  float: left;
+}
+@media (max-width: 48em) {
+  /* line 171, sass/ui/_scaffolding.scss */
+  .timeline {
+    height: 620px;
+  }
+}
+
+/* line 179, sass/ui/_scaffolding.scss */
+.timeline__container {
+  height: 200px;
+  width: 80%;
+  margin: 50px auto;
+}
+@media (max-width: 48em) {
+  /* line 179, sass/ui/_scaffolding.scss */
+  .timeline__container {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    margin: 212px auto;
+    float: left;
+  }
+}
+
+/* line 185, sass/ui/_scaffolding.scss */
+.timeline__phase {
+  width: 100%;
+  height: 30px;
+  background: #344E58;
+  position: relative;
+  top: 100px;
+}
+
+/* line 192, sass/ui/_scaffolding.scss */
+.timeline__period {
+  background: #527B8B;
+  height: 50px;
+  width: 24%;
+  position: relative;
+  top: -53px;
+  display: inline-block;
+  float: left;
+  border: 1px solid white;
+}
+
+/* line 202, sass/ui/_scaffolding.scss */
+.timeline__tools-item {
+  background: #DE838B;
+  width: 15%;
+  height: 40px;
+  display: inline-block;
+  top: -40px;
+  position: relative;
+  float: left;
+  margin: 0 9%;
 }
 
 /*------------------------------------*\
