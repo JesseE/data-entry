@@ -128,6 +128,9 @@ section.menu-active{
 	}
 	h1{color:white;}
 	p{color:white;}
+	a{
+		li{ list-style-type: none; color: white; text-decoration:underline;}
+	}
 }
 .block-list__tools-item{
 	div{ height:10px; margin: 10px; background: crimson;}

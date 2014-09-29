@@ -89,6 +89,7 @@ app.get('/', function(request, response, next) {
     response.render('index', {  
         headbg:true,
         maps: true,
+        footer: true,
         helpers:{
             added: function() {
                 if(gitStats.length > 19) {
@@ -126,6 +127,7 @@ app.get('/', function(request, response, next) {
 // posts page
 app.get('/post-1', function(request, response, next) {
     response.render('partials/item' ,{
+        footer: true,
         helpers:{
             title: function () { return 'Datavisualisatie'},
             links: function () { return 'datavis'},
@@ -135,12 +137,14 @@ app.get('/post-1', function(request, response, next) {
 });
 app.get('/datavis', function(request, response, next) {
     response.render('partials/datavis' ,{
+        footer: true,
         helpers:{
             images: function() { return "../assets/images/placeholder-image.jpg"}
     }});
 });
 app.get('/post-2', function(request, response, next) {
     response.render('partials/item',{
+        footer: true,
         helpers:{
             title: function () { return 'Resizer'; },
             links:function() {return 'resizer';},
@@ -150,12 +154,14 @@ app.get('/post-2', function(request, response, next) {
 });
 app.get('/resizer', function(request, response, next) {
     response.render('partials/resizer',{
+        footer: false,
         helpers:{
             images: function() { return "../assets/images/placeholder-image-2.jpg"}
     }}); 
 });
 app.get('/post-3', function(request, response, next) {
     response.render('partials/item',{
+        footer: true,
         helpers:{
             title: function () { return 'Melkweg'; },
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
@@ -164,6 +170,7 @@ app.get('/post-3', function(request, response, next) {
 });
 app.get('/post-4', function(request, response, next) {
     response.render('partials/item',{
+        footer: true,
         helpers:{
             title: function () { return 'Score App'; },
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
@@ -172,6 +179,7 @@ app.get('/post-4', function(request, response, next) {
 });
 app.get('/post-5', function(request, response, next) {
     response.render('partials/item',{
+        footer: true,
         helpers:{
             title: function () { return 'Eikema Reintegratie'; },
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
@@ -180,6 +188,7 @@ app.get('/post-5', function(request, response, next) {
 });
 app.get('/post-6', function(request, response, next) {
     response.render('partials/item',{
+        footer: true,
         helpers:{
             title: function () { return 'Klassiekwijzer'; },
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},

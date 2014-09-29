@@ -150,7 +150,6 @@ barC.append("rect")
 
 //reszier
 
-
 /*
  *  Anti aliasing images
  *  Author: Jesse

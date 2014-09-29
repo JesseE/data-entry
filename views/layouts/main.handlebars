@@ -52,15 +52,17 @@
         <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->      
     {{{ body }}}
-   {{!--  <footer class="banner--footer" id="contact">
+    {{#if footer}}
+    <footer class="banner--footer" id="contact">
         <h1>Contact</h1>
-        <p>Kopje koffie drinken?</p> --}}
+        <p>Kopje koffie drinken?</p>
         {{#if maps}}
         <div class="maps">    
              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.136148872208!2d4.919222299999995!3d52.34981589999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60978b3449359%3A0xd2cfacd67f71c1e7!2sEerste+Ringdijkstraat%2C+1097+Amsterdam!5e0!3m2!1snl!2snl!4v1409873535465" width="800" height="600" frameborder="0" style="border:0"></iframe>
         </div>
         {{/if}}
- {{!--    </footer> --}}
+    </footer>
+    {{/if}}
      <!-- build:js(assets) scripts/scripts.js -->
     <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/bower_components/d3/d3.min.js"></script>
