@@ -149,7 +149,7 @@ app.get('/post-2', function(request, response, next) {
             title: function () { return 'Resizer'; },
             links:function() {return 'resizer';},
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image-2.jpg"}
+            images: function() { return "../assets/images/og_grrr.png"}
     }}); 
 });
 app.get('/resizer', function(request, response, next) {

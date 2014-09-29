@@ -21,7 +21,7 @@ section.menu-active{
 	}
 }
 .block-list{
-	width: 100%; height: 600px; margin: 100px auto;
+	width: 100%; height: 600px; /*margin: 100px auto;*/
 	@include bp (med){width: 100%;}
 	@include bp (large){width: 88%;}
 	@include bp (wide){width: 85%;margin:100px 10%;}
@@ -109,22 +109,30 @@ section.menu-active{
 	h1 { margin: 30px auto;float:left;width:100%; color: white; }
 	p{color:grey;}
 }
-.block-container{width:100%;}
-.block-container__item{width: 80%;margin: 0 auto;}
-.block-container__item-image{ float: left; width:30%; background: #C0D1D8; border-right: 2px solid white; 
-	@include bp(med) {
-		width: 100%; margin: 10px 0 0 0;
+.block-container{width:100%;position:relative; float:left; margin:auto;}
+.block-container__item{width: 80%;margin: auto;
+	@include bp(med){
+		width: 100%;
 	}
-	img{ float: right;margin: 25px;
-		@include bp(med){
-			float:none;	margin: 25px 23%;
+}
+.block-container__item-image{ float: left; width:30%; border-right: 2px solid white; 
+	@include bp(med) {
+		width: 100%;/* margin: 10px 0 0 0;*/
+		max-height: 100px;
+	}
+	img{ float: left;/*margin: 25px;*/ width: 100%;
+
+		@include bp(min-med){
+			max-width: 400px;
+			max-height: 400px;
+			// float:none;	margin: 25px 23%;
 		}
 	}	
 }
 .block-description{
-	float: left; width: 50%;margin: 10px; height: 403px; padding-left: 100px; background: #527B8B; line-height: 71px; border-left: 9px solid white;
+	float: right; width: 50%;margin: 10px; height: 403px; padding-left: 100px; background: #527B8B; line-height: 71px; /*border-left: 9px solid white;*/
 	@include bp(med){
-		float: left; width: 81%; min-height: 400px; padding-left: 39px; line-height: 30px;
+		float: left; width: 81%; min-height: 400px; padding:20px; line-height: 30px;
 	}
 	h1{color:white;}
 	p{color:white;}

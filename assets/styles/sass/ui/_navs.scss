@@ -29,7 +29,7 @@
 		}
 	}		
 	@include bp(med) { 
-		top: 0; left: 0;width: 25%; height: 70px;
+		top: 0; left: 0;width: 77px; height: 61px;
 	  	&:hover{opacity:1;}
 	  	.nav__button { left: 0px; top:0; margin: 5px 1qpx;}
 		ul{display:block; margin:0; height: 100%; background: white;
@@ -39,7 +39,7 @@
 }
 .nav--off-window{ display:none;	z-index: 2; top: 0; position: fixed; width: 148px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
 	@include bp(med){
-		float: left; width: 25%;
+		float: left; width: 77px;
 	}
 	ul{
 		margin: 100% 0; padding: 0;text-align:center;
@@ -54,7 +54,7 @@
 } 
 .nav--secundairy{display:none;z-index: 2; top: 0; left: 148px; position: fixed; width: 165px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
 	@include bp(med){
-		float: right; width: 40%; top: 0px; height: 100%;left: 25%;opacity:0.9;
+		float: right; width: 40%; top: 0px; height: 100%;left: 277px;opacity:0.9;
 		.nav__list{top: -50px; margin-top: 0;width: 100%;}
 	}
 	ul{
