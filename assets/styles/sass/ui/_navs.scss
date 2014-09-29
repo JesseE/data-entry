@@ -54,7 +54,7 @@
 } 
 .nav--secundairy{display:none;z-index: 2; top: 0; left: 148px; position: fixed; width: 165px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
 	@include bp(med){
-		float: right; width: 40%; top: 0px; height: 100%;left: 277px;opacity:0.9;
+		float: right; width: 40%; top: 0px; height: 100%;left: 77px;opacity:0.9;
 		.nav__list{top: -50px; margin-top: 0;width: 100%;}
 	}
 	ul{
