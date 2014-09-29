@@ -72,6 +72,9 @@ label {
 /**
  * ^CUSTOM FONT MIXINS 
  */
+/* ==========================================================================
+   variables
+   ========================================================================== */
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
@@ -81,6 +84,66 @@ label {
 /*------------------------------------*\
     $MIXINS
 \*------------------------------------*/
+/* ==========================================================================
+   mixins and functions
+   ========================================================================== */
+/**
+ * For converting pixels to ems
+ * Based on a 10px font-size on the html
+ * Usage:
+ * div { width: pxToEm(300); }
+ * Returns:
+ * div { width: 30em; }
+ */
+/**
+ * Color mixins (other than lighten or darken)
+*/
+/**
+ * Responsive padding (include units, so: 20px, ...)
+ * Usage:
+ * .content { @include responsive-padding($margin, $margin*2, $margin, $margin*1.5): }
+ *
+ * author: Koen
+ */
+/**
+ * For image replacement
+ */
+/**
+ * For font-sizing in rem
+ * Usage:
+ * html { font-size: 62.5%; }
+ * p { @include font-size(16); }
+ */
+/**
+ * For using breakpoints
+ * Usage:
+ * div { width: 60px;
+ *	@include breakpoint-min($small) { width: 80px; }
+ * }
+ *
+ * Pass true as a second parameter to toggle high dpi screens
+ */
+/**
+ * For targetting high dpi screens
+ * Usage:
+ * div {
+ *	width: 30px; height: 30px; background: url('img.jpg');
+ *	@include high-dpi() { background: url('image-2x.jpg'); @include background-size(30px 30px); }
+ * }
+ */
+/**
+ * For targeting old-IE
+ * Usage:
+ * div {
+ *  @include old-ie { zoom: 1; }
+ * }
+ */
+/**
+ * Calculate fluid ratio based on two dimensions (width/height)
+ * @see http://voormedia.com/blog/2012/11/responsive-background-images-with-fixed-or-fluid-aspect-ratios
+ * Usage:
+ * .header { @include fluid-ratio(800px 200px, 300px 150px); background-image: url('img/branding.png'); }
+ */
 /**
  * She’s all yours, cap’n... Begin importing your stuff here.
  */
@@ -392,7 +455,6 @@ html, body {
 .block-container__item {
   width: 80%;
   margin: 0 auto;
-  background: lightgrey;
 }
 
 /* line 114, sass/ui/_scaffolding.scss */
@@ -1370,3 +1432,910 @@ input[type=password]:focus {
 /**
  * SECTION TITLE
 */
+/* line 2, sass/ui/_resizer-input.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* line 6, sass/ui/_resizer-input.scss */
+input[type=checkbox] {
+  display: none;
+}
+
+/* line 10, sass/ui/_resizer-input.scss */
+.custom-filetype-button::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+/* line 12, sass/ui/_resizer-input.scss */
+.header-title h1 {
+  text-align: center;
+  font-size: 70px;
+  font-weight: bold;
+  color: #3C3C3B;
+  width: 366px;
+}
+
+/* line 14, sass/ui/_resizer-input.scss */
+.intro {
+  width: 100%;
+}
+
+/* line 17, sass/ui/_resizer-input.scss */
+.intro__bg {
+  background-image: url(../images/drag-and-drop.png);
+  width: 75px;
+  height: 57px;
+  margin: auto;
+  background-repeat: no-repeat;
+  position: relative;
+  top: 60px;
+}
+
+/* line 19, sass/ui/_resizer-input.scss */
+.intro__text p {
+  text-align: center;
+  color: white;
+  line-height: 200px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+/* line 22, sass/ui/_resizer-input.scss */
+.input {
+  position: relative;
+  z-index: 3;
+  width: 366px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+/* line 23, sass/ui/_resizer-input.scss */
+.input__browse {
+  width: 100%;
+  margin: 25px 0 0 0;
+  height: 85px;
+  background: #FFAE20;
+  border-radius: 5px;
+}
+/* line 24, sass/ui/_resizer-input.scss */
+.input__browse input[type="file"] {
+  height: 79px;
+  width: 100%;
+  border-radius: 5px;
+  border-bottom: white 2px solid;
+  outline: none;
+}
+/* line 25, sass/ui/_resizer-input.scss */
+.input__browse input[type="file"]:active {
+  height: 82px;
+}
+/* line 28, sass/ui/_resizer-input.scss */
+.input__browse input#file-input::before {
+  width: 100%;
+  height: 77px;
+  border-radius: 5px;
+  background: #FFD800;
+  content: 'browse';
+  font-size: 35px;
+  text-shadow: 0px 3px 0px #FFC300;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 80px;
+  display: inline-block;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: #FFF;
+}
+@media only screen and (max-width: 39.9375em) {
+  /* line 28, sass/ui/_resizer-input.scss */
+  .input__browse input#file-input::before {
+    font-size: 27px;
+  }
+}
+/* line 31, sass/ui/_resizer-input.scss */
+.input__browse input#file-input:hover::before {
+  background: #FFC300;
+}
+/* line 32, sass/ui/_resizer-input.scss */
+.input__browse input#file-input:active::before {
+  height: 81px;
+}
+
+/* line 36, sass/ui/_resizer-input.scss */
+.input-background {
+  background-image: url(../images/dimensions-background.png);
+  width: 366px;
+  height: 279px;
+}
+
+/* line 37, sass/ui/_resizer-input.scss */
+.amount {
+  padding: 35px 10px 10px 10px;
+  color: white;
+  text-align: center;
+}
+
+/* line 38, sass/ui/_resizer-input.scss */
+.dimensions {
+  display: block;
+}
+
+/* line 39, sass/ui/_resizer-input.scss */
+.crop-button {
+  width: 100px;
+  height: 45px;
+  border-radius: 5px;
+  border: none;
+  background: white;
+  box-shadow: 0 0 5px grey;
+}
+
+/* line 41, sass/ui/_resizer-input.scss */
+.input__dimensions {
+  display: none;
+  height: 94px;
+}
+/* line 43, sass/ui/_resizer-input.scss */
+.input__dimensions input {
+  outline: none;
+  width: 145px;
+  height: 45px;
+  float: left;
+  margin: 0 14px;
+  border-radius: 5px;
+  border: none;
+  box-shadow: 0px 0px 8px grey;
+  padding: 5px;
+}
+
+/* line 47, sass/ui/_resizer-input.scss */
+.input__button {
+  display: none;
+  width: 100%;
+  margin: 25px 0 0 0;
+  height: 86px;
+  background: #FFC300;
+  border-radius: 5px;
+}
+/* line 49, sass/ui/_resizer-input.scss */
+.input__button button {
+  height: 77px;
+  width: 100%;
+  border-radius: 5px;
+  background: #FFD800;
+  outline: none;
+  padding: 0;
+  border: 0 0 2px 0 solid white;
+  border-bottom: 2px solid white;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+}
+/* line 50, sass/ui/_resizer-input.scss */
+.input__button button:active {
+  height: 83px;
+}
+/* line 51, sass/ui/_resizer-input.scss */
+.input__button button:hover {
+  background: #FFC300;
+}
+/* line 53, sass/ui/_resizer-input.scss */
+.input__button p {
+  font-size: 35px;
+  text-shadow: 0px 3px 0px #FFC300;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 15px;
+  font-weight: 700;
+  color: #FFF;
+}
+/* line 54, sass/ui/_resizer-input.scss */
+.input__button .custom-checkbox::before {
+  width: 100%;
+  height: 75px;
+  border-radius: 5px;
+  background: #FFD800;
+  display: inline-block;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+}
+
+/* line 59, sass/ui/_resizer-input.scss */
+.pressed {
+  background: #FFD800 !important;
+}
+
+/* line 60, sass/ui/_resizer-input.scss */
+.active--resizer {
+  background-image: url(../images/crop_check.png);
+}
+
+/* line 61, sass/ui/_resizer-input.scss */
+.icon-label {
+  float: left;
+  width: 38px;
+  height: 38px;
+  background: #B2B2B2;
+  position: relative;
+  z-index: 1;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  top: 1px;
+  left: 2px;
+}
+
+/* line 63, sass/ui/_resizer-input.scss */
+.input__crop {
+  display: none;
+  width: 100px;
+  height: 45px;
+  margin: auto;
+  background: #EDEDED;
+  border-radius: 5px;
+  box-shadow: 0 0 8px grey;
+  border-bottom: 4px solid #B2B2B2;
+  color: #3C3C3B;
+}
+/* line 64, sass/ui/_resizer-input.scss */
+.input__crop:active {
+  background: #C6C6C6;
+  border-bottom: 1px solid #b2b2b2;
+}
+/* line 65, sass/ui/_resizer-input.scss */
+.input__crop:active > .icon-label {
+  background: #878787;
+}
+/* line 67, sass/ui/_resizer-input.scss */
+.input__crop label {
+  cursor: pointer;
+  float: right;
+  margin: 14px 0 0 0;
+  padding: 1px;
+  /* background: grey; */
+  width: 50px;
+  font-weight: bold;
+}
+/* line 69, sass/ui/_resizer-input.scss */
+.input__crop label:after {
+  z-index: 1;
+  opacity: 0;
+  content: '';
+  position: absolute;
+  width: 17px;
+  height: 9px;
+  background: transparent;
+  top: 10px;
+  left: 10px;
+  border: 3px solid white;
+  border-top: none;
+  border-right: none;
+  transform: rotate(-45deg);
+}
+/* line 71, sass/ui/_resizer-input.scss */
+.input__crop:checked + label {
+  background: yellow;
+}
+
+/* line 73, sass/ui/_resizer-input.scss */
+.ending {
+  display: none;
+  width: 100%;
+}
+
+/* line 74, sass/ui/_resizer-input.scss */
+.ending__text {
+  text-align: center;
+  color: white;
+  line-height: 250px;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+/* line 76, sass/ui/_resizer-input.scss */
+.download {
+  display: none;
+  width: 366px;
+  margin: 25px 0 0 0;
+  height: 85px;
+  background: #FFC300;
+  border-radius: 5px;
+}
+
+/* line 78, sass/ui/_resizer-input.scss */
+.download__button {
+  padding: 0;
+  border: 0;
+  height: 77px;
+  width: 100%;
+  border-radius: 5px;
+  border-bottom: white 2px solid;
+  outline: none;
+}
+/* line 79, sass/ui/_resizer-input.scss */
+.download__button:hover {
+  background: #FFC300;
+}
+/* line 80, sass/ui/_resizer-input.scss */
+.download__button:active::before {
+  background: #FFC300;
+}
+/* line 81, sass/ui/_resizer-input.scss */
+.download__button:active {
+  height: 81px;
+}
+/* line 82, sass/ui/_resizer-input.scss */
+.download__button::before {
+  width: 100%;
+  height: 82px;
+  border-radius: 5px;
+  background: #FFD800;
+  content: 'Download';
+  font-size: 35px;
+  text-shadow: 0px 3px 0px #FFC300;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 80px;
+  display: inline-block;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  font-weight: 700;
+  color: #FFF;
+}
+@media only screen and (max-width: 39.9375em) {
+  /* line 78, sass/ui/_resizer-input.scss */
+  .download__button {
+    font-size: 27px;
+  }
+}
+
+/* line 86, sass/ui/_resizer-input.scss */
+.back {
+  display: none;
+  width: 366px;
+  border-top: 1px solid grey;
+  margin: 25px 0 0 0;
+}
+
+/* line 87, sass/ui/_resizer-input.scss */
+.back__button {
+  background-image: url(../images/back-button.png);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  float: left;
+  line-height: 15px;
+  text-align: right;
+  color: black;
+  margin: 25px 0 0 0;
+}
+/* line 88, sass/ui/_resizer-input.scss */
+.back__button p {
+  padding: 0px 45px;
+  color: #3C3C3B;
+  font-size: 30px;
+}
+
+/* line 90, sass/ui/_resizer-input.scss */
+.back__start-over {
+  background-image: url(../images/start-over.png);
+  background-repeat: no-repeat;
+  background-repeat: no-repeat;
+  width: 45%;
+  height: 28px;
+  float: right;
+  text-align: right;
+  margin: 18px 0 0 0;
+  color: black;
+}
+/* line 91, sass/ui/_resizer-input.scss */
+.back__start-over p {
+  padding: 0px 0px;
+  color: #3C3C3B;
+  line-height: 30px;
+  font-size: 30px;
+}
+
+/* line 93, sass/ui/_resizer-input.scss */
+.layout {
+  width: 100%;
+}
+
+@media only screen and (max-width: 39.9375em) {
+  /* line 97, sass/ui/_resizer-input.scss */
+  .triangle-ruler, .passer, .ruler, .pen, .circular-ruler, .image-stack {
+    display: none !important;
+  }
+
+  /* line 98, sass/ui/_resizer-input.scss */
+  .slippers, .cropped-images, .ananas, .badje, .guitar {
+    display: none !important;
+  }
+}
+@media only screen and (max-width: 63.9375em) {
+  /* line 101, sass/ui/_resizer-input.scss */
+  .image-stack {
+    display: none !important;
+  }
+
+  /* line 102, sass/ui/_resizer-input.scss */
+  .triangle-ruler-moved, .triangle-ruler {
+    top: 49% !important;
+    left: 2% !important;
+  }
+
+  /* line 103, sass/ui/_resizer-input.scss */
+  .passer-moved, .passer {
+    top: 13% !important;
+    left: 11% !important;
+  }
+
+  /* line 104, sass/ui/_resizer-input.scss */
+  .badje {
+    left: 0% !important;
+  }
+
+  /* line 105, sass/ui/_resizer-input.scss */
+  .guitar {
+    left: 5% !important;
+  }
+
+  /* line 106, sass/ui/_resizer-input.scss */
+  .ananas {
+    left: 80% !important;
+  }
+
+  /* line 107, sass/ui/_resizer-input.scss */
+  .circular-ruler {
+    left: 80%;
+    top: 36%;
+  }
+}
+/* line 109, sass/ui/_resizer-input.scss */
+.triangle-ruler {
+  background-image: url(../images/tri-ruler.png);
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  width: 173px;
+  height: 111px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(12deg);
+}
+@media only screen and (max-width: 63.9375em) {
+  /* line 109, sass/ui/_resizer-input.scss */
+  .triangle-ruler {
+    top: 50%;
+    left: -6%;
+  }
+}
+
+/* line 114, sass/ui/_resizer-input.scss */
+.passer {
+  background-image: url(../images/passer.png);
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  width: 33px;
+  height: 193px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(-10deg);
+}
+@media only screen and (max-width: 63.9375em) {
+  /* line 114, sass/ui/_resizer-input.scss */
+  .passer {
+    top: 3%;
+    left: 30%;
+  }
+}
+
+/* line 118, sass/ui/_resizer-input.scss */
+.image-stack {
+  display: none;
+  background-image: url(../images/image-stack.png);
+  position: absolute;
+  top: 31%;
+  left: 17%;
+  width: 270px;
+  height: 189px;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* line 122, sass/ui/_resizer-input.scss */
+.ruler {
+  background-image: url(../images/ruler.png);
+  position: absolute;
+  width: 240px;
+  height: 38px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 26%;
+  left: 65%;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(10deg);
+}
+@media only screen and (max-width: 63.9375em) {
+  /* line 122, sass/ui/_resizer-input.scss */
+  .ruler {
+    top: 22%;
+    left: 65%;
+  }
+}
+
+/* line 126, sass/ui/_resizer-input.scss */
+.pen {
+  background-image: url(../images/pen.png);
+  position: absolute;
+  width: 16px;
+  height: 177px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 38%;
+  left: 66%;
+}
+@media only screen and (max-width: 63.9375em) {
+  /* line 126, sass/ui/_resizer-input.scss */
+  .pen {
+    top: 33%;
+    left: 77%;
+  }
+}
+
+/* line 130, sass/ui/_resizer-input.scss */
+.circular-ruler {
+  background-image: url(../images/circular-ruler.png);
+  position: absolute;
+  width: 157px;
+  height: 79px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  left: 70%;
+  top: 46%;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(-19deg);
+}
+@media only screen and (max-width: 63.9375em) {
+  /* line 130, sass/ui/_resizer-input.scss */
+  .circular-ruler {
+    left: 100%;
+    top: 26%;
+  }
+}
+
+/* line 134, sass/ui/_resizer-input.scss */
+.badje {
+  display: none;
+  position: absolute;
+  top: 17%;
+  left: 17%;
+  width: 209px;
+  height: 192px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(-10deg);
+  background-image: url(../images/badje.png);
+}
+
+/* line 138, sass/ui/_resizer-input.scss */
+.guitar {
+  display: none;
+  position: absolute;
+  top: 41%;
+  left: 21%;
+  width: 115px;
+  height: 293px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(12deg);
+  background-image: url(../images/guitar.png);
+}
+
+/* line 142, sass/ui/_resizer-input.scss */
+.cropped-images {
+  display: none;
+  background-image: url(../images/cropped.png);
+  position: absolute;
+  width: 225px;
+  height: 162px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 31%;
+  left: 70%;
+}
+
+/* line 146, sass/ui/_resizer-input.scss */
+.ananas {
+  display: none;
+  position: absolute;
+  width: 115px;
+  height: 220px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 5%;
+  left: 70%;
+  -webkit-transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  transform: rotate(30deg);
+  -webkit-transform: rotate(10deg);
+  background-image: url(../images/ananas.png);
+}
+
+/* line 150, sass/ui/_resizer-input.scss */
+.slippers {
+  display: none;
+  background-image: url(../images/slippers.png);
+  position: absolute;
+  width: 198px;
+  height: 168px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  top: 54%;
+  left: 70%;
+}
+
+/* line 153, sass/ui/_resizer-input.scss */
+.triangle-ruler p, .passer p, .image-stack p, .ruler p, .pen p, .circular-ruler p, .badje p, .guitar p, .cropped-images p, .ananas p, .slippers p {
+  display: none;
+}
+
+/* line 154, sass/ui/_resizer-input.scss */
+.passer-moved {
+  top: 13% !important;
+  left: 22% !important;
+  -webkit-transform: rotate(-74deg) !important;
+}
+
+/* line 155, sass/ui/_resizer-input.scss */
+.triangle-ruler-moved {
+  top: 60% !important;
+  left: 17% !important;
+  -webkit-transform: rotate(12deg) !important;
+}
+
+/* line 1, sass/ui/_resizer-loader.scss */
+.loader {
+  width: 100%;
+  position: relative;
+  top: -15px !important;
+}
+
+/* line 2, sass/ui/_resizer-loader.scss */
+.loader__progress-bar {
+  z-index: 1;
+  position: relative;
+  width: 0%;
+  height: 5px;
+  background: #fab914;
+  box-shadow: 0 1px 5px #000;
+}
+
+/*form controls / menu */
+/* line 2, sass/ui/_resizer-form.scss */
+.imageresizer--intro {
+  border-radius: 20px;
+  left: 30%;
+  top: 10%;
+  position: absolute;
+  width: 50%;
+  /* z-index: 0; */
+  /* margin: auto; */
+  background: #fab914;
+  height: 50%;
+}
+
+/* line 3, sass/ui/_resizer-form.scss */
+.imageresizer__block {
+  width: 100%;
+  height: 200px;
+}
+
+/* line 4, sass/ui/_resizer-form.scss */
+.imageresizer__block img {
+  margin: 0;
+  padding: 20px;
+}
+
+/* line 5, sass/ui/_resizer-form.scss */
+.imageresizer__input {
+  margin-top: 35px;
+}
+
+/* line 9, sass/ui/_resizer-form.scss */
+.dimensions p {
+  color: #FFF;
+  padding-left: 5px;
+}
+
+/* line 10, sass/ui/_resizer-form.scss */
+.dimensions {
+  width: 100%;
+  left: 0;
+  position: absolute;
+  display: block;
+  background: #fab914;
+}
+
+/* line 11, sass/ui/_resizer-form.scss */
+.dnd:before {
+  vertical-align: middle;
+  content: '';
+  display: inline-block;
+  height: 200px;
+  margin-right: -0.25em;
+}
+
+/* line 12, sass/ui/_resizer-form.scss */
+.dnd {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  border: 2px dashed #FFF;
+  text-align: center;
+  margin-top: 25px;
+}
+
+/* line 14, sass/ui/_resizer-form.scss */
+#items {
+  float: right;
+  width: 75%;
+  margin-top: 10px;
+}
+
+/* line 15, sass/ui/_resizer-form.scss */
+.item {
+  float: left;
+  position: relative;
+  margin: 40px 5px 5px 5px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+/* line 16, sass/ui/_resizer-form.scss */
+.item:hover {
+  -webkit-transform: scale(1.1);
+}
+
+/* line 17, sass/ui/_resizer-form.scss */
+span.highlight {
+  color: #000;
+}
+
+/* line 18, sass/ui/_resizer-form.scss */
+#dimensions {
+  float: right;
+  width: 75%;
+  margin-top: 10px;
+}
+
+/* line 20, sass/ui/_resizer-form.scss */
+#imagecollection {
+  position: absolute;
+  left: 15%;
+  width: 15%;
+  transition: all 0.4s cubic-bezier(0.17, 0.67, 0, 1);
+}
+
+/* line 21, sass/ui/_resizer-form.scss */
+#imagecollection img {
+  width: 100%;
+  margin: 5px;
+  padding: 5px;
+  background: #fab914;
+  box-shadow: 1px 0 5px #000;
+}
+
+/* line 25, sass/ui/_resizer-form.scss */
+#to-top {
+  width: 125px;
+  height: 35px;
+  position: fixed;
+  bottom: 10px;
+  right: 38%;
+  background: #fab914;
+}
+
+/* line 26, sass/ui/_resizer-form.scss */
+#to-top > span {
+  text-align: center;
+  display: block;
+  padding: 5px;
+  color: #FFF;
+}
+
+/* line 27, sass/ui/_resizer-form.scss */
+form .input {
+  float: left;
+}
+
+/* line 28, sass/ui/_resizer-form.scss */
+button {
+  display: block;
+  margin: 5px auto;
+  width: 90%;
+  height: 40px;
+  background: #fab914;
+  border: 1px solid #FFF;
+  outline: none;
+  border-radius: 6px;
+  color: #FFF;
+}
+
+/* line 29, sass/ui/_resizer-form.scss */
+input {
+  display: block;
+  margin: 10px auto;
+  width: 90%;
+  height: 40px;
+  padding: 7px;
+  outline: none;
+  border-radius: 10px;
+}
+
+/* line 31, sass/ui/_resizer-form.scss */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+/* line 32, sass/ui/_resizer-form.scss */
+input[type=number] {
+  border: none;
+  box-shadow: inset 0px 1px 5px #000;
+}
+
+/*output images*/
+/* line 2, sass/ui/_resizer-output.scss */
+canvas {
+  position: relative;
+  z-index: -1;
+  border-top: 10px #000;
+}
+
+/* line 11, sass/ui/_resizer-output.scss */
+.canvas {
+  position: relative;
+  z-index: 1;
+}
+
+/* line 13, sass/ui/_resizer-output.scss */
+.imageresizer {
+  z-index: 1;
+  position: fixed;
+  height: 100%;
+  width: 15%;
+  background: #fab914;
+  box-shadow: 1px 0px 10px #000;
+}
+
+/* line 14, sass/ui/_resizer-output.scss */
+.logo {
+  position: fixed;
+  top: 80%;
+}

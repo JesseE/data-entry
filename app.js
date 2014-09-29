@@ -5,7 +5,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var port = 3000;
+var port = 3050;
 var express = require('express');
 var router = express.Router();
 var unirest = require('unirest');
@@ -128,7 +128,14 @@ app.get('/post-1', function(request, response, next) {
     response.render('partials/item' ,{
         helpers:{
             title: function () { return 'Datavisualisatie'},
+            links: function () { return 'datavis'},
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
+            images: function() { return "../assets/images/placeholder-image.jpg"}
+    }});
+});
+app.get('/datavis', function(request, response, next) {
+    response.render('partials/datavis' ,{
+        helpers:{
             images: function() { return "../assets/images/placeholder-image.jpg"}
     }});
 });
@@ -136,7 +143,14 @@ app.get('/post-2', function(request, response, next) {
     response.render('partials/item',{
         helpers:{
             title: function () { return 'Resizer'; },
+            links:function() {return 'resizer';},
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
+            images: function() { return "../assets/images/placeholder-image-2.jpg"}
+    }}); 
+});
+app.get('/resizer', function(request, response, next) {
+    response.render('partials/resizer',{
+        helpers:{
             images: function() { return "../assets/images/placeholder-image-2.jpg"}
     }}); 
 });

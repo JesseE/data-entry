@@ -9,6 +9,7 @@
     "jade": "^1.5.0"
   },
   "devDependencies": {
+    "blueimp-load-image": "^1.13.0",
     "express-handlebars": "^1.1.0",
     "express3-handlebars": "^0.4.1",
     "grunt": "~0.4.5",
