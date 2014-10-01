@@ -92,23 +92,23 @@ app.get('/', function(request, response, next) {
         footer: true,
         helpers:{
             added: function() {
-                if(gitStats.length > 19) {
+                if(gitStats.length == 30) {
                     var added = [];
                     for ( var i = 0, len = gitStats.length; i < len; i ++ ){
                         added.push(gitStats[i].additions);
                     };
-                    if(added.length > 19){
+                    if(added.length == 30){
                         return added;
                     }
                 }
             },
             removed: function() {
-                if(gitStats.length > 19) {
+                if(gitStats.length == 30) {
                     var removed = [];
                     for(var i = 0, len = gitStats.length; i < len; i ++ ){
                         removed.push(gitStats[i].deletions);
                     }
-                    if(removed.length > 19) {
+                    if(removed.length == 30) {
                         return removed;
                     }
 
@@ -116,6 +116,7 @@ app.get('/', function(request, response, next) {
             },
             comments: function() {
                 if(gitMessage.length > 19){
+                    console.log(gitMessage);
                     return gitMessage;
                 }
             },
@@ -155,6 +156,7 @@ app.get('/post-2', function(request, response, next) {
 app.get('/resizer', function(request, response, next) {
     response.render('partials/resizer',{
         footer: false,
+        resizer: true,
         helpers:{
             images: function() { return "../assets/images/placeholder-image-2.jpg"}
     }}); 
