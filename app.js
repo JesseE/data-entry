@@ -120,7 +120,7 @@ app.get('/', function(request, response, next) {
                 }
             },
             title: function () { return 'Jesse Eikema'; },
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.'; }
+            paragraph: function () { return 'Donec purus turpis, pellentesque'; }
     }});
 });
 
