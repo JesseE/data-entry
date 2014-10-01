@@ -75,8 +75,9 @@ function getAllMessage () {
             user: username,
             pass: password,
             sendImmediately: true
-        }).headers(header).end(function(response){
-            gitMessage.push(response.body.commit.message); 
+        }).headers(header).end(function(response){  
+            var object = {"comment" : response.body.commit.message};     
+            gitMessage.push(object);        
         });
     };
 };
@@ -115,9 +116,13 @@ app.get('/', function(request, response, next) {
                 }
             },
             comments: function() {
-                if(gitMessage.length > 19){
-                    console.log(gitMessage);
-                    return gitMessage;
+                if(gitStats.length > 19){
+                      var comments = gitMessage;
+                    // var comments = {};
+                    for(var i = 0, len = gitStats.length; i < len; i ++ ){
+                        console.log(comments[i].comment);
+                    }
+                    return comments;       
                 }
             },
             title: function () { return 'Jesse Eikema'; },

@@ -128,14 +128,14 @@ var barC = chartX.selectAll("g")
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
     .attr("fill", "white")
-    .on("mouseover", function(d) {
+    .on("mouseover", function(d,i) {
         console.log(this);
         d3.select(this)
             .style("fill", "#A61B0C")
             .append("p")
             .style("color","white")
             .style("width", 100)
-            .text(function(d){ return "comment:" + d +addedComments;});
+            .text(function(d){ return "comment:" + d +addedComments[i];});
     })
     .on("mouseout", function(d) {
         d3.select(this)
