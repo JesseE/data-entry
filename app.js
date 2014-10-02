@@ -149,14 +149,24 @@ app.get('/datavis', function(request, response, next) {
     }});
 });
 app.get('/post-2', function(request, response, next) {
-    response.render('partials/item',{
-        footer: true,
-        helpers:{
-            title: function () { return 'Resizer'; },
-            links:function() {return 'resizer';},
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/og_grrr.png"}
-    }}); 
+    var imgEntry = [
+        {"img":"../assets/images/resizer-1.png"},
+        {"img":"../assets/images/resizer-3.png"},
+        {"img":"../assets/images/resizer-2.png"}
+    ];
+    var textEntry = [
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
+        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+    ];
+    console.log(textEntry);
+        response.render('partials/item',{
+            img: imgEntry,
+            text: textEntry,
+            footer: true,
+            helpers:{
+                title: function () { return 'Resizer'; },
+                links:function() {return 'resizer';}
+        }}); 
 });
 app.get('/resizer', function(request, response, next) {
     response.render('partials/resizer',{
