@@ -76,7 +76,8 @@ function getAllMessage () {
             pass: password,
             sendImmediately: true
         }).headers(header).end(function(response){  
-            var object = {"comment" : response.body.commit.message};     
+           // var object = {"comment" : response.body.commit.message};     
+            var object = response.body.commit.message;
             gitMessage.push(object);        
         });
     };
@@ -86,7 +87,16 @@ function getAllMessage () {
  */
 
 // Index Page
-app.get('/', function(request, response, next) {
+app.get('/', function(request, response, next) {    
+    // console.log(gitMessage);
+    var container = [];
+    for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
+                gitMessage[i];
+                var bucket = gitMessage[i];
+                JSON.parse("[\"bucket[i]\"]");
+                container.push(bucket);
+    };
+    
     response.render('index', {  
         headbg:true,
         maps: true,
@@ -117,11 +127,11 @@ app.get('/', function(request, response, next) {
             },
             comments: function() {
                 if(gitStats.length > 19){
-                      var comments = gitMessage;
+                     var comments = container;
                     // var comments = {};
-                    for(var i = 0, len = gitStats.length; i < len; i ++ ){
-                        console.log(comments[i].comment);
-                    }
+                    // for(var i = 0, len = gitStats.length; i < len; i ++ ){
+                    //    console.log(comments[i].comment);
+                    // }
                     return comments;       
                 }
             },

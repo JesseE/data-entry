@@ -35,7 +35,6 @@ $('a.active').hover(function(){
 var mode = 2;
 
 // skills visualisation
-
 var data = [
 	{name: "GIT", score: 4},
  	{name: "Javascript", score: 8},
@@ -82,69 +81,95 @@ bar.append("text")
     .text(function(d) { return d; });
 
 // git activity visualisation
+var gitData2 = {remove : removedData};
+var gitData = {add: addData};
 
-var gitData = addData;
-console.log(gitData);
+Container.push(gitData);
+Container.push(gitData2);
+
+// console.log("add: "+Container[1].add);
+// console.log("remove: "+ Container[2].remove);
+// console.log("comments: "+ Container[0].comments);
 
 var x2 = d3.scale.linear()
-    .domain([0, d3.max(gitData)])
+    .domain([0, d3.max(Container[1].add)])
     .range([0, width]);
 
 var chartZ = d3.select(".git-feed .added")
     .attr("width", width)
-    .attr("height", barHeight * gitData.length);
+    .attr("height", barHeight * Container[1].add.length);
 
 var barB = chartZ.selectAll("g")
-    .data(gitData)
+    .data(Container[1].add)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
     .attr("fill", "white")
         .on("mouseover", function(d) {
-        console.log(this);
-        d3.select(this)
-            .style("fill", "#71B0C2")
-    })
-    .on("mouseout", function(d) {
         d3.select(this)
             .style("fill", "white")
+        d3.selectAll("g div")
+            .remove()
+        d3.selectAll(".git-feed__comment text")
+            .remove()
+        d3.select(this)
+            .style("fill", "#71B0C2")
+             d3.select('.git-feed__comment')
+                .append("text")
+                .style("color","white")
+                .style("width", 100)
+                .text(function(d){ return i +' '+ Container[0].comments[i];})
+    })
+    .on("mouseout", function(d) {
+        // d3.select(this)
+        //     .style("fill", "white")
+        // d3.selectAll("g div")
+        //     .remove()
+        // d3.selectAll(".git-feed__comment text")
+        //     .remove()
     });
 
 barB.append("rect")
     .attr("width", x2)
     .attr("height", barHeight - 1);
 
-var gitData2 = removedData;
 var minWidth = 320;
 var x3 = d3.scale.linear()
-    .domain([0,d3.max(gitData2)])
+    .domain([0,d3.max(Container[2].remove)])
     .range([0,minWidth ]);
 
 var chartX = d3.select(".git-feed .removed")
     .attr("width", 320)
-    .attr("height", barHeight * gitData2.length);
+    .attr("height", barHeight * Container[2].remove.length);
 
-var barC = chartX.selectAll("g")
-    .data(gitData2)
+var barC = chartX.selectAll(".git-feed__description")
+    .data(Container[2].remove)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
     .attr("fill", "white")
     .on("mouseover", function(d,i) {
-        console.log(this);
-        d3.select(this)
-            .style("fill", "#A61B0C")
-            .append("p")
-            .style("color","white")
-            .style("width", 100)
-            .text(function(d){ return "comment:" + d +addedComments[i];});
-    })
-    .on("mouseout", function(d) {
-        d3.select(this)
+                d3.select(this)
             .style("fill", "white")
         d3.selectAll("g div")
-            .remove();
+            .remove()
+        d3.selectAll(".git-feed__comment text")
+            .remove()
+        d3.select(this)
+            .style("fill", "#A61B0C")
+            d3.select('.git-feed__comment')
+                .append("text")
+                .style("color","white")
+                .style("width", 100)
+                .text(function(d){ return i +' '+ Container[0].comments[i];})
+    })
+    .on("mouseout", function(d) {
+        // d3.select(this)
+        //     .style("fill", "white")
+        // d3.selectAll("g div")
+        //     .remove()
+        // d3.selectAll(".git-feed__comment text")
+        //     .remove()
     });
 
 barC.append("rect")
     .attr("width", x3)
     .attr("height", barHeight - 1);
-
