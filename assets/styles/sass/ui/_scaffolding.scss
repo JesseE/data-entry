@@ -192,9 +192,7 @@ h5{color:white;}
 }
 .git-feed__comment{
 	text{
-		position: relative;
-		top: -30px;
-		left:100px;
+		position: relative; top: -30px; left:100px;
 	}
 }
 svg.removed{
@@ -204,7 +202,7 @@ svg.removed{
 	}
 }
 svg.added{
-	position:relative; z-index: 1;transform:rotate(180deg); -webkit-transform:rotate(180deg);
+	position:relative; z-index: 1;transform:rotate(180deg); -webkit-transform:rotate(180deg);-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 	@include bp(med){
 		width: 40%;
 	}

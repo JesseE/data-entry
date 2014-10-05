@@ -1,4 +1,6 @@
-// nav functionality
+/*/////////////////////////////
+    nav functionality
+*//////////////////////////////
 var value = 0;
 $('.nav').click(function(){
 	switch (value) {
@@ -34,7 +36,10 @@ $('a.active').hover(function(){
 });
 var mode = 2;
 
-// skills visualisation
+/*/////////////////////////////
+    skills visualisation
+*//////////////////////////////
+
 var data = [
 	{name: "GIT", score: 4},
  	{name: "Javascript", score: 8},
@@ -80,7 +85,10 @@ bar.append("text")
     .data(dataName)
     .text(function(d) { return d; });
 
-// git activity visualisation
+/*/////////////////////////////
+ git activity visualisation
+*//////////////////////////////
+
 var gitData2 = {remove : removedData};
 var gitData = {add: addData};
 
@@ -104,7 +112,7 @@ var barB = chartZ.selectAll("g")
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
     .attr("fill", "white")
-        .on("mouseover", function(d) {
+        .on("mouseover", function(d, i) {
         d3.select(this)
             .style("fill", "white")
         d3.selectAll("g div")
@@ -120,12 +128,6 @@ var barB = chartZ.selectAll("g")
                 .text(function(d){ return i +' '+ Container[0].comments[i];})
     })
     .on("mouseout", function(d) {
-        // d3.select(this)
-        //     .style("fill", "white")
-        // d3.selectAll("g div")
-        //     .remove()
-        // d3.selectAll(".git-feed__comment text")
-        //     .remove()
     });
 
 barB.append("rect")
@@ -135,7 +137,7 @@ barB.append("rect")
 var minWidth = 320;
 var x3 = d3.scale.linear()
     .domain([0,d3.max(Container[2].remove)])
-    .range([0,minWidth ]);
+    .range([0,minWidth]);
 
 var chartX = d3.select(".git-feed .removed")
     .attr("width", 320)
@@ -147,7 +149,7 @@ var barC = chartX.selectAll(".git-feed__description")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
     .attr("fill", "white")
     .on("mouseover", function(d,i) {
-                d3.select(this)
+        d3.select(this)
             .style("fill", "white")
         d3.selectAll("g div")
             .remove()
@@ -162,12 +164,6 @@ var barC = chartX.selectAll(".git-feed__description")
                 .text(function(d){ return i +' '+ Container[0].comments[i];})
     })
     .on("mouseout", function(d) {
-        // d3.select(this)
-        //     .style("fill", "white")
-        // d3.selectAll("g div")
-        //     .remove()
-        // d3.selectAll(".git-feed__comment text")
-        //     .remove()
     });
 
 barC.append("rect")

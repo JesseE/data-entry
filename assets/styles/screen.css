@@ -640,53 +640,54 @@ h5 {
   left: 100px;
 }
 
-/* line 200, sass/ui/_scaffolding.scss */
+/* line 198, sass/ui/_scaffolding.scss */
 svg.removed {
   position: relative;
   z-index: 1;
 }
 @media (max-width: 48em) {
-  /* line 200, sass/ui/_scaffolding.scss */
+  /* line 198, sass/ui/_scaffolding.scss */
   svg.removed {
     width: 40%;
   }
 }
 
-/* line 206, sass/ui/_scaffolding.scss */
+/* line 204, sass/ui/_scaffolding.scss */
 svg.added {
   position: relative;
   z-index: 1;
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
+  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 @media (max-width: 48em) {
-  /* line 206, sass/ui/_scaffolding.scss */
+  /* line 204, sass/ui/_scaffolding.scss */
   svg.added {
     width: 40%;
   }
 }
 
-/* line 212, sass/ui/_scaffolding.scss */
+/* line 210, sass/ui/_scaffolding.scss */
 .timeline {
   width: 100%;
   background: white;
   float: left;
 }
 @media (max-width: 48em) {
-  /* line 212, sass/ui/_scaffolding.scss */
+  /* line 210, sass/ui/_scaffolding.scss */
   .timeline {
     height: 620px;
   }
 }
 
-/* line 218, sass/ui/_scaffolding.scss */
+/* line 216, sass/ui/_scaffolding.scss */
 .timeline__container {
   height: 200px;
   width: 80%;
   margin: 100px auto;
 }
 @media (max-width: 48em) {
-  /* line 218, sass/ui/_scaffolding.scss */
+  /* line 216, sass/ui/_scaffolding.scss */
   .timeline__container {
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -698,7 +699,7 @@ svg.added {
   }
 }
 
-/* line 224, sass/ui/_scaffolding.scss */
+/* line 222, sass/ui/_scaffolding.scss */
 .timeline__phase {
   width: 100%;
   height: 30px;
@@ -707,7 +708,7 @@ svg.added {
   top: 100px;
 }
 
-/* line 227, sass/ui/_scaffolding.scss */
+/* line 225, sass/ui/_scaffolding.scss */
 .timeline__period {
   background: #527B8B;
   height: 50px;
@@ -719,7 +720,7 @@ svg.added {
   border: 1px solid white;
 }
 
-/* line 230, sass/ui/_scaffolding.scss */
+/* line 228, sass/ui/_scaffolding.scss */
 .timeline__tools-item {
   background: #DE838B;
   width: 7%;
@@ -731,7 +732,7 @@ svg.added {
   margin: 0 20%;
 }
 
-/* line 233, sass/ui/_scaffolding.scss */
+/* line 231, sass/ui/_scaffolding.scss */
 .timeline__tools-item__description {
   width: 100px;
   height: 60px;
@@ -744,7 +745,7 @@ svg.added {
   line-height: 60px;
 }
 @media (max-width: 48em) {
-  /* line 233, sass/ui/_scaffolding.scss */
+  /* line 231, sass/ui/_scaffolding.scss */
   .timeline__tools-item__description {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);

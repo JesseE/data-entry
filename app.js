@@ -128,10 +128,6 @@ app.get('/', function(request, response, next) {
             comments: function() {
                 if(gitStats.length > 19){
                      var comments = container;
-                    // var comments = {};
-                    // for(var i = 0, len = gitStats.length; i < len; i ++ ){
-                    //    console.log(comments[i].comment);
-                    // }
                     return comments;       
                 }
             },
