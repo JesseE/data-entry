@@ -41,10 +41,13 @@ var mode = 2;
 *//////////////////////////////
 
 var data = [
-	{name: "GIT", score: 4},
- 	{name: "Javascript", score: 8},
-  	{name: "SASS", score: 8},
-   	{name: "Node", score: 16}
+	{name: "GIT", score: 10},
+ 	{name: "Javascript", score: 15},
+    {name: "SASS", score: 18},
+    {name: "HTML", score: 20},
+    {name: "D3", score: 16},
+   	{name: "Node", score: 17},
+    {name: "Express", score: 18}
 ];
 
 var dataScore = [];
@@ -77,12 +80,16 @@ bar.append("rect")
     .attr("width", x)
     .attr("height", barHeight - 1);
 
-bar.append("text")
+var bartext = d3.select('.skills').append("div");
+
+bartext.selectAll("div")
+    .data(dataName)
+    .enter().append("text") 
+    .attr("class", "block-list--tools-container__text")
     .attr("x", function(d) { return  width-500; })
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
-    .attr("class", "block-list--tools-container__bar")
-    .data(dataName)
+
     .text(function(d) { return d; });
 
 /*/////////////////////////////
@@ -111,23 +118,25 @@ var barB = chartZ.selectAll("g")
     .data(Container[1].add)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
-    .attr("fill", "white")
+    .attr("fill", "#71B0C2")
         .on("mouseover", function(d, i) {
         d3.select(this)
-            .style("fill", "white")
+            .style("fill", "#A61B0C")
         d3.selectAll("g div")
             .remove()
         d3.selectAll(".git-feed__comment text")
             .remove()
         d3.select(this)
-            .style("fill", "#71B0C2")
+            .style("fill", "white")
              d3.select('.git-feed__comment')
                 .append("text")
-                .style("color","white")
+                .style("color","#71B0C2")
                 .style("width", 100)
                 .text(function(d){ return i +' '+ Container[0].comments[i];})
     })
     .on("mouseout", function(d) {
+        d3.select(this)
+            .style("fill", "71B0C2")
     });
 
 barB.append("rect")
@@ -147,23 +156,25 @@ var barC = chartX.selectAll(".git-feed__description")
     .data(Container[2].remove)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
-    .attr("fill", "white")
+    .attr("fill", "#B53843")
     .on("mouseover", function(d,i) {
         d3.select(this)
-            .style("fill", "white")
+            .style("fill", "#A61B0C")
         d3.selectAll("g div")
             .remove()
         d3.selectAll(".git-feed__comment text")
             .remove()
         d3.select(this)
-            .style("fill", "#A61B0C")
+            .style("fill", "white")
             d3.select('.git-feed__comment')
                 .append("text")
-                .style("color","white")
+                .style("color","#B53843")
                 .style("width", 100)
                 .text(function(d){ return i +' '+ Container[0].comments[i];})
     })
     .on("mouseout", function(d) {
+     d3.select(this)
+            .style("fill", "B53843")
     });
 
 barC.append("rect")

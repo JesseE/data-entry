@@ -132,6 +132,8 @@ h5{color:white;}
 	float:left; width: 100%; background-color: #527B8B; text-align:center;
 	h1 { margin: 30px auto;float:left;width:100%; color: white; }
 }
+
+
 .block-container{width:100%;position:relative; float:left; margin:auto;}
 .block-container__item{width: 80%;margin: auto;
 	@include bp(med){
@@ -151,10 +153,21 @@ h5{color:white;}
 		}
 	}	
 }
+.block-container__item-image--reverse{
+	@extend .block-container__item-image;
+	float:right; border: none;
+	@include bp(med) {
+		display:none;
+	}
+}
+.block-container__item-image--no-float{
+	@extend .block-container__item-image--reverse;
+	float:none; border:none;
+}
 .block-description{
-	float: right; width: 50%;margin: 10px; height: 403px; padding-left: 100px; background: #527B8B; line-height: 71px;
+	float: right; width: 50%;margin: 10px; height: 340px; padding-left: 100px; background: #527B8B; line-height: 40px;
 	@include bp(med){
-		float: left; width: 81%; min-height: 400px; padding:20px; line-height: 30px;
+		float: left; width: 81%; max-height: 270px; padding:20px; line-height: 30px;
 	}
 	h1{color:white;}
 	p{color:white;}
@@ -162,18 +175,41 @@ h5{color:white;}
 		li{ list-style-type: none; color: white; text-decoration:underline;}
 	}
 }
+.block-description--reverse{
+	@extend .block-description;
+	float:left;
+}
+
 .block-list__tools-item{
 	div{ height:10px; margin: 10px; background: crimson;}
 }
-.block-list--tools-container{
-	float: right; margin: 50px auto; width: 50%;
+.skills{
+	width: 100%;
+	position: relative;
+	float:left;
+}
+.block-list--tools-container__text{
+	float:left;width: 45%;color: white;text-align: right;
 	@include bp (med) {
-		margin: 10px auto; width: 90%;	
+		width: 25%; text-align: center;
 	}
+}
+.block-list--tools-container{
+	float: right; width: 50%;
+	@include bp (med) {
+		width: 75%;
+	}
+}
+.git-activity{
+	width:  100%;
+	float:left; 
+	position:relative;
+	background: #527B8B;
 }
 .git-feed{
 	float: left; width: 100%; height: 900px; margin-left:-200px; transform:rotate(90deg);
 	@include bp(med){
+		display:none;
 		transform: rotate(0deg);-webkit-transform:rotate(0deg); height: 625px; margin-left:0;margin-top:25px;
 	}	
 }
@@ -192,7 +228,7 @@ h5{color:white;}
 }
 .git-feed__comment{
 	text{
-		position: relative; top: -30px; left:100px;
+		position: relative; top: 0; left:0;
 	}
 }
 svg.removed{

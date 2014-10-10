@@ -96,8 +96,19 @@ app.get('/', function(request, response, next) {
                 JSON.parse("[\"bucket[i]\"]");
                 container.push(bucket);
     };
+    var imgEntry = [
+        {"img":"../assets/images/resizer-1.png"},
+        {"img":"../assets/images/resizer-3.png"},
+        {"img":"../assets/images/resizer-2.png"}
+    ];
+    var textEntry = [
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
+        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+    ];
     
     response.render('index', {  
+        img: imgEntry,
+        text: textEntry,
         headbg:true,
         maps: true,
         footer: true,
@@ -137,7 +148,7 @@ app.get('/', function(request, response, next) {
 });
 
 // posts page
-app.get('/post-1', function(request, response, next) {
+app.get('/datavisualisatie', function(request, response, next) {
     response.render('partials/item' ,{
         footer: true,
         helpers:{
@@ -154,7 +165,7 @@ app.get('/datavis', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image.jpg"}
     }});
 });
-app.get('/post-2', function(request, response, next) {
+app.get('/resizer', function(request, response, next) {
     var imgEntry = [
         {"img":"../assets/images/resizer-1.png"},
         {"img":"../assets/images/resizer-3.png"},
@@ -164,17 +175,16 @@ app.get('/post-2', function(request, response, next) {
         {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
         {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
     ];
-    console.log(textEntry);
-        response.render('partials/item',{
-            img: imgEntry,
-            text: textEntry,
-            footer: true,
-            helpers:{
-                title: function () { return 'Resizer'; },
-                links:function() {return 'resizer';}
-        }}); 
+    response.render('partials/item',{
+        img: imgEntry,
+        text: textEntry,
+        footer: true,
+        helpers:{
+            title: function () { return 'Resizer'; },
+            links:function() {return 'resizer';}
+    }}); 
 });
-app.get('/resizer', function(request, response, next) {
+app.get('/resizer-prototype', function(request, response, next) {
     response.render('partials/resizer',{
         footer: false,
         resizer: true,
@@ -182,7 +192,7 @@ app.get('/resizer', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image-2.jpg"}
     }}); 
 });
-app.get('/post-3', function(request, response, next) {
+app.get('/melkweg', function(request, response, next) {
     response.render('partials/item',{
         footer: true,
         helpers:{
@@ -191,7 +201,7 @@ app.get('/post-3', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image-3.jpg"}
     }}); 
 });
-app.get('/post-4', function(request, response, next) {
+app.get('/score-app', function(request, response, next) {
     response.render('partials/item',{
         footer: true,
         helpers:{
@@ -200,7 +210,7 @@ app.get('/post-4', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image-4.jpg"}
     }}); 
 });
-app.get('/post-5', function(request, response, next) {
+app.get('/eikema-reintegratie', function(request, response, next) {
     response.render('partials/item',{
         footer: true,
         helpers:{
@@ -209,7 +219,7 @@ app.get('/post-5', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image-5.jpg"}
     }}); 
 });
-app.get('/post-6', function(request, response, next) {
+app.get('/klassiekwijzer', function(request, response, next) {
     response.render('partials/item',{
         footer: true,
         helpers:{

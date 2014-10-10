@@ -2,7 +2,7 @@
 	<div class="container" id="assignments" name="assignments">
 	    <div class="banner" id="projects"><h1>Projects</h1></div>
 	    <div class="block-list">
-	    	<a href="/post-1">
+	    	<a href="/datavisualisatie">
 	    		<div class="block-image odd"><img src="../assets/images/placeholder-image-3.jpg">
 				<div class="block-item" id="post-1">
 					<div class="block-text">			    		
@@ -12,7 +12,7 @@
 		    	</div>
 	    		</div>	
 	    	</a>
-	    	<a href="/post-2">
+	    	<a href="/resizer">
 	    		<div class="block-image even bla"><div class="pos"><img src="../assets/images/og_grrr.png"></div>
 	    		<div class="block-item" id="post-2">
 			    	<div class="block-text">
@@ -22,7 +22,7 @@
 		    	</div>
 		    	</div>
 	    	</a>
-	    	<a href="/post-3">
+	    	<a href="/melkweg">
 	    		<div class="block-image odd blo"><div class="pos"><img src="../assets/images/placeholder-image-4.jpg"></div>
 	    		<div class="block-item" id="post-3">
 		    		<div class="block-text">
@@ -32,7 +32,7 @@
 		    	</div>
 		    	</div>	
 	    	</a>
-	    	<a href="/post-4">
+	    	<a href="/score-app">
 	    		<div class="block-image even fourth"><div class="pos"><img src="../assets/images/placeholder-image-5.jpg"></div>
 	    		<div class="block-item" id="post-4">	
 			    	<div class="block-text">			    		
@@ -42,7 +42,7 @@
 			    </div>
 			    </div>
 	    	</a>
-	    	<a href="/post-5">
+	    	<a href="/eikema-reintegratie">
 	    		<div class="block-image odd fifth"><div class="pos"><img src="../assets/images/placeholder-image-6.jpg"></div>
 	    		<div class="block-item" id="post-5">
 		    		<div class="block-text">
@@ -52,7 +52,7 @@
 		    	</div>
 		    	</div>
 	    	</a>
-	    	<a href="/post-6">
+	    	<a href="/klassiekwijzer">
 	    		<div class="block-image even sixth"><div class="pos"><img src="../assets/images/placeholder-image-6.jpg"></div>
 	    		<div class="block-item" id="post-6">
 		    		<div class="block-text">
@@ -65,9 +65,29 @@
 		</div>
 	</div>
 	<div class="about" id="about-me" name="about-jesse">
-		<h1>Methodology &amp visie</h1>
+		<h1>visie</h1>
+		<section class="block-container">
+			<div class="block-container__item">
+				<div class="block-container__item-image--reverse">
+					<img src="{{img.[1].img}}"/>	
+				</div>
+				<div class="block-description--reverse">
+					<h1>Modulair</h1>
+					<p class="Label">{{text.[0].text}}</p>
+				</div>
+				<div class="block-container__item-image--no-float">
+					<img src="{{img.[2].img}}"/>	
+				</div>
+				<div class="block-description">
+					<h1>Herbruikbaar</h1>
+					<p class="Label">{{text.[1].text}}</p>
+					<a href="/{{links}}"><li>test live: {{links}}</li></a>
+				</div>
+			</div>
+		</section>
 		<h1>Tools</h1>
 		<div class="skills">
+			<div class="block-list--tools-container__text"></div>
 			<svg class="block-list--tools-container"></svg>
 		</div>
 		<h1>Tijdlijn</h1>
@@ -104,15 +124,15 @@
 				</div>
 			</div>
 		</div>
+		<div class="git-activity">
 		<h1>Git Activiteit</h1>
 		<div class="git-feed">
 			<svg class="added"></svg>
 			<svg class="removed"></svg>	
 			<div class="git-feed__description"><h3>Comment:</h3>
 				<div class="git-feed__comment"></div>
-				<h3>code added</h3>
-				<h3>code removed</h3>
 			</div>
+		</div>
 		</div>
 	</div>
 </section>
