@@ -168,7 +168,7 @@ app.get('/datavisualisatie', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Datavisualisatie'},
-            links: function () { return 'datavis'},
+            links: function () { return '/datavis'},
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image.jpg"}
     }});
@@ -196,7 +196,7 @@ app.get('/resizer', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Resizer'; },
-            links:function() {return 'resizer-prototype';}
+            links:function() {return '/resizer-prototype';}
     }}); 
 });
 app.get('/resizer-prototype', function(request, response, next) {
@@ -223,8 +223,7 @@ app.get('/melkweg', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Melkweg'; },
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image-3.jpg"}
+            links: function () { return 'http://www.melkweg.nl/nl';}
     }}); 
 });
 app.get('/score-app', function(request, response, next) {
@@ -273,7 +272,8 @@ app.get('/klassiekwijzer', function(request, response, next) {
         helpers:{
             title: function () { return 'Klassiekwijzer'; },
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image-6.jpg"}
+            images: function() { return "../assets/images/placeholder-image-6.jpg"},
+            links: function() { return "http://klassiekwijzer.avro.nl/"}
     }}); 
 });
 
