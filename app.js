@@ -97,9 +97,9 @@ app.get('/', function(request, response, next) {
                 container.push(bucket);
     };
     var imgEntry = [
-        {"img":"../assets/images/resizer-1.png"},
-        {"img":"../assets/images/resizer-3.png"},
-        {"img":"../assets/images/resizer-2.png"}
+        {"img":"../assets/images/modular.png"},
+        {"img":"../assets/images/reusable.png"},
+        {"img":"../assets/images/modularv2.png"}
     ];
     var textEntry = [
         {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
@@ -181,7 +181,7 @@ app.get('/resizer', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Resizer'; },
-            links:function() {return 'resizer';}
+            links:function() {return 'resizer-prototype';}
     }}); 
 });
 app.get('/resizer-prototype', function(request, response, next) {
@@ -193,7 +193,18 @@ app.get('/resizer-prototype', function(request, response, next) {
     }}); 
 });
 app.get('/melkweg', function(request, response, next) {
+    var imgEntry = [
+        {"img":"../assets/images/melkwegv1.png"},
+        {"img":"../assets/images/melkwegv2.png"},
+        {"img":"../assets/images/resizer-2.png"}
+    ];
+    var textEntry = [
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
+        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+    ];
     response.render('partials/item',{
+        img: imgEntry,
+        text: textEntry,
         footer: true,
         helpers:{
             title: function () { return 'Melkweg'; },
@@ -211,7 +222,18 @@ app.get('/score-app', function(request, response, next) {
     }}); 
 });
 app.get('/eikema-reintegratie', function(request, response, next) {
+    var imgEntry = [
+        {"img":"../assets/images/eikemav1.png"},
+        {"img":"../assets/images/eikemav2.png"},
+        {"img":"../assets/images/resizer-2.png"}
+    ];
+    var textEntry = [
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
+        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+    ];
     response.render('partials/item',{
+        img: imgEntry,
+        text: textEntry,
         footer: true,
         helpers:{
             title: function () { return 'Eikema Reintegratie'; },
@@ -220,7 +242,18 @@ app.get('/eikema-reintegratie', function(request, response, next) {
     }}); 
 });
 app.get('/klassiekwijzer', function(request, response, next) {
+     var imgEntry = [
+        {"img":"../assets/images/klassiekwijzerv1.png"},
+        {"img":"../assets/images/klassiekwijzerv2.png"},
+        {"img":"../assets/images/resizer-2.png"}
+    ];
+    var textEntry = [
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
+        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+    ];
     response.render('partials/item',{
+        img: imgEntry,
+        text: textEntry,
         footer: true,
         helpers:{
             title: function () { return 'Klassiekwijzer'; },
