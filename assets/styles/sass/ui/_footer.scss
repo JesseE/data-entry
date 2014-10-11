@@ -6,13 +6,16 @@
 */
 
 .banner--footer{
-	float: left;height: 500px; width: 100%; background-color: #344E58; color:white; text-align:center;
+	float: left;sheight: 500px; width: 100%; background-color: #344E58; color:white; text-align:center;
 	h1 { width: 100%; margin: 50px auto; color: white; }
 	p { margin: 50px auto;} 
 	iframe{
 		width:100%;height:500px;
 	}
-	.maps{background: lightgrey;height: 500px;}
+	.maps{background: lightgrey;height: 500px;
+		//background-image:url(../../images/maps.png) ;
+		//img{width:100%;max-height: 500px;}
+	}
 }
 
 

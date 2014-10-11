@@ -97,18 +97,35 @@ app.get('/', function(request, response, next) {
                 container.push(bucket);
     };
     var imgEntry = [
-        {"img":"../assets/images/modular.png"},
+        {"img":"../assets/images/modularv4.png"},
         {"img":"../assets/images/reusable.png"},
         {"img":"../assets/images/modularv2.png"}
+    ];
+    var titleEntry = [
+        {"title": "Datavisualisatie"},
+        {"title": "Resizer"},
+        {"title": "Melkweg"},
+        {"title": "Score app"},
+        {"title": "Klassiekwijzer"},
+        {"title": "Pathogen"},
+    ];
+    var paragraphEntry =[
+        {"paragraph": "visualisatie van coding activiteit"},
+        {"paragraph": "Pas de dimensies van je afbeelding"},
+        {"paragraph": "SASS aanpassingen in de melkweg"},
+        {"paragraph": "Toevoegen van actuele score's"},
+        {"paragraph": "Kom erachter welke klassieke muziek bij je past"},
+        {"paragraph": "RTS game gemaakt met javascript"},
     ];
     var textEntry = [
         {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
         {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
     ];
-    
     response.render('index', {  
         img: imgEntry,
         text: textEntry,
+        title: titleEntry,
+        paragraph: paragraphEntry,
         headbg:true,
         maps: true,
         footer: true,
@@ -141,9 +158,7 @@ app.get('/', function(request, response, next) {
                      var comments = container;
                     return comments;       
                 }
-            },
-            title: function () { return 'Jesse Eikema'; },
-            paragraph: function () { return 'Donec purus turpis, pellentesque'; }
+            }
     }});
 });
 
@@ -221,10 +236,10 @@ app.get('/score-app', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image-4.jpg"}
     }}); 
 });
-app.get('/eikema-reintegratie', function(request, response, next) {
+app.get('/pathogen', function(request, response, next) {
     var imgEntry = [
-        {"img":"../assets/images/eikemav1.png"},
-        {"img":"../assets/images/eikemav2.png"},
+        {"img":"../assets/images/pathogenv1.png"},
+        {"img":"../assets/images/pathogenv2.png"},
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
@@ -236,7 +251,7 @@ app.get('/eikema-reintegratie', function(request, response, next) {
         text: textEntry,
         footer: true,
         helpers:{
-            title: function () { return 'Eikema Reintegratie'; },
+            title: function () { return 'pathogen'; },
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image-5.jpg"}
     }}); 

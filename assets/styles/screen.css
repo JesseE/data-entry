@@ -642,8 +642,14 @@ h5 {
   position: relative;
   background: #527B8B;
 }
+@media (max-width: 48em) {
+  /* line 198, sass/ui/_scaffolding.scss */
+  .git-activity {
+    display: none;
+  }
+}
 
-/* line 204, sass/ui/_scaffolding.scss */
+/* line 202, sass/ui/_scaffolding.scss */
 .git-feed {
   float: left;
   width: 100%;
@@ -652,7 +658,7 @@ h5 {
   transform: rotate(90deg);
 }
 @media (max-width: 48em) {
-  /* line 204, sass/ui/_scaffolding.scss */
+  /* line 202, sass/ui/_scaffolding.scss */
   .git-feed {
     display: none;
     transform: rotate(0deg);
@@ -663,24 +669,24 @@ h5 {
   }
 }
 
-/* line 210, sass/ui/_scaffolding.scss */
+/* line 208, sass/ui/_scaffolding.scss */
 .git-feed__description {
   position: relative;
   z-index: 0;
 }
 @media (max-width: 48em) {
-  /* line 210, sass/ui/_scaffolding.scss */
+  /* line 208, sass/ui/_scaffolding.scss */
   .git-feed__description {
     transform: rotate(0deg);
   }
 }
-/* line 215, sass/ui/_scaffolding.scss */
+/* line 213, sass/ui/_scaffolding.scss */
 .git-feed__description h3 {
   margin: 20px;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 215, sass/ui/_scaffolding.scss */
+  /* line 213, sass/ui/_scaffolding.scss */
   .git-feed__description h3 {
     margin: 10px;
     color: white;
@@ -690,26 +696,26 @@ h5 {
   }
 }
 
-/* line 224, sass/ui/_scaffolding.scss */
+/* line 222, sass/ui/_scaffolding.scss */
 .git-feed__comment text {
   position: relative;
   top: 0;
   left: 0;
 }
 
-/* line 228, sass/ui/_scaffolding.scss */
+/* line 226, sass/ui/_scaffolding.scss */
 svg.removed {
   position: relative;
   z-index: 1;
 }
 @media (max-width: 48em) {
-  /* line 228, sass/ui/_scaffolding.scss */
+  /* line 226, sass/ui/_scaffolding.scss */
   svg.removed {
     width: 40%;
   }
 }
 
-/* line 234, sass/ui/_scaffolding.scss */
+/* line 232, sass/ui/_scaffolding.scss */
 svg.added {
   position: relative;
   z-index: 1;
@@ -718,33 +724,33 @@ svg.added {
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 @media (max-width: 48em) {
-  /* line 234, sass/ui/_scaffolding.scss */
+  /* line 232, sass/ui/_scaffolding.scss */
   svg.added {
     width: 40%;
   }
 }
 
-/* line 240, sass/ui/_scaffolding.scss */
+/* line 238, sass/ui/_scaffolding.scss */
 .timeline {
   width: 100%;
   background: white;
   float: left;
 }
 @media (max-width: 48em) {
-  /* line 240, sass/ui/_scaffolding.scss */
+  /* line 238, sass/ui/_scaffolding.scss */
   .timeline {
     height: 620px;
   }
 }
 
-/* line 246, sass/ui/_scaffolding.scss */
+/* line 244, sass/ui/_scaffolding.scss */
 .timeline__container {
   height: 200px;
   width: 80%;
   margin: 100px auto;
 }
 @media (max-width: 48em) {
-  /* line 246, sass/ui/_scaffolding.scss */
+  /* line 244, sass/ui/_scaffolding.scss */
   .timeline__container {
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -756,7 +762,7 @@ svg.added {
   }
 }
 
-/* line 252, sass/ui/_scaffolding.scss */
+/* line 250, sass/ui/_scaffolding.scss */
 .timeline__phase {
   width: 100%;
   height: 30px;
@@ -765,7 +771,7 @@ svg.added {
   top: 100px;
 }
 
-/* line 255, sass/ui/_scaffolding.scss */
+/* line 253, sass/ui/_scaffolding.scss */
 .timeline__period {
   background: #527B8B;
   height: 50px;
@@ -777,7 +783,7 @@ svg.added {
   border: 1px solid white;
 }
 
-/* line 258, sass/ui/_scaffolding.scss */
+/* line 256, sass/ui/_scaffolding.scss */
 .timeline__tools-item {
   width: 46px;
   height: 40px;
@@ -789,7 +795,7 @@ svg.added {
   background-image: url(../../images/arrowv2.png);
 }
 
-/* line 269, sass/ui/_scaffolding.scss */
+/* line 260, sass/ui/_scaffolding.scss */
 .timeline__tools-item__description {
   width: 100px;
   height: 60px;
@@ -802,7 +808,7 @@ svg.added {
   line-height: 60px;
 }
 @media (max-width: 48em) {
-  /* line 269, sass/ui/_scaffolding.scss */
+  /* line 260, sass/ui/_scaffolding.scss */
   .timeline__tools-item__description {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
@@ -1518,7 +1524,7 @@ input[type=password]:focus {
 /* line 8, sass/ui/_footer.scss */
 .banner--footer {
   float: left;
-  height: 500px;
+  sheight: 500px;
   width: 100%;
   background-color: #344E58;
   color: white;
