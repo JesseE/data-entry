@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<title>Pathogen</title>
+		<script src="assets/pathogen/js/app/common.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/libraries/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/libraries/jquery.rightClick.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/libraries/jquery.disableSelect.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/libraries/spin.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/libraries/slider.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/libraries/mousewheel.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/libraries/easing.js" type="text/javascript" charset="utf-8"></script>
+
+		<script src="assets/pathogen/js/app/game.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/interface/mouse.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/interface/input.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/interface/cursor.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/interface/screens.js" type="text/javascript" charset="utf-8"></script>		
+		<script src="assets/pathogen/js/app/singleplayer.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/maps.js" type="text/javascript" charset="utf-8"></script>
+
+		<!-- Definitions for game entities -->		
+		<script src="assets/pathogen/js/app/entities/buildings.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/entities/vehicles.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/entities/aircraft.js" type="text/javascript" charset="utf-8"></script>		
+		<script src="assets/pathogen/js/app/entities/terrain.js" type="text/javascript" charset="utf-8"></script>
+	
+		<script src="assets/pathogen/js/app/interface/interface.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="assets/pathogen/js/app/entities/bullets.js" type="text/javascript" charset="utf-8"></script>
+		
+		<script src="assets/pathogen/js/app/fog.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/overlay.js" type="text/javascript" charset="utf-8"></script>
+		<script src="assets/pathogen/js/app/interface/sounds.js" type="text/javascript" charset="utf-8"></script>
+
+		<link href='http://fonts.googleapis.com/css?family=Jura:400,300' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Wallpoet' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="assets/pathogen/css/reset.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="assets/pathogen/css/styles.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="assets/pathogen/css/slider.css" type="text/css" media="screen" charset="utf-8">
+		<link rel="stylesheet" href="assets/pathogen/css/box_shadows.css" type="text/css" media="screen" charset="utf-8">
+	</head>
+	<body>
+		<div id="center_container" class="effect8">
+			<div id="gamecontainer">
+				<div id="splashscreen">
+					<div id="loader_icon"></div>
+				</div>	
+
+				<a id="mute-button" class="screen_mute_button" onclick="sounds.toggleMute();">Mute</a>
+				<div id="gamestartscreen" class="gamelayer">
+					<div id="bg_start_game" class="start_bg"></div>
+					<div id="bg_load_game" class="start_bg"></div>
+					<div id="bg_select_level" class="start_bg"></div>
+					<div id="bg_credits" class="start_bg"></div>
+					<div id="bg_instructions" class="start_bg"></div>
+
+					<span id="button_start_game" class="start_button" onclick = "screens.show('new_campaign');">New campaign</span>
+					<span id="button_load_game" class="start_button" onclick = "screens.show('load_savegame');">Load save game</span>
+					<span id="button_select_level" class="start_button" onclick = "screens.show('select_level');">Select level</span>
+					<span id="button_credits" class="start_button" onclick = "screens.show('credits');">Credits</span>
+					<span id="button_instructions" class="start_button" onclick = "screens.show('instructions');">Instructions</span>
+
+				</div>
+
+				<div id="creditsscreen" class="gamelayer">
+					<span class="back_button" onclick="screens.hide();">Back</span>
+					<div class="bg_back">
+						<div class="bg_back_active"></div>
+					</div>
+				</div>
+
+				<div id="instructionsscreen" class="gamelayer">
+					<span class="back_button" onclick="screens.hide();">Back</span>
+					<div class="bg_back">
+						<div class="bg_back_active"></div>
+					</div>
+				</div>
+
+				<div id="missionscreen" class="gamelayer">
+					<div id="missonbriefing">
+					</div>
+
+					<div id="briefing_slider">
+					</div>
+
+					<span class="enter_button" id="startmission">Enter mission</span>
+					<div class="bg_startmission briefing_screen">
+						<div class="bg_startmission_active briefing_screen"></div>
+					</div>
+
+					<span class="back_button" onclick="screens.hide();">Back</span>
+					<div class="bg_back briefing_screen">
+						<div class="bg_back_active briefing_screen"></div>
+					</div>
+				</div>
+
+				<div id="outroscreen" class="gamelayer">
+					<div id="briefing_slider">
+					</div>
+
+					<span class="back_button" onclick="screens.hide();">Back</span>
+					<div class="bg_back briefing_screen">
+						<div class="bg_back_active briefing_screen"></div>
+					</div>
+				</div>
+
+				<div id="missionselectscreen" class="gamelayer">
+					<div id="container">
+						<div id="torso">
+							<span class="select_button" id="stomach">Stomach</span>
+							<span class="select_button" id="intestines">Intestines</span>
+							<span class="select_button" id="heart">Heart</span>
+						</div>
+
+						<div id="briefing">
+							<div id="briefing_text">
+								<h1></h1>
+								<p></p>
+							</div>
+							<div id="briefing_image"></div>
+						</div>
+
+						<div class="clear"></div>
+					</div>
+
+					<span class="enter_button" id="entermission">Enter mission</span>
+					<div class="bg_entermission">
+						<div class="bg_entermission_active"></div>
+					</div>
+
+					<span class="back_button" onclick="screens.hide();">Back</span>
+					<div class="bg_back">
+						<div class="bg_back_active"></div>
+					</div>
+				</div>
+
+				<div id="gameinterfacescreen" class="gamelayer">
+					<div id="game_menu">
+						<ul>
+							<li class="menu_button"><a id="resume_game" onclick="game.showMenu();">Resume</a></li>
+							<li class="menu_button"><a id="save_game" onclick="game.save();">Save</a></li>
+							<li class="menu_button"><a id="exit_game" onclick="game.exitGame();">Exit</a></li>
+							<li class="clear"></li>
+						</ul>			
+					</div>
+
+					<div id="game_paused"></div>
+
+					<div id="tip_message"></div>
+					<div id="timers">
+					</div>
+					<div class="border_piece" id="top">
+						<span id="resources">0</span>
+						<span id="objective_number"></span>
+						<span id="objective_separator">-</span>
+						<span id="objective_text" ></span>
+
+						<span id="objective_time"></span>
+						<span id="game_time"></span>
+					</div>
+
+					<div class="border_piece" id="left"></div>
+					<div class="border_piece" id="right"></div>
+
+					<div id="message_box">
+						<div id="gamemessages"></div>        
+					</div>
+
+					<div id="interface_top"></div>
+
+					<div id="interface_bottom">
+						<div id="item_info">
+							<h1>Item information</h1>
+							<span>Cost</span><span id="cost" class="stat"></span>
+							<span>Damage</span><span id="damage" class="stat"></span>
+							<span>Health</span><span id="health" class="stat"></span>
+							<span>Range</span><span id="range" class="stat"></span>
+						</div>
+					    <div id="sidebarbuttons">    
+					    	<a id="barrack-light-button" class="UI_button large building" title="Light Barracks"></a>
+					        <a id="barrack-heavy-button" class="UI_button large building" title="Heavy Barracks"></a>
+
+					        <a id="cell-light-button" class="UI_button small unit" title="Light cell"></a>
+					        <a id="cell-heavy-button" class="UI_button small unit" title="Heavy cell"></a>
+					        <a id="cell-yellow-button" class="UI_button small unit" title="Super cell"></a>
+					                     
+					    </div>
+					    <div id="game_buttons">
+					    	<a id="pause-button" class="game_button" onclick="game.togglePause();">Pause</a>
+					    	<a id="mute-button" class="game_button" onclick="sounds.toggleMute();">Mute</a>
+					    	<a id="menu-button" class="game_button"onclick="game.showMenu();" >Menu</a>
+					    </div>
+					    <div id="selected_info">
+					    	<div id="container">
+								<h1></h1>
+								<div id="stat_bars">
+									<div id="resource_bar" class="bar">
+										<div id="resources_gathered" class="stat_left"></div>
+										<span></span>
+									</div>
+									<div id="health_bar" class="bar">
+										<div id="health_left"  class="stat_left"></div>
+										<span></span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				    <canvas id="gamebackgroundcanvas" height="560" width="980"></canvas>
+				    <canvas id="gameforegroundcanvas" height="560" width="980"></canvas>
+				</div>
+				<div id="messageboxscreen" class="gamelayer">
+					<div class="messagebox">
+					</div>
+				</div>
+				<div id="loadingscreen" class="gamelayer">
+					<div id="loadingmessage"></div>
+				</div>	
+			</div>
+		</div>
+		<script>
+		$(function(){
+			var opts = {
+				lines: 13, // The number of lines to draw
+				length: 22, // The length of each line
+				width: 13, // The line thickness
+				radius: 26, // The radius of the inner circle
+				corners: 1, // Corner roundness (0..1)
+				rotate: 21, // The rotation offset
+				direction: 1, // 1: clockwise, -1: counterclockwise
+				color: '#000', // #rgb or #rrggbb
+				speed: 1, // Rounds per second
+				trail: 60, // Afterglow percentage
+				shadow: false, // Whether to render a shadow
+				hwaccel: false, // Whether to use hardware acceleration
+				className: 'spinner', // The CSS class to assign to the spinner
+				zIndex: 2e9, // The z-index (defaults to 2000000000)
+				top: 'auto', // Top position relative to parent in px
+				left: 'auto' // Left position relative to parent in px
+			};
+			var target = document.getElementById('loader_icon');
+			var spinner = new Spinner(opts).spin(target);
+		});
+		</script>
+	</body>
+</html>

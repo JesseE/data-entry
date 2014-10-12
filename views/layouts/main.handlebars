@@ -10,9 +10,10 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-        <link rel="stylesheet" href="styles/screen.css">
+        <link rel="stylesheet" href="/assets/styles/screen.css">
     </head>
     <body>
+    {{#if nav_1}}    
     <nav class="nav--off-window">
         <ul class="nav__list">
             <a href="/#projects" class="active"><li class="active">Projects</li></a>
@@ -20,7 +21,9 @@
             <a href="/#contact"><li>Contact</li></a>
         </ul>
     </nav>
+    {{/if}}
     <header class="header">
+        {{#if nav_2}}
         <nav class="nav">
             <div class="nav__button">
                 <div class="nav__button-container">
@@ -40,12 +43,16 @@
                 <a href="/klassiekwijzer" class="active"><li>Klassiekwijzer</li></a>
             </ul>
         </nav>
+        {{/if}}
         {{#if headbg}}
         <div class="header__bg">
             <div class="header__brand">
-                <h1>Jesse Eikema</h1>
-                <h1>Frontend Developer</h1>
-                <h1>{ { CODING NINJA } } </h1>
+                <div class="ninja-title">
+                    <h1>Jesse Eikema</h1>
+                    <h1>Frontend Developer</h1>
+                    <h1>{ { CODING NINJA } } </h1>
+                </div>    
+                <div class="ninja-icon"><img src="assets/images/ninja.jpg"></div>
             </div>
         </div>
         {{/if}}
@@ -68,9 +75,9 @@
     {{/if}}
     <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/bower_components/d3/d3.min.js"></script>
-    <script type="text/javascript" src="/assets/bower_components/blueimp-load-image/js/load-image.all.min.js"></script>
-    <script type="text/javascript" src="/assets/bower_components/jszip/jszip.min.js"></script>
     {{#if resizer}}
+        <script type="text/javascript" src="/assets/bower_components/blueimp-load-image/js/load-image.all.min.js"></script>
+        <script type="text/javascript" src="/assets/bower_components/jszip/jszip.min.js"></script>
         <script type="text/javascript" src="/assets/scripts/resizer.js"></script>
     {{/if}}
     <script type="text/javascript"> 

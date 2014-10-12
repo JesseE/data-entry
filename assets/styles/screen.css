@@ -175,6 +175,32 @@ h5 {
 }
 
 /* line 17, sass/ui/_scaffolding.scss */
+.ninja-title {
+  float: left;
+  margin: 0px auto;
+  width: 60%;
+}
+@media (max-width: 48em) {
+  /* line 17, sass/ui/_scaffolding.scss */
+  .ninja-title {
+    width: 100%;
+  }
+}
+
+/* line 21, sass/ui/_scaffolding.scss */
+.ninja-icon {
+  float: left;
+  height: 400px;
+  width: 40%;
+}
+@media (max-width: 48em) {
+  /* line 21, sass/ui/_scaffolding.scss */
+  .ninja-icon {
+    width: 100%;
+  }
+}
+
+/* line 27, sass/ui/_scaffolding.scss */
 .container {
   position: relative;
   float: left;
@@ -182,40 +208,40 @@ h5 {
   width: 100%;
   background-color: white;
 }
-/* line 19, sass/ui/_scaffolding.scss */
+/* line 29, sass/ui/_scaffolding.scss */
 .container h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 17, sass/ui/_scaffolding.scss */
+  /* line 27, sass/ui/_scaffolding.scss */
   .container {
     margin: 0 auto;
   }
 }
 
-/* line 24, sass/ui/_scaffolding.scss */
+/* line 34, sass/ui/_scaffolding.scss */
 .block-list {
   width: 100%;
   height: 600px;
 }
-/* line 27, sass/ui/_scaffolding.scss */
+/* line 37, sass/ui/_scaffolding.scss */
 .block-list .block-text h1 {
   line-height: 115px;
 }
 @media (max-width: 48em) {
-  /* line 24, sass/ui/_scaffolding.scss */
+  /* line 34, sass/ui/_scaffolding.scss */
   .block-list {
     margin: auto;
   }
-  /* line 33, sass/ui/_scaffolding.scss */
+  /* line 43, sass/ui/_scaffolding.scss */
   .block-list .block-text h1 {
     color: white;
     border-bottom: 1px solid white;
     line-height: 77px;
   }
-  /* line 34, sass/ui/_scaffolding.scss */
+  /* line 44, sass/ui/_scaffolding.scss */
   .block-list .block-text p {
     width: 80%;
     margin: auto;
@@ -224,18 +250,18 @@ h5 {
   }
 }
 @media (min-width: 64em) {
-  /* line 24, sass/ui/_scaffolding.scss */
+  /* line 34, sass/ui/_scaffolding.scss */
   .block-list {
     width: 88%;
     margin: auto;
   }
-  /* line 39, sass/ui/_scaffolding.scss */
+  /* line 49, sass/ui/_scaffolding.scss */
   .block-list .block-text h1 {
     color: white;
     border-bottom: 1px solid white;
     line-height: 77px;
   }
-  /* line 40, sass/ui/_scaffolding.scss */
+  /* line 50, sass/ui/_scaffolding.scss */
   .block-list .block-text p {
     width: 80%;
     margin: auto;
@@ -244,18 +270,18 @@ h5 {
   }
 }
 @media (min-width: 84.375em) {
-  /* line 24, sass/ui/_scaffolding.scss */
+  /* line 34, sass/ui/_scaffolding.scss */
   .block-list {
     width: 85%;
     margin: 100px 10%;
   }
-  /* line 45, sass/ui/_scaffolding.scss */
+  /* line 55, sass/ui/_scaffolding.scss */
   .block-list .block-text h1 {
     line-height: 115px;
   }
 }
 
-/* line 50, sass/ui/_scaffolding.scss */
+/* line 60, sass/ui/_scaffolding.scss */
 .block-item {
   display: none;
   position: absolute;
@@ -269,32 +295,32 @@ h5 {
   opacity: 0.80;
 }
 @media (max-width: 48em) {
-  /* line 50, sass/ui/_scaffolding.scss */
+  /* line 60, sass/ui/_scaffolding.scss */
   .block-item {
     width: 100%;
   }
 }
 @media (min-width: 64em) {
-  /* line 50, sass/ui/_scaffolding.scss */
+  /* line 60, sass/ui/_scaffolding.scss */
   .block-item {
     width: 100%;
   }
 }
 
-/* line 60, sass/ui/_scaffolding.scss */
+/* line 70, sass/ui/_scaffolding.scss */
 .block-text h1 {
   color: white;
   border-bottom: 1px solid white;
   line-height: 77px;
 }
-/* line 61, sass/ui/_scaffolding.scss */
+/* line 71, sass/ui/_scaffolding.scss */
 .block-text p {
   width: 70%;
   margin: auto;
   color: white;
 }
 
-/* line 63, sass/ui/_scaffolding.scss */
+/* line 73, sass/ui/_scaffolding.scss */
 .banner {
   float: left;
   height: 100px;
@@ -304,7 +330,7 @@ h5 {
   color: white;
   text-align: center;
 }
-/* line 65, sass/ui/_scaffolding.scss */
+/* line 75, sass/ui/_scaffolding.scss */
 .banner h1 {
   width: 100%;
   margin: 0 auto;
@@ -312,16 +338,16 @@ h5 {
   padding: 20px;
   line-height: 50px;
 }
-/* line 66, sass/ui/_scaffolding.scss */
+/* line 76, sass/ui/_scaffolding.scss */
 .banner p {
   padding: 20px;
 }
 @media (max-width: 48em) {
-  /* line 63, sass/ui/_scaffolding.scss */
+  /* line 73, sass/ui/_scaffolding.scss */
   .banner {
     margin-bottom: 50px;
   }
-  /* line 68, sass/ui/_scaffolding.scss */
+  /* line 78, sass/ui/_scaffolding.scss */
   .banner h1 {
     padding: 0;
     line-height: 100px;
@@ -329,68 +355,68 @@ h5 {
 }
 
 @-moz-document url-prefix() {
-  /* line 74, sass/ui/_scaffolding.scss */
+  /* line 84, sass/ui/_scaffolding.scss */
   .block-image {
     margin: 0 !important;
   }
 }
 
-/* line 78, sass/ui/_scaffolding.scss */
+/* line 88, sass/ui/_scaffolding.scss */
 .block-image {
   position: relative;
   float: left;
   -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
   -moz-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
 }
-/* line 80, sass/ui/_scaffolding.scss */
+/* line 90, sass/ui/_scaffolding.scss */
 .block-image:hover .block-item {
   display: block;
 }
 @media (max-width: 48em) {
-  /* line 78, sass/ui/_scaffolding.scss */
+  /* line 88, sass/ui/_scaffolding.scss */
   .block-image {
     margin: 0 20%;
   }
-  /* line 85, sass/ui/_scaffolding.scss */
+  /* line 95, sass/ui/_scaffolding.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0 20%;
   }
 }
 @media (min-width: 48em) {
-  /* line 88, sass/ui/_scaffolding.scss */
+  /* line 98, sass/ui/_scaffolding.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
-  /* line 91, sass/ui/_scaffolding.scss */
+  /* line 101, sass/ui/_scaffolding.scss */
   .block-image.fourth {
     margin: -115px 0 0 130px;
   }
-  /* line 92, sass/ui/_scaffolding.scss */
+  /* line 102, sass/ui/_scaffolding.scss */
   .block-image.fifth {
     margin: -115px 0 0 260px;
   }
-  /* line 93, sass/ui/_scaffolding.scss */
+  /* line 103, sass/ui/_scaffolding.scss */
   .block-image.sixth {
     margin: -264px 0 0 390px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 96, sass/ui/_scaffolding.scss */
+  /* line 106, sass/ui/_scaffolding.scss */
   .block-image.fourth {
     margin: -175px 0 0 188px;
   }
-  /* line 97, sass/ui/_scaffolding.scss */
+  /* line 107, sass/ui/_scaffolding.scss */
   .block-image.fifth {
     margin: -379px 563px;
   }
-  /* line 98, sass/ui/_scaffolding.scss */
+  /* line 108, sass/ui/_scaffolding.scss */
   .block-image.sixth {
     margin: -378px 938px;
   }
 }
-/* line 100, sass/ui/_scaffolding.scss */
+/* line 110, sass/ui/_scaffolding.scss */
 .block-image img {
   width: 375px;
   height: 375px;
@@ -398,34 +424,34 @@ h5 {
   margin: 0px auto;
 }
 @media (max-width: 48em) {
-  /* line 100, sass/ui/_scaffolding.scss */
+  /* line 110, sass/ui/_scaffolding.scss */
   .block-image img {
     width: 250px;
     height: 250px;
   }
 }
 @media (min-width: 64em) {
-  /* line 100, sass/ui/_scaffolding.scss */
+  /* line 110, sass/ui/_scaffolding.scss */
   .block-image img {
     width: 260px;
     height: 260px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 100, sass/ui/_scaffolding.scss */
+  /* line 110, sass/ui/_scaffolding.scss */
   .block-image img {
     width: 375px;
     height: 375px;
   }
 }
 
-/* line 113, sass/ui/_scaffolding.scss */
+/* line 123, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 116, sass/ui/_scaffolding.scss */
+/* line 126, sass/ui/_scaffolding.scss */
 .block-item--tools {
   height: 200px;
   width: 45%;
@@ -436,41 +462,41 @@ h5 {
   border: 1px solid white;
 }
 @media (max-width: 48em) {
-  /* line 116, sass/ui/_scaffolding.scss */
+  /* line 126, sass/ui/_scaffolding.scss */
   .block-item--tools {
     width: 85%;
   }
 }
 
-/* line 122, sass/ui/_scaffolding.scss */
+/* line 132, sass/ui/_scaffolding.scss */
 .block-item--tools__image {
   float: left;
   width: 25%;
 }
-/* line 124, sass/ui/_scaffolding.scss */
+/* line 134, sass/ui/_scaffolding.scss */
 .block-item--tools__image img {
   width: 100px;
   height: 100px;
 }
 
-/* line 126, sass/ui/_scaffolding.scss */
+/* line 136, sass/ui/_scaffolding.scss */
 .block-item--tools__text {
   width: 60%;
   float: right;
   background: #505759;
   height: 100%;
 }
-/* line 128, sass/ui/_scaffolding.scss */
+/* line 138, sass/ui/_scaffolding.scss */
 .block-item--tools__text h1 {
   padding: 10px;
   border-bottom: 1px solid grey;
 }
-/* line 129, sass/ui/_scaffolding.scss */
+/* line 139, sass/ui/_scaffolding.scss */
 .block-item--tools__text p {
   padding: 10px;
 }
 
-/* line 131, sass/ui/_scaffolding.scss */
+/* line 141, sass/ui/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
@@ -478,7 +504,7 @@ h5 {
   text-align: center;
   margin-top: 50px;
 }
-/* line 133, sass/ui/_scaffolding.scss */
+/* line 143, sass/ui/_scaffolding.scss */
 .about h1 {
   margin: 30px auto;
   float: left;
@@ -486,7 +512,7 @@ h5 {
   color: white;
 }
 
-/* line 135, sass/ui/_scaffolding.scss */
+/* line 145, sass/ui/_scaffolding.scss */
 .block-container {
   width: 100%;
   position: relative;
@@ -494,52 +520,52 @@ h5 {
   margin: auto;
 }
 
-/* line 136, sass/ui/_scaffolding.scss */
+/* line 146, sass/ui/_scaffolding.scss */
 .block-container__item {
   width: 80%;
   margin: auto;
 }
 @media (max-width: 48em) {
-  /* line 136, sass/ui/_scaffolding.scss */
+  /* line 146, sass/ui/_scaffolding.scss */
   .block-container__item {
     width: 100%;
   }
 }
 
-/* line 141, sass/ui/_scaffolding.scss */
+/* line 151, sass/ui/_scaffolding.scss */
 .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--no-float {
   float: left;
   width: 30%;
   border-right: 2px solid white;
 }
 @media (max-width: 48em) {
-  /* line 141, sass/ui/_scaffolding.scss */
+  /* line 151, sass/ui/_scaffolding.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--no-float {
     width: 100%;
-    max-height: 100px;
+    margin-bottom: 10px;
   }
 }
-/* line 145, sass/ui/_scaffolding.scss */
+/* line 155, sass/ui/_scaffolding.scss */
 .block-container__item-image img, .block-container__item-image--reverse img, .block-container__item-image--no-float img {
   float: left;
   width: 100%;
 }
 @media (min-width: 48em) {
-  /* line 145, sass/ui/_scaffolding.scss */
+  /* line 155, sass/ui/_scaffolding.scss */
   .block-container__item-image img, .block-container__item-image--reverse img, .block-container__item-image--no-float img {
     max-width: 400px;
     max-height: 400px;
   }
 }
 
-/* line 151, sass/ui/_scaffolding.scss */
+/* line 161, sass/ui/_scaffolding.scss */
 .block-container__item-image--reverse, .block-container__item-image--no-float {
   float: right;
   border: none;
   max-width: 250px;
 }
 @media (max-width: 48em) {
-  /* line 151, sass/ui/_scaffolding.scss */
+  /* line 161, sass/ui/_scaffolding.scss */
   .block-container__item-image--reverse, .block-container__item-image--no-float {
     display: block;
     max-height: 250px;
@@ -548,13 +574,13 @@ h5 {
   }
 }
 
-/* line 158, sass/ui/_scaffolding.scss */
+/* line 168, sass/ui/_scaffolding.scss */
 .block-container__item-image--no-float {
   float: none;
   border: none;
 }
 
-/* line 162, sass/ui/_scaffolding.scss */
+/* line 172, sass/ui/_scaffolding.scss */
 .block-description, .block-description--reverse {
   float: right;
   width: 50%;
@@ -565,7 +591,7 @@ h5 {
   line-height: 40px;
 }
 @media (max-width: 48em) {
-  /* line 162, sass/ui/_scaffolding.scss */
+  /* line 172, sass/ui/_scaffolding.scss */
   .block-description, .block-description--reverse {
     float: left;
     width: 81%;
@@ -574,41 +600,41 @@ h5 {
     line-height: 30px;
   }
 }
-/* line 167, sass/ui/_scaffolding.scss */
+/* line 177, sass/ui/_scaffolding.scss */
 .block-description h1, .block-description--reverse h1 {
   color: white;
 }
-/* line 168, sass/ui/_scaffolding.scss */
+/* line 178, sass/ui/_scaffolding.scss */
 .block-description p, .block-description--reverse p {
   color: white;
 }
-/* line 170, sass/ui/_scaffolding.scss */
+/* line 180, sass/ui/_scaffolding.scss */
 .block-description a li, .block-description--reverse a li {
   list-style-type: none;
   color: white;
   text-decoration: underline;
 }
 
-/* line 173, sass/ui/_scaffolding.scss */
+/* line 183, sass/ui/_scaffolding.scss */
 .block-description--reverse {
   float: left;
 }
 
-/* line 179, sass/ui/_scaffolding.scss */
+/* line 189, sass/ui/_scaffolding.scss */
 .block-list__tools-item div {
   height: 10px;
   margin: 10px;
   background: crimson;
 }
 
-/* line 181, sass/ui/_scaffolding.scss */
+/* line 191, sass/ui/_scaffolding.scss */
 .skills {
   width: 100%;
   position: relative;
   float: left;
 }
 
-/* line 186, sass/ui/_scaffolding.scss */
+/* line 196, sass/ui/_scaffolding.scss */
 .block-list--tools-container__text {
   float: left;
   width: 45%;
@@ -616,26 +642,26 @@ h5 {
   text-align: right;
 }
 @media (max-width: 48em) {
-  /* line 186, sass/ui/_scaffolding.scss */
+  /* line 196, sass/ui/_scaffolding.scss */
   .block-list--tools-container__text {
     width: 25%;
     text-align: center;
   }
 }
 
-/* line 192, sass/ui/_scaffolding.scss */
+/* line 202, sass/ui/_scaffolding.scss */
 .block-list--tools-container {
   float: right;
   width: 50%;
 }
 @media (max-width: 48em) {
-  /* line 192, sass/ui/_scaffolding.scss */
+  /* line 202, sass/ui/_scaffolding.scss */
   .block-list--tools-container {
     width: 75%;
   }
 }
 
-/* line 198, sass/ui/_scaffolding.scss */
+/* line 208, sass/ui/_scaffolding.scss */
 .git-activity {
   width: 100%;
   float: left;
@@ -643,13 +669,13 @@ h5 {
   background: #527B8B;
 }
 @media (max-width: 48em) {
-  /* line 198, sass/ui/_scaffolding.scss */
+  /* line 208, sass/ui/_scaffolding.scss */
   .git-activity {
     display: none;
   }
 }
 
-/* line 202, sass/ui/_scaffolding.scss */
+/* line 212, sass/ui/_scaffolding.scss */
 .git-feed {
   float: left;
   width: 100%;
@@ -658,7 +684,7 @@ h5 {
   transform: rotate(90deg);
 }
 @media (max-width: 48em) {
-  /* line 202, sass/ui/_scaffolding.scss */
+  /* line 212, sass/ui/_scaffolding.scss */
   .git-feed {
     display: none;
     transform: rotate(0deg);
@@ -669,24 +695,24 @@ h5 {
   }
 }
 
-/* line 208, sass/ui/_scaffolding.scss */
+/* line 218, sass/ui/_scaffolding.scss */
 .git-feed__description {
   position: relative;
   z-index: 0;
 }
 @media (max-width: 48em) {
-  /* line 208, sass/ui/_scaffolding.scss */
+  /* line 218, sass/ui/_scaffolding.scss */
   .git-feed__description {
     transform: rotate(0deg);
   }
 }
-/* line 213, sass/ui/_scaffolding.scss */
+/* line 223, sass/ui/_scaffolding.scss */
 .git-feed__description h3 {
   margin: 20px;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 213, sass/ui/_scaffolding.scss */
+  /* line 223, sass/ui/_scaffolding.scss */
   .git-feed__description h3 {
     margin: 10px;
     color: white;
@@ -696,26 +722,26 @@ h5 {
   }
 }
 
-/* line 222, sass/ui/_scaffolding.scss */
+/* line 232, sass/ui/_scaffolding.scss */
 .git-feed__comment text {
   position: relative;
   top: 0;
   left: 0;
 }
 
-/* line 226, sass/ui/_scaffolding.scss */
+/* line 236, sass/ui/_scaffolding.scss */
 svg.removed {
   position: relative;
   z-index: 1;
 }
 @media (max-width: 48em) {
-  /* line 226, sass/ui/_scaffolding.scss */
+  /* line 236, sass/ui/_scaffolding.scss */
   svg.removed {
     width: 40%;
   }
 }
 
-/* line 232, sass/ui/_scaffolding.scss */
+/* line 242, sass/ui/_scaffolding.scss */
 svg.added {
   position: relative;
   z-index: 1;
@@ -724,33 +750,33 @@ svg.added {
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 @media (max-width: 48em) {
-  /* line 232, sass/ui/_scaffolding.scss */
+  /* line 242, sass/ui/_scaffolding.scss */
   svg.added {
     width: 40%;
   }
 }
 
-/* line 238, sass/ui/_scaffolding.scss */
+/* line 248, sass/ui/_scaffolding.scss */
 .timeline {
   width: 100%;
   background: white;
   float: left;
 }
 @media (max-width: 48em) {
-  /* line 238, sass/ui/_scaffolding.scss */
+  /* line 248, sass/ui/_scaffolding.scss */
   .timeline {
     height: 620px;
   }
 }
 
-/* line 244, sass/ui/_scaffolding.scss */
+/* line 254, sass/ui/_scaffolding.scss */
 .timeline__container {
   height: 200px;
   width: 80%;
   margin: 100px auto;
 }
 @media (max-width: 48em) {
-  /* line 244, sass/ui/_scaffolding.scss */
+  /* line 254, sass/ui/_scaffolding.scss */
   .timeline__container {
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -762,7 +788,7 @@ svg.added {
   }
 }
 
-/* line 250, sass/ui/_scaffolding.scss */
+/* line 260, sass/ui/_scaffolding.scss */
 .timeline__phase {
   width: 100%;
   height: 30px;
@@ -771,7 +797,7 @@ svg.added {
   top: 100px;
 }
 
-/* line 253, sass/ui/_scaffolding.scss */
+/* line 263, sass/ui/_scaffolding.scss */
 .timeline__period {
   background: #527B8B;
   height: 50px;
@@ -783,7 +809,7 @@ svg.added {
   border: 1px solid white;
 }
 
-/* line 256, sass/ui/_scaffolding.scss */
+/* line 266, sass/ui/_scaffolding.scss */
 .timeline__tools-item {
   width: 46px;
   height: 40px;
@@ -795,7 +821,7 @@ svg.added {
   background-image: url(../../images/arrowv2.png);
 }
 
-/* line 260, sass/ui/_scaffolding.scss */
+/* line 270, sass/ui/_scaffolding.scss */
 .timeline__tools-item__description {
   width: 100px;
   height: 60px;
@@ -808,7 +834,7 @@ svg.added {
   line-height: 60px;
 }
 @media (max-width: 48em) {
-  /* line 260, sass/ui/_scaffolding.scss */
+  /* line 270, sass/ui/_scaffolding.scss */
   .timeline__tools-item__description {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
@@ -1176,7 +1202,7 @@ body {
 .header__bg {
   position: relative;
   top: 25%;
-  width: 56%;
+  width: 75%;
   height: 400px;
   margin: 7% 20%;
   /*background-color: black;*/
@@ -1524,7 +1550,7 @@ input[type=password]:focus {
 /* line 8, sass/ui/_footer.scss */
 .banner--footer {
   float: left;
-  sheight: 500px;
+  height: 300px;
   width: 100%;
   background-color: #344E58;
   color: white;

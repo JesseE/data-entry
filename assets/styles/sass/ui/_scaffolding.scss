@@ -14,6 +14,16 @@ section.menu-active{
 }
 h5{color:white;}
 
+.ninja-title{
+	float: left;margin: 0px auto;width:  60%;
+	@include bp(med) {width: 100%;}
+}
+.ninja-icon{
+	float:left;	height: 400px;	width: 40%;
+	@include bp(med){
+		width: 100%;
+	}
+}
 .container{
 	position: relative; float: left; margin: 0 auto 100px auto; width: 100%; background-color: white; 
 	h1 { width: 100%; margin: 0 auto; color: white; }
@@ -140,7 +150,7 @@ h5{color:white;}
 }
 .block-container__item-image{ float: left; width:30%; border-right: 2px solid white; 
 	@include bp(med) {
-		width: 100%;max-height: 100px;
+		width: 100%;margin-bottom: 10px;
 	}
 	img{ float: left; width: 100%;
 		@include bp(min-med){

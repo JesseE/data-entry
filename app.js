@@ -5,7 +5,7 @@
 var express = require('express');
 var app = express();
 var path = require('path');
-var port = 3050;
+var port = 3000;
 var express = require('express');
 var router = express.Router();
 var unirest = require('unirest');
@@ -126,6 +126,8 @@ app.get('/', function(request, response, next) {
         text: textEntry,
         title: titleEntry,
         paragraph: paragraphEntry,
+        nav_1: true,
+        nav_2: true,
         headbg:true,
         maps: true,
         footer: true,
@@ -162,9 +164,14 @@ app.get('/', function(request, response, next) {
     }});
 });
 
+
 // posts page
+
+
 app.get('/datavisualisatie', function(request, response, next) {
     response.render('partials/item' ,{
+        nav_1: true,
+        nav_2: true,
         footer: true,
         helpers:{
             title: function () { return 'Datavisualisatie'},
@@ -180,6 +187,8 @@ app.get('/datavis', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image.jpg"}
     }});
 });
+
+
 app.get('/resizer', function(request, response, next) {
     var imgEntry = [
         {"img":"../assets/images/resizer-1.png"},
@@ -193,6 +202,8 @@ app.get('/resizer', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        nav_1: true,
+        nav_2: true,
         footer: true,
         helpers:{
             title: function () { return 'Resizer'; },
@@ -207,6 +218,8 @@ app.get('/resizer-prototype', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image-2.jpg"}
     }}); 
 });
+
+
 app.get('/melkweg', function(request, response, next) {
     var imgEntry = [
         {"img":"../assets/images/melkwegv1.png"},
@@ -220,25 +233,20 @@ app.get('/melkweg', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        nav_1: true,
+        nav_2: true,
         footer: true,
         helpers:{
             title: function () { return 'Melkweg'; },
             links: function () { return 'http://www.melkweg.nl/nl';}
     }}); 
 });
+
+
 app.get('/score-app', function(request, response, next) {
-    response.render('partials/item',{
-        footer: true,
-        helpers:{
-            title: function () { return 'Score App'; },
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image-4.jpg"}
-    }}); 
-});
-app.get('/pathogen', function(request, response, next) {
     var imgEntry = [
-        {"img":"../assets/images/pathogenv1.png"},
-        {"img":"../assets/images/pathogenv2.png"},
+        {"img":"../assets/images/score-appv1.png"},
+        {"img":"../assets/images/score-appv2.png"},
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
@@ -248,13 +256,58 @@ app.get('/pathogen', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        nav_1: true,
+        nav_2: true,
         footer: true,
         helpers:{
-            title: function () { return 'pathogen'; },
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image-5.jpg"}
+            title: function () { return 'Score App'; },
+            links: function () { return '/score-app-prototype'}
+     }}); 
+});
+app.get('/score-app-prototype', function(request, response, next) {
+    response.render('layouts/score-app',{
+        nav_1: false,
+        nav_2: false,
+        footer: false,
+        helpers:{
     }}); 
 });
+
+app.get('/pathogen', function(request, response, next) {
+    var imgEntry = [
+        {"img":"../assets/images/pathogenv1.png"},
+        {"img":"../assets/images/pathogenv2.png"},
+        {"img":"../assets/images/pathogenv3.png"}
+    ];
+    var textEntry = [
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
+        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+    ];
+    response.render('partials/item',{
+        img: imgEntry,
+        text: textEntry,
+        nav_1: true,
+        nav_2: true,
+        footer: true,
+        helpers:{
+            title: function () { return 'Pathogen'; },
+            links: function () { return '/pathogen-prototype';}
+    }}); 
+});
+
+app.get('/pathogen-prototype', function(request, response, next) {
+    response.render('layouts/pathogen',{
+        nav_1: false,
+        nav_2: false,
+        footer: false,
+        helpers:{
+            title: function () { return 'Score App'; },
+            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
+            images: function() { return "../assets/images/placeholder-image-4.jpg"}
+    }}); 
+});
+
+
 app.get('/klassiekwijzer', function(request, response, next) {
      var imgEntry = [
         {"img":"../assets/images/klassiekwijzerv1.png"},
@@ -268,6 +321,8 @@ app.get('/klassiekwijzer', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        nav_1: true,
+        nav_2: true,
         footer: true,
         helpers:{
             title: function () { return 'Klassiekwijzer'; },

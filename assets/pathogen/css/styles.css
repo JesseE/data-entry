@@ -1,0 +1,1052 @@
+html{
+	min-height:		100%;
+}
+body{
+	background:		url('../images/screens/background.jpg') repeat-y center center;
+	background-size:	100% 100%;
+	height:			100%;
+}
+
+body:before 
+{ 
+   content: "";
+   position: fixed;
+   top: -10px;
+   left: 0;
+   width: 100%;
+   height: 10px;
+   z-index: 100;
+   -webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+   -moz-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+   box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+}
+
+@font-face {
+	font-family: 'Xenophone';
+	src: 	url('../fonts/xenophone.ttf'),
+			url('../fonts/xenophone.eot');
+}
+
+.clear{
+	clear: 			both;
+}
+
+.hide{
+	display:		none;
+}
+
+#center_container{
+	position:		absolute;
+	width:			980px;
+	height:			700px;
+	left:			50%;
+	top:			50%;
+	margin:			-350px 0 0 -480px;
+}
+
+#gamecontainer {
+	width: 			980px;
+	height: 		700px;
+	background:		#333;
+	/*background:		url('../images/screens/screen_background.jpg');*/
+	border: 		1px solid black;
+	overflow:		hidden;
+	position: 		relative;
+}
+
+.gamelayer {
+	width: 			980px;
+	height: 		700px;
+	position:		relative;
+	display:		none;
+}
+	
+.gamelayer h1{
+	font-family: 	'Special Elite', cursive;
+	font-size:		35px;
+	font-weight:	bold;
+	color:			#3d2700;
+	margin:			0 0 .4em 0;
+	-webkit-font-smoothing: antialiased !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+
+.gamelayer p{
+	font-family: 	'Xenophone', 'Jura', 'Special Elite', 'Wallpoet', sans-serif;
+	font-size:		22px;
+	font-weight:	100;
+	color:			#702828;
+	line-height:	1.4em;
+	-webkit-font-smoothing: antialiased !important;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+}
+	/* Mute button */
+
+#gamecontainer .screen_mute_button{
+	display:		block;
+	position:		absolute;
+	top:			20px;
+	right:			20px;
+	width:			41px;
+	height:			32px;
+	background: 	url('../images/interface/global_buttons.png') no-repeat 0 0;
+	text-indent:	-999px;
+	opacity:		0.7;
+	z-index:		9999;
+	cursor:			pointer;
+}
+
+#gamecontainer .muted{
+	background-position:	0 -32px;
+}
+	/* Back button */
+.gamelayer .bg_back{
+	position:		absolute;
+	width:			330px;
+	height:			145px;
+	bottom:			0;
+	right:			0;
+	background: 	url('../images/screens/button_back.png') no-repeat top left;
+	z-index:		998;
+}
+
+.gamelayer .bg_back_active{
+	display:		none;
+	width:			330px;
+	height:			145px;
+	background: 	url('../images/screens/button_back.png') no-repeat 0 -145px;
+}
+
+.gamelayer .bg_back.briefing_screen{
+	background: 	url('../images/screens/button_back_v2.png') no-repeat 0 0;
+}
+
+.gamelayer .bg_back_active.briefing_screen{
+	background: 	url('../images/screens/button_back_v2.png') no-repeat 0 -145px;
+}
+
+.gamelayer span.back_button{
+	position:		absolute;
+	width:			152px;
+	height:			53px;
+	top:			589px;
+	left:			678px;
+	z-index:		999;
+	text-indent:	-999px;
+	cursor:			pointer;
+}
+
+	/* Enter level button */
+.gamelayer .bg_entermission, .gamelayer .bg_startmission{
+	position:		absolute;
+	width:			310px;
+	height:			181px;
+	bottom:			0;
+	left:			383px;
+	z-index:		998;
+	background: 	url('../images/screens/button_enter.png') no-repeat top left;
+}
+
+.gamelayer .bg_entermission_active, .gamelayer .bg_startmission_active{
+	display:		none;
+	width:			310px;
+	height:			181px;
+	background:		url('../images/screens/button_enter.png') no-repeat 0 -181px;
+}
+.gamelayer .bg_startmission{
+	background: 	url('../images/screens/button_start.png') no-repeat 0 0;
+}
+
+.gamelayer .bg_startmission_active{
+	background: 	url('../images/screens/button_start.png') no-repeat 0 -181px;
+}
+
+.gamelayer .bg_startmission.briefing_screen{
+	background: 	url('../images/screens/button_start_v2.png') no-repeat 0 0;
+}
+
+.gamelayer .bg_startmission_active.briefing_screen{
+	background: 	url('../images/screens/button_start_v2.png') no-repeat 0 -181px;
+}
+
+.gamelayer span.enter_button{
+	position:		absolute;
+	top:			581px;
+	left:			436px;
+	width:			197px;
+	height:			68px;
+	z-index:		999;
+	text-indent:	-999px;
+	cursor:			pointer;
+}
+
+/* Splash screen */
+#splashscreen{
+	float:			left;
+	position:		relative;
+	height:			700px;
+	width:			980px;
+	background: 	url('../images/screens/loading/loading_bg.jpg') no-repeat top left;
+	z-index:		999;
+}
+
+#splashscreen #loader_icon{
+	float:			left;
+	width:			250px;
+	height:			250px;
+	margin-top:		370px;
+	margin-left:	355px;
+}
+
+
+/* Game Starting Menu Screen */
+#gamestartscreen {
+	background: 	url('../images/screens/start/start_screen_bg.jpg') no-repeat top left;
+}
+
+		/* Button hoverables */
+#gamestartscreen span.start_button{
+	position:		absolute;
+	text-indent:	-9999px;
+	cursor:			pointer;
+}
+#gamestartscreen #button_start_game{
+	width:			323px;
+	height:			114px;
+	top:			327px;
+	left:			130px;
+}
+#gamestartscreen #button_load_game{
+	width:			281px;
+	height:			119px;
+	top:			328px;
+	left:			515px;
+}
+#gamestartscreen #button_select_level{
+	width:			286px;
+	height:			95px;
+	top:			525px;
+	left:			345px;
+}
+#gamestartscreen #button_credits{
+	width:			175px;
+	height:			57px;
+	top:			497px;
+	left:			667px;	
+}
+#gamestartscreen #button_instructions{
+	width:			234px;
+	height:			85px;
+	top:			478px;
+	left:			85px;
+}
+
+		/* Button backgrounds */
+#gamestartscreen div.start_bg{
+	position:		absolute;
+	background: 	url('../images/screens/start/start_screen_buttons.png') no-repeat;
+	display:		block;
+	display:		none;
+}
+
+#gamestartscreen div#bg_start_game{
+	width:			490px;
+	height:			180px;
+	top:			290px;
+	left:			0;
+	background-position: 0 0;
+}
+#gamestartscreen div#bg_load_game{
+	width:			490px;
+	height:			190px;
+	top:			290px;
+	left:			490px;
+	background-position: 0 -180px;
+}
+#gamestartscreen div#bg_select_level{
+	width:			400px;
+	height:			210px;
+	top:			490px;
+	left:			287px;
+	background-position: 0 -370px;
+}
+#gamestartscreen div#bg_credits{
+	width:			348px;
+	height:			145px;
+	top:			453px;
+	left:			632px;
+	background-position: 0 -751px;
+}
+#gamestartscreen div#bg_instructions{
+	width:			350px;
+	height:			171px;
+	top:			434px;
+	left:			0;
+	background-position: 0 -580px;
+}
+
+#gamestartscreen span:hover {
+	color:			#ccc;
+}
+
+/* Loading Screen */
+#loadingscreen {
+	float:			left;
+	background:		url('../images/screens/loading/loading_bg.jpg') no-repeat center;
+	z-index:		9999;
+}
+
+#loadingmessage {
+    margin-top:		400px;
+	text-align:		center;
+	height:			48px;
+	color:			white;
+	background:		url('../images/loader.gif') no-repeat center;
+	font:			12px Arial;
+}
+
+/* Credits */
+#creditsscreen{
+	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+}
+
+/* Instructions */
+#instructionsscreen{
+	background: 	url('../images/screens/instructions/screen_background_instructions.jpg') no-repeat top left;
+}
+
+
+/* Level select */
+#missionselectscreen{
+	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+}
+
+#missionselectscreen #container{
+	float:			left;
+	width:			100%;
+	height:			480px;
+	margin-top:		220px;
+}
+
+#missionselectscreen #container #torso{
+	float:			left;
+	height:			100%;
+	width:			390px;
+	background: 	url('../images/screens/level_select/torso.jpg') no-repeat top left;
+}
+
+#missionselectscreen #container #torso .select_button{
+	position:		absolute;
+	text-indent:	-999px;
+	cursor:			pointer;
+}
+
+#missionselectscreen #container #torso .select_button:hover{
+	
+}
+
+#missionselectscreen #container #torso #stomach{
+	width:			30px;
+	height:			30px;
+	top:			533px;
+	left:			259px;
+}
+#missionselectscreen #container #torso #intestines{
+	width:			35px;
+	height:			35px;
+	top:			586px;
+	left:			207px;
+}
+#missionselectscreen #container #torso #heart{
+	width:			40px;
+	height:			40px;
+	top:			476px;
+	left:			216px;
+}
+
+#missionselectscreen #container #torso .mission_infobox{
+	display:		none;
+	position:		absolute;
+	width:			75px;
+	height:			2em;
+	line-height:	2em;
+	text-align:		center;
+	background:		rgba(255, 255, 255, 0.7);
+	border:			1px solid #ccc;
+}
+
+#missionselectscreen #container #briefing{
+	float:			left;
+	height:			100%;
+	width:			590px;
+	position:		relative;
+}
+
+#missionselectscreen #container #briefing #briefing_image{
+	display:		none;
+	position:		absolute;
+	top:			3px;
+	left:			0;
+	height:			100%;
+	width:			100%;
+	background:		no-repeat 0 -3px;
+	z-index:		997;
+}
+
+#missionselectscreen #container #briefing #briefing_text{
+	position:		relative;
+	padding:		90px 150px 100px 50px;
+	z-index:		999;
+}
+
+/* Level select */
+#missionselectscreen{
+	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+}
+
+/* Mission Briefing Screen */
+#missionscreen, #outroscreen {
+	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+}
+/*
+#briefing-slider{
+	position:	absolute;
+	top:		235px;
+	width:		980px;
+	height:		465px;
+}
+
+#briefing-slider > div{
+	width:		900px;
+	height:		385px;
+	padding:	40px;
+}
+*/
+#missionscreen #missonbriefing {
+	position:		absolute;
+	padding:		10px;
+	top:			260px;
+	left:			106px;
+	width:			410px;
+	height:			300px;
+	color:			rgb(130,150,162);
+	font-size: 		13px;
+	font-family: 	‘Courier New’, Courier, monospace;
+}
+
+/* Game Interface Screen */
+#gameinterfacescreen {
+	font-family: 'Jura', sans-serif;
+}
+
+#game_paused{
+	position:		absolute;
+	display:		none;
+	z-index:		999;
+	width:			130px;
+	height:			143px;
+	top:			217px;
+	left:			425px;
+	background:		url('../images/interface/pause.png') no-repeat top left;
+	cursor:			pointer;
+}
+
+#game_menu{
+	position:		absolute;
+	left:			340px;
+	top:			175px;
+	width:			300px;
+	height:			250px;
+	background:		rgba(0, 0, 0, 0.7);
+	display:		none;
+	z-index:		1000;
+}
+
+#game_menu ul{
+	display:		block;
+	margin:			0;
+	padding:		0;
+}
+
+#game_menu .menu_button{
+	display:		block;
+	float:			left;
+	width:			78%;
+	text-align:		center;
+	margin:			.5em 10%;
+	color:			#fff;
+	border:			2px dashed #ccc;
+}
+
+#game_menu .menu_button:first-child{
+	margin-top: 	1em;
+}
+
+#game_menu .menu_button:hover{
+	border:			2px dashed rgba(0,255,0,0.7);
+}
+
+#game_menu .button_feedback{
+	display:		none;
+	width:			100%;
+	height:			2em;
+	line-height:	2em;
+	font-size:		.8em;
+	color:			#ccc;
+}
+
+.menu_button a{
+	display:		block;
+	width:			100%;
+	height:			3em;
+	line-height:	3em;
+}
+
+.menu_button a:hover{
+	background:		rgba(255, 255, 255, 0.4);
+}
+
+.menu_button#save_game{
+
+}
+.menu_button#exit_game{
+
+}
+
+#timers{
+	position:		absolute;
+	top:			50px;
+	right:			55px;
+	width:			150px;
+	height:			80px;
+	z-index:		100;
+	overflow:		hidden;
+	pointer-events:	none;
+}
+
+#timers .timer{
+	display:		block;
+	float:			right;
+	width:			100%;
+	height:			2em;
+	line-height:	2em;
+	color:			#ccc;
+	font-size:		12px;
+	font-weight:	100;
+	text-align:		right;
+}
+
+.border_piece{
+	position: 		absolute;
+	z-index:		100;
+	pointer-events: none;
+}
+
+#top{
+	height: 		55px;
+	width: 			980px;
+	top:			0;
+	left:			0;
+	background:		url('../images/interface/interface.png') no-repeat 0 0;
+	color:			#c8c6c3;
+}
+#top span{
+	display:		block;
+	position:		absolute;
+	left:			0;
+	top:			20px;
+	overflow:		hidden;
+	height:			25px;
+	line-height:	25px;
+	font-size:		15px;
+}
+#top #resources{
+	left:			80px;
+	width:			58px;
+}
+#top #objective_number{
+	left:			183px;
+	width:			50px;
+	text-align:		center;
+}
+#top #objective_separator{
+	top:			19px;
+	left:			245px;
+}
+#top #objective_text{
+	left:			265px;
+	font-size:		14px;
+	width:			520px;
+}
+#top #objective_time{
+	left:			790px;
+	width:			45px;
+	text-align:		right;
+	color:			#ff8400;
+}
+#top #game_time{
+	left: 			850px;
+}
+
+#left{
+	height: 		457px;
+	width:			47px;
+	top:			55px;
+	left:			0;
+	background:		url('../images/interface/interface.png') no-repeat 0 -55px;
+}
+
+#right{
+	height: 		457px;
+	width:			47px;
+	top:			55px;
+	right:			0;
+	background:		url('../images/interface/interface.png') no-repeat right -55px;
+}
+
+#message_box{
+	position:		absolute;
+	width:			394px;
+	height:			168px;
+	bottom:			0;
+	left:			293px;
+	background:		url('../images/interface/interface.png') no-repeat -100px -100px;
+	z-index:		1000;
+	pointer-events: none;
+}
+
+#interface_bottom{
+	position: 		absolute;
+	bottom: 		0;
+	left:			0;
+	width:			980px;
+	height:			165px;
+	z-index: 		999;
+	background:		url('../images/interface/interface.png') no-repeat left bottom;
+}
+#interface_top{
+	position: 		absolute;
+	bottom: 		165px;
+	left:			0;
+	width:			980px;
+	height:			25px;
+	z-index: 		999;
+	background:		url('../images/interface/interface.png') no-repeat left -510px;
+	pointer-events: none;
+}
+
+#gameinterfacescreen h1{
+	font-size:		16px;
+	font-family: 	'Wallpoet', cursive;
+	color:			#fff;
+}
+/* -- Game buttons */
+#game_buttons{
+	position: 		absolute;
+	height:			120px;
+	width:			80px;
+	overflow:		hidden;
+	bottom:			12px;
+	left:			675px;
+	color:			#fff;
+}
+
+#game_buttons .game_button{
+	display:		block;
+	width:			90%;
+	height:			1em;
+	margin:			5%;
+
+}
+#pause-button{
+
+}
+
+/* -- Item info */
+#gameinterfacescreen #item_info h1{
+	padding:		31px 10px 0 15px;
+	margin-bottom:	9px;
+}
+
+#gameinterfacescreen #item_info{
+	position:		absolute;
+	bottom:			12px;
+	left:			18px;
+	width:			205px;
+	height:			150px;
+	color:			#d7d5d3;
+	pointer-events:	none;
+}
+#gameinterfacescreen #item_info span{
+	display:		block;
+	float:			left;
+	padding:		0 0 0 35px;
+	width:			70px;
+	height:			21px;
+	line-height:	21px;
+	font-size:		14px;
+}
+#gameinterfacescreen #item_info span.stat{
+	padding:		0 0 0 20px;
+}
+/* -- Selected info */
+#gameinterfacescreen #selected_info{
+	position:		absolute;
+	bottom:			12px;
+	right:			18px;
+	width:			200px;
+	height:			147px;
+	color:			#d7d5d3;
+	pointer-events:	none;
+	background:		url('../images/interface/UI_selected.png') no-repeat 0 0;
+}
+#selected_info #container{
+	position:		absolute;
+	bottom:			0;
+	left:			0;
+}
+#selected_info h1{
+	padding:		0;
+	margin:			0 4px;
+	background:		rgba(0, 0, 0, 0.7);
+	width:			192px;
+	height: 		30px;
+	line-height:	30px;
+	text-align:		center;
+}
+
+#selected_info #stat_bars{
+	width:			192px;
+	margin:			0 4px;
+}
+
+#selected_info #stat_bars .bar{
+	display: 		none;
+	width:			192px;
+	height:			17px;
+	position:		relative;
+}
+
+#selected_info #stat_bars .bar .stat_left{
+	width:			0;
+	height:			17px;
+	position:		absolute;
+	top:			0;
+	left:			0;
+}
+
+#selected_info #stat_bars .bar span{
+	display:		block;
+	height:			17px;
+	padding:		0 0 0 3px;
+	line-height:	17px;
+	position:		absolute;
+	top:			0;
+	left:			0;
+	font-size:		12px;
+}
+#selected_info #resource_bar{
+	background:		rgba(0, 0, 55, 1);
+}
+#selected_info #resources_gathered{
+	background:		rgba(0, 0, 255, 0.6);
+}
+#selected_info #health_bar{
+	background:		rgba(60, 0, 0, 1);
+}
+#selected_info #health_left{
+	background:		rgba(0, 255, 0, 0.6);
+}
+
+/* -- Game messages */
+#gameinterfacescreen #gamemessages{
+	position:		absolute;
+	top:			50px;
+	left:			55px;
+	width:			290px;
+	height:			75px;
+	color:			#fcfcfc;
+	overflow:		hidden;
+	font-size: 		12px;
+	pointer-events: none;
+}
+#gameinterfacescreen #gamemessages span {
+	font-weight:	800;
+	color:			red;
+}
+
+#gameinterfacescreen canvas{
+	position:		absolute;
+	top:			0px;
+	left:			0px;
+}
+
+#gameinterfacescreen #foregroundcanvas{
+	z-index:		1;
+}
+
+#gameinterfacescreen{
+	cursor:			crosshair;
+}
+
+#gameinterfacescreen #backgroundcanvas{
+	z-index:		0;
+}
+
+/* Tutorial messages */
+
+#tip_message{
+	position: 		absolute;
+	color:			white;
+	display:		none;
+	top: 			460px;
+	left: 			50px;
+	font-size: 		120%;
+	text-shadow: 	2px 2px 2px rgba(0, 0, 0, 1);
+	pointer-events:	none;
+	padding:		10px;
+	z-index:		2;
+	
+	-webkit-user-select: 	none; /* Chrome/Safari */        
+	-moz-user-select: 		none; /* Firefox */
+	-ms-user-select: 		none; /* IE10+ */
+}
+
+#tip_message span{
+}
+
+/* Sidebar Buttons */
+
+/* Sidebar Buttons */
+#gameinterfacescreen #sidebarbuttons {
+	position:		absolute;
+	left:			225px;
+	bottom:			12px;
+	width:			87px;
+	height:			127px;
+	overflow:		none;
+}
+
+#gameinterfacescreen #sidebarbuttons input[type="button"] {
+	border-width:	0px;
+	padding:		0px;	
+}
+/* Grayed out state for buttons*/
+.UI_button{
+	display:			block;
+	position:			relative;
+	background-image: 	url('../images/interface/UI.png');
+}
+.small{
+	margin:				-8px -3px;
+	width:			  	50px;
+	height:				50px;
+}
+.small:first-child{
+	margin-top:			-4px;
+	width:			  	50px;
+	height:				50px;
+}
+.large{
+	margin:				-2px 0 -2px -5px;
+	width:			  	90px;
+	height:				65px;
+}
+
+.building, .unit{
+	display:			none;
+}
+
+.queue_number{
+	position:			absolute;
+	pointer-events:		none;
+	color:				#fff;
+	bottom:				.6em;
+	right:				.6em;
+}
+
+/* Regular state for buttons*/ 
+#barrack-light-button{
+	background-position: -150px 0;
+}
+#barrack-heavy-button{
+	background-position: -150px 75px;
+}
+#barrack-light-button:hover{
+	background-position: -330px 0;
+}
+#barrack-heavy-button:hover{
+	background-position: -330px 75px;
+}
+
+#barrack-light-button.disabled{
+	background-position: -240px 0;
+}
+#barrack-heavy-button.disabled{
+	background-position: -240px 75px;
+}
+#barrack-light-button.disabled:hover{
+	background-position: -240px 0;
+}
+#barrack-heavy-button.disabled:hover{
+	background-position: -240px 75px;
+}
+
+
+#cell-light-button{
+	background-position: 0 0;
+}
+#cell-heavy-button{
+	background-position: 0 50px;
+}
+#cell-yellow-button{
+	background-position: 0 100px;
+}
+#cell-light-button:hover{
+	background-position: -100px 0;
+}
+#cell-heavy-button:hover{
+	background-position: -100px 50px;
+}
+#cell-yellow-button:hover{
+	background-position: -100px 100px;
+}
+
+
+#cell-light-button.disabled{
+	background-position: -50px 0;
+}
+#cell-heavy-button.disabled{
+	background-position: -50px 50px;
+}
+#cell-yellow-button.disabled{
+	background-position: -50px 100px;
+}
+#cell-light-button.disabled:hover{
+	background-position: -50px 0;
+}
+#cell-heavy-button.disabled:hover{
+	background-position: -50px 50px;
+}
+#cell-yellow-button.disabled:hover{
+	background-position: -50px 100px;
+}
+
+
+
+
+/* Message Box Screen */
+#messageboxscreen {
+	background:		rgba(0,0,0,0.8);	
+	position:		absolute;
+	top:			0;
+	left:			0;
+	z-index:		998;
+}
+.messagebox {
+    position:		relative;
+    float:			left;
+	margin-top:		120px;
+	margin-left:	180px;
+	width:			620px;
+	height:			320px;
+	color:			white;
+	color:			rgb(130,150,162);
+	overflow:		hidden;
+	font-size: 		13px;
+	font-family: 	'Courier New', Courier, monospace;
+}
+
+#victory{
+	background:		url('../images/screens/popup/victory_bg.png') no-repeat 0 0;
+}
+
+#game_over{
+	background:		url('../images/screens/popup/game-over_bg.png') no-repeat 0 0;
+}
+
+.messagebox_button{
+	display:		block;
+	position:		absolute;
+	width:			150px;
+	height:			80px;
+	background:		url('../images/screens/popup/buttons.png') no-repeat 0 0;
+	cursor:			pointer;
+}
+
+.button_left{
+	bottom:			25px;
+	left:			150px;
+}
+
+.button_right{
+	bottom:			25px;
+	right:			150px;
+}
+
+#next_mission{
+	background-position:	0 -160px;
+}
+#next_mission:hover{
+	background-position:	-150px -160px;
+}
+
+#final_mission{
+	background-position:	0 -240px;
+}
+#final_mission:hover{
+	background-position:	-150px -240px;
+}
+
+#retry_mission{
+	background-position:	0 -80px;
+}
+#retry_mission:hover{
+	background-position:	-150px -80px;
+}
+
+#exit_popup{
+	background-position:	0 0;
+}
+#exit_popup:hover{
+	background-position:	-150px 0;
+}
+
+/*
+
+#messagebox span {
+	position:		absolute;
+	top:			30px;
+	left:			50px;
+	width:			200px;
+	height:			100px;
+}
+
+#messagebox input[type="button"]{
+	background-image: url('../images/buttons.png');	
+	position:		absolute;
+	border-width:	0px;
+	padding:		0px;
+}
+#messageboxok{
+	background-position: -2px -150px;
+	top:			126px;
+	left:			11px;	
+	width:			74px;
+	height:			26px;
+}
+#messageboxok:active,#messageboxok:disabled{
+	background-position: -2px -186px;
+}
+
+#messageboxcancel{
+	background-position: -86px -150px;	
+	left:			197px;
+	top:			129px;	
+	width:			73px;
+	height:			24px;
+}
+#messageboxcancel:active,#messageboxcancel:disabled{
+	background-position: -86px -184px;
+}
+*/
