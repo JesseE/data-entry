@@ -10,7 +10,9 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        {{#if normal}}
         <link rel="stylesheet" href="/assets/styles/screen.css">
+        {{/if}}
     </head>
     <body>
     {{#if nav_1}}    
@@ -73,7 +75,9 @@
         {{/if}}
     </footer>
     {{/if}}
+    {{#if normal}}
     <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
+    {{/if}}
     <script type="text/javascript" src="/assets/bower_components/d3/d3.min.js"></script>
     {{#if resizer}}
         <script type="text/javascript" src="/assets/bower_components/blueimp-load-image/js/load-image.all.min.js"></script>

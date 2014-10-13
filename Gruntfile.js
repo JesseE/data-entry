@@ -16,7 +16,7 @@ module.exports = function (grunt) {
             },
             scripts: {
                 files: [
-                    'assets/scripts/**/*.js',
+                    'assets/scripts/**/*.js',                            
                 ],
             },
             css: {
@@ -30,7 +30,14 @@ module.exports = function (grunt) {
             },
             images: {
                 files: [
-                    'assets/images/**/*.{png,jpg,jpeg,webp}'
+                    'assets/images/**/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/buildings/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/bullets/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/interface/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/maps/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/screens/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/terrain/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/vehicles/*.{png,jpg,jpeg,webp}'
                 ],
             },
             express: {
@@ -39,13 +46,13 @@ module.exports = function (grunt) {
                 options: {
                     nospawn: true // Without this option specified express won't be reloaded
                 }
-            },
+            }
         },
-         scripts: {
+        scripts: {
                 files: [
-                    'assets/scripts/**/*.js',
+                    'assets/scripts/**/*.js'
                 ],
-            },
+        },
         // Clean Config
         clean: {
             dist: {

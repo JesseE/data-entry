@@ -126,6 +126,7 @@ app.get('/', function(request, response, next) {
         text: textEntry,
         title: titleEntry,
         paragraph: paragraphEntry,
+        normal: true,
         nav_1: true,
         nav_2: true,
         headbg:true,
@@ -170,6 +171,7 @@ app.get('/', function(request, response, next) {
 
 app.get('/datavisualisatie', function(request, response, next) {
     response.render('partials/item' ,{
+        normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
@@ -182,6 +184,7 @@ app.get('/datavisualisatie', function(request, response, next) {
 });
 app.get('/datavis', function(request, response, next) {
     response.render('partials/datavis' ,{
+        normal: true,
         footer: true,
         helpers:{
             images: function() { return "../assets/images/placeholder-image.jpg"}
@@ -202,6 +205,7 @@ app.get('/resizer', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
@@ -212,6 +216,7 @@ app.get('/resizer', function(request, response, next) {
 });
 app.get('/resizer-prototype', function(request, response, next) {
     response.render('partials/resizer',{
+        normal: true,
         footer: false,
         resizer: true,
         helpers:{
@@ -233,6 +238,7 @@ app.get('/melkweg', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
@@ -256,6 +262,7 @@ app.get('/score-app', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
@@ -266,6 +273,7 @@ app.get('/score-app', function(request, response, next) {
 });
 app.get('/score-app-prototype', function(request, response, next) {
     response.render('layouts/score-app',{
+        normal: false,
         nav_1: false,
         nav_2: false,
         footer: false,
@@ -274,6 +282,8 @@ app.get('/score-app-prototype', function(request, response, next) {
 });
 
 app.get('/pathogen', function(request, response, next) {
+     
+    //  
     var imgEntry = [
         {"img":"../assets/images/pathogenv1.png"},
         {"img":"../assets/images/pathogenv2.png"},
@@ -286,6 +296,7 @@ app.get('/pathogen', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
@@ -297,6 +308,7 @@ app.get('/pathogen', function(request, response, next) {
 
 app.get('/pathogen-prototype', function(request, response, next) {
     response.render('layouts/pathogen',{
+        normal: false,
         nav_1: false,
         nav_2: false,
         footer: false,
@@ -321,6 +333,7 @@ app.get('/klassiekwijzer', function(request, response, next) {
     response.render('partials/item',{
         img: imgEntry,
         text: textEntry,
+        normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
