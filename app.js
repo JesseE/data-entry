@@ -111,7 +111,7 @@ app.get('/', function(request, response, next) {
     ];
     var paragraphEntry =[
         {"paragraph": "visualisatie van coding activiteit"},
-        {"paragraph": "Pas de dimensies van je afbeelding"},
+        {"paragraph": "Pas de dimensies van je afbeelding aan"},
         {"paragraph": "SASS aanpassingen in de melkweg"},
         {"paragraph": "Toevoegen van actuele score's"},
         {"paragraph": "Kom erachter welke klassieke muziek bij je past"},

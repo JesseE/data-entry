@@ -22,13 +22,13 @@ $('a.active').hover(function(){
     switch (value) {
         case 0 :
             $('.nav--secundairy').hide();
-            $('header, section, footer').removeClass('menu-active');
+            // $('header, section, footer').removeClass('menu-active');
             value = 1;
             console.log('show');
             break;
         case 1 :
             $('.nav--secundairy').show();
-            $('header, section, footer').addClass('menu-active');
+            // $('header, section, footer').addClass('menu-active');
             value = 0;
             console.log('hide');
             break;
@@ -42,12 +42,14 @@ var mode = 2;
 
 var data = [
 	{name: "GIT", score: 10},
- 	{name: "Javascript", score: 15},
-    {name: "SASS", score: 18},
+    {name: "Javascript", score: 18},
+ 	{name: "CSS / SASS", score: 18},
     {name: "HTML", score: 20},
-    {name: "D3", score: 16},
-   	{name: "Node", score: 17},
-    {name: "Express", score: 18}
+    {name: "D3.js", score: 16},
+   	{name: "Node.js", score: 17},
+    {name: "Express.js", score: 18},
+    {name: "Game Dev", score: 16},
+    {name: "Mobile Dev", score: 15}
 ];
 
 var dataScore = [];
@@ -73,7 +75,7 @@ var chart = d3.select(".block-list--tools-container")
 var bar = chart.selectAll("g")
     .data(dataScore)
   .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
+    .attr("transform", function(d, i) { return "translate(0," +i * barHeight*2 + ")"; })
     .attr("fill", "white");
 
 bar.append("rect")

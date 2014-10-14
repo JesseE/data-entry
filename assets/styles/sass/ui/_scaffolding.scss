@@ -8,8 +8,9 @@ html,body{
 	width: 100%;margin: 0;
 }
 section.menu-active{
+	transition: all 0.5 ease;
 	@include bp (med){
-		width: 70%; float:right;
+		width: 80%; float:right;
 	}
 }
 h5{color:white;}
@@ -148,13 +149,13 @@ h5{color:white;}
 		width: 100%;
 	}
 }
-.block-container__item-image{ float: left; width:30%; border-right: 2px solid white; 
+.block-container__item-image{ float: left; width:42%;
 	@include bp(med) {
 		width: 100%;margin-bottom: 10px;
 	}
 	img{ float: left; width: 100%;
 		@include bp(min-med){
-			max-width: 400px;max-height: 400px;
+			//min-width: 600px;min-height: 400px;
 		}
 	}	
 }
@@ -170,7 +171,7 @@ h5{color:white;}
 	float:none; border:none;
 }
 .block-description{
-	float: right; width: 50%;margin: 10px; height: 340px; padding-left: 100px; background: #527B8B; line-height: 40px;
+	float: right; width: 47%;margin: 10px; height: 340px; padding:20px; background: #527B8B; line-height: 40px;
 	@include bp(med){
 		float: left; width: 81%; max-height: 270px; padding:20px; line-height: 30px;
 	}
@@ -192,9 +193,11 @@ h5{color:white;}
 	width: 100%;
 	position: relative;
 	float:left;
+	svg{ height: 400px;}
 }
+
 .block-list--tools-container__text{
-	float:left;width: 45%;color: white;text-align: right;
+	float:left;width: 45%;color: white;text-align: right; line-height:40px;
 	@include bp (med) {
 		width: 25%; text-align: center;
 	}

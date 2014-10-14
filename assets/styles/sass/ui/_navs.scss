@@ -16,7 +16,7 @@
 
 .nav {  z-index: 2; position: fixed; top: 10px; left:10px; margin:0; width:125px; height: 110px; background-color: #383d3f; 
   	ul{ position: relative;margin: 100px 0; width: 50%; padding: 0px 15px;height: 100%;
-		li{ float: left; height: 60px; width: 100px; list-style-type: none; padding: 0 20px; line-height: 55px;
+		li{ float: left; height: 60px; width: 100px; list-style-type: none; padding: 0 20px; line-height: 55px; 
 			&:hover{ background-color: grey; color: white;
 				
 			}
@@ -39,13 +39,13 @@
 }
 .nav--off-window{ display:none;	z-index: 2; top: 0; position: fixed; width: 148px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
 	@include bp(med){
-		float: left; width: 77px;
+		float: left; width: 20%;
 	}
 	ul{
 		margin: 100% 0; padding: 0;text-align:center;
 		li{ 
 			display: inline-block; width: 100%; padding: 25px 0; color: white; list-style-type: none; text-align: center;
-			&:hover{background:white; color:grey;}
+			&:hover{background:white; color:grey;transition: background-color 0.5 ease;}
 			a{
 				text-decoration: none;	
 			}
@@ -70,7 +70,7 @@
 .nav__list{ margin-top:100%;}
 .nav__button{	position:absolute; left: 25px; top: 25px;padding: 5px;}
 
-.nav__button-container{ height: 50px; background: #383d3f;}
+.nav__button-container{ height: 50px; background: #383d3f; }
 
 .nav__button-bar{ width: 65px;  height: 10px; margin:10px 0;background:white;
 	&:first-child{ margin: 0 0 10px 0;}
