@@ -4,6 +4,7 @@
 * {
 	font-family: "helvetica","Arial";
 }
+a.smarterwiki-linkify{ color: white;}
 html,body{
 	width: 100%;margin: 0;
 }
@@ -171,12 +172,11 @@ h5{color:white;}
 	float:none; border:none;
 }
 .block-description{
-	float: right; width: 47%;margin: 10px; height: 340px; padding:20px; background: #527B8B; line-height: 40px;
+	float: right; width: 47%;margin: 10px; /*height: 340px;*/ padding:20px; background: #527B8B; line-height: 40px;
 	@include bp(med){
-		float: left; width: 81%; max-height: 270px; padding:20px; line-height: 30px;
+		float: left; width: 81%; /*max-height: 270px;*/ padding:20px; line-height: 30px;
 	}
-	h1{color:white;}
-	p{color:white;}
+	h1,h3,p{color:white;}
 	a{
 		li{ list-style-type: none; color: white; text-decoration:underline;}
 	}
@@ -193,7 +193,11 @@ h5{color:white;}
 	width: 100%;
 	position: relative;
 	float:left;
-	svg{ height: 400px;}
+	svg{ height: 400px;
+		g{
+			rect{ width: 100%;}
+		}
+	}
 }
 
 .block-list--tools-container__text{

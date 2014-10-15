@@ -53,6 +53,7 @@
                     <h1>Jesse Eikema</h1>
                     <h1>Frontend Developer</h1>
                     <h1>{ { CODING NINJA } } </h1>
+                     <h1>{{name.[0].name}} + {{name.[0].score}} </h1>
                 </div>    
                 <div class="ninja-icon"><img src="assets/images/ninja.jpg"></div>
             </div>
@@ -67,6 +68,7 @@
     <footer class="banner--footer" id="contact">
         <h1>Contact</h1>
         <p>Kopje koffie drinken?</p>
+        <p>jesse.eikema@gmail.com</p>
         {{#if maps}}
         <div class="maps">    
             {{!-- <a href="https://www.google.com/maps/place/Eerste+Ringdijkstraat,+1097+Amsterdam,+Nederland/@52.350113,4.922608,16z/data=!4m2!3m1!1s0x47c60978b3449359:0xd2cfacd67f71c1e7?hl=nl-NL"><img src="assets/images/maps.png"></a> --}}
@@ -85,6 +87,13 @@
         <script type="text/javascript" src="/assets/scripts/resizer.js"></script>
     {{/if}}
     <script type="text/javascript"> 
+        // var nameList = ['{{name}}'];
+        // var newName = nameList[0];
+        // console.log({{name}});
+        // var namesItems = nameList[0];
+        // var newNames = [{newnames: namesItems.split(',')}];
+        // console.log('{{name.[0].name}}');
+        // var newName = ['{{name.[0].name}}'];
         var addData = [{{added}}];
         var removedData = [{{removed}}];
         var commentContainer = ['{{comments}}'];

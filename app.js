@@ -89,6 +89,7 @@ function getAllMessage () {
 // Index Page
 app.get('/', function(request, response, next) {    
     // console.log(gitMessage);
+
     var container = [];
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
                 gitMessage[i];
@@ -121,7 +122,19 @@ app.get('/', function(request, response, next) {
         {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
         {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
     ];
+    var nameEntry = [
+        {'name': "GIT", 'score': 10},
+        {'name': "Javascript", 'score': 18},
+        {'name': "CSS / SASS", 'score': 18},
+        {'name': "HTML", 'score': 20},
+        {'name': "D3.js", 'score': 16},
+        {'name': "Node.js", 'score': 17},
+        {'name': "Express.js", 'score': 18},
+        {'name': "Game Dev", 'score': 16},
+        {'name': "Mobile Dev", 'score': 15}
+    ];
     response.render('index', {  
+        name: nameEntry,
         img: imgEntry,
         text: textEntry,
         title: titleEntry,
@@ -161,6 +174,20 @@ app.get('/', function(request, response, next) {
                      var comments = container;
                     return comments;       
                 }
+            },
+            name: function () {
+                var nameEntry = [
+                    {'name': "GIT", 'score': 10},
+                    {'name': "Javascript", 'score': 18},
+                    {'name': "CSS / SASS", 'score': 18},
+                    {'name': "HTML", 'score': 20},
+                    {'name': "D3.js", 'score': 16},
+                    {'name': "Node.js", 'score': 17},
+                    {'name': "Express.js", 'score': 18},
+                    {'name': "Game Dev", 'score': 16},
+                    {'name': "Mobile Dev", 'score': 15}
+                ];
+                return nameEntry;
             }
     }});
 });
@@ -194,8 +221,8 @@ app.get('/datavis', function(request, response, next) {
 
 app.get('/resizer', function(request, response, next) {
     var imgEntry = [
-        {"img":"../assets/images/resizer-1.png"},
-        {"img":"../assets/images/resizer-3.png"},
+        {"img":"../assets/images/resizer-08.png"},
+        {"img":"../assets/images/resizer-11.png"},
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
