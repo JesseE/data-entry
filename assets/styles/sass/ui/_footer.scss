@@ -6,7 +6,8 @@
 */
 
 .banner--footer{
-	float: left; height: 300px; width: 100%;background-color: #344E58; color:white; text-align:center;
+	float: left; height: 300px; width: 100%;background-color: #344E58; color:white; text-align:center;position: relative;
+z-index: 1;
 	h1 { width: 100%; margin: 50px auto; color: white; }
 	p { margin: 50px auto;} 
 	iframe{

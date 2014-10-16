@@ -38,7 +38,7 @@ var mode = 2;
 
 /*/////////////////////////////
     skills visualisation
-    my first datavisualisation template!!
+    my first datavisualisation template
 *//////////////////////////////
 var nameData = nameContainer[0];
 var scoreData = scoreContainer;
@@ -66,14 +66,14 @@ var bar = chart.selectAll("g")
     .data(dataScore)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," +i * barHeight*2 + ")"; })
-    .attr("fill", "white");
+    .attr("fill", "#344E58");
 
 bar.append("rect")
     .attr("width", x)
     .attr("height", barHeight - 1);
 
-var bartext = d3.select('.skills').append("div");
-
+var bartext = d3.select('.skills__text').append("div");
+;
 bartext.selectAll("div")
     .data(dataName)
     .enter().append("text") 
@@ -81,7 +81,7 @@ bartext.selectAll("div")
     .attr("x", function(d) { return  width-500; })
     .attr("y", barHeight / 2)
     .attr("dy", ".35em")
-
+    .attr("fill", "#344E58")
     .text(function(d) { return d; });
 
 /*/////////////////////////////
@@ -161,7 +161,7 @@ var barC = chartX.selectAll(".git-feed__description")
             .style("fill", "white")
             d3.select('.git-feed__comment')
                 .append("text")
-                .style("color","#B53843")
+                .style("color","white")
                 .style("width", 100)
                 .text(function(d){ return ' '+ Container[0].comments[i];})
     })

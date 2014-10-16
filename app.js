@@ -49,7 +49,7 @@ function getAllCommits (){ unirest.get('https://api.github.com/repos/JesseE/data
     pass: password,
     sendImmediately: true
 }).headers(header).end(function(response){
-    for(var i = 0, len = commitsHash.length; i < len; i ++ ){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
         commitContainer.push(response.body[i].sha);
     }
     getAllStats();    
@@ -57,7 +57,7 @@ function getAllCommits (){ unirest.get('https://api.github.com/repos/JesseE/data
 };
 //addtions deletions total adjustments in a commit
 function getAllStats () { 
-    for(var i = 0, len = commitsHash.length; i < len; i ++ ){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
         unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
             user: username,
             pass: password,
@@ -70,7 +70,7 @@ function getAllStats () {
 };
 // commit comments
 function getAllMessage () { 
-    for(var i = 0, len = commitsHash.length; i < len; i ++ ){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
         unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
             user: username,
             pass: password,
@@ -199,8 +199,6 @@ app.get('/', function(request, response, next) {
 
 
 // posts page
-
-
 app.get('/datavisualisatie', function(request, response, next) {
     var name = [
         {'name': "GIT", 'score': 10},
@@ -483,8 +481,6 @@ app.get('/pathogen-prototype', function(request, response, next) {
             images: function() { return "../assets/images/placeholder-image-4.jpg"}
     }}); 
 });
-
-
 app.get('/klassiekwijzer', function(request, response, next) {
     var name = [
         {'name': "CSS", 'score': 18},
