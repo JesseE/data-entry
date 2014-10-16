@@ -53,7 +53,6 @@
                     <h1>Jesse Eikema</h1>
                     <h1>Frontend Developer</h1>
                     <h1>{ { CODING NINJA } } </h1>
-                     <h1>{{name.[0].name}} + {{name.[0].score}} </h1>
                 </div>    
                 <div class="ninja-icon"><img src="assets/images/ninja.jpg"></div>
             </div>
@@ -99,8 +98,20 @@
         var commentContainer = ['{{comments}}'];
         var commentsString = commentContainer[0];
         var Container = [{comments: commentsString.split(',')}];
+        var nameString = ['{{name}}'];
+        var nameStringified = nameString[0];
+        var nameContainer =  [{name: nameStringified.split(',')}];
+        var scoreContainer = [{{score}}];
+        // var scoreStringified = scoreString[0];
+        // var scoreContainer =  [{score: scoreStringified.split(',')}];
     </script>
-    <script type="text/javascript" src="/assets/scripts/main.js"> </script>
+    <script type="text/javascript" src="/assets/scripts/main.js"> 
+        // for (var i = 0, len = namelist.length; i < len; i ++){
+        //     nameItems[i];
+        //     console.log(namesItems);
+        // //var name1 = {{name.[0].name}} + {{name.[0].score}};
+        // }
+    </script>
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

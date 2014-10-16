@@ -89,7 +89,6 @@ function getAllMessage () {
 // Index Page
 app.get('/', function(request, response, next) {    
     // console.log(gitMessage);
-
     var container = [];
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
                 gitMessage[i];
@@ -122,7 +121,7 @@ app.get('/', function(request, response, next) {
         {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
         {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
     ];
-    var nameEntry = [
+    var name = [
         {'name': "GIT", 'score': 10},
         {'name': "Javascript", 'score': 18},
         {'name': "CSS / SASS", 'score': 18},
@@ -134,7 +133,6 @@ app.get('/', function(request, response, next) {
         {'name': "Mobile Dev", 'score': 15}
     ];
     response.render('index', {  
-        name: nameEntry,
         img: imgEntry,
         text: textEntry,
         title: titleEntry,
@@ -176,19 +174,26 @@ app.get('/', function(request, response, next) {
                 }
             },
             name: function () {
-                var nameEntry = [
-                    {'name': "GIT", 'score': 10},
-                    {'name': "Javascript", 'score': 18},
-                    {'name': "CSS / SASS", 'score': 18},
-                    {'name': "HTML", 'score': 20},
-                    {'name': "D3.js", 'score': 16},
-                    {'name': "Node.js", 'score': 17},
-                    {'name': "Express.js", 'score': 18},
-                    {'name': "Game Dev", 'score': 16},
-                    {'name': "Mobile Dev", 'score': 15}
-                ];
-                return nameEntry;
+               
+                var nameBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    nameBucket.push(name[i].name);
+                  
+                }
+                return nameBucket;
+            },
+            score: function() {
+                var scoreBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    scoreBucket.push(name[i].score);
+                }
+                return scoreBucket;
             }
+
     }});
 });
 
@@ -197,6 +202,15 @@ app.get('/', function(request, response, next) {
 
 
 app.get('/datavisualisatie', function(request, response, next) {
+    var name = [
+        {'name': "GIT", 'score': 10},
+        {'name': "Javascript", 'score': 18},
+        {'name': "CSS / SASS", 'score': 18},
+        {'name': "HTML", 'score': 20},
+        {'name': "D3.js", 'score': 16},
+        {'name': "Node.js", 'score': 17},
+        {'name': "unirest.js", 'score': 16}
+    ];
     response.render('partials/item' ,{
         normal: true,
         nav_1: true,
@@ -206,7 +220,27 @@ app.get('/datavisualisatie', function(request, response, next) {
             title: function () { return 'Datavisualisatie'},
             links: function () { return '/datavis'},
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image.jpg"}
+            images: function() { return "../assets/images/placeholder-image.jpg"},
+            name: function () {
+               
+                var nameBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    nameBucket.push(name[i].name);
+                  
+                }
+                return nameBucket;
+            },
+            score: function() {
+                var scoreBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    scoreBucket.push(name[i].score);
+                }
+                return scoreBucket;
+            }
     }});
 });
 app.get('/datavis', function(request, response, next) {
@@ -220,6 +254,13 @@ app.get('/datavis', function(request, response, next) {
 
 
 app.get('/resizer', function(request, response, next) {
+    var name = [
+        {'name': "GIT", 'score': 15},
+        {'name': "SASS", 'score': 20},
+        {'name': "HTML", 'score': 13},
+        {'name': 'Javascript', 'score': 20},
+        {'name': "JavaScript-Load-Image", 'score': 10}
+    ];
     var imgEntry = [
         {"img":"../assets/images/resizer-08.png"},
         {"img":"../assets/images/resizer-11.png"},
@@ -238,7 +279,27 @@ app.get('/resizer', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Resizer'; },
-            links:function() {return '/resizer-prototype';}
+            links:function() {return '/resizer-prototype';},
+            name: function () {
+               
+                var nameBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    nameBucket.push(name[i].name);
+                  
+                }
+                return nameBucket;
+            },
+            score: function() {
+                var scoreBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    scoreBucket.push(name[i].score);
+                }
+                return scoreBucket;
+            }
     }}); 
 });
 app.get('/resizer-prototype', function(request, response, next) {
@@ -253,6 +314,11 @@ app.get('/resizer-prototype', function(request, response, next) {
 
 
 app.get('/melkweg', function(request, response, next) {
+    var name = [
+        {'name': "GIT", 'score': 15},
+        {'name': "SASS", 'score': 20},
+        {'name': "HTML", 'score': 10},
+    ];
     var imgEntry = [
         {"img":"../assets/images/melkwegv1.png"},
         {"img":"../assets/images/melkwegv2.png"},
@@ -271,12 +337,40 @@ app.get('/melkweg', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Melkweg'; },
-            links: function () { return 'http://www.melkweg.nl/nl';}
+            links: function () { return 'http://www.melkweg.nl/nl';},
+            name: function () {
+               
+                var nameBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    nameBucket.push(name[i].name);
+                  
+                }
+                return nameBucket;
+            },
+            score: function() {
+                var scoreBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    scoreBucket.push(name[i].score);
+                }
+                return scoreBucket;
+            }
     }}); 
 });
 
 
 app.get('/score-app', function(request, response, next) {
+    var name = [
+        {'name': "CSS", 'score': 15},
+        {'name': "Mobile Dev", 'score': 10},
+        {'name': "HTML", 'score': 10},
+        {'name': "zepto.js", 'score': 17},
+        {'name': "quo.js", 'score': 15},
+        {'name': "leaguevine API", 'score': 15},
+    ];
     var imgEntry = [
         {"img":"../assets/images/score-appv1.png"},
         {"img":"../assets/images/score-appv2.png"},
@@ -295,7 +389,27 @@ app.get('/score-app', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Score App'; },
-            links: function () { return '/score-app-prototype'}
+            links: function () { return '/score-app-prototype'},
+            name: function () {
+               
+                var nameBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    nameBucket.push(name[i].name);
+                  
+                }
+                return nameBucket;
+            },
+            score: function() {
+                var scoreBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    scoreBucket.push(name[i].score);
+                }
+                return scoreBucket;
+            }
      }}); 
 });
 app.get('/score-app-prototype', function(request, response, next) {
@@ -309,8 +423,12 @@ app.get('/score-app-prototype', function(request, response, next) {
 });
 
 app.get('/pathogen', function(request, response, next) {
-     
-    //  
+    var name = [
+        {'name': "Javascript", 'score': 20},
+        {'name': "HTML", 'score': 14},
+        {'name': "CSS", 'score': 13},
+        {'name': "Game Dev", 'score': 20}
+    ]; 
     var imgEntry = [
         {"img":"../assets/images/pathogenv1.png"},
         {"img":"../assets/images/pathogenv2.png"},
@@ -329,7 +447,27 @@ app.get('/pathogen', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Pathogen'; },
-            links: function () { return '/pathogen-prototype';}
+            links: function () { return '/pathogen-prototype';},
+            name: function () {
+               
+                var nameBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    nameBucket.push(name[i].name);
+                  
+                }
+                return nameBucket;
+            },
+            score: function() {
+                var scoreBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    scoreBucket.push(name[i].score);
+                }
+                return scoreBucket;
+            }
     }}); 
 });
 
@@ -348,7 +486,14 @@ app.get('/pathogen-prototype', function(request, response, next) {
 
 
 app.get('/klassiekwijzer', function(request, response, next) {
-     var imgEntry = [
+    var name = [
+        {'name': "CSS", 'score': 18},
+        {'name': "SMACCS", 'score': 15},
+        {'name': "BEM CSS", 'score': 15},
+        {'name': "GIT", 'score': 17},
+        {'name': "PHP", 'score': 13}
+    ];
+    var imgEntry = [
         {"img":"../assets/images/klassiekwijzerv1.png"},
         {"img":"../assets/images/klassiekwijzerv2.png"},
         {"img":"../assets/images/resizer-2.png"}
@@ -368,7 +513,26 @@ app.get('/klassiekwijzer', function(request, response, next) {
             title: function () { return 'Klassiekwijzer'; },
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image-6.jpg"},
-            links: function() { return "http://klassiekwijzer.avro.nl/"}
+            links: function() { return "http://klassiekwijzer.avro.nl/"},
+            name: function () {
+                var nameBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    nameBucket.push(name[i].name);
+                  
+                }
+                return nameBucket;
+            },
+            score: function() {
+                var scoreBucket = [];
+
+                for (var i = 0, len = name.length; i < len; i ++){
+                    name[i];
+                    scoreBucket.push(name[i].score);
+                }
+                return scoreBucket;
+            }
     }}); 
 });
 

@@ -38,26 +38,18 @@ var mode = 2;
 
 /*/////////////////////////////
     skills visualisation
+    my first datavisualisation template!!
 *//////////////////////////////
-var data = [
-    {name: "GIT", score: 10},
-    {name: "Javascript", score: 18},
-    {name: "CSS / SASS", score: 18},
-    {name: "HTML", score: 20},
-    {name: "D3.js", score: 16},
-    {name: "Node.js", score: 17},
-    {name: "Express.js", score: 18},
-    {name: "Game Dev", score: 16},
-    {name: "Mobile Dev", score: 15}
-];
-var dataScore = [];
-var dataName = [];
-for (var i = 0, len = data.length; i < len; i ++){
-    data[i];
-    dataScore.push(data[i].score);
-    dataName.push(data[i].name);
-}
-console.log(dataName);
+var nameData = nameContainer[0];
+var scoreData = scoreContainer;
+
+var data = [];
+
+data.push(nameData);
+data.push({score: scoreData});
+
+dataScore = data[1].score;
+dataName = data[0].name;
 
 var width = 320,
     barHeight = 20;
@@ -97,6 +89,7 @@ bartext.selectAll("div")
 *//////////////////////////////
 
 var gitData2 = {remove : removedData};
+
 var gitData = {add: addData};
 
 Container.push(gitData);
