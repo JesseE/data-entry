@@ -118,8 +118,8 @@ app.get('/', function(request, response, next) {
         {"paragraph": "RTS game gemaakt met javascript"},
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
-        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+        {"text":"Tijdens het programeren splits ik mijn code afhankelijk van zijn functies in aparte modules, zodat het achteraf makkelijk te onderhouden is"},
+        {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe tevoegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."}
     ];
     var name = [
         {'name': "GIT", 'score': 10},
@@ -129,8 +129,10 @@ app.get('/', function(request, response, next) {
         {'name': "D3.js", 'score': 16},
         {'name': "Node.js", 'score': 17},
         {'name': "Express.js", 'score': 18},
+        {'name': "Heroku", 'score': 16},
         {'name': "Game Dev", 'score': 16},
         {'name': "Mobile Dev", 'score': 15}
+
     ];
     response.render('index', {  
         img: imgEntry,
@@ -209,14 +211,25 @@ app.get('/datavisualisatie', function(request, response, next) {
         {'name': "Node.js", 'score': 17},
         {'name': "unirest.js", 'score': 16}
     ];
+    var imgEntry = [
+        {"img":"../assets/images/datavisV1.png"},
+        {"img":"../assets/images/resizer-11.png"},
+        {"img":"../assets/images/resizer-2.png"}
+    ];
+    var textEntry = [
+        {"text":"Datavisualisatie van toevoegingen en verwijderijgen van code die op Bitbucket staat van de werknemers van Grrr. "},
+        {"text":"Een indicatie maken van de actuele code veranderingen per project van Grrr. Het was de bedoeling om gegevens van de geschreven code te laten zien door contact te maken met de API van Bitbucket.com en deze gegevens werden dan gevisualiseerd met behulp van d3.js."}
+    ];
     response.render('partials/item' ,{
+        img: imgEntry,
+        text: textEntry,
         normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
         helpers:{
             title: function () { return 'Datavisualisatie'},
-            links: function () { return '/datavis'},
+            links: function () { return ''},
             paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
             images: function() { return "../assets/images/placeholder-image.jpg"},
             name: function () {
@@ -265,8 +278,8 @@ app.get('/resizer', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
-        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien.Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."},
+        {"text":"Grrr heeft een CMS systeem voor hun klanten dat Garp heet. En ze zochten een toevoegingen waarbij je gemakkelijk meerdere afbeedlingen kon schalen. Hier werd mijn product dus voor gemaakt dat nu de Resizer heet. "}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -323,8 +336,8 @@ app.get('/melkweg', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
-        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+        {"text":"Het refactoren van de geschreven CSS/SASS code van de Melkweg.nl"},
+        {"text":"Ik kreeg de taak om code te vereenvoudigen aan de hand van SMACCS en BEM methodes. Hierbij heb ik ook de suggetie gedaan om de gemoduleerde SASS bestanden in een subfolder te plaatsen. Dit zorgde voor een betere overzicht binnen de SASS structuur van de melkweg."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -375,8 +388,8 @@ app.get('/score-app', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
-        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+        {"text":"Score webapp is een applicatie waarbij je scores van een wedstrijd kunt bij houden zo wel op mobiel als op pc."},
+        {"text":"Deze webapp werkt aan de hand van de leaguevine API en meerder javascript libraries. Hierdoor is het mogelijk om van de toegevoegde partijen de scores te veranderen."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -433,8 +446,8 @@ app.get('/pathogen', function(request, response, next) {
         {"img":"../assets/images/pathogenv3.png"}
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
-        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+        {"text":"Pathogen is een realtime strategy game gemaakt met javascript. Je speel in de game als de partij van het imuunsysteem en je vecht tegen de slechte  bacterien in verschillende lokaties van het menselijk lichaam."},
+        {"text":"Je gaat de lokaties af van het lichaam waar de zichtes zich bevinden. Jij bent een nanorobot die het gevecht aan gaat met de ziektes die in het lichaam zit. Je bouwt je imuunsysteem op en vecht met de antilichamen samen om het lichaam weer beter te maken."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -495,8 +508,8 @@ app.get('/klassiekwijzer', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien."},
-        {"text":"Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."}
+        {"text":"Dit is een vragen reeks die uiteindelijk moet laten zien wat voor klassiekemuziek het beste bij jou past."},
+        {"text":"Dit moest zowel op pc als op tablet en mobiel goed te gebruiken zijn. Verder moest er ook een stap terug in de vragen reeks te zien zijn. Uiteindelijk kon je de resultaten delen via social media."}
     ];
     response.render('partials/item',{
         img: imgEntry,
