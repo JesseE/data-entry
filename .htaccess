@@ -1,0 +1,3 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.jesseeikema\.nl
+RewriteRule (.*) http://jesseeikema.nl/$1 [R=301,L]
