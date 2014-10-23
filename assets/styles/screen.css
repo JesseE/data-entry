@@ -227,7 +227,7 @@ label {
   width: 90%;
   color: #344E58;
   text-align: right;
-  line-height: 35px;
+  line-height: 39px;
 }
 @media (max-width: 48em) {
   /* line 33, sass/ui/_block-list.scss */
