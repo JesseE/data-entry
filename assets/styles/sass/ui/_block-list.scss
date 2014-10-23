@@ -30,13 +30,13 @@
 .block-list__tools-item{
 	div{ height:10px; margin: 10px; background: crimson;}
 }
-.block-list--tools-container__text{ float:left;width: 90%;color: #344E58;text-align: right; line-height:40px;
+.block-list--tools-container__text{ float:left;width: 90%;color: #344E58;text-align: right; line-height:35px;
 	@include bp (med) {
 		width: 100%; text-align: center;
 	}
 }
 .block-list--tools-container{ float: right; width: 50%;
 	@include bp (med) {
-		width: 75%;
+		width: 72%;
 	}
 }

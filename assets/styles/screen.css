@@ -227,7 +227,7 @@ label {
   width: 90%;
   color: #344E58;
   text-align: right;
-  line-height: 40px;
+  line-height: 35px;
 }
 @media (max-width: 48em) {
   /* line 33, sass/ui/_block-list.scss */
@@ -245,7 +245,7 @@ label {
 @media (max-width: 48em) {
   /* line 38, sass/ui/_block-list.scss */
   .block-list--tools-container {
-    width: 75%;
+    width: 72%;
   }
 }
 
@@ -379,7 +379,7 @@ label {
 @media (max-width: 48em) {
   /* line 15, sass/ui/_skills.scss */
   .skills__text {
-    width: 25%;
+    width: 26%;
   }
 }
 
