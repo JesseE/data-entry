@@ -51,8 +51,18 @@ data.push({score: scoreData});
 dataScore = data[1].score;
 dataName = data[0].name;
 
-var width = 320,
+// var width = 320,
+var width =  {},
     barHeight = 20;
+
+(function(){
+    if(window.innerWidth < 500){ 
+     width = 200;
+        console.log('What you want!?');
+    }else {
+        width = 320;
+    };
+})();
 
 var x = d3.scale.linear()
     .domain([0, d3.max(dataScore)])
