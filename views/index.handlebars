@@ -2,85 +2,102 @@
 	<div class="container" id="assignments" name="assignments">
 	    <div class="banner" id="projects"><h1>projects</h1></div>
 	    <div class="block-list">
-	    	<a href="/datavisualisatie">
-	    		<div class="block-image odd"><img src="../assets/images/datavis-logo.png">
-				<div class="block-item" id="post-1">
-					<div class="block-text">			    		
-			    		<h1>{{title.[0].title}}</h1>
-			    		<p>{{paragraph.[0].paragraph}}</p>
+    		<div class="block-image odd">
+    			<a href="/klassiekwijzer">
+    				<div class="pos"><img src="../assets/images/klassiekwijzer.png"></div>
+    				<div class="block-item" id="post-6">
+			    		<div class="block-text">
+				    		<h1>{{title.[4].title}}</h1>
+				    		<p>{{paragraph.[4].paragraph}}</p>
+			    		</div>
+	    			</div>
+	    		</a>
+	    	</div>
+    		<div class="block-image even bla">
+    			<a href="/pathogen">
+    				<div class="pos"><img src="../assets/images/pathogen-logo.png"></div>
+		    		<div class="block-item" id="post-2">
+				    	<div class="block-text">
+				    		<h1>{{title.[5].title}}</h1>
+				    		<p>{{paragraph.[5].paragraph}}</p>
+				    	</div>	
 			    	</div>
-		    	</div>
-	    		</div>	
-	    	</a>
-	    	<a href="/pathogen">
-	    		<div class="block-image even bla"><div class="pos"><img src="../assets/images/pathogen-logo.png"></div>
-	    		<div class="block-item" id="post-2">
-			    	<div class="block-text">
-			    		<h1>{{title.[5].title}}</h1>
-			    		<p>{{paragraph.[5].paragraph}}</p>
-			    	</div>	
-		    	</div>
-		    	</div>
-	    	</a>
-	    	<a href="/melkweg">
-	    		<div class="block-image odd blo"><div class="pos"><img src="../assets/images/melkweg.png"></div>
-	    		<div class="block-item" id="post-3">
-		    		<div class="block-text">
-			    		<h1>{{title.[2].title}}</h1>
-			    		<p>{{paragraph.[2].paragraph}}</p>
-		    		</div>
-		    	</div>
-		    	</div>	
-	    	</a>
-	    	<a href="/score-app">
-	    		<div class="block-image even fourth"><div class="pos"><img src="../assets/images/score-app-logo.png"></div>
-	    		<div class="block-item" id="post-4">	
-			    	<div class="block-text">			    		
-			    		<h1>{{title.[3].title}}</h1>
-			    		<p>{{paragraph.[3].paragraph}}</p>
+	    		</a>
+	    	</div>	    
+    		<div class="block-image odd blo">
+    			<a href="/melkweg">
+    				<div class="pos"><img src="../assets/images/melkweg.png"></div>
+		    		<div class="block-item" id="post-3">
+			    		<div class="block-text">
+				    		<h1>{{title.[2].title}}</h1>
+				    		<p>{{paragraph.[2].paragraph}}</p>
+			    		</div>
 			    	</div>
-			    </div>
-			    </div>
-	    	</a>
-	    	<a href="/resizer">
-	    		<div class="block-image odd fifth"><div class="pos"><img src="../assets/images/og_grrr.png"></div>
-	    		<div class="block-item" id="post-5">
-		    		<div class="block-text">
-			    		<h1>{{title.[1].title}}</h1>
-			    		<p>{{paragraph.[1].paragraph}}</p>
-		    		</div>
-		    	</div>
-		    	</div>
-	    	</a>
-	    	<a href="/klassiekwijzer">
-	    		<div class="block-image even sixth"><div class="pos"><img src="../assets/images/klassiekwijzer.png"></div>
-	    		<div class="block-item" id="post-6">
-		    		<div class="block-text">
-			    		<h1>{{title.[4].title}}</h1>
-			    		<p>{{paragraph.[4].paragraph}}</p>
-		    		</div>
-		    	</div>
-		    	</div>
-	    	</a>
+				</a>		    	
+	    	</div>		    	
+    		<div class="block-image even fourth">
+    			<a href="/score-app">
+    				<div class="pos"><img src="../assets/images/score-app-logo.png"></div>
+		    		<div class="block-item" id="post-4">	
+				    	<div class="block-text">			    		
+				    		<h1>{{title.[3].title}}</h1>
+				    		<p>{{paragraph.[3].paragraph}}</p>
+				    	</div>
+				    </div>
+		    	</a>
+		    </div>	    	
+    		<div class="block-image odd fifth">
+    			<a href="/resizer">
+    				<div class="pos"><img src="../assets/images/og_grrr.png"></div>
+		    		<div class="block-item" id="post-5">
+			    		<div class="block-text">
+				    		<h1>{{title.[1].title}}</h1>
+				    		<p>{{paragraph.[1].paragraph}}</p>
+			    		</div>
+			    	</div>
+	    		</a>	
+    		</div>
+	    	<div class="block-image even sixth">
+	    		<a href="/datavisualisatie">
+	    			<div class="pos"><img src="../assets/images/datavis-logo.png"></div>
+					<div class="block-item" id="post-1">
+						<div class="block-text">			    		
+				    		<h1>{{title.[0].title}}</h1>
+				    		<p>{{paragraph.[0].paragraph}}</p>
+				    	</div>
+			    	</div>
+	    		</a>		
+	    	</div>
 		</div>
 	</div>
 	<div class="about" id="visie" name="about-jesse">
 		<div class="banner--border-bottom"><h1>visie</h1></div>
 		<section class="block-container">
 			<div class="block-container__item">
+				<div class="block-container__item-image--left">
+					<img src="{{img.[2].img}}"/>	
+				</div>
+				<div class="block-description--right">
+					<h1>Werkwijze</h1>
+					<p class="Label">{{text.[0].text}}</p>
+				</div>
+			</div>
+				<div class="block-container__item">
 				<div class="block-container__item-image--reverse">
 					<img src="{{img.[0].img}}"/>	
 				</div>
 				<div class="block-description--reverse">
 					<h1>Modulair</h1>
-					<p class="Label">{{text.[0].text}}</p>
+					<p class="Label">{{text.[1].text}}</p>
 				</div>
-				<div class="block-container__item-image--no-float">
+			</div>
+			<div class="block-container__item">
+				<div class="block-container__item-image--left">
 					<img src="{{img.[2].img}}"/>	
 				</div>
-				<div class="block-description--color">
+				<div class="block-description--right">
 					<h1>Herbruikbaar</h1>
-					<p class="Label">{{text.[1].text}}</p>
+					<p class="Label">{{text.[2].text}}</p>
 				</div>
 			</div>
 		</section>

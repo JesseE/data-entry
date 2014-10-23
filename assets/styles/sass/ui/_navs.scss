@@ -1,18 +1,14 @@
 /*------------------------------------*\
     $NAV PRIMARY
 \*------------------------------------*/
-
 .nav {  z-index: 2; position: fixed; top: 10px; left:10px; margin:0; width:125px; height: 110px; background-color: #383d3f; 
   	ul{ position: relative;margin: 100px 0; width: 50%; padding: 0px 15px;height: 100%;
 		li{ float: left; height: 60px; width: 100px; list-style-type: none; padding: 0 20px; line-height: 55px; 
-			&:hover{ background-color: grey; color: white;
-				
-			}
+			&:hover{ background-color: grey; color: white;}
 			a{ display: block; height:60px; width:100%; text-decoration: none;
 				&:hover{ color: white;
-				.nav--secundairy{
-					display:block;
-				}}
+					.nav--secundairy{display:block;}
+				}
 			}
 		}
 	}		
@@ -26,44 +22,35 @@
 	}	
 }
 .nav--off-window{ display:none;	z-index: 2; top: 0; position: fixed; width: 148px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
-	@include bp(med){
-		float: left; width: 21%;
-	}
 	ul{
 		margin: 100% 0; padding: 0;text-align:center;
 		li{ 
 			display: inline-block; width: 100%; padding: 25px 0; color: white; list-style-type: none; text-align: center;
 			&:hover{background:white; color:grey;transition: background-color 0.5 ease;}
-			a{
-				text-decoration: none;	
-			}
+			a{text-decoration: none;}
 		}
+	}
+	@include bp(med){
+		float: left; width: 21%;
 	}
 } 
 .nav--secundairy{display:none;z-index: 2; top: 0; left: 148px; position: fixed; width: 165px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
-	@include bp(med){
-		float: right; width: 40%; top: 0px; height: 100%;left: 21%;opacity:0.9;
-		.nav__list{top: -50px; margin-top: 0;width: 100%;}
-	}
 	ul{
 		padding: 0;text-align:center;
 		li{ 
 			display: inline-block; width: 100%; padding: 25px 0; color: white; list-style-type: none; text-align: center;
 			&:hover{background:white; color:grey;}
-			a{
-				text-decoration: none;	
-			}
+			a{text-decoration: none;}
 		}
-	}}
+	}
+	@include bp(med){
+		float: right; width: 40%; top: 0px; height: 100%;left: 21%;opacity:0.9;
+		.nav__list{top: -50px; margin-top: 0;width: 100%;}
+	}
+}
 .nav__list{ margin-top:100%;}
-.nav__button{	width: 50%; position:absolute; left: 25px; top: 25px;padding: 5px;}
-
+.nav__button{ width: 50%; position:absolute; left: 25px; top: 25px;padding: 5px;}
 .nav__button-container{ height: 50px; width: 100%; background: #383d3f; }
-
 .nav__button-bar{ width: 100%;  height: 10px; margin:10px 0;background:white;
 	&:first-child{ margin: 0 0 10px 0;}
 }
-/*------------------------------------*\
-    $NAV MOBILE
-\*------------------------------------*/
-

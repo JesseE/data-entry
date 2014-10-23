@@ -118,8 +118,9 @@ app.get('/', function(request, response, next) {
         {"paragraph": "RTS game gemaakt met javascript"},
     ];
     var textEntry = [
+        {"text":"Als frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interacitieve producten soepel en gebruiksvriendelijk gebeurt."},
         {"text":"Tijdens het programeren splits ik mijn code afhankelijk van zijn functies in aparte modules, zodat het achteraf makkelijk te onderhouden is"},
-        {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe tevoegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."}
+        {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe te voegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."}
     ];
     var name = [
         {'name': "GIT", 'score': 10},
@@ -278,8 +279,8 @@ app.get('/resizer', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien.Download de afbeeedling direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."},
-        {"text":"Grrr heeft een CMS systeem voor hun klanten dat Garp heet. En ze zochten een toevoegingen waarbij je gemakkelijk meerdere afbeedlingen kon schalen. Hier werd mijn product dus voor gemaakt dat nu de Resizer heet. "}
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien. Download de afbeeldingen direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."},
+        {"text":"Grrr heeft een CMS systeem voor hun klanten dat Garp heet. En ze zochten een toevoegingen waarbij je gemakkelijk meerdere afbeeldingen kan schalen. Hier werd mijn product dus voor gemaakt dat nu de Resizer heet."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -336,8 +337,8 @@ app.get('/melkweg', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Het refactoren van de geschreven CSS/SASS code van de Melkweg.nl"},
-        {"text":"Ik kreeg de taak om code te vereenvoudigen aan de hand van SMACCS en BEM methodes. Hierbij heb ik ook de suggetie gedaan om de gemoduleerde SASS bestanden in een subfolder te plaatsen. Dit zorgde voor een betere overzicht binnen de SASS structuur van de melkweg."}
+        {"text":"Het refactoren van de geschreven CSS/SASS code van de Melkweg."},
+        {"text":"Ik kreeg de taak om code te vereenvoudigen aan de hand van SMACCS en BEM methodes. Tijdens het herschrijven van de code, heb ik ook de suggestie gedaan om de gemoduleerde SASS bestanden in een subfolder te plaatsen. Dit zorgde voor een betere overzicht binnen de SASS structuur van de melkweg."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -388,8 +389,8 @@ app.get('/score-app', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Score webapp is een applicatie waarbij je scores van een wedstrijd kunt bij houden zo wel op mobiel als op pc."},
-        {"text":"Deze webapp werkt aan de hand van de leaguevine API en meerder javascript libraries. Hierdoor is het mogelijk om van de toegevoegde partijen de scores te veranderen."}
+        {"text":"Score webapp is een applicatie waarbij je scores van een wedstrijd kunt bij houden zowel op mobiel als op pc."},
+        {"text":"Deze webapp werkt aan de hand van de Leaguevine API en meerder javascript libraries. Hierdoor is het mogelijk om van de toegevoegde partijen de scores te veranderen."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -446,8 +447,8 @@ app.get('/pathogen', function(request, response, next) {
         {"img":"../assets/images/pathogenv3.png"}
     ];
     var textEntry = [
-        {"text":"Pathogen is een realtime strategy game gemaakt met javascript. Je speel in de game als de partij van het imuunsysteem en je vecht tegen de slechte  bacterien in verschillende lokaties van het menselijk lichaam."},
-        {"text":"Je gaat de lokaties af van het lichaam waar de zichtes zich bevinden. Jij bent een nanorobot die het gevecht aan gaat met de ziektes die in het lichaam zit. Je bouwt je imuunsysteem op en vecht met de antilichamen samen om het lichaam weer beter te maken."}
+        {"text":"Pathogen is een realtime strategy game gemaakt met javascript. Je speelt in de game als de partij van het imuunsysteem en je vecht tegen de slechte bacteriën in verschillende locaties van het menselijk lichaam."},
+        {"text":"Je gaat de locaties af van het lichaam waar de ziektes zich bevinden. Jij bent een nanorobot die het gevecht aan gaat met de ziektes die in het lichaam zit. Je bouwt je imuunsysteem op en vecht met de antilichamen samen om het lichaam weer beter te maken."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -509,7 +510,7 @@ app.get('/klassiekwijzer', function(request, response, next) {
     ];
     var textEntry = [
         {"text":"Dit is een vragen reeks die uiteindelijk moet laten zien wat voor klassiekemuziek het beste bij jou past."},
-        {"text":"Dit moest zowel op pc als op tablet en mobiel goed te gebruiken zijn. Verder moest er ook een stap terug in de vragen reeks te zien zijn. Uiteindelijk kon je de resultaten delen via social media."}
+        {"text":"Dit moest zowel op pc als op tablet en mobiel goed te gebruiken zijn. Verder moest er ook een stap terug in de vragen reeks mogelijk worden. Uiteindelijk kon je de resultaten delen via social media."}
     ];
     response.render('partials/item',{
         img: imgEntry,

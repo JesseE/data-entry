@@ -1,0 +1,44 @@
+/*************************
+		block-image
+*************************/
+//this has to be refactored
+@-moz-document url-prefix() {
+    .block-image {
+   		margin:0 !important;
+	}
+}
+.block-image {
+	position:relative; float: left; -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);-moz-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
+	&:hover{
+		.block-item{ display:block;}
+	}
+	img{
+		width: 375px; height: 375px; position:relative;  margin: 0px auto;
+		@include bp (med) {
+			width: 250px; height: 250px;
+		}
+		@include bp (large) {
+			width: 260px; height: 260px;
+		}
+		@include bp (wide) {
+			width: 375px; height: 375px;
+		}
+	}
+	@include bp (med) {
+		margin: 0 20%;
+		&.fourth,&.fifth,&.sixth{margin: 0 20%;}
+	}
+	@include bp (min-med){
+		&.fourth,&.fifth,&.sixth{margin: 0;}
+	}
+	@include bp (large){
+		&.fourth{margin:  -115px 0 0 130px;}
+		&.fifth{margin: -115px 0 0 260px;}
+		&.sixth{margin: -264px 0 0 390px;}
+	}
+	@include bp (wide){
+		&.fourth{margin: -175px 0 0 188px;}
+		&.fifth{margin: -379px 563px;}
+		&.sixth{margin: -378px 938px;}
+	}
+}

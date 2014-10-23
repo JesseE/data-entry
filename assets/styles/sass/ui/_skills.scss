@@ -1,0 +1,23 @@
+/*************************
+		timeline
+*************************/
+.skills{ float:left;position: relative;width: 100%;background-color: white;
+	svg{ height: 285px;
+		g{
+			rect{ width: 100%;}
+		}
+	}
+}
+.skills--main{
+	@extend .skills;
+	svg{ height: 425px;}
+}
+.skills__text{ float:left;position: relative;width: 50%;background-color: white;
+
+	svg{ height: 285px;
+		g{
+			rect{ width: 100%;}
+		}
+	}
+	@include bp(med) { width: 25%;}
+}
