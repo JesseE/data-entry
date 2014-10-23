@@ -32,7 +32,7 @@
 }
 .block-list--tools-container__text{ float:left;width: 90%;color: #344E58;text-align: right; line-height:39px;
 	@include bp (med) {
-		width: 100%; text-align: center; line-height: 35px;
+		width: 100%; text-align: center;
 	}
 }
 .block-list--tools-container{ float: right; width: 50%;

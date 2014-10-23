@@ -124,7 +124,7 @@ app.get('/', function(request, response, next) {
     var name = [
         {'name': "GIT", 'score': 10},
         {'name': "Javascript", 'score': 18},
-        {'name': "CSS / SASS", 'score': 18},
+        {'name': "SASS", 'score': 18},
         {'name': "HTML", 'score': 20},
         {'name': "D3.js", 'score': 16},
         {'name': "Node.js", 'score': 17},
