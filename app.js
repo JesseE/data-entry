@@ -118,7 +118,7 @@ app.get('/', function(request, response, next) {
         {"paragraph": "RTS game gemaakt met javascript"},
     ];
     var textEntry = [
-        {"text":"Als frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interacitieve producten soepel en gebruiksvriendelijk gebeurt."},
+        {"text":"Als Frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interacitieve producten soepel en gebruiksvriendelijk gebeurt."},
         {"text":"Tijdens het programeren splits ik mijn code afhankelijk van zijn functies in aparte modules, zodat het achteraf makkelijk te onderhouden is"},
         {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe te voegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."}
     ];
