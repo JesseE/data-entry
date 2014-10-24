@@ -60,7 +60,7 @@ var width =  {},
      width = 200;
         console.log('What you want!?');
     }else {
-        width = 320;
+        width = 420;
     };
 })();
 
@@ -105,16 +105,16 @@ var gitData = {add: addData};
 Container.push(gitData);
 Container.push(gitData2);
 
-// console.log("add: "+Container[1].add);
-// console.log("remove: "+ Container[2].remove);
-// console.log("comments: "+ Container[0].comments);
+console.log("add: "+Container[1].add);
+console.log("remove: "+ Container[2].remove);
+console.log("comments: "+ Container[0].comments);
 
 var x2 = d3.scale.linear()
-    .domain([0, d3.max(Container[1].add)])
-    .range([0, width]);
+    .domain([0, 500])
+    .range([0, 500]);
 
 var chartZ = d3.select(".git-feed .added")
-    .attr("width", width)
+    .attr("width", 300)
     .attr("height", barHeight * Container[1].add.length);
 
 var barB = chartZ.selectAll("g")
@@ -139,20 +139,19 @@ var barB = chartZ.selectAll("g")
     })
     .on("mouseout", function(d) {
         d3.select(this)
-            .style("fill", "71B0C2")
+            .style("fill", "#71B0C2")
     });
 
 barB.append("rect")
     .attr("width", x2)
     .attr("height", barHeight - 1);
 
-var minWidth = 320;
 var x3 = d3.scale.linear()
-    .domain([0,d3.max(Container[2].remove)])
-    .range([0,minWidth]);
+    .domain([0,500])
+    .range([0,500]);
 
 var chartX = d3.select(".git-feed .removed")
-    .attr("width", 320)
+    .attr("width", 300)
     .attr("height", barHeight * Container[2].remove.length);
 
 var barC = chartX.selectAll(".git-feed__description")
@@ -177,7 +176,7 @@ var barC = chartX.selectAll(".git-feed__description")
     })
     .on("mouseout", function(d) {
      d3.select(this)
-            .style("fill", "B53843")
+            .style("fill", "#B53843")
     });
 
 barC.append("rect")

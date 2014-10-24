@@ -368,11 +368,11 @@ label {
   width: 50%;
   background-color: white;
 }
-/* line 17, sass/ui/_skills.scss */
+/* line 16, sass/ui/_skills.scss */
 .skills__text svg {
   height: 285px;
 }
-/* line 19, sass/ui/_skills.scss */
+/* line 18, sass/ui/_skills.scss */
 .skills__text svg g rect {
   width: 100%;
 }
