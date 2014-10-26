@@ -19,7 +19,7 @@
 			p{ width: 80%;margin: auto;color: white;font-size:12px;}
 		}
 	}
-	@include bp (wide){ /*width: 85%;*/ width: 1200px; margin:200px auto 0 auto;
+	@include bp (wide){ /*width: 85%;*/ width: 1500px; margin:200px auto 0 auto;
 		.block-text{
 			h1{line-height:115px;}
 			// p{line-height: 55px;}

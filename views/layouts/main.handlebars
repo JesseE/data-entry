@@ -89,16 +89,7 @@
         <script type="text/javascript" src="/assets/bower_components/jszip/jszip.min.js"></script>
         <script type="text/javascript" src="/assets/scripts/resizer.js"></script>
     {{/if}}
-    <script type="text/javascript">
-        var addData = [{{added}}];
-        var removedData = [{{removed}}];
-        var commentContainer = ['{{comments}}'];
-        var commentsString = commentContainer[0];
-        var Container = [{comments: commentsString.split(',')}];
-        var nameString = ['{{name}}'];
-        var nameStringified = nameString[0];
-        var nameContainer =  [{name: nameStringified.split(',')}];
-        var scoreContainer = [{{score}}];
+    <script type="text/javascript">var addData = [{{added}}];var removedData = [{{removed}}];var commentContainer = ['{{comments}}'];var commentsString = commentContainer[0];var Container = [{comments: commentsString.split(',')}];var nameString = ['{{name}}'];var nameStringified = nameString[0];var nameContainer =  [{name: nameStringified.split(',')}];var scoreContainer = [{{score}}];
     </script>
     <script type="text/javascript" src="/assets/scripts/main.js"></script>
     <script>
