@@ -37,13 +37,17 @@ var header = {'user-agent': 'node.js'};
 
 var commitsHash = [];
 var commitContainer = [];
+var checker = [];
 var gitStats = [];
 var gitMessage = [];
 commitsHash.length = 30;
+var commitContainerNumber = {};
+commitContainerNumber.length = 60;
 
-getAllCommits();
+getAllCommitPageOne();
+// getAllCommits();
 // get all commit hashes
-function getAllCommits (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?sha=master').auth({
+function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?page=1>sha=master').auth({
     user: username,
     pass: password,
     sendImmediately: true
@@ -51,12 +55,46 @@ function getAllCommits (){ unirest.get('https://api.github.com/repos/JesseE/data
     for(var i = 0, len = commitsHash.length; i < len; ++i){
         commitContainer.push(response.body[i].sha);
     }
-    getAllStats();    
+    getAllCommitPageTwo();   
     });
 };
+function getAllCommitPageTwo (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?page=2>sha=master').auth({
+    user: username,
+    pass: password,
+    sendImmediately: true
+}).headers(header).end(function(response){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
+        commitContainer.push(response.body[i].sha);
+    }
+    getAllCommitPageThree();
+    });
+};
+function getAllCommitPageThree (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?page=3>sha=master').auth({
+    user: username,
+    pass: password,
+    sendImmediately: true
+}).headers(header).end(function(response){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
+        commitContainer.push(response.body[i].sha);
+    }
+    
+    getAllStats();  
+    });
+};
+// function getAllCommits (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?page=1>sha=master').auth({
+//     user: username,
+//     pass: password,
+//     sendImmediately: true
+// }).headers(header).end(function(response){
+//     for(var i = 0, len = commitsHash.length; i < len; ++i){
+//         commitContainer.push(response.body[i].sha);
+//     }
+//     getAllStats();    
+//     });
+// };
 //addtions deletions total adjustments in a commit
 function getAllStats () { 
-    for(var i = 0, len = commitsHash.length; i < len; ++i){
+    for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
         unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
             user: username,
             pass: password,
@@ -69,13 +107,14 @@ function getAllStats () {
 };
 // commit comments
 function getAllMessage () { 
-    for(var i = 0, len = commitsHash.length; i < len; ++i){
+    for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
         unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
             user: username,
             pass: password,
             sendImmediately: true
         }).headers(header).end(function(response){  
            // var object = {"comment" : response.body.commit.message};     
+           console.log(gitStats);
             var object = response.body.commit.message;
             gitMessage.push(object);        
         });
@@ -147,23 +186,23 @@ app.get('/', function(request, response, next) {
         footer: true,
         helpers:{
             added: function() {
-                if(gitStats.length == 30) {
+                if(gitStats.length == 60) {
                     var added = [];
                     for ( var i = 0, len = gitStats.length; i < len; i ++ ){
                         added.push(gitStats[i].additions);
                     };
-                    if(added.length == 30){
+                    if(added.length == 60){
                         return added;
                     }
                 }
             },
             removed: function() {
-                if(gitStats.length == 30) {
+                if(gitStats.length == 60) {
                     var removed = [];
                     for(var i = 0, len = gitStats.length; i < len; i ++ ){
                         removed.push(gitStats[i].deletions);
                     }
-                    if(removed.length == 30) {
+                    if(removed.length == 60) {
                         return removed;
                     }
                 }

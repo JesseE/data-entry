@@ -105,9 +105,9 @@ var gitData = {add: addData};
 Container.push(gitData);
 Container.push(gitData2);
 
-// console.log("add: "+Container[1].add);
-// console.log("remove: "+ Container[2].remove);
-// console.log("comments: "+ Container[0].comments);
+console.log("add: "+Container[1].add);
+console.log("remove: "+ Container[2].remove);
+console.log("comments: "+ Container[0].comments);
 
 // limiters
 var addedArray = Container[1].add;

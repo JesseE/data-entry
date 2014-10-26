@@ -4,7 +4,7 @@
 .git-activity{ width:  100%;float:left;position:relative;background: #527B8B;
 	@include bp (med){ display:none; } 
 }
-.git-feed{ float: left; width: 100%; height: 900px; margin-left:-200px; transform:rotate(90deg);
+ .git-feed{/* float: left; width: 100%; height: 900px;*/  transform:rotate(270deg);
 	@include bp(med){
 		display:none;transform: rotate(0deg);-webkit-transform:rotate(0deg); height: 625px; margin-left:0;margin-top:25px;
 	}	
@@ -25,12 +25,12 @@
 		position: relative; top: 0; left:0;
 	}
 }
-svg.removed{ position:relative; z-index: 1;
+svg.removed{ position:relative; z-index: 1;-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 	@include bp(med){
 		width:40%;
 	}
 }
-svg.added{ position:relative; z-index: 1;transform:rotate(180deg); -webkit-transform:rotate(180deg);-webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
+svg.added{ position:relative; z-index: 1;-webkit-transform: matrix(1, 0, 0, 1, 0, 0);
 	@include bp(med){
 		width: 40%;
 	}
