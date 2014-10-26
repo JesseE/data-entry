@@ -13,13 +13,13 @@
 			p{ width: 80%;margin: auto;color: white;font-size:12px;}
 		}
 	}
-	@include bp (large){ width: 100%; margin: auto;
+	@include bp (large){ /*width: 100%;*/ width: 1135px; margin: auto;
 		.block-text {
 			h1{ color: white;border-bottom: 1px solid white;line-height: 77px;}
 			p{ width: 80%;margin: auto;color: white;font-size:12px;}
 		}
 	}
-	@include bp (wide){ width: 85%;margin:200px 10% 0 10%;
+	@include bp (wide){ /*width: 85%;*/ width: 1200px; margin:200px auto 0 auto;
 		.block-text{
 			h1{line-height:115px;}
 			// p{line-height: 55px;}

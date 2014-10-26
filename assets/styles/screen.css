@@ -179,7 +179,8 @@ label {
 @media (min-width: 64em) {
   /* line 4, sass/ui/_block-list.scss */
   .block-list {
-    width: 100%;
+    /*width: 100%;*/
+    width: 1135px;
     margin: auto;
   }
   /* line 18, sass/ui/_block-list.scss */
@@ -199,8 +200,9 @@ label {
 @media (min-width: 84.375em) {
   /* line 4, sass/ui/_block-list.scss */
   .block-list {
-    width: 85%;
-    margin: 200px 10% 0 10%;
+    /*width: 85%;*/
+    width: 1200px;
+    margin: 200px auto 0 auto;
   }
   /* line 24, sass/ui/_block-list.scss */
   .block-list .block-text h1 {
@@ -297,12 +299,12 @@ label {
 .timeline__period {
   background: #527B8B;
   height: 50px;
-  width: 24.3%;
+  width: 25%;
   position: relative;
   top: -90px;
   display: inline-block;
   float: left;
-  border: 1px solid white;
+  box-shadow: inset 1px 0px 0px white;
 }
 
 /* line 16, sass/ui/_timeline.scss */
@@ -421,17 +423,22 @@ label {
 .git-feed__description {
   position: relative;
   z-index: 0;
-  margin: 30px auto;
+  margin: 0px auto;
   line-height: 35px;
-  height: 100px;
+  height: 50px;
 }
 /* line 13, sass/ui/_git-feed.scss */
+.git-feed__description text {
+  position: relative;
+  top: 100px;
+}
+/* line 14, sass/ui/_git-feed.scss */
 .git-feed__description h3 {
   margin: 20px;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 13, sass/ui/_git-feed.scss */
+  /* line 14, sass/ui/_git-feed.scss */
   .git-feed__description h3 {
     margin: 10px;
     color: white;
@@ -448,33 +455,37 @@ label {
 }
 
 /* line 24, sass/ui/_git-feed.scss */
+.git-feed__comment {
+  margin: 110px 0 0 0;
+}
+/* line 26, sass/ui/_git-feed.scss */
 .git-feed__comment text {
   position: relative;
-  top: 0;
+  top: 100px;
   left: 0;
 }
 
-/* line 28, sass/ui/_git-feed.scss */
+/* line 30, sass/ui/_git-feed.scss */
 svg.removed {
   position: relative;
   z-index: 1;
   -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
 }
 @media (max-width: 48em) {
-  /* line 28, sass/ui/_git-feed.scss */
+  /* line 30, sass/ui/_git-feed.scss */
   svg.removed {
     width: 40%;
   }
 }
 
-/* line 33, sass/ui/_git-feed.scss */
+/* line 35, sass/ui/_git-feed.scss */
 svg.added {
   position: relative;
   z-index: 1;
   -webkit-transform: matrix(1, 0, 0, 1, 0, 0);
 }
 @media (max-width: 48em) {
-  /* line 33, sass/ui/_git-feed.scss */
+  /* line 35, sass/ui/_git-feed.scss */
   svg.added {
     width: 40%;
   }
@@ -614,41 +625,41 @@ svg.added {
   .block-image {
     margin: 0 20%;
   }
-  /* line 32, sass/ui/_block-image.scss */
+  /* line 29, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0 20%;
   }
 }
 @media (min-width: 48em) {
-  /* line 35, sass/ui/_block-image.scss */
+  /* line 32, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
-  /* line 43, sass/ui/_block-image.scss */
+  /* line 35, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -150px 0 0 155px;
   }
-  /* line 44, sass/ui/_block-image.scss */
+  /* line 36, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -151px 0 0 0px;
   }
-  /* line 45, sass/ui/_block-image.scss */
+  /* line 37, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -313px 0 0 775px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 48, sass/ui/_block-image.scss */
+  /* line 40, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -175px 0 0 188px;
   }
-  /* line 49, sass/ui/_block-image.scss */
+  /* line 41, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -379px 563px;
   }
-  /* line 50, sass/ui/_block-image.scss */
+  /* line 42, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -378px 938px;
   }

@@ -99,15 +99,16 @@ bartext.selectAll("div")
 *//////////////////////////////
 
 // fetched array's
+var gitBarHeight = 10;
 var gitData2 = {remove : removedData};
 var gitData = {add: addData};
 
 Container.push(gitData);
 Container.push(gitData2);
 
-console.log("add: "+Container[1].add);
-console.log("remove: "+ Container[2].remove);
-console.log("comments: "+ Container[0].comments);
+// console.log("add: "+Container[1].add);
+// console.log("remove: "+ Container[2].remove);
+// console.log("comments: "+ Container[0].comments);
 
 // limiters
 var addedArray = Container[1].add;
@@ -139,12 +140,12 @@ var x2 = d3.scale.linear()
 
 var chartZ = d3.select(".git-feed .added")
     .attr("width", 300)
-    .attr("height", barHeight * addedArray.length);
+    .attr("height", gitBarHeight * addedArray.length);
 
 var barB = chartZ.selectAll("g")
     .data(addedArray)
   .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
+    .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
     .attr("fill", "#71B0C2")
         .on("mouseover", function(d, i) {
         d3.select(this)
@@ -177,7 +178,7 @@ var barB = chartZ.selectAll("g")
 
 barB.append("rect")
     .attr("width", x2)
-    .attr("height", barHeight - 1);
+    .attr("height", gitBarHeight - 1);
 
 var x3 = d3.scale.linear()
     .domain([0,500])
@@ -185,12 +186,12 @@ var x3 = d3.scale.linear()
 
 var chartX = d3.select(".git-feed .removed")
     .attr("width", 300)
-    .attr("height", barHeight * removedArray.length);
+    .attr("height", gitBarHeight * removedArray.length);
 
 var barC = chartX.selectAll(".git-feed__description")
     .data(removedArray)
   .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
+    .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
     .attr("fill", "#B53843")
     .on("mouseover", function(d,i) {
         d3.select(this)
@@ -223,4 +224,4 @@ var barC = chartX.selectAll(".git-feed__description")
 
 barC.append("rect")
     .attr("width", x3)
-    .attr("height", barHeight - 1);
+    .attr("height",gitBarHeight - 1);

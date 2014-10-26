@@ -17,9 +17,6 @@
 		@include bp (med) {
 			width: 250px; height: 250px;
 		}
-		// @include bp (large) {
-		// 	width: 260px; height: 260px;
-		// }
 		@include bp (large) {
 			width: 310px; height: 310px;
 		}
@@ -34,11 +31,6 @@
 	@include bp (min-med){
 		&.fourth,&.fifth,&.sixth{margin: 0;}
 	}
-	// @include bp (large){
-	// 	&.fourth{margin:  -115px 0 0 130px;}
-	// 	&.fifth{margin: -115px 0 0 260px;}
-	// 	&.sixth{margin: -264px 0 0 390px;}
-	// }
 	@include bp (large){
 		&.fourth{margin:  -150px 0 0 155px;}
 		&.fifth{margin: -151px 0 0 0px;}

@@ -42,7 +42,7 @@ var gitStats = [];
 var gitMessage = [];
 commitsHash.length = 30;
 var commitContainerNumber = {};
-commitContainerNumber.length = 60;
+commitContainerNumber.length = 90;
 
 getAllCommitPageOne();
 // getAllCommits();
@@ -156,7 +156,7 @@ app.get('/', function(request, response, next) {
         {"paragraph": "RTS game gemaakt met javascript"},
     ];
     var textEntry = [
-        {"text":"Als Frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interacitieve producten soepel en gebruiksvriendelijk gebeurt."},
+        {"text":"Als Frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interactieve producten soepel en gebruiksvriendelijk gebeurt."},
         {"text":"Tijdens het programeren splits ik mijn code afhankelijk van zijn functies in aparte modules, zodat het achteraf makkelijk te onderhouden is"},
         {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe te voegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."}
     ];
@@ -171,7 +171,6 @@ app.get('/', function(request, response, next) {
         {'name': "Heroku", 'score': 16},
         {'name': "Game Dev", 'score': 16},
         {'name': "Mobile Dev", 'score': 15}
-
     ];
     response.render('index', {  
         img: imgEntry,
@@ -186,23 +185,23 @@ app.get('/', function(request, response, next) {
         footer: true,
         helpers:{
             added: function() {
-                if(gitStats.length == 60) {
+                if(gitStats.length == 90) {
                     var added = [];
                     for ( var i = 0, len = gitStats.length; i < len; i ++ ){
                         added.push(gitStats[i].additions);
                     };
-                    if(added.length == 60){
+                    if(added.length == 90){
                         return added;
                     }
                 }
             },
             removed: function() {
-                if(gitStats.length == 60) {
+                if(gitStats.length == 90) {
                     var removed = [];
                     for(var i = 0, len = gitStats.length; i < len; i ++ ){
                         removed.push(gitStats[i].deletions);
                     }
-                    if(removed.length == 60) {
+                    if(removed.length == 90) {
                         return removed;
                     }
                 }
