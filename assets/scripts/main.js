@@ -98,27 +98,51 @@ bartext.selectAll("div")
  git activity visualisation
 *//////////////////////////////
 
+// fetched array's
 var gitData2 = {remove : removedData};
-
 var gitData = {add: addData};
 
 Container.push(gitData);
 Container.push(gitData2);
 
-console.log("add: "+Container[1].add);
-console.log("remove: "+ Container[2].remove);
-console.log("comments: "+ Container[0].comments);
+// console.log("add: "+Container[1].add);
+// console.log("remove: "+ Container[2].remove);
+// console.log("comments: "+ Container[0].comments);
 
+// limiters
+var addedArray = Container[1].add;
+for (var i = 0, len = addedArray.length; i < len; i++ ){
+    addedArray[i];
+    if(addedArray[i]>1000){
+        addedArray[i] = 500;        
+    }
+    if(addedArray[i]<20){
+        addedArray[i] = 25;
+    }
+} 
+
+var removedArray = Container[2].remove;
+for (var i = 0, len = removedArray.length; i < len; i++ ){
+    removedArray[i];
+    if(removedArray[i]>1000){
+        removedArray[i] = 500;        
+    }
+    if(removedArray[i]<20){
+        removedArray[i] = 25;
+    }
+} 
+
+//range and domain visual
 var x2 = d3.scale.linear()
     .domain([0, 500])
     .range([0, 500]);
 
 var chartZ = d3.select(".git-feed .added")
     .attr("width", 300)
-    .attr("height", barHeight * Container[1].add.length);
+    .attr("height", barHeight * addedArray.length);
 
 var barB = chartZ.selectAll("g")
-    .data(Container[1].add)
+    .data(addedArray)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
     .attr("fill", "#71B0C2")
@@ -152,10 +176,10 @@ var x3 = d3.scale.linear()
 
 var chartX = d3.select(".git-feed .removed")
     .attr("width", 300)
-    .attr("height", barHeight * Container[2].remove.length);
+    .attr("height", barHeight * removedArray.length);
 
 var barC = chartX.selectAll(".git-feed__description")
-    .data(Container[2].remove)
+    .data(removedArray)
   .enter().append("g")
     .attr("transform", function(d, i) { return "translate(0," + i * barHeight + ")"; })
     .attr("fill", "#B53843")

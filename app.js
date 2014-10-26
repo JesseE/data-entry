@@ -90,10 +90,10 @@ app.get('/', function(request, response, next) {
     // console.log(gitMessage);
     var container = [];
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
-                gitMessage[i];
-                var bucket = gitMessage[i];
-                JSON.parse("[\"bucket[i]\"]");
-                container.push(bucket);
+        gitMessage[i];
+        var bucket = gitMessage[i];
+        JSON.parse("[\"bucket[i]\"]");
+        container.push(bucket);
     };
     var imgEntry = [
         {"img":"../assets/images/modularv4.png"},
@@ -166,7 +166,6 @@ app.get('/', function(request, response, next) {
                     if(removed.length == 30) {
                         return removed;
                     }
-
                 }
             },
             comments: function() {
