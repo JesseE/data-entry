@@ -13,7 +13,7 @@
 			p{ width: 80%;margin: auto;color: white;font-size:12px;}
 		}
 	}
-	@include bp (large){ width: 88%; margin: auto;
+	@include bp (large){ width: 100%; margin: auto;
 		.block-text {
 			h1{ color: white;border-bottom: 1px solid white;line-height: 77px;}
 			p{ width: 80%;margin: auto;color: white;font-size:12px;}

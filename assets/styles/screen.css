@@ -179,7 +179,7 @@ label {
 @media (min-width: 64em) {
   /* line 4, sass/ui/_block-list.scss */
   .block-list {
-    width: 88%;
+    width: 100%;
     margin: auto;
   }
   /* line 18, sass/ui/_block-list.scss */
@@ -598,8 +598,8 @@ svg.added {
 @media (min-width: 64em) {
   /* line 15, sass/ui/_block-image.scss */
   .block-image img {
-    width: 260px;
-    height: 260px;
+    width: 310px;
+    height: 310px;
   }
 }
 @media (min-width: 84.375em) {
@@ -614,41 +614,41 @@ svg.added {
   .block-image {
     margin: 0 20%;
   }
-  /* line 29, sass/ui/_block-image.scss */
+  /* line 32, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0 20%;
   }
 }
 @media (min-width: 48em) {
-  /* line 32, sass/ui/_block-image.scss */
+  /* line 35, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
-  /* line 35, sass/ui/_block-image.scss */
+  /* line 43, sass/ui/_block-image.scss */
   .block-image.fourth {
-    margin: -115px 0 0 130px;
+    margin: -150px 0 0 155px;
   }
-  /* line 36, sass/ui/_block-image.scss */
+  /* line 44, sass/ui/_block-image.scss */
   .block-image.fifth {
-    margin: -115px 0 0 260px;
+    margin: -151px 0 0 0px;
   }
-  /* line 37, sass/ui/_block-image.scss */
+  /* line 45, sass/ui/_block-image.scss */
   .block-image.sixth {
-    margin: -264px 0 0 390px;
+    margin: -313px 0 0 775px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 40, sass/ui/_block-image.scss */
+  /* line 48, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -175px 0 0 188px;
   }
-  /* line 41, sass/ui/_block-image.scss */
+  /* line 49, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -379px 563px;
   }
-  /* line 42, sass/ui/_block-image.scss */
+  /* line 50, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -378px 938px;
   }
