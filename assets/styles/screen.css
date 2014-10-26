@@ -424,7 +424,9 @@ label {
 .git-feed__description {
   position: relative;
   z-index: 0;
-  line-height: 80px;
+  margin: 30px auto;
+  line-height: 35px;
+  height: 100px;
 }
 /* line 13, sass/ui/_git-feed.scss */
 .git-feed__description h3 {
