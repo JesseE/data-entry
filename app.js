@@ -34,6 +34,8 @@ app.set('view engine', 'handlebars');
 var username = "JesseE";
 var password = "Eikema22";
 var header = {'user-agent': 'node.js'};
+var repository = "data-entry";
+var branch = "master";
 
 var commitsHash = [];
 var commitContainer = [];
@@ -47,7 +49,7 @@ commitContainerNumber.length = 90;
 getAllCommitPageOne();
 // getAllCommits();
 // get all commit hashes
-function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?page=1>sha=master').auth({
+function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=1>sha=master').auth({
     user: username,
     pass: password,
     sendImmediately: true
@@ -58,7 +60,7 @@ function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/Jesse
     getAllCommitPageTwo();   
     });
 };
-function getAllCommitPageTwo (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?page=2>sha=master').auth({
+function getAllCommitPageTwo (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=2>sha=master').auth({
     user: username,
     pass: password,
     sendImmediately: true
@@ -69,7 +71,7 @@ function getAllCommitPageTwo (){ unirest.get('https://api.github.com/repos/Jesse
     getAllCommitPageThree();
     });
 };
-function getAllCommitPageThree (){ unirest.get('https://api.github.com/repos/JesseE/data-entry/commits?page=3>sha=master').auth({
+function getAllCommitPageThree (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=3>sha=master').auth({
     user: username,
     pass: password,
     sendImmediately: true
@@ -95,7 +97,7 @@ function getAllCommitPageThree (){ unirest.get('https://api.github.com/repos/Jes
 //addtions deletions total adjustments in a commit
 function getAllStats () { 
     for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
-        unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
+        unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
             user: username,
             pass: password,
             sendImmediately: true
@@ -108,7 +110,7 @@ function getAllStats () {
 // commit comments
 function getAllMessage () { 
     for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
-        unirest.get('https://api.github.com/repos/JesseE/data-entry/commits/'+commitContainer[i]).auth({
+        unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
             user: username,
             pass: password,
             sendImmediately: true

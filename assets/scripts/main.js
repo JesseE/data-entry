@@ -97,7 +97,10 @@ bartext.selectAll("div")
 /*/////////////////////////////
  git activity visualisation
 *//////////////////////////////
-
+// only load on screen larger than 500px
+(function(){
+    if(window.innerWidth > 500){
+    console.log("visual is calc"); 
 // fetched array's
 var gitBarHeight = 10;
 var gitData2 = {remove : removedData};
@@ -225,3 +228,8 @@ var barC = chartX.selectAll(".git-feed__description")
 barC.append("rect")
     .attr("width", x3)
     .attr("height",gitBarHeight - 1);
+
+    } else{
+        console.log("no vis calc! yey!");
+    }
+})();
