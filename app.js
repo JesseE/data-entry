@@ -158,8 +158,8 @@ app.get('/', function(request, response, next) {
         {"paragraph": "RTS game gemaakt met javascript"},
     ];
     var textEntry = [
-        {"text":"Als Frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interactieve producten soepel en gebruiksvriendelijk gebeurt."},
-        {"text":"Tijdens het programeren splits ik mijn code afhankelijk van zijn functies in aparte modules, zodat het achteraf makkelijk te onderhouden is"},
+        {"text":"Als Frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interactieve producten vloeiend en gebruiksvriendelijk gebeurt."},
+        {"text":"Tijdens het programeren splits ik mijn code afhankelijk van zijn functies op in aparte modules, zodat het achteraf makkelijk te onderhouden is"},
         {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe te voegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."}
     ];
     var name = [
@@ -179,6 +179,7 @@ app.get('/', function(request, response, next) {
         text: textEntry,
         title: titleEntry,
         paragraph: paragraphEntry,
+        datavisual: true,
         normal: true,
         nav_1: true,
         nav_2: true,
@@ -209,7 +210,7 @@ app.get('/', function(request, response, next) {
                 }
             },
             comments: function() {
-                if(gitStats.length > 19){
+                if(gitStats.length == 90){
                      var comments = container;
                     return comments;       
                 }
@@ -251,12 +252,10 @@ app.get('/datavisualisatie', function(request, response, next) {
         {'name': "unirest.js", 'score': 16}
     ];
     var imgEntry = [
-        {"img":"../assets/images/datavisV1.png"},
-        {"img":"../assets/images/resizer-11.png"},
-        {"img":"../assets/images/resizer-2.png"}
+        {"img":"../assets/images/datavisV1.png"}
     ];
     var textEntry = [
-        {"text":"Datavisualisatie van toevoegingen en verwijderijgen van code die op Bitbucket staat van de werknemers van Grrr. "},
+        {"text":"Een datavisualisatie van de toevoegingen en verwijderingen van regels code die in repositories van Grrr staan. "},
         {"text":"Een indicatie maken van de actuele code veranderingen per project van Grrr. Het was de bedoeling om gegevens van de geschreven code te laten zien door contact te maken met de API van Bitbucket.com en deze gegevens werden dan gevisualiseerd met behulp van d3.js."}
     ];
     response.render('partials/item' ,{
@@ -269,10 +268,7 @@ app.get('/datavisualisatie', function(request, response, next) {
         helpers:{
             title: function () { return 'Datavisualisatie'},
             links: function () { return ''},
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image.jpg"},
             name: function () {
-               
                 var nameBucket = [];
 
                 for (var i = 0, len = name.length; i < len; i ++){
@@ -317,8 +313,8 @@ app.get('/resizer', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeedlingen zullen je geschaalde afbeedlingen er nog goed uitzien. Download de afbeeldingen direct via een zip bestand. Je kunt als je wilt ook meedere afbeedlingen tegelijk schalen."},
-        {"text":"Grrr heeft een CMS systeem voor hun klanten dat Garp heet. En ze zochten een toevoegingen waarbij je gemakkelijk meerdere afbeeldingen kan schalen. Hier werd mijn product dus voor gemaakt dat nu de Resizer heet."}
+        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeeldingen zullen je geschaalde afbeeldingen er nog goed uitzien. Download de afbeeldingen direct via een zip bestand. Je kunt als je wilt ook meedere afbeeldingen tegelijkertijd schalen."},
+        {"text":"Grrr heeft een CMS systeem voor hun klanten dat Garp heet. Zij zochten een toevoegingen waarbij je gemakkelijk meerdere afbeeldingen kan schalen. Hier werd mijn product dus voor gemaakt dat nu de Resizer heet."}
     ];
     response.render('partials/item',{
         img: imgEntry,
@@ -388,8 +384,7 @@ app.get('/melkweg', function(request, response, next) {
         helpers:{
             title: function () { return 'Melkweg'; },
             links: function () { return 'http://www.melkweg.nl/nl';},
-            name: function () {
-               
+            name: function () {  
                 var nameBucket = [];
 
                 for (var i = 0, len = name.length; i < len; i ++){
@@ -427,7 +422,7 @@ app.get('/score-app', function(request, response, next) {
         {"img":"../assets/images/resizer-2.png"}
     ];
     var textEntry = [
-        {"text":"Score webapp is een applicatie waarbij je scores van een wedstrijd kunt bij houden zowel op mobiel als op pc."},
+        {"text":"Score webapp is een applicatie waarbij je scores van een wedstrijd kunt bijhouden zowel op mobiel als op pc."},
         {"text":"Deze webapp werkt aan de hand van de Leaguevine API en meerder javascript libraries. Hierdoor is het mogelijk om van de toegevoegde partijen de scores te veranderen."}
     ];
     response.render('partials/item',{
@@ -480,8 +475,8 @@ app.get('/pathogen', function(request, response, next) {
         {'name': "Game Dev", 'score': 20}
     ]; 
     var imgEntry = [
-        {"img":"../assets/images/pathogenv1.png"},
-        {"img":"../assets/images/pathogenv2.png"},
+        {"img":"../assets/images/pathogen_v1.png"},
+        {"img":"../assets/images/pathogen_v2.png"},
         {"img":"../assets/images/pathogenv3.png"}
     ];
     var textEntry = [
@@ -528,9 +523,7 @@ app.get('/pathogen-prototype', function(request, response, next) {
         nav_2: false,
         footer: false,
         helpers:{
-            title: function () { return 'Score App'; },
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image-4.jpg"}
+            title: function () { return 'Score App'; }
     }}); 
 });
 app.get('/klassiekwijzer', function(request, response, next) {
@@ -559,8 +552,6 @@ app.get('/klassiekwijzer', function(request, response, next) {
         footer: true,
         helpers:{
             title: function () { return 'Klassiekwijzer'; },
-            paragraph: function () { return 'Donec purus turpis, pellentesque et viverra at, vestibulum vitae ipsum. Suspendisse efficitur tristique tempor.';},
-            images: function() { return "../assets/images/placeholder-image-6.jpg"},
             links: function() { return "http://klassiekwijzer.avro.nl/"},
             name: function () {
                 var nameBucket = [];
