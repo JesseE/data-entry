@@ -252,7 +252,7 @@ app.get('/datavisualisatie', function(request, response, next) {
         {'name': "unirest.js", 'score': 16}
     ];
     var imgEntry = [
-        {"img":"../assets/images/datavisV1.png"}
+        {"img":"../assets/images/datavis_v1.png"}
     ];
     var textEntry = [
         {"text":"Een datavisualisatie van de toevoegingen en verwijderingen van regels code die in repositories van Grrr staan. "},
@@ -308,9 +308,8 @@ app.get('/resizer', function(request, response, next) {
         {'name': "JavaScript-Load-Image", 'score': 10}
     ];
     var imgEntry = [
-        {"img":"../assets/images/resizer-08.png"},
-        {"img":"../assets/images/resizer-11.png"},
-        {"img":"../assets/images/resizer-2.png"}
+        {"img":"../assets/images/resizer_v1.png"},
+        {"img":"../assets/images/resizer_v2.png"}
     ];
     var textEntry = [
         {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeeldingen zullen je geschaalde afbeeldingen er nog goed uitzien. Download de afbeeldingen direct via een zip bestand. Je kunt als je wilt ook meedere afbeeldingen tegelijkertijd schalen."},
@@ -366,9 +365,8 @@ app.get('/melkweg', function(request, response, next) {
         {'name': "HTML", 'score': 10},
     ];
     var imgEntry = [
-        {"img":"../assets/images/melkwegv1.png"},
-        {"img":"../assets/images/melkwegv2.png"},
-        {"img":"../assets/images/resizer-2.png"}
+        {"img":"../assets/images/melkweg_v1.png"},
+        {"img":"../assets/images/melkweg_v2.png"}
     ];
     var textEntry = [
         {"text":"Het refactoren van de geschreven CSS/SASS code van de Melkweg."},
@@ -417,9 +415,8 @@ app.get('/score-app', function(request, response, next) {
         {'name': "leaguevine API", 'score': 15},
     ];
     var imgEntry = [
-        {"img":"../assets/images/score-appv1.png"},
-        {"img":"../assets/images/score-appv2.png"},
-        {"img":"../assets/images/resizer-2.png"}
+        {"img":"../assets/images/score-app_v1.png"},
+        {"img":"../assets/images/score-app_v2.png"}
     ];
     var textEntry = [
         {"text":"Score webapp is een applicatie waarbij je scores van een wedstrijd kunt bijhouden zowel op mobiel als op pc."},
@@ -476,8 +473,7 @@ app.get('/pathogen', function(request, response, next) {
     ]; 
     var imgEntry = [
         {"img":"../assets/images/pathogen_v1.png"},
-        {"img":"../assets/images/pathogen_v2.png"},
-        {"img":"../assets/images/pathogenv3.png"}
+        {"img":"../assets/images/pathogen_v2.png"}
     ];
     var textEntry = [
         {"text":"Pathogen is een realtime strategy game gemaakt met javascript. Je speelt in de game als de partij van het imuunsysteem en je vecht tegen de slechte bacteriën in verschillende locaties van het menselijk lichaam."},
@@ -535,9 +531,8 @@ app.get('/klassiekwijzer', function(request, response, next) {
         {'name': "PHP", 'score': 13}
     ];
     var imgEntry = [
-        {"img":"../assets/images/klassiekwijzerv1.png"},
-        {"img":"../assets/images/klassiekwijzerv2.png"},
-        {"img":"../assets/images/resizer-2.png"}
+        {"img":"../assets/images/klassiekwijzer_v1.png"},
+        {"img":"../assets/images/klassiekwijzer_v2.png"}
     ];
     var textEntry = [
         {"text":"Dit is een vragen reeks die uiteindelijk moet laten zien wat voor klassiekemuziek het beste bij jou past."},
