@@ -1663,6 +1663,7 @@ input[type=password]:focus {
   text-align: center;
   background-color: #344E58;
   color: white;
+  top: -1px;
 }
 /* line 6, sass/ui/_footer.scss */
 .banner--footer h1 {
