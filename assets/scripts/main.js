@@ -54,7 +54,8 @@ dataName = data[0].name;
 // var width = 320,
 var width =  {},
     barHeight = 20;
-
+    
+//mobile or desktop
 (function(){
     if(window.innerWidth < 500){ 
      width = 200;
