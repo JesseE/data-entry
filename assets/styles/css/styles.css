@@ -2,7 +2,7 @@ html{
 	min-height:		100%;
 }
 body{
-	background:		url('../images/screens/background.jpg') repeat-y center center;
+	background:		url('../../images/screens/background.jpg') repeat-y center center;
 	background-size:	100% 100%;
 	height:			100%;
 }
@@ -48,7 +48,7 @@ body:before
 	width: 			980px;
 	height: 		700px;
 	background:		#333;
-	/*background:		url('../images/screens/screen_background.jpg');*/
+	/*background:		url('../../images/screens/screen_background.jpg');*/
 	border: 		1px solid black;
 	overflow:		hidden;
 	position: 		relative;
@@ -89,7 +89,7 @@ body:before
 	right:			20px;
 	width:			41px;
 	height:			32px;
-	background: 	url('../images/interface/global_buttons.png') no-repeat 0 0;
+	background: 	url('../../images/interface/global_buttons.png') no-repeat 0 0;
 	text-indent:	-999px;
 	opacity:		0.7;
 	z-index:		9999;
@@ -106,7 +106,7 @@ body:before
 	height:			145px;
 	bottom:			0;
 	right:			0;
-	background: 	url('../images/screens/button_back.png') no-repeat top left;
+	background: 	url('../../images/screens/button_back.png') no-repeat top left;
 	z-index:		998;
 }
 
@@ -114,15 +114,15 @@ body:before
 	display:		none;
 	width:			330px;
 	height:			145px;
-	background: 	url('../images/screens/button_back.png') no-repeat 0 -145px;
+	background: 	url('../../images/screens/button_back.png') no-repeat 0 -145px;
 }
 
 .gamelayer .bg_back.briefing_screen{
-	background: 	url('../images/screens/button_back_v2.png') no-repeat 0 0;
+	background: 	url('../../images/screens/button_back_v2.png') no-repeat 0 0;
 }
 
 .gamelayer .bg_back_active.briefing_screen{
-	background: 	url('../images/screens/button_back_v2.png') no-repeat 0 -145px;
+	background: 	url('../../images/screens/button_back_v2.png') no-repeat 0 -145px;
 }
 
 .gamelayer span.back_button{
@@ -144,29 +144,29 @@ body:before
 	bottom:			0;
 	left:			383px;
 	z-index:		998;
-	background: 	url('../images/screens/button_enter.png') no-repeat top left;
+	background: 	url('../../images/screens/button_enter.png') no-repeat top left;
 }
 
 .gamelayer .bg_entermission_active, .gamelayer .bg_startmission_active{
 	display:		none;
 	width:			310px;
 	height:			181px;
-	background:		url('../images/screens/button_enter.png') no-repeat 0 -181px;
+	background:		url('../../images/screens/button_enter.png') no-repeat 0 -181px;
 }
 .gamelayer .bg_startmission{
-	background: 	url('../images/screens/button_start.png') no-repeat 0 0;
+	background: 	url('../../images/screens/button_start.png') no-repeat 0 0;
 }
 
 .gamelayer .bg_startmission_active{
-	background: 	url('../images/screens/button_start.png') no-repeat 0 -181px;
+	background: 	url('../../images/screens/button_start.png') no-repeat 0 -181px;
 }
 
 .gamelayer .bg_startmission.briefing_screen{
-	background: 	url('../images/screens/button_start_v2.png') no-repeat 0 0;
+	background: 	url('../../images/screens/button_start_v2.png') no-repeat 0 0;
 }
 
 .gamelayer .bg_startmission_active.briefing_screen{
-	background: 	url('../images/screens/button_start_v2.png') no-repeat 0 -181px;
+	background: 	url('../../images/screens/button_start_v2.png') no-repeat 0 -181px;
 }
 
 .gamelayer span.enter_button{
@@ -186,7 +186,7 @@ body:before
 	position:		relative;
 	height:			700px;
 	width:			980px;
-	background: 	url('../images/screens/loading/loading_bg.jpg') no-repeat top left;
+	background: 	url('../../images/screens/loading/loading_bg.jpg') no-repeat top left;
 	z-index:		999;
 }
 
@@ -201,7 +201,7 @@ body:before
 
 /* Game Starting Menu Screen */
 #gamestartscreen {
-	background: 	url('../images/screens/start/start_screen_bg.jpg') no-repeat top left;
+	background: 	url('../../images/screens/start/start_screen_bg.jpg') no-repeat top left;
 }
 
 		/* Button hoverables */
@@ -244,7 +244,7 @@ body:before
 		/* Button backgrounds */
 #gamestartscreen div.start_bg{
 	position:		absolute;
-	background: 	url('../images/screens/start/start_screen_buttons.png') no-repeat;
+	background: 	url('../../images/screens/start/start_screen_buttons.png') no-repeat;
 	display:		block;
 	display:		none;
 }
@@ -292,7 +292,7 @@ body:before
 /* Loading Screen */
 #loadingscreen {
 	float:			left;
-	background:		url('../images/screens/loading/loading_bg.jpg') no-repeat center;
+	background:		url('../../images/screens/loading/loading_bg.jpg') no-repeat center;
 	z-index:		9999;
 }
 
@@ -301,24 +301,24 @@ body:before
 	text-align:		center;
 	height:			48px;
 	color:			white;
-	background:		url('../images/loader.gif') no-repeat center;
+	background:		url('../../images/loader.gif') no-repeat center;
 	font:			12px Arial;
 }
 
 /* Credits */
 #creditsscreen{
-	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+	background: 	url('../../images/screens/screen_background.jpg') no-repeat top left;
 }
 
 /* Instructions */
 #instructionsscreen{
-	background: 	url('../images/screens/instructions/screen_background_instructions.jpg') no-repeat top left;
+	background: 	url('../../images/screens/instructions/screen_background_instructions.jpg') no-repeat top left;
 }
 
 
 /* Level select */
 #missionselectscreen{
-	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+	background: 	url('../../images/screens/screen_background.jpg') no-repeat top left;
 }
 
 #missionselectscreen #container{
@@ -332,7 +332,7 @@ body:before
 	float:			left;
 	height:			100%;
 	width:			390px;
-	background: 	url('../images/screens/level_select/torso.jpg') no-repeat top left;
+	background: 	url('../../images/screens/level_select/torso.jpg') no-repeat top left;
 }
 
 #missionselectscreen #container #torso .select_button{
@@ -401,12 +401,12 @@ body:before
 
 /* Level select */
 #missionselectscreen{
-	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+	background: 	url('../../images/screens/screen_background.jpg') no-repeat top left;
 }
 
 /* Mission Briefing Screen */
 #missionscreen, #outroscreen {
-	background: 	url('../images/screens/screen_background.jpg') no-repeat top left;
+	background: 	url('../../images/screens/screen_background.jpg') no-repeat top left;
 }
 /*
 #briefing-slider{
@@ -447,7 +447,7 @@ body:before
 	height:			143px;
 	top:			217px;
 	left:			425px;
-	background:		url('../images/interface/pause.png') no-repeat top left;
+	background:		url('../../images/interface/pause.png') no-repeat top left;
 	cursor:			pointer;
 }
 
@@ -547,7 +547,7 @@ body:before
 	width: 			980px;
 	top:			0;
 	left:			0;
-	background:		url('../images/interface/interface.png') no-repeat 0 0;
+	background:		url('../../images/interface/interface.png') no-repeat 0 0;
 	color:			#c8c6c3;
 }
 #top span{
@@ -593,7 +593,7 @@ body:before
 	width:			47px;
 	top:			55px;
 	left:			0;
-	background:		url('../images/interface/interface.png') no-repeat 0 -55px;
+	background:		url('../../images/interface/interface.png') no-repeat 0 -55px;
 }
 
 #right{
@@ -601,7 +601,7 @@ body:before
 	width:			47px;
 	top:			55px;
 	right:			0;
-	background:		url('../images/interface/interface.png') no-repeat right -55px;
+	background:		url('../../images/interface/interface.png') no-repeat right -55px;
 }
 
 #message_box{
@@ -610,7 +610,7 @@ body:before
 	height:			168px;
 	bottom:			0;
 	left:			293px;
-	background:		url('../images/interface/interface.png') no-repeat -100px -100px;
+	background:		url('../../images/interface/interface.png') no-repeat -100px -100px;
 	z-index:		1000;
 	pointer-events: none;
 }
@@ -622,7 +622,7 @@ body:before
 	width:			980px;
 	height:			165px;
 	z-index: 		999;
-	background:		url('../images/interface/interface.png') no-repeat left bottom;
+	background:		url('../../images/interface/interface.png') no-repeat left bottom;
 }
 #interface_top{
 	position: 		absolute;
@@ -631,7 +631,7 @@ body:before
 	width:			980px;
 	height:			25px;
 	z-index: 		999;
-	background:		url('../images/interface/interface.png') no-repeat left -510px;
+	background:		url('../../images/interface/interface.png') no-repeat left -510px;
 	pointer-events: none;
 }
 
@@ -698,7 +698,7 @@ body:before
 	height:			147px;
 	color:			#d7d5d3;
 	pointer-events:	none;
-	background:		url('../images/interface/UI_selected.png') no-repeat 0 0;
+	background:		url('../../images/interface/UI_selected.png') no-repeat 0 0;
 }
 #selected_info #container{
 	position:		absolute;
@@ -835,7 +835,7 @@ body:before
 .UI_button{
 	display:			block;
 	position:			relative;
-	background-image: 	url('../images/interface/UI.png');
+	background-image: 	url('../../images/interface/UI.png');
 }
 .small{
 	margin:				-8px -3px;
@@ -958,11 +958,11 @@ body:before
 }
 
 #victory{
-	background:		url('../images/screens/popup/victory_bg.png') no-repeat 0 0;
+	background:		url('../../images/screens/popup/victory_bg.png') no-repeat 0 0;
 }
 
 #game_over{
-	background:		url('../images/screens/popup/game-over_bg.png') no-repeat 0 0;
+	background:		url('../../images/screens/popup/game-over_bg.png') no-repeat 0 0;
 }
 
 .messagebox_button{
@@ -970,7 +970,7 @@ body:before
 	position:		absolute;
 	width:			150px;
 	height:			80px;
-	background:		url('../images/screens/popup/buttons.png') no-repeat 0 0;
+	background:		url('../../images/screens/popup/buttons.png') no-repeat 0 0;
 	cursor:			pointer;
 }
 
@@ -1023,7 +1023,7 @@ body:before
 }
 
 #messagebox input[type="button"]{
-	background-image: url('../images/buttons.png');	
+	background-image: url('../../images/buttons.png');	
 	position:		absolute;
 	border-width:	0px;
 	padding:		0px;

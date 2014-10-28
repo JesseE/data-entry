@@ -28,7 +28,7 @@
   * http://rhinoslider.com/license/
   */
 .rhino-btn {
-	background:url(../images/screens/briefing/slider-arrows.png) 0 0 no-repeat;
+	background:url(../../images/screens/briefing/slider-arrows.png) 0 0 no-repeat;
 	z-index: 999;
 	width: 83px;
 	height: 119px;
@@ -104,7 +104,7 @@
 	content:' ';
 	width:16px;
 	height:26px;
-	background:url(../images/screens/briefing/rhinoslider-sprite.png) -224px 0 no-repeat;
+	background:url(../../images/screens/briefing/rhinoslider-sprite.png) -224px 0 no-repeat;
 }
 
 .rhino-bullets:after {
