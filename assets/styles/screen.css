@@ -769,7 +769,7 @@ svg.added {
   /* line 4, sass/ui/_block-description.scss */
   .block-description, .block-description--reverse, .block-description--introduction, .block-description--right {
     float: left;
-    width: 90%;
+    width: 88%;
     /*max-height: 270px;*/
     padding: 20px;
     line-height: 30px;
