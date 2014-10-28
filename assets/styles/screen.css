@@ -506,7 +506,7 @@ svg.added {
 .block-container__item {
   width: 80%;
   margin: 61px auto;
-  height: 350px;
+  height: 415px;
 }
 @media (max-width: 48em) {
   /* line 5, sass/ui/_block-container.scss */
