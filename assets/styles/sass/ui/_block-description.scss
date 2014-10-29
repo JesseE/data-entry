@@ -28,3 +28,9 @@
 	// height:340px;
 	h1,p{color: white;}
 }
+.block-description--contained{
+	@extend .block-description--right;
+	width: 90%; line-height: 20px;
+	h3{ color: white; border-bottom: 5px solid #344E58;}
+}
+

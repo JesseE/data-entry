@@ -119,7 +119,11 @@ module.exports.create = function(request, response){
     var textEntry = [
         {"text":"Als Frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interactieve producten vloeiend en gebruiksvriendelijk gebeurt."},
         {"text":"Tijdens het programeren splits ik mijn code afhankelijk van zijn functies op in aparte modules, zodat het achteraf makkelijk te onderhouden is"},
-        {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe te voegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."}
+        {"text":"Naast dat aparte modules een duidelijk overzicht maakt van de geschreven code, is het ook eenvoudig om het in een andere project toe te voegen. Dit maakt de code een stuk beter herbruikbaar. Je hoeft dus niet meer van niks te beginnen, dit scheelt veel tijd."},
+        {"text":"Begonnen met het gebruiken van javascript op een hogere niveau. Importeren van library's en API's aanroepen. De concepten van OOP beginnen door te dringen."},
+        {"text":"Tijdens het volgen van lessen over datavisualisatie leerde ik d3.js gebruiken. Hiermee kwam de concepten van het bouwen van visualisaties naar voren. Denk aan enter(), update() en exit()."},
+        {"text":"Veel geleerd in deze periode over hoe handig GIT cli kan zijn. En de eerste stappen met SASS gemaakt. Denk hierbij aan het toepassen van SMACSS en BEM methodes voor gestructureerde en herbruikbare CSS."},
+        {"text":"Naarmate ik steeds grotere projecten ging doen, werd een betere stuctuur steeds  meer essentieel, daarom ben ik begonnen met een framework genaamd Express.js. Deze framework is erg fijn om grotere applicaties mee te bouwen."},
     ];
     var name = [
         {'name': "GIT", 'score': 10},

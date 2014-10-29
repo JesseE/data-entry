@@ -256,9 +256,20 @@ label {
 *************************/
 /* line 4, sass/ui/_timeline.scss */
 .timeline {
+  padding: 14% 0;
   width: 100%;
   background: white;
   float: left;
+}
+@media (max-width: 64em) {
+  /* line 4, sass/ui/_timeline.scss */
+  .timeline {
+    display: none;
+  }
+  /* line 7, sass/ui/_timeline.scss */
+  .timeline .banner-timeline {
+    display: none;
+  }
 }
 @media (max-width: 48em) {
   /* line 4, sass/ui/_timeline.scss */
@@ -267,14 +278,25 @@ label {
   }
 }
 
-/* line 9, sass/ui/_timeline.scss */
+/* line 13, sass/ui/_timeline.scss */
 .timeline__container {
+  top: 27%;
   height: 200px;
-  width: 80%;
-  margin: 100px auto;
+  width: 70%;
+  margin: 14%;
+  -webkit-transform: rotate(90deg);
+  position: relative;
+}
+/* line 14, sass/ui/_timeline.scss */
+.timeline__container a:hover > .timeline__phase {
+  background: #527B8B;
+}
+/* line 15, sass/ui/_timeline.scss */
+.timeline__container a:hover > .timeline__period, .timeline__container a:hover > .timeline__period--left {
+  background: #344E58;
 }
 @media (max-width: 48em) {
-  /* line 9, sass/ui/_timeline.scss */
+  /* line 13, sass/ui/_timeline.scss */
   .timeline__container {
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
@@ -286,7 +308,7 @@ label {
   }
 }
 
-/* line 14, sass/ui/_timeline.scss */
+/* line 21, sass/ui/_timeline.scss */
 .timeline__phase {
   width: 100%;
   height: 30px;
@@ -295,8 +317,8 @@ label {
   top: 100px;
 }
 
-/* line 15, sass/ui/_timeline.scss */
-.timeline__period {
+/* line 22, sass/ui/_timeline.scss */
+.timeline__period, .timeline__period--left {
   background: #527B8B;
   height: 50px;
   width: 25%;
@@ -307,11 +329,12 @@ label {
   box-shadow: inset 1px 0px 0px white;
 }
 
-/* line 16, sass/ui/_timeline.scss */
-.timeline__tools-item {
+/* line 24, sass/ui/_timeline.scss */
+.timeline__tools-item, .timeline__tools-item--left {
   width: 46px;
   height: 40px;
   display: inline-block;
+  left: 180px;
   top: -40px;
   position: absolute;
   float: left;
@@ -319,24 +342,39 @@ label {
   background-image: url(../../images/arrowv2.png);
 }
 
-/* line 20, sass/ui/_timeline.scss */
-.timeline__tools-item__description {
-  width: 100px;
-  height: 60px;
+/* line 28, sass/ui/_timeline.scss */
+.timeline__tools-item--left {
+  top: 83px;
+  left: 180px;
+  transform: rotate(180deg);
+}
+
+/* line 30, sass/ui/_timeline.scss */
+.timeline__tools-item__description, .timeline__tools-item__description--left {
+  width: 400px;
+  height: 200px;
   background: #527B8B;
   color: white;
   border-radius: 3px;
-  top: -62px;
+  top: -299px;
   position: relative;
-  left: -22px;
+  left: -170px;
   line-height: 60px;
+  -webkit-transform: rotate(-90deg);
 }
 @media (max-width: 48em) {
-  /* line 20, sass/ui/_timeline.scss */
-  .timeline__tools-item__description {
+  /* line 30, sass/ui/_timeline.scss */
+  .timeline__tools-item__description, .timeline__tools-item__description--left {
     transform: rotate(-90deg);
     -webkit-transform: rotate(-90deg);
   }
+}
+
+/* line 36, sass/ui/_timeline.scss */
+.timeline__tools-item__description--left {
+  top: -299px;
+  -webkit-transform: rotate(-270deg);
+  left: -185px;
 }
 
 /*************************
@@ -394,6 +432,7 @@ label {
   float: left;
   position: relative;
   background: #527B8B;
+  margin-top: 100px;
 }
 @media (max-width: 48em) {
   /* line 4, sass/ui/_git-feed.scss */
@@ -500,6 +539,7 @@ svg.added {
   position: relative;
   float: left;
   margin: auto;
+  background-color: #527B8B;
 }
 
 /* line 5, sass/ui/_block-container.scss */
@@ -743,7 +783,7 @@ svg.added {
 		block-description
 *************************/
 /* line 4, sass/ui/_block-description.scss */
-.block-description, .block-description--reverse, .block-description--introduction, .block-description--right {
+.block-description, .block-description--reverse, .block-description--introduction, .block-description--right, .block-description--contained {
   float: right;
   width: 50%;
   /*margin: 10px;height: 340px;*/
@@ -752,22 +792,22 @@ svg.added {
   line-height: 30px;
 }
 /* line 6, sass/ui/_block-description.scss */
-.block-description h1, .block-description--reverse h1, .block-description--introduction h1, .block-description--right h1 {
+.block-description h1, .block-description--reverse h1, .block-description--introduction h1, .block-description--right h1, .block-description--contained h1 {
   border-bottom: 5px solid #344E58;
 }
 /* line 7, sass/ui/_block-description.scss */
-.block-description h1, .block-description--reverse h1, .block-description--introduction h1, .block-description--right h1, .block-description h3, .block-description--reverse h3, .block-description--introduction h3, .block-description--right h3, .block-description p, .block-description--reverse p, .block-description--introduction p, .block-description--right p {
+.block-description h1, .block-description--reverse h1, .block-description--introduction h1, .block-description--right h1, .block-description--contained h1, .block-description h3, .block-description--reverse h3, .block-description--introduction h3, .block-description--right h3, .block-description--contained h3, .block-description p, .block-description--reverse p, .block-description--introduction p, .block-description--right p, .block-description--contained p {
   color: #344E58;
 }
 /* line 9, sass/ui/_block-description.scss */
-.block-description a li, .block-description--reverse a li, .block-description--introduction a li, .block-description--right a li {
+.block-description a li, .block-description--reverse a li, .block-description--introduction a li, .block-description--right a li, .block-description--contained a li {
   list-style-type: none;
   color: #344E58;
   text-decoration: underline;
 }
 @media (max-width: 48em) {
   /* line 4, sass/ui/_block-description.scss */
-  .block-description, .block-description--reverse, .block-description--introduction, .block-description--right {
+  .block-description, .block-description--reverse, .block-description--introduction, .block-description--right, .block-description--contained {
     float: left;
     width: 88%;
     /*max-height: 270px;*/
@@ -796,8 +836,19 @@ svg.added {
 }
 
 /* line 29, sass/ui/_block-description.scss */
-.block-description--right h1, .block-description--right p {
+.block-description--right h1, .block-description--contained h1, .block-description--right p, .block-description--contained p {
   color: white;
+}
+
+/* line 31, sass/ui/_block-description.scss */
+.block-description--contained {
+  width: 90%;
+  line-height: 20px;
+}
+/* line 34, sass/ui/_block-description.scss */
+.block-description--contained h3 {
+  color: white;
+  border-bottom: 5px solid #344E58;
 }
 
 /*------------------------------------*\
@@ -958,7 +1009,6 @@ h5 {
 .about {
   float: left;
   width: 100%;
-  background-color: #527B8B;
   text-align: center;
   margin-top: 50px;
 }
