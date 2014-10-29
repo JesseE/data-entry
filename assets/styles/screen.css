@@ -534,68 +534,73 @@ svg.added {
 		block-container
 *************************/
 /* line 4, sass/ui/_block-container.scss */
-.block-container {
+.block-container, .block-container--about {
   width: 100%;
   position: relative;
   float: left;
   margin: auto;
-  background-color: #527B8B;
+  background-color: white;
 }
 
 /* line 5, sass/ui/_block-container.scss */
+.block-container--about {
+  background-color: #527B8B;
+}
+
+/* line 6, sass/ui/_block-container.scss */
 .block-container__item {
   width: 80%;
   margin: 61px auto;
   height: 415px;
 }
 @media (max-width: 48em) {
-  /* line 5, sass/ui/_block-container.scss */
+  /* line 6, sass/ui/_block-container.scss */
   .block-container__item {
     width: 100%;
   }
 }
 
-/* line 10, sass/ui/_block-container.scss */
+/* line 11, sass/ui/_block-container.scss */
 .block-container__item-imagecontainer {
   float: left;
   width: 43%;
 }
 @media (max-width: 48em) {
-  /* line 10, sass/ui/_block-container.scss */
+  /* line 11, sass/ui/_block-container.scss */
   .block-container__item-imagecontainer {
     width: 100%;
   }
 }
 
-/* line 16, sass/ui/_block-container.scss */
+/* line 17, sass/ui/_block-container.scss */
 .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
   float: left;
 }
-/* line 18, sass/ui/_block-container.scss */
+/* line 19, sass/ui/_block-container.scss */
 .block-container__item-image img, .block-container__item-image--reverse img, .block-container__item-image--left img {
   /*float: left;*/
   width: 250px;
 }
-/* line 23, sass/ui/_block-container.scss */
+/* line 24, sass/ui/_block-container.scss */
 .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
   width: 100%;
 }
 @media (max-width: 48em) {
-  /* line 16, sass/ui/_block-container.scss */
+  /* line 17, sass/ui/_block-container.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
     width: 100%;
     margin-bottom: 10px;
   }
 }
 
-/* line 30, sass/ui/_block-container.scss */
+/* line 31, sass/ui/_block-container.scss */
 .block-container__item-image--reverse, .block-container__item-image--left {
   float: right;
   border: none;
   /*max-width: 250px; margin-top: 50px;*/
 }
 @media (max-width: 48em) {
-  /* line 30, sass/ui/_block-container.scss */
+  /* line 31, sass/ui/_block-container.scss */
   .block-container__item-image--reverse, .block-container__item-image--left {
     display: block;
     max-height: 250px;
@@ -604,7 +609,7 @@ svg.added {
   }
 }
 
-/* line 37, sass/ui/_block-container.scss */
+/* line 38, sass/ui/_block-container.scss */
 .block-container__item-image--left {
   float: left;
   border: none;
