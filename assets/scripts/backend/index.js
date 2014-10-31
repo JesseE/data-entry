@@ -92,7 +92,7 @@
 //module index create function
 module.exports.create = function(request, response){ 
 //make sure you have values in github response
-    if(done == true){
+    // if(done == true){
 // console.log(gitMessage);
     var container = [];
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
@@ -208,4 +208,4 @@ module.exports.create = function(request, response){
             }
         }
     });
-}};
+};
