@@ -35,7 +35,7 @@
 		width: 100%; text-align: center;
 	}
 }
-.block-list--tools-container{ float: right; width: 50%;
+.block-list--tools-container{ float: left; width: 50%;
 	@include bp (med) {
 		width: 72%;
 	}

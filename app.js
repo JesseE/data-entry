@@ -34,11 +34,9 @@ app.use(express.static(__dirname + '/assets'));
 
 // Set Handlebars
 app.set('view engine', 'handlebars');
-
 /*
  * Routes
  */
-
 // Index Page
 app.get('/', index.create);
 // posts page

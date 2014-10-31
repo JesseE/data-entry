@@ -21,6 +21,7 @@
   },
   "devDependencies": {
     "blueimp-load-image": "~1.13.0",
-    "jszip": "~2.0.0"
+    "jszip": "~2.0.0",
+    "zepto": "~1.1.4"
   }
 }

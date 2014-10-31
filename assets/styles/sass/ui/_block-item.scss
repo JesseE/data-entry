@@ -11,13 +11,13 @@
 	}
 }
 .block-item--tools{
-	height: 200px; width:45%; background: #C0D1D8; color: grey;float: left; margin:2em;border:1px solid white;
+	float: left; height: 200px; width:45%; background: #C0D1D8; color: grey; margin:2em;border:1px solid white;
 	@include bp (med){
 		width: 85%;
 	}
 }
 .block-item--tools__image{
-	float:left; width: 25%;
+	float: left; width: 25%;
 	img{width: 100px;height:100px;}
 }
 .block-item--tools__text{

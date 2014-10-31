@@ -19,7 +19,8 @@
     {{#if nav_1}}    
     <nav class="nav--off-window">
         <ul>
-            <a href="/#projects" class="active"><li class="active">Projects</li></a>
+            <a href="/"><li>Home</li></a>
+            <li class="active">Projects</li>
             <a href="/#visie"><li>Visie</li></a>
             <a href="/#tools"><li>Tools</li></a>
             <a href="/#tijdlijn"><li>Tijdlijn</li></a>
@@ -57,7 +58,6 @@
                     <h1>{ { CODING NINJA } } </h1>
                 </div>    
                 <div class="ninja-icon"><img src="assets/images/ninja.jpg"></div>
-            {{!--     <div class="made-with"><p>Build with:</p><img src="assets/images/node-logo.png"></div> --}}
             </div>
         </div>
         {{/if}}
@@ -79,11 +79,11 @@
     </footer>
     {{/if}}
     {{#if normal}}
-    <script type="text/javascript" src="/assets/bower_components/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/bower_components/d3/d3.min.js"></script>
-    <script type="text/javascript" src="/assets/bower_components/modernizr/modernizr.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
     <script type="text/javascript">var addData = [{{added}}];var removedData = [{{removed}}];var commentContainer = ['{{comments}}'];var commentsString = commentContainer[0];var Container = [{comments: commentsString.split(',')}];var nameString = ['{{name}}'];var nameStringified = nameString[0];var nameContainer =  [{name: nameStringified.split(',')}];var scoreContainer = [{{score}}];</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
     <script type="text/javascript" src="/assets/scripts/main.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     {{/if}}
     {{#if resizer}}
         <script type="text/javascript" src="/assets/bower_components/blueimp-load-image/js/load-image.all.min.js"></script>

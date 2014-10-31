@@ -1,6 +1,7 @@
-/*/////////////////////////////
-    nav functionality
-*//////////////////////////////
+// /*/////////////////////////////
+//     nav functionality
+// *//////////////////////////////
+
 var value = 0;
 $('.nav').click(function(){
 	switch (value) {
@@ -18,7 +19,7 @@ $('.nav').click(function(){
 			break;
 	}
 });
-$('a.active').hover(function(){
+$('li.active').click(function(){
     switch (value) {
         case 0 :
             $('.nav--secundairy').hide();
@@ -55,16 +56,18 @@ dataName = data[0].name;
 var width =  {},
     barHeight = 20;
     
-//mobile or desktop
+//mobile or desktop responsive visualisation
 (function(){
-    if(window.innerWidth < 500){ 
-     width = 200;
-        console.log('What you want!?');
-    }else {
-        width = 420;
+    width = 420;
+    if(window.innerWidth <= 1600){ 
+        width = 330;
+    };
+    if ( window.innerWidth <= 1280) {
+        width = 200;
     };
 })();
 
+// start d3 visual
 var x = d3.scale.linear()
     .domain([0, d3.max(dataScore)])
     .range([0, width]);
