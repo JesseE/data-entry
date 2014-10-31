@@ -3,7 +3,6 @@
 // var githubRequest = require('./ext_request/github.js');
 
 // app.get(githubRequest.create);
-
     var unirest = require('unirest');
     //github request repos
     var username = "JesseE";
@@ -11,6 +10,7 @@
     var header = {'user-agent': 'node.js'};
     var repository = "data-entry";
     var branch = "master";
+    var done = false;
 
     var commitsHash = [];
     var commitContainer = [];
@@ -27,7 +27,7 @@
         user: username,
         pass: password,
         sendImmediately: true
-    }).headers(header).end(function(response){
+    }).headers(header).complete(function(response){
         for(var i = 0, len = commitsHash.length; i < len; ++i){
             commitContainer.push(response.body[i].sha);
         }
@@ -38,7 +38,7 @@
         user: username,
         pass: password,
         sendImmediately: true
-    }).headers(header).end(function(response){
+    }).headers(header).complete(function(response){
         for(var i = 0, len = commitsHash.length; i < len; ++i){
             commitContainer.push(response.body[i].sha);
         }
@@ -49,7 +49,7 @@
         user: username,
         pass: password,
         sendImmediately: true
-    }).headers(header).end(function(response){
+    }).headers(header).complete(function(response){
         for(var i = 0, len = commitsHash.length; i < len; ++i){
             commitContainer.push(response.body[i].sha);
         }
@@ -64,7 +64,7 @@
                 user: username,
                 pass: password,
                 sendImmediately: true
-            }).headers(header).end(function(response){
+            }).headers(header).complete(function(response){
                 gitStats.push(response.body.stats);   
             });
         };
@@ -77,15 +77,19 @@
                 user: username,
                 pass: password,
                 sendImmediately: true
-            }).headers(header).end(function(response){  
+            }).headers(header).complete(function(response){  
                // var object = {"comment" : response.body.commit.message};     
                console.log(gitStats);
                 var object = response.body.commit.message;
-                gitMessage.push(object);        
+                gitMessage.push(object); 
+                done();       
             });
         };
     };
-
+    function done(){
+        done = true;
+    };
+//module index create function
 module.exports.create = function(request, response){ 
 // console.log(gitMessage);
     var container = [];
@@ -137,6 +141,9 @@ module.exports.create = function(request, response){
         {'name': "Game Dev", 'score': 16},
         {'name': "Mobile Dev", 'score': 15}
     ];
+    //make sure you have values in github response
+    if(done === true){
+        //if true start rendering
     response.render('index', {  
         img: imgEntry,
         text: textEntry,
@@ -199,5 +206,5 @@ module.exports.create = function(request, response){
                 return scoreBucket;
             }
         }
-    });
+    })};
 };
