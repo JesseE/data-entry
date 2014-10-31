@@ -10,7 +10,8 @@
     var header = {'user-agent': 'node.js'};
     var repository = "data-entry";
     var branch = "master";
-
+    var done = false;
+    
     var commitsHash = [];
     var commitContainer = [];
     var checker = [];
@@ -26,7 +27,7 @@
         user: username,
         pass: password,
         sendImmediately: true
-    }).headers(header).complete(function(response){
+    }).headers(header).end(function(response){
         for(var i = 0, len = commitsHash.length; i < len; ++i){
             commitContainer.push(response.body[i].sha);
         }
@@ -37,7 +38,7 @@
         user: username,
         pass: password,
         sendImmediately: true
-    }).headers(header).complete(function(response){
+    }).headers(header).end(function(response){
         for(var i = 0, len = commitsHash.length; i < len; ++i){
             commitContainer.push(response.body[i].sha);
         }
@@ -48,11 +49,10 @@
         user: username,
         pass: password,
         sendImmediately: true
-    }).headers(header).complete(function(response){
+    }).headers(header).end(function(response){
         for(var i = 0, len = commitsHash.length; i < len; ++i){
             commitContainer.push(response.body[i].sha);
         }
-        
         getAllStats();  
         });
     };
@@ -63,7 +63,7 @@
                 user: username,
                 pass: password,
                 sendImmediately: true
-            }).headers(header).complete(function(response){
+            }).headers(header).end(function(response){
                 gitStats.push(response.body.stats);   
             });
         };
@@ -76,21 +76,33 @@
                 user: username,
                 pass: password,
                 sendImmediately: true
-            }).headers(header).complete(function(response){  
+            }).headers(header).end(function(response){  
                // var object = {"comment" : response.body.commit.message};     
-               console.log(gitStats);
                 var object = response.body.commit.message;
                 gitMessage.push(object); 
-                      
+                completeReq();  
             });
+
         };
+    };
+    function completeReq() {
+        done = true;
     };
 //module index create function
 module.exports.create = function(request, response){ 
-//make sure you have values in github response
-    // if(done == true){
-// console.log(gitMessage);
+    //make sure you have values in github response
+    function checkIfFinished (){
+        return (gitStats.length >= 90);
+    };
+    var isFinished = false;
+    var timeout = setInterval(function(){ 
+        if(checkIfFinished()) { 
+            clearInterval(timeout); isFinished = true; } 
+        }, 100);
+
+    if(isFinished=true){ console.log('yeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah ' + isFinished); 
     var container = [];
+
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
         gitMessage[i];
         var bucket = gitMessage[i];
@@ -139,8 +151,8 @@ module.exports.create = function(request, response){
         {'name': "Game Dev", 'score': 16},
         {'name': "Mobile Dev", 'score': 15}
     ];
-
-        //if true start rendering
+    }
+    //if true start rendering
     response.render('index', {  
         img: imgEntry,
         text: textEntry,

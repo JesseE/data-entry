@@ -3,7 +3,7 @@
 // *//////////////////////////////
 
 var value = 0;
-$('.nav').click(function(){
+$('nav').click(function(){
 	switch (value) {
 		case 0 :
 			$('.nav--off-window').show();
@@ -13,6 +13,7 @@ $('.nav').click(function(){
 			break;
 		case 1 :
 			$('.nav--off-window').hide();
+            $('.nav--secundairy').hide();
 			$('header, section, footer').removeClass('menu-active');
 			value = 0;
 			console.log('hide');
@@ -34,6 +35,12 @@ $('li.active').click(function(){
             console.log('hide');
             break;
     }
+});
+$('section').click(function(){ 
+    $('.nav--secundairy').hide();
+});
+$('.header').click(function(){ 
+    $('.nav--secundairy').hide();
 });
 var mode = 2;
 
@@ -57,15 +64,13 @@ var width =  {},
     barHeight = 20;
     
 //mobile or desktop responsive visualisation
-(function(){
-    width = 420;
-    if(window.innerWidth <= 1600){ 
-        width = 330;
-    };
-    if ( window.innerWidth <= 1280) {
-        width = 200;
-    };
-})();
+width = 420;
+if( window.innerWidth <= 1600 ){ 
+    width = 330;
+};
+if ( window.innerWidth <= 1280 ) {
+    width = 200;
+};
 
 // start d3 visual
 var x = d3.scale.linear()
@@ -102,13 +107,16 @@ bartext.selectAll("div")
  git activity visualisation
 *//////////////////////////////
 // only load on screen larger than 500px
-(function(){
-    if(window.innerWidth > 500){
-    console.log("visual is calc"); 
+
+if(window.innerWidth > 500){
+console.log("visual is calc"); 
+
 // fetched array's
 var gitBarHeight = 10;
 var gitData2 = {remove : removedData};
 var gitData = {add: addData};
+
+if(gitData.length = 90){ console.log(gitData.length);
 
 Container.push(gitData);
 Container.push(gitData2);
@@ -121,10 +129,10 @@ Container.push(gitData2);
 var addedArray = Container[1].add;
 for (var i = 0, len = addedArray.length; i < len; i++ ){
     addedArray[i];
-    if(addedArray[i]>1000){
+    if( addedArray[i] > 1000 ){
         addedArray[i] = 500;        
     }
-    if(addedArray[i]<20){
+    if( addedArray[i] < 20 ){
         addedArray[i] = 25;
     }
 } 
@@ -132,10 +140,10 @@ for (var i = 0, len = addedArray.length; i < len; i++ ){
 var removedArray = Container[2].remove;
 for (var i = 0, len = removedArray.length; i < len; i++ ){
     removedArray[i];
-    if(removedArray[i]>1000){
+    if( removedArray[i] > 1000 ){
         removedArray[i] = 500;        
     }
-    if(removedArray[i]<20){
+    if( removedArray[i] < 20 ){
         removedArray[i] = 25;
     }
 } 
@@ -169,8 +177,8 @@ var barB = chartZ.selectAll("g")
                     .append("text")
                     .style("color","#FFF")
                     .text(function(d){   
-                        if(addedArray[i] <= 25){ return "less than 25 lines of code is added";}
-                        if(addedArray[i] >= 500){ return "more than 500 lines of code is added";}  
+                        if( addedArray[i] <= 25 ){ return "less than 25 lines of code is added";}
+                        if( addedArray[i] >= 500 ){ return "more than 500 lines of code is added";}  
                         return addedArray[i] + ' lines of code are added';})
                 d3.select('.git-feed__description')
                     .append("text")
@@ -215,8 +223,8 @@ var barC = chartX.selectAll(".git-feed__description")
                     .append("text")
                     .style("color","#FFF")
                     .text(function(d){   
-                        if(removedArray[i] <= 25){ return "less than 25 lines of code is removed";}
-                        if(removedArray[i] >= 500){ return "more than 500 lines of code is removed";}  
+                        if( removedArray[i] <= 25 ){ return "less than 25 lines of code is removed";}
+                        if( removedArray[i] >= 500 ){ return "more than 500 lines of code is removed";}  
                         return removedArray[i] + ' lines of code are removed';})
                 d3.select('.git-feed__description')
                     .append("text")
@@ -236,4 +244,4 @@ barC.append("rect")
     } else{
         console.log("no vis calc! yey!");
     }
-})();
+}
