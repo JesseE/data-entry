@@ -10,10 +10,9 @@
 		height: 620px;
 	}
 }
-.timeline__container{ top: 27%;height: 200px;width: 70%;margin: 14%;transform: rotate(90deg);position: relative;
-		a:hover > .timeline__phase{background:#527B8B;}
+.timeline__container{ top: 27%;height: 200px;width: 70%;margin:34% 14% 13% 14%;transform: rotate(90deg);position: relative;
+	a:hover > .timeline__phase{background:#527B8B;}
 	a:hover > .timeline__period{background:#344E58;}
-
 	@include bp(med){
 		transform: rotate(90deg); transform:rotate(90deg);margin: 212px auto;float: left; width: 100%; position: relative; left:-70px;
 	}

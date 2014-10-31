@@ -1,9 +1,6 @@
-// var express = require('express');
-// var app = express();
-// var githubRequest = require('./ext_request/github.js');
-
-// app.get(githubRequest.create);
+    //request js lib 
     var unirest = require('unirest');
+    
     //github request repos
     var username = "JesseE";
     var password = "Eikema22";
@@ -20,9 +17,8 @@
     commitsHash.length = 30;
     var commitContainerNumber = {};
     commitContainerNumber.length = 90;
-
-    getAllCommitPageOne();
     // get all commit hashes
+    getAllCommitPageOne();
     function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=1>sha=master').auth({
         user: username,
         pass: password,

@@ -283,7 +283,7 @@ label {
   top: 27%;
   height: 200px;
   width: 70%;
-  margin: 14%;
+  margin: 34% 14% 13% 14%;
   transform: rotate(90deg);
   position: relative;
 }
@@ -308,7 +308,7 @@ label {
   }
 }
 
-/* line 21, sass/ui/_timeline.scss */
+/* line 20, sass/ui/_timeline.scss */
 .timeline__phase {
   width: 100%;
   height: 30px;
@@ -317,7 +317,7 @@ label {
   top: 100px;
 }
 
-/* line 22, sass/ui/_timeline.scss */
+/* line 21, sass/ui/_timeline.scss */
 .timeline__period, .timeline__period--left {
   background: #527B8B;
   height: 50px;
@@ -329,7 +329,7 @@ label {
   box-shadow: inset 1px 0px 0px white;
 }
 
-/* line 24, sass/ui/_timeline.scss */
+/* line 23, sass/ui/_timeline.scss */
 .timeline__tools-item, .timeline__tools-item--left {
   width: 46px;
   height: 40px;
@@ -342,14 +342,14 @@ label {
   background-image: url(../../images/arrowv2.png);
 }
 
-/* line 28, sass/ui/_timeline.scss */
+/* line 27, sass/ui/_timeline.scss */
 .timeline__tools-item--left {
   top: 83px;
   left: 180px;
   transform: rotate(180deg);
 }
 
-/* line 30, sass/ui/_timeline.scss */
+/* line 29, sass/ui/_timeline.scss */
 .timeline__tools-item__description, .timeline__tools-item__description--left {
   width: 400px;
   height: 200px;
@@ -363,14 +363,14 @@ label {
   transform: rotate(-90deg);
 }
 @media (max-width: 48em) {
-  /* line 30, sass/ui/_timeline.scss */
+  /* line 29, sass/ui/_timeline.scss */
   .timeline__tools-item__description, .timeline__tools-item__description--left {
     transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
 }
 
-/* line 36, sass/ui/_timeline.scss */
+/* line 35, sass/ui/_timeline.scss */
 .timeline__tools-item__description--left {
   top: -299px;
   transform: rotate(-270deg);
