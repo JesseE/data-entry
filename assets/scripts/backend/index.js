@@ -10,7 +10,6 @@
     var header = {'user-agent': 'node.js'};
     var repository = "data-entry";
     var branch = "master";
-    var done = false;
 
     var commitsHash = [];
     var commitContainer = [];
@@ -82,12 +81,9 @@
                console.log(gitStats);
                 var object = response.body.commit.message;
                 gitMessage.push(object); 
-                done();       
+                      
             });
         };
-    };
-    function done(){
-        done = true;
     };
 //module index create function
 module.exports.create = function(request, response){ 
