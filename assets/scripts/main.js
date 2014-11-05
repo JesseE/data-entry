@@ -1,11 +1,16 @@
 // /*/////////////////////////////
 //     nav functionality
 // *//////////////////////////////
-
+// $('#map').gmap3('get').setOptions({
+//     draggable: false,
+//     disableDefaultUI: false,
+//     scrollwheel:false,
+//     zoomControl: false
+// });
 var value = 1;
-if ( window.innerWidth < 1280 ) {
-    $('.nav--off-window').hide();
-};
+// if ( window.innerWidth < 1280 ) {
+//     $('.nav--off-window').hide();
+// };
 $('nav').click(function(){
 	switch (value) {
 		case 0 :

@@ -1613,6 +1613,12 @@ body {
 .nav--secundairy ul li a {
   text-decoration: none;
 }
+@media (max-width: 79.9375em) {
+  /* line 34, sass/ui/_navs.scss */
+  .nav--secundairy {
+    display: none;
+  }
+}
 @media (max-width: 48em) {
   /* line 34, sass/ui/_navs.scss */
   .nav--secundairy {
@@ -1623,7 +1629,7 @@ body {
     left: 21%;
     opacity: 0.9;
   }
-  /* line 45, sass/ui/_navs.scss */
+  /* line 46, sass/ui/_navs.scss */
   .nav--secundairy .nav__list {
     top: -50px;
     margin-top: 0;
@@ -1631,7 +1637,7 @@ body {
   }
 }
 
-/* line 48, sass/ui/_navs.scss */
+/* line 49, sass/ui/_navs.scss */
 .nav--off-window {
   display: block;
   z-index: 2;
@@ -1644,13 +1650,13 @@ body {
   box-shadow: 1px 1px 5px grey;
   text-align: center;
 }
-/* line 49, sass/ui/_navs.scss */
+/* line 50, sass/ui/_navs.scss */
 .nav--off-window ul {
   margin: 100% 0;
   padding: 0;
   text-align: center;
 }
-/* line 51, sass/ui/_navs.scss */
+/* line 52, sass/ui/_navs.scss */
 .nav--off-window ul li {
   display: inline-block;
   width: 100%;
@@ -1659,18 +1665,24 @@ body {
   list-style-type: none;
   text-align: center;
 }
-/* line 53, sass/ui/_navs.scss */
+/* line 54, sass/ui/_navs.scss */
 .nav--off-window ul li:hover {
   background: white;
   color: grey;
   transition: background-color 0.5 ease;
 }
-/* line 54, sass/ui/_navs.scss */
+/* line 55, sass/ui/_navs.scss */
 .nav--off-window ul li a {
   text-decoration: none;
 }
+@media (max-width: 79.9375em) {
+  /* line 49, sass/ui/_navs.scss */
+  .nav--off-window {
+    display: none;
+  }
+}
 @media (max-width: 48em) {
-  /* line 48, sass/ui/_navs.scss */
+  /* line 49, sass/ui/_navs.scss */
   .nav--off-window {
     float: left;
     width: 21%;
@@ -1786,10 +1798,22 @@ input[type=password]:focus {
   width: 100%;
   height: 500px;
 }
-/* line 9, sass/ui/_footer.scss */
+@media (max-width: 48em) {
+  /* line 8, sass/ui/_footer.scss */
+  .banner--footer iframe {
+    height: 370px;
+  }
+}
+/* line 10, sass/ui/_footer.scss */
 .banner--footer .maps {
   background: lightgrey;
   height: 500px;
+}
+@media (max-width: 48em) {
+  /* line 10, sass/ui/_footer.scss */
+  .banner--footer .maps {
+    height: 370px;
+  }
 }
 
 /* line 2, sass/ui/_resizer-input.scss */
