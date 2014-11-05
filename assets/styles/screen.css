@@ -179,8 +179,8 @@ label {
 @media (min-width: 64em) {
   /* line 4, sass/ui/_block-list.scss */
   .block-list {
-    /*width: 100%;*/
-    width: 1135px;
+    /*width: 100%; width: 1135px;*/
+    width: 940px;
     margin: auto;
   }
   /* line 18, sass/ui/_block-list.scss */
@@ -200,8 +200,8 @@ label {
 @media (min-width: 84.375em) {
   /* line 4, sass/ui/_block-list.scss */
   .block-list {
-    /*width: 85%;*/
-    width: 1500px;
+    /*width: 85%;width: 1500px;*/
+    width: 1270px;
     margin: 200px auto 0 auto;
   }
   /* line 24, sass/ui/_block-list.scss */
