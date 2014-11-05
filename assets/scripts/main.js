@@ -3,6 +3,9 @@
 // *//////////////////////////////
 
 var value = 0;
+if ( window.innerWidth <= 500 ) {
+    $('.nav--off-window').hide();
+};
 $('nav').click(function(){
 	switch (value) {
 		case 0 :

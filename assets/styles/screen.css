@@ -683,7 +683,7 @@ svg.added {
 @media (max-width: 30em) {
   /* line 15, sass/ui/_block-image.scss */
   .block-image img {
-    width: 100%;
+    width: 300px;
     height: 270px;
   }
 }
