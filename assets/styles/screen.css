@@ -652,7 +652,13 @@ svg.added {
 .block-image:hover .block-item {
   display: block;
 }
-/* line 15, sass/ui/_block-image.scss */
+@media (max-width: 30em) {
+  /* line 12, sass/ui/_block-image.scss */
+  .block-image:hover {
+    display: none;
+  }
+}
+/* line 16, sass/ui/_block-image.scss */
 .block-image img {
   width: 375px;
   height: 375px;
@@ -660,28 +666,28 @@ svg.added {
   margin: 0px auto;
 }
 @media (max-width: 48em) {
-  /* line 15, sass/ui/_block-image.scss */
+  /* line 16, sass/ui/_block-image.scss */
   .block-image img {
     width: 250px;
     height: 250px;
   }
 }
 @media (min-width: 64em) {
-  /* line 15, sass/ui/_block-image.scss */
+  /* line 16, sass/ui/_block-image.scss */
   .block-image img {
     width: 310px;
     height: 310px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 15, sass/ui/_block-image.scss */
+  /* line 16, sass/ui/_block-image.scss */
   .block-image img {
     width: 375px;
     height: 375px;
   }
 }
 @media (max-width: 30em) {
-  /* line 15, sass/ui/_block-image.scss */
+  /* line 16, sass/ui/_block-image.scss */
   .block-image img {
     width: 300px;
     height: 270px;
@@ -692,7 +698,7 @@ svg.added {
   .block-image {
     margin: 0 20%;
   }
-  /* line 32, sass/ui/_block-image.scss */
+  /* line 33, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0 20%;
   }
@@ -702,41 +708,41 @@ svg.added {
   .block-image {
     margin: auto;
   }
-  /* line 36, sass/ui/_block-image.scss */
+  /* line 37, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: auto;
   }
 }
 @media (min-width: 48em) {
-  /* line 39, sass/ui/_block-image.scss */
+  /* line 40, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
-  /* line 42, sass/ui/_block-image.scss */
+  /* line 43, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -150px 0 0 155px;
   }
-  /* line 43, sass/ui/_block-image.scss */
+  /* line 44, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -151px 0 0 0px;
   }
-  /* line 44, sass/ui/_block-image.scss */
+  /* line 45, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -313px 0 0 775px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 47, sass/ui/_block-image.scss */
+  /* line 48, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -175px 0 0 188px;
   }
-  /* line 48, sass/ui/_block-image.scss */
+  /* line 49, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -379px 563px;
   }
-  /* line 49, sass/ui/_block-image.scss */
+  /* line 50, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -378px 938px;
   }
@@ -1058,6 +1064,13 @@ h5 {
   width: 100%;
   text-align: center;
   margin-top: 50px;
+}
+
+@media (max-width: 30em) {
+  /* line 60, sass/ui/_scaffolding.scss */
+  .no-mob {
+    display: none;
+  }
 }
 
 /*------------------------------------*\

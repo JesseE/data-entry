@@ -57,3 +57,6 @@ h5{color:white;}
 	float:left; width: 100%; text-align:center; margin-top: 50px;
 	// h1 { margin: 30px auto;float:left;width:100%; color: white; }
 }
+.no-mob{
+	@include bp(phone){display:none;}
+}
