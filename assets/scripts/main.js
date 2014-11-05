@@ -39,6 +39,24 @@ $('.active').click(function(){
             break;
     }
 });
+$('.non-active').click(function(){
+    switch (value) {
+        case 0 :
+            $('.nav--off-window').show();
+            $('.nav--secundairy').hide();
+            // $('header, section, footer').removeClass('menu-active');
+            value = 1;
+            console.log('show');
+            break;
+        case 1 :
+
+            $('.nav--secundairy').hide();
+            // $('header, section, footer').addClass('menu-active');
+            value = 0;
+            console.log('hide');
+            break;
+    }
+});
 $('section').click(function(){ 
     $('.nav--secundairy').hide();
 });

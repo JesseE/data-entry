@@ -653,12 +653,12 @@ svg.added {
   display: block;
 }
 @media (max-width: 30em) {
-  /* line 12, sass/ui/_block-image.scss */
-  .block-image:hover {
+  /* line 13, sass/ui/_block-image.scss */
+  .block-image:hover .block-item {
     display: none;
   }
 }
-/* line 16, sass/ui/_block-image.scss */
+/* line 17, sass/ui/_block-image.scss */
 .block-image img {
   width: 375px;
   height: 375px;
@@ -666,28 +666,28 @@ svg.added {
   margin: 0px auto;
 }
 @media (max-width: 48em) {
-  /* line 16, sass/ui/_block-image.scss */
+  /* line 17, sass/ui/_block-image.scss */
   .block-image img {
     width: 250px;
     height: 250px;
   }
 }
 @media (min-width: 64em) {
-  /* line 16, sass/ui/_block-image.scss */
+  /* line 17, sass/ui/_block-image.scss */
   .block-image img {
     width: 310px;
     height: 310px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 16, sass/ui/_block-image.scss */
+  /* line 17, sass/ui/_block-image.scss */
   .block-image img {
     width: 375px;
     height: 375px;
   }
 }
 @media (max-width: 30em) {
-  /* line 16, sass/ui/_block-image.scss */
+  /* line 17, sass/ui/_block-image.scss */
   .block-image img {
     width: 300px;
     height: 270px;
@@ -698,7 +698,7 @@ svg.added {
   .block-image {
     margin: 0 20%;
   }
-  /* line 33, sass/ui/_block-image.scss */
+  /* line 34, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0 20%;
   }
@@ -708,41 +708,41 @@ svg.added {
   .block-image {
     margin: auto;
   }
-  /* line 37, sass/ui/_block-image.scss */
+  /* line 38, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: auto;
   }
 }
 @media (min-width: 48em) {
-  /* line 40, sass/ui/_block-image.scss */
+  /* line 41, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
-  /* line 43, sass/ui/_block-image.scss */
+  /* line 44, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -150px 0 0 155px;
   }
-  /* line 44, sass/ui/_block-image.scss */
+  /* line 45, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -151px 0 0 0px;
   }
-  /* line 45, sass/ui/_block-image.scss */
+  /* line 46, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -313px 0 0 775px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 48, sass/ui/_block-image.scss */
+  /* line 49, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -175px 0 0 188px;
   }
-  /* line 49, sass/ui/_block-image.scss */
+  /* line 50, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -379px 563px;
   }
-  /* line 50, sass/ui/_block-image.scss */
+  /* line 51, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -378px 938px;
   }
