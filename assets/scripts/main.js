@@ -64,14 +64,16 @@ var width =  {},
     barHeight = 20;
     
 //mobile or desktop responsive visualisation
-width = 420;
+    width = 420;
 if( window.innerWidth <= 1600 ){ 
     width = 330;
 };
 if ( window.innerWidth <= 1280 ) {
-    width = 200;
+    width = 300;
 };
-
+if ( window.innerWidth <= 500 ) {
+    width = 230;
+};
 // start d3 visual
 var x = d3.scale.linear()
     .domain([0, d3.max(dataScore)])
@@ -92,7 +94,7 @@ bar.append("rect")
     .attr("height", barHeight - 1);
 
 var bartext = d3.select('.skills__text').append("div");
-;
+
 bartext.selectAll("div")
     .data(dataName)
     .enter().append("text") 

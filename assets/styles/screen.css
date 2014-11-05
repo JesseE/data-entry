@@ -256,10 +256,9 @@ label {
 *************************/
 /* line 4, sass/ui/_timeline.scss */
 .timeline {
-  padding: 14% 0;
+  float: left;
   width: 100%;
   background: white;
-  float: left;
 }
 @media (max-width: 64em) {
   /* line 4, sass/ui/_timeline.scss */
@@ -280,10 +279,9 @@ label {
 
 /* line 13, sass/ui/_timeline.scss */
 .timeline__container {
-  top: 27%;
   height: 200px;
-  width: 70%;
-  margin: 34% 14% 13% 14%;
+  width: 50%;
+  margin: 24% auto 18% auto;
   transform: rotate(90deg);
   position: relative;
 }
@@ -310,7 +308,6 @@ label {
 
 /* line 20, sass/ui/_timeline.scss */
 .timeline__phase {
-  width: 100%;
   height: 30px;
   background: #344E58;
   position: relative;
@@ -334,7 +331,7 @@ label {
   width: 46px;
   height: 40px;
   display: inline-block;
-  left: 180px;
+  left: 104px;
   top: -40px;
   position: absolute;
   float: left;
@@ -342,14 +339,14 @@ label {
   background-image: url(../../images/arrowv2.png);
 }
 
-/* line 27, sass/ui/_timeline.scss */
+/* line 24, sass/ui/_timeline.scss */
 .timeline__tools-item--left {
   top: 83px;
-  left: 180px;
+  left: 123px;
   transform: rotate(180deg);
 }
 
-/* line 29, sass/ui/_timeline.scss */
+/* line 25, sass/ui/_timeline.scss */
 .timeline__tools-item__description, .timeline__tools-item__description--left {
   width: 400px;
   height: 200px;
@@ -363,14 +360,14 @@ label {
   transform: rotate(-90deg);
 }
 @media (max-width: 48em) {
-  /* line 29, sass/ui/_timeline.scss */
+  /* line 25, sass/ui/_timeline.scss */
   .timeline__tools-item__description, .timeline__tools-item__description--left {
     transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
 }
 
-/* line 35, sass/ui/_timeline.scss */
+/* line 30, sass/ui/_timeline.scss */
 .timeline__tools-item__description--left {
   top: -299px;
   transform: rotate(-270deg);
@@ -683,46 +680,63 @@ svg.added {
     height: 375px;
   }
 }
+@media (max-width: 30em) {
+  /* line 15, sass/ui/_block-image.scss */
+  .block-image img {
+    width: 100%;
+    height: 270px;
+  }
+}
 @media (max-width: 48em) {
   /* line 10, sass/ui/_block-image.scss */
   .block-image {
     margin: 0 20%;
   }
-  /* line 29, sass/ui/_block-image.scss */
+  /* line 32, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0 20%;
   }
 }
+@media (max-width: 30em) {
+  /* line 10, sass/ui/_block-image.scss */
+  .block-image {
+    margin: auto;
+  }
+  /* line 36, sass/ui/_block-image.scss */
+  .block-image.fourth, .block-image.fifth, .block-image.sixth {
+    margin: auto;
+  }
+}
 @media (min-width: 48em) {
-  /* line 32, sass/ui/_block-image.scss */
+  /* line 39, sass/ui/_block-image.scss */
   .block-image.fourth, .block-image.fifth, .block-image.sixth {
     margin: 0;
   }
 }
 @media (min-width: 64em) {
-  /* line 35, sass/ui/_block-image.scss */
+  /* line 42, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -150px 0 0 155px;
   }
-  /* line 36, sass/ui/_block-image.scss */
+  /* line 43, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -151px 0 0 0px;
   }
-  /* line 37, sass/ui/_block-image.scss */
+  /* line 44, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -313px 0 0 775px;
   }
 }
 @media (min-width: 84.375em) {
-  /* line 40, sass/ui/_block-image.scss */
+  /* line 47, sass/ui/_block-image.scss */
   .block-image.fourth {
     margin: -175px 0 0 188px;
   }
-  /* line 41, sass/ui/_block-image.scss */
+  /* line 48, sass/ui/_block-image.scss */
   .block-image.fifth {
     margin: -379px 563px;
   }
-  /* line 42, sass/ui/_block-image.scss */
+  /* line 49, sass/ui/_block-image.scss */
   .block-image.sixth {
     margin: -378px 938px;
   }
@@ -1606,7 +1620,7 @@ body {
 
 /* line 48, sass/ui/_navs.scss */
 .nav--off-window {
-  display: none;
+  display: block;
   z-index: 2;
   top: 0;
   position: fixed;
