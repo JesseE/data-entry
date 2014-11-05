@@ -23,7 +23,7 @@ $('nav').click(function(){
 			break;
 	}
 });
-$('li.active').click(function(){
+$('.active').click(function(){
     switch (value) {
         case 0 :
             $('.nav--secundairy').hide();
