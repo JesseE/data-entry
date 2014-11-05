@@ -10,8 +10,9 @@
 .block-image {
 	position:relative; float: left; -webkit-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);-moz-clip-path: polygon(0px 50%, 50% 99%, 100% 50%, 50% 0px);
 	&:hover{
-		.block-item{ display:block;}
-		@include bp(phone) { display: none;}
+		.block-item{ display:block;
+			@include bp(phone) { display: none;}
+		}
 	}
 	img{
 		width: 375px; height: 375px; position:relative;  margin: 0px auto;
