@@ -2,7 +2,7 @@
 //     nav functionality
 // *//////////////////////////////
 
-var value = 0;
+var value = 1;
 if ( window.innerWidth <= 500 ) {
     $('.nav--off-window').hide();
 };
