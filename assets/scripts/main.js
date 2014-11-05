@@ -95,7 +95,7 @@ if( window.innerWidth <= 1600 ){
     width = 330;
 };
 if ( window.innerWidth <= 1280 ) {
-    width = 300;
+    width = 250;
 };
 if ( window.innerWidth <= 500 ) {
     width = 230;
