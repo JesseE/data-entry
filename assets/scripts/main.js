@@ -3,7 +3,7 @@
 // *//////////////////////////////
 
 var value = 1;
-if ( window.innerWidth <= 500 ) {
+if ( window.innerWidth < 1280 ) {
     $('.nav--off-window').hide();
 };
 $('nav').click(function(){

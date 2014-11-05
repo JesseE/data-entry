@@ -102,12 +102,12 @@ module.exports.create = function(request, response){
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
         gitMessage[i];
         var bucket = gitMessage[i];
-        JSON.parse("[\"bucket[i]\"]");
+        JSON.parse("[\"bucket[i]\"]");  
         container.push(bucket);
     };
     var imgEntry = [
+        {"img":"../assets/images/modularv1.png"},
         {"img":"../assets/images/modularv4.png"},
-        {"img":"../assets/images/reusable.png"},
         {"img":"../assets/images/modularv2.png"}
     ];
     var titleEntry = [
