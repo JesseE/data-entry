@@ -95,11 +95,14 @@ if( window.innerWidth <= 1600 ){
     width = 330;
 };
 if ( window.innerWidth <= 1280 ) {
-    width = 250;
+    width = 255;
 };
-if ( window.innerWidth <= 500 ) {
-    width = 230;
+if ( window.innerWidth <= 1000 ) {
+    width = 220;
 };
+// if ( window.innerWidth <= 500 ) {
+//     width = 230;
+// };
 // start d3 visual
 var x = d3.scale.linear()
     .domain([0, d3.max(dataScore)])
