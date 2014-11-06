@@ -5,7 +5,7 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
-
+    grunt.loadNpmTasks('grunt-uncss');
     grunt.initConfig({
 
         // Watch Config
@@ -31,13 +31,13 @@ module.exports = function (grunt) {
             images: {
                 files: [
                     'assets/images/**/*.{png,jpg,jpeg,webp}',
-                    'assets/styles/images/buildings/*.{png,jpg,jpeg,webp}',
-                    'assets/styles/images/bullets/*.{png,jpg,jpeg,webp}',
-                    'assets/styles/images/interface/*.{png,jpg,jpeg,webp}',
-                    'assets/styles/images/maps/*.{png,jpg,jpeg,webp}',
-                    'assets/styles/images/screens/*.{png,jpg,jpeg,webp}',
-                    'assets/styles/images/terrain/*.{png,jpg,jpeg,webp}',
-                    'assets/styles/images/vehicles/*.{png,jpg,jpeg,webp}'
+                    // 'assets/styles/images/buildings/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/bullets/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/interface/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/maps/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/screens/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/terrain/*.{png,jpg,jpeg,webp}',
+                    // 'assets/styles/images/vehicles/*.{png,jpg,jpeg,webp}'
                 ],
             },
             express: {
@@ -268,11 +268,11 @@ module.exports = function (grunt) {
         // 'open:editor',
         //'clean:dev',
         //'concurrent:dev',
-        'useminPrepare',
-        'imagemin',
-        'cssmin',
-        'usemin',
-        'rev',
+        // 'useminPrepare',
+        // 'imagemin',
+        // 'cssmin',
+        // 'usemin',
+        // 'rev',
         // 'concat',
         'watch'
     ]);
