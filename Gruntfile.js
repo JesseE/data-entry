@@ -158,7 +158,7 @@ module.exports = function (grunt) {
                     expand: true,
                     cwd: 'assets/images',
                     src: '**/*.{png,jpg,jpeg}',
-                    dest: 'dist/assets/images'
+                    dest: 'assets/images'
                 }]
             }
         },
@@ -269,7 +269,7 @@ module.exports = function (grunt) {
         //'clean:dev',
         //'concurrent:dev',
         // 'useminPrepare',
-        // 'imagemin',
+        'imagemin',
         // 'cssmin',
         // 'usemin',
         // 'rev',
