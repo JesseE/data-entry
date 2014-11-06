@@ -378,43 +378,43 @@ label {
 		timeline
 *************************/
 /* line 4, sass/ui/_skills.scss */
-.skills, .skills--main {
+.skills, .skills--secondary {
   float: left;
   position: relative;
   width: 100%;
   background-color: white;
 }
-/* line 5, sass/ui/_skills.scss */
-.skills svg, .skills--main svg {
-  height: 285px;
+/* line 6, sass/ui/_skills.scss */
+.skills svg, .skills--secondary svg {
+  height: 425px;
 }
-/* line 7, sass/ui/_skills.scss */
-.skills svg g rect, .skills--main svg g rect {
+/* line 8, sass/ui/_skills.scss */
+.skills svg g rect, .skills--secondary svg g rect {
   width: 100%;
 }
 
-/* line 13, sass/ui/_skills.scss */
-.skills--main svg {
-  height: 425px;
+/* line 14, sass/ui/_skills.scss */
+.skills--secondary svg {
+  height: 285px;
 }
 
-/* line 15, sass/ui/_skills.scss */
+/* line 16, sass/ui/_skills.scss */
 .skills__text {
   float: left;
   position: relative;
   width: 50%;
   background-color: white;
 }
-/* line 16, sass/ui/_skills.scss */
+/* line 17, sass/ui/_skills.scss */
 .skills__text svg {
   height: 285px;
 }
-/* line 18, sass/ui/_skills.scss */
+/* line 19, sass/ui/_skills.scss */
 .skills__text svg g rect {
   width: 100%;
 }
 @media (max-width: 48em) {
-  /* line 15, sass/ui/_skills.scss */
+  /* line 16, sass/ui/_skills.scss */
   .skills__text {
     width: 26%;
   }
@@ -531,7 +531,7 @@ svg.added {
 		block-container
 *************************/
 /* line 4, sass/ui/_block-container.scss */
-.block-container, .block-container--about {
+.block-container, .block-container--visie {
   width: 100%;
   position: relative;
   float: left;
@@ -540,7 +540,7 @@ svg.added {
 }
 
 /* line 5, sass/ui/_block-container.scss */
-.block-container--about {
+.block-container--visie {
   background-color: #527B8B;
 }
 

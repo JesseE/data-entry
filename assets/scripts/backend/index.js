@@ -14,9 +14,11 @@
     var checker = [];
     var gitStats = [];
     var gitMessage = [];
+    
     commitsHash.length = 30;
     var commitContainerNumber = {};
     commitContainerNumber.length = 90;
+
     // get all commit hashes
     getAllCommitPageOne();
     function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=1>sha=master').auth({
@@ -87,18 +89,7 @@
 //module index create function
 module.exports.create = function(request, response){ 
     //make sure you have values in github response
-    function checkIfFinished (){
-        return (gitStats.length >= 90);
-    };
-    var isFinished = false;
-    var timeout = setInterval(function(){ 
-        if(checkIfFinished()) { 
-            clearInterval(timeout); isFinished = true; } 
-        }, 100);
-
-    if(isFinished=true){ console.log('yeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaah ' + isFinished); 
     var container = [];
-
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
         gitMessage[i];
         var bucket = gitMessage[i];

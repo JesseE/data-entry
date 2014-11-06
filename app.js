@@ -2,14 +2,13 @@
  * Express Dependencies
  */
 var express = require('express');
-var app = express();
+var app = express(); 
 // var server = require('http').createServer(app);
 // var io = require('socket.io')(server);
 
 // io.on('connection', function() {
 //     console.log('yo collin me a biatch?!');
 // });
-
 var path = require('path');
 var port = 3000;
 var router = express.Router();
@@ -21,10 +20,10 @@ var minutes = 20, the_interval = minutes * 60 * 1000;
 setInterval(function() {
     var options = {
         host: 'www.jesseeikema.nl'
-        };
-        http.get(options, function (http_res) {
-            console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-        });
+    };
+    http.get(options, function (http_res) {
+        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
+    });
 }, the_interval);
 
 // modules

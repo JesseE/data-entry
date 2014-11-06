@@ -1,18 +1,19 @@
 /*************************
 		timeline
 *************************/
-.skills{ float:left;position: relative;width: 100%;background-color: white;
-	svg{ height: 285px;
+.skills {
+	float:left;position: relative;width: 100%;background-color: white;
+	svg{ height: 425px;
 		g{
 			rect{ width: 100%;}
 		}
 	}
 }
-.skills--main{
+.skills--secondary { 
 	@extend .skills;
-	svg{ height: 425px;}
+	svg{ height: 285px;}
 }
-.skills__text{ float:left;position: relative;width: 50%;background-color: white;
+.skills__text { float:left;position: relative;width: 50%;background-color: white;
 	svg{ height: 285px;
 		g{
 			rect{ width: 100%;}

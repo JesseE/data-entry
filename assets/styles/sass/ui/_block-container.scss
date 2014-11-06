@@ -2,7 +2,7 @@
 		block-container
 *************************/
 .block-container{width:100%;position:relative; float: left; margin:auto;background-color: white;}
-.block-container--about{@extend .block-container; background-color: #527B8B;}
+.block-container--visie{@extend .block-container; background-color: #527B8B;}
 .block-container__item{width: 78%;margin: 61px auto;height: 415px; //350
 	@include bp(med){
 		width: 100%;
