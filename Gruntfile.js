@@ -271,8 +271,8 @@ module.exports = function (grunt) {
         'useminPrepare',
         'imagemin',
         'cssmin',
-        'rev',
         'usemin',
+        'rev',
         // 'concat',
         'watch'
     ]);
