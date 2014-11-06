@@ -31,13 +31,13 @@ module.exports = function (grunt) {
             images: {
                 files: [
                     'assets/images/**/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/buildings/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/bullets/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/interface/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/maps/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/screens/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/terrain/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/vehicles/*.{png,jpg,jpeg,webp}'
+                    'assets/styles/images/buildings/*.{png,jpg,jpeg,webp}',
+                    'assets/styles/images/bullets/*.{png,jpg,jpeg,webp}',
+                    'assets/styles/images/interface/*.{png,jpg,jpeg,webp}',
+                    'assets/styles/images/maps/*.{png,jpg,jpeg,webp}',
+                    'assets/styles/images/screens/*.{png,jpg,jpeg,webp}',
+                    'assets/styles/images/terrain/*.{png,jpg,jpeg,webp}',
+                    'assets/styles/images/vehicles/*.{png,jpg,jpeg,webp}'
                 ],
             },
             express: {
@@ -67,20 +67,18 @@ module.exports = function (grunt) {
             },
             server: ['.tmp'],
         },
-
         // Hint Config
-        // jshint: {
-        //     options: {
-        //         jshintrc: '.jshintrc'
-        //     },
-        //     all: [
-        //         'Gruntfile.js',
-        //         'assets/scripts/**/*.js',
-        //         '!assets/scripts/vendor/*',
-        //         'test/spec/**/*.js'
-        //     ]
-        // },
-
+        jshint: {
+            options: {
+                jshintrc: '.jshintrc'
+            },
+            all: [
+                'Gruntfile.js',
+                'assets/scripts/**/*.js',
+                '!assets/scripts/vendor/*',
+                'test/spec/**/*.js'
+            ]
+        },
         // Sass Config
         sass: {
             options: {
@@ -182,38 +180,37 @@ module.exports = function (grunt) {
             // This task is pre-configured if you do not wish to use Usemin
             // blocks for your CSS. By default, the Usemin block from your
             // `index.html` will take care of minification, e.g.
-            //
+            
             //     <!-- build:css({.tmp,app}) styles/main.css -->
-            //
-            // dist: {
-            //     files: {
-            //         'dist/assets/styles/main.css': [
-            //             '.tmp/styles/{,*/}*.css',
-            //             'assets/styles/{,*/}*.css'
-            //         ]
-            //     }
-            // }
+            
+            dist: {
+                files: {
+                    'dist/assets/styles/main.css': [
+                        '.tmp/styles/{,*/}*.css',
+                        'assets/styles/{,*/}*.css'
+                    ]
+                }
+            }
         },
 
         // HTML Config
         htmlmin: {
             dist: {
                 options: {
-                    /*removeCommentsFromCDATA: true,
-                    // https://github.com/yeoman/grunt-usemin/issues/44
-                    //collapseWhitespace: true,
+                    removeCommentsFromCDATA: true,
+                    collapseWhitespace: true,
                     collapseBooleanAttributes: true,
                     removeAttributeQuotes: true,
                     removeRedundantAttributes: true,
                     useShortDoctype: true,
                     removeEmptyAttributes: true,
-                    removeOptionalTags: true*/
+                    removeOptionalTags: true
                 },
                 files: [{
                     expand: true,
                     cwd: 'assets',
-                    src: '*.html',
-                    dest: 'dist/assets'
+                    src: '*.handlebars',
+                    dest: 'assets'
                 }]
             }
         },
@@ -269,7 +266,13 @@ module.exports = function (grunt) {
         'express:dev',
         // 'open:site',
         // 'open:editor',
-
+        //'clean:dev',
+        //'concurrent:dev',
+        'useminPrepare',
+        'imagemin',
+        'cssmin',
+        'rev',
+        'usemin',
         // 'concat',
         'watch'
     ]);
@@ -288,9 +291,7 @@ module.exports = function (grunt) {
         'concurrent:dist',
         'useminPrepare',
         'imagemin',
-        'concat',
         'cssmin',
-        'uglify',
         'copy:dist',
         'rev',
         'usemin',

@@ -1,0 +1,86 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Jesse Eikema Frontend Developer</title>
+        <meta name="description" content="Als Frontend Developer is het mijn taak om ervoor te zorgen dat interactie tussen de gebruiker en digitale interactieve producten vloeiend en gebruiksvriendelijk gebeurt.">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta name="p:domain_verify" content="4d414117efb0e00ff74553bce6959035"/>
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->{{#if normal}}
+        <link rel="stylesheet" href="/assets/styles/screen.css">{{/if}}
+    </head>
+    <body> {{#if nav_1}} 
+    <nav class="nav--off-window">
+        <ul>
+            <a href="/"><li class="non-active">Home</li></a>
+            <li class="active">Projects</li>
+            <a href="/#visie" ><li class="non-active">Visie</li></a>
+            <a href="/#tools"><li class="non-active">Tools</li></a>
+            <a class="no-mob" href="/#tijdlijn"><li class="non-active">Tijdlijn</li></a>
+            <a class="no-mob" href="/#git-activiteit"><li class="non-active">Activiteit</li></a>
+            <a href="/#contact"><li class="non-active">Contact</li></a>
+        </ul>
+    </nav>{{/if}}
+    <header class="header">{{#if nav_2}}
+        <nav class="nav">
+            <div class="nav__container">
+                <div class="nav__container-bar"></div>
+                <div class="nav__container-bar"></div>
+                <div class="nav__container-bar"></div>
+            </div>
+        </nav>
+        <nav class="nav--secundairy">
+            <ul>
+                <a href="/datavisualisatie" class="active"><li>Datavisualisatie</li></a>
+                <a href="/resizer" class="active"><li>Resizer</li></a>
+                <a href="/melkweg" class="active"><li>Melkweg</li></a>
+                <a href="/score-app" class="active"><li>Score App</li></a>
+                <a href="/pathogen" class="active"><li>Pathogen</li></a>
+                <a href="/klassiekwijzer" class="active"><li>Klassiekwijzer</li></a>
+            </ul>
+        </nav>{{/if}}{{#if headbg}}
+        <div class="header__bg">
+            <div class="header__brand">
+                <div class="ninja-title">
+                    <h1>Jesse Eikema</h1>
+                    <h1>Frontend Developer</h1>
+                    <h1>{ { CODING NINJA } } </h1>
+                </div>    
+                <div class="ninja-icon"><img src="assets/images/ninja.jpg"></div>
+            </div>
+        </div>{{/if}}
+    </header>
+    <!--[if lt IE 10]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->      
+    {{{ body }}}{{#if footer}}
+    <footer class="banner--footer" id="contact">
+        <h1>Contact</h1>
+        <p>Kopje koffie drinken?</p>
+        <p>jesse.eikema@gmail.com</p>{{#if maps}}
+        <div class="maps">    
+             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2437.136148872208!2d4.919222299999995!3d52.34981589999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c60978b3449359%3A0xd2cfacd67f71c1e7!2sEerste+Ringdijkstraat%2C+1097+Amsterdam!5e0!3m2!1snl!2snl!4v1409873535465" width="800" height="600" frameborder="0" style="border:0"></iframe>
+        </div>{{/if}}
+    </footer>{{/if}}{{#if normal}}
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
+    <script type="text/javascript">var addData = [{{added}}];var removedData = [{{removed}}];var commentContainer = ['{{comments}}'];var commentsString = commentContainer[0];var Container = [{comments: commentsString.split(',')}];var nameString = ['{{name}}'];var nameStringified = nameString[0];var nameContainer =  [{name: nameStringified.split(',')}];var scoreContainer = [{{score}}];</script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/main.js"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>{{/if}}{{#if resizer}}
+    <script type="text/javascript" src="/assets/bower_components/blueimp-load-image/js/load-image.all.min.js"></script>
+    <script type="text/javascript" src="/assets/bower_components/jszip/jszip.min.js"></script>
+    <script type="text/javascript" src="/assets/scripts/resizer.js"></script>{{/if}}
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-55038580-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+    </body>
+</html>
