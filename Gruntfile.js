@@ -31,13 +31,6 @@ module.exports = function (grunt) {
             images: {
                 files: [
                     'assets/images/**/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/buildings/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/bullets/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/interface/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/maps/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/screens/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/terrain/*.{png,jpg,jpeg,webp}',
-                    // 'assets/styles/images/vehicles/*.{png,jpg,jpeg,webp}'
                 ],
             },
             express: {
@@ -185,7 +178,7 @@ module.exports = function (grunt) {
             
             dist: {
                 files: {
-                    'dist/assets/styles/main.css': [
+                    'assets/styles/screen.css': [
                         '.tmp/styles/{,*/}*.css',
                         'assets/styles/{,*/}*.css'
                     ]
@@ -269,8 +262,8 @@ module.exports = function (grunt) {
         //'clean:dev',
         //'concurrent:dev',
         // 'useminPrepare',
-        'imagemin',
-        // 'cssmin',
+        //'imagemin',
+        //'cssmin',
         // 'usemin',
         // 'rev',
         // 'concat',
