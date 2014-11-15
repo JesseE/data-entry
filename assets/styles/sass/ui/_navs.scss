@@ -20,6 +20,7 @@
 			li{width: 100%; background: white;}
 		}
 	}	
+	@include fadeInLeft();
 }
 .nav__container{ position:relative; top: 20px;width: 60%; margin:auto; 
 	@include bp(med) {
@@ -30,6 +31,7 @@
 	@include bp(med) {
 		height: 7px; margin: 5px auto;
 	}
+	@include fadeInLeft();
 }
 .nav--secundairy{display:none;z-index: 2; top: 0; left: 148px; position: fixed; width: 165px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
 	ul{
@@ -45,8 +47,10 @@
 		float: right; width: 40%; top: 0px; height: 100%;left: 21%;opacity:0.9;
 		.nav__list{top: -50px; margin-top: 0;width: 100%;}
 	}
+	@include fadeInLeft();
 }
-.nav--off-window{ display:block;	z-index: 2; top: 0; position: fixed; width: 148px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
+.nav--off-window{ display:block; z-index: 2; top: 0; position: fixed; width: 148px; height: 100%;  background: #383d3f; opacity: 1; box-shadow: 1px 1px 5px grey; text-align: center;
+
 	ul{
 		margin: 100% 0; padding: 0;text-align:center;
 		li{ 
@@ -59,5 +63,5 @@
 	@include bp(med){
 		float: left; width: 21%;
 	}
-
+	@include fadeInLeft();
 } 

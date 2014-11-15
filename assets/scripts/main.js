@@ -11,10 +11,12 @@ var value = 1;
 // if ( window.innerWidth < 1280 ) {
 //     $('.nav--off-window').hide();
 // };
+
+
 $('nav').click(function(){
 	switch (value) {
 		case 0 :
-			$('.nav--off-window').show();
+            $('.nav--off-window').show();
 			$('header, section, footer').addClass('menu-active');
 			value = 1;
 			console.log('show');
