@@ -138,7 +138,6 @@ module.exports.create = function(request, response){
         {'name': "Game Dev", 'score': 16},
         {'name': "Mobile Dev", 'score': 15}
     ];
-    
     //if true start rendering
     response.render('index', {  
         img: imgEntry,
