@@ -11,7 +11,8 @@ module.exports.create = function(request, response){
 	];
     var imgEntry = [
         {"img":"../assets/images/score-app_v1.png"},
-        {"img":"../assets/images/score-app_v2.png"}
+        {"img":"../assets/images/score-app_v2.png"},
+        {"img":"../assets/images/score-app_v3.png"}
     ];
     var textEntry = [
         {"text":"Score webapp is een applicatie waarbij je scores van een wedstrijd kunt bijhouden zowel op mobiel als op pc."},
