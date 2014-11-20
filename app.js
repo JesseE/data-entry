@@ -56,10 +56,6 @@ var app = express();
 //         name: 'image_1',
 //         src: imageData
 //     };
-//     console.log(image);
-//     //collection.fs.files.insert(image, {w:1}, function(err, results){});
-//     //collection.fs.files.find({name: 'image_1'});
-
 //     //locate all entries using find
 //     collection.find().toArray(function(err, results){
 //         console.log(results); 
