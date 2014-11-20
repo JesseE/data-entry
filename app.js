@@ -9,62 +9,62 @@ var mongoClient = require('mongodb'),
     format = require('util').format;
 
 // var mongoose = require('mongoose');
-mongoClient.connect('mongodb://localhost:27017', function(err, db) {
-    // mongoose.connect('mongodb://localhost:27017', function(err, db) {
-    if(err){throw err;}
+// mongoClient.connect('mongodb://localhost:27017', function(err, db) {
+//     // mongoose.connect('mongodb://localhost:27017', function(err, db) {
+//     if(err){throw err;}
     
-    var collection = db.collection('test_insert');
-    // collection.insert({a:2}, function(err, docs) {
-    //     collection.count(function(err, count) {
-    //         console.log(format("count = %s",count));   
-    //     });
-    // });  
+//     var collection = db.collection('test_insert');
+//     // collection.insert({a:2}, function(err, docs) {
+//     //     collection.count(function(err, count) {
+//     //         console.log(format("count = %s",count));   
+//     //     });
+//     // });  
 
-    //remove values
-    collection.remove({_id: null}, function(){});
+//     //remove values
+//     collection.remove({_id: null}, function(){});
 
-    var imageData = fs.readFile(__dirname + '/assets/images/klassiekwijzer.png', function(err, results){
-        if(err){throw err;}
-        // collection.update({'$pull': imageData});
-        // collection.update({'$push': imageData});
-    });  
+//     var imageData = fs.readFile(__dirname + '/assets/images/klassiekwijzer.png', function(err, results){
+//         if(err){throw err;}
+//         // collection.update({'$pull': imageData});
+//         // collection.update({'$push': imageData});
+//     });  
 
-    //initial document to be added
-    // var article = {
-    //     _id: 4, 
-    //     name: 'JesseE',
-    //     title: 'Datavisualisatie'
-    // };
+//     //initial document to be added
+//     // var article = {
+//     //     _id: 4, 
+//     //     name: 'JesseE',
+//     //     title: 'Datavisualisatie'
+//     // };
 
-    //add new entries
-    // collection.insert(article, {w: 1}, function(err, results){
-    //     //console.log(results);
-    // });
+//     //add new entries
+//     // collection.insert(article, {w: 1}, function(err, results){
+//     //     //console.log(results);
+//     // });
 
-    //update values
-    collection.update(
-        { title: 'Datavisualisatie'},
-        {
-            $set: { title: 'Eikema' } 
-        }, 
-        { multi: true }, 
-        function( err, results ) { 
-            if( err ){  throw err; }
-        }
-    );
-    var image = {
-        name: 'image_1',
-        src: imageData
-    };
-    console.log(image);
-    //collection.fs.files.insert(image, {w:1}, function(err, results){});
-    //collection.fs.files.find({name: 'image_1'});
+//     //update values
+//     collection.update(
+//         { title: 'Datavisualisatie'},
+//         {
+//             $set: { title: 'Eikema' } 
+//         }, 
+//         { multi: true }, 
+//         function( err, results ) { 
+//             if( err ){  throw err; }
+//         }
+//     );
+//     var image = {
+//         name: 'image_1',
+//         src: imageData
+//     };
+//     console.log(image);
+//     //collection.fs.files.insert(image, {w:1}, function(err, results){});
+//     //collection.fs.files.find({name: 'image_1'});
 
-    //locate all entries using find
-    collection.find().toArray(function(err, results){
-        console.log(results); 
-    });   
-});
+//     //locate all entries using find
+//     collection.find().toArray(function(err, results){
+//         console.log(results); 
+//     });   
+// });
 
 var path = require('path');     
 var port = 3000;
