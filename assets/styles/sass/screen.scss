@@ -30,26 +30,26 @@
 @import "mixins";  // Custom mixins
 @import "grrr-mixins";
 
-@import "ui/block-list";
-@import "ui/timeline";
-@import "ui/skills";
-@import "ui/git-feed";
-@import "ui/block-container";
-@import "ui/block-image";
-@import "ui/block-item";
-@import "ui/block-description";
+@import "ui/homepage/block-list";
+@import "ui/homepage/timeline";
+@import "ui/homepage/skills";
+@import "ui/homepage/git-feed";
+@import "ui/homepage/block-container";
+@import "ui/homepage/block-image";
+@import "ui/homepage/block-item";
+@import "ui/homepage/block-description";
 
-@import "ui/scaffolding";
+@import "ui/homepage/scaffolding";
 
-@import "ui/typography";
-@import "ui/color";
-@import "ui/header";
-@import "ui/navs";
-@import "ui/forms";
-@import "ui/buttons";
-@import "ui/footer";
+@import "ui/homepage/typography";
+@import "ui/homepage/color";
+@import "ui/homepage/header";
+@import "ui/homepage/navs";
+@import "ui/homepage/forms";
+@import "ui/homepage/buttons";
+@import "ui/homepage/footer";
 
-@import "ui/resizer-input";
-@import "ui/resizer-loader";
-@import "ui/resizer-form";
-@import "ui/resizer-output";
+// @import "ui/actionpage/resizer-input";
+// @import "ui/actionpage/resizer-loader";
+// @import "ui/actionpage/resizer-form";
+// @import "ui/actionpage/resizer-output";

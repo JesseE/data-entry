@@ -68,16 +68,16 @@ var router = express.Router();
 var exphbs = require('express3-handlebars');
 
 // a bot to prevent heroku from going to sleep
-var minutes = 20, the_interval = minutes * 60 * 1000;
+// var minutes = 20, the_interval = minutes * 60 * 1000;
 
-setInterval(function() {
-    var options = {
-        host: 'www.jesseeikema.nl'
-    };
-    http.get(options, function (http_res) {
-        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-    });
-}, the_interval);
+// setInterval(function() {
+//     var options = {
+//         host: 'www.jesseeikema.nl'
+//     };
+//     http.get(options, function (http_res) {
+//         console.log("Sent http request to www.jesseeikema.nl to stay awake.");
+//     });
+// }, the_interval);
 
 // modules
 var index = require('./assets/scripts/backend/index.js');
@@ -88,6 +88,10 @@ var scoreapp = require('./assets/scripts/backend/scoreapp.js');
 var pathogen = require('./assets/scripts/backend/pathogen.js');
 var klassiekwijzer = require('./assets/scripts/backend/klassiekwijzer.js');
 
+// page conditionals/booleans
+var homePage = {};
+var contentPage = {};
+var actionPage = {};
 // For gzip compression
 app.use(express.compress());
 
@@ -122,6 +126,12 @@ app.get('/datavis', function(request, response, next) {
 });
 app.get('/resizer', resizer.create);
 app.get('/resizer-prototype', function(request, response, next) {
+    
+    contentPage = false;
+    homePage = false;
+    actionPage = true;
+    console.log('homepage = '+homePage, 'contentpage = '+contentPage, 'actionpage = '+ actionPage); 
+    
     response.render('partials/resizer',{
         normal: true,
         footer: false,
