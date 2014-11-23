@@ -1506,9 +1506,8 @@ label {
 /* line 13, sass/ui/homepage/_timeline.scss */
 .timeline__container {
   height: 200px;
-  width: 50%;
+  width: 80%;
   margin: 24% auto 18% auto;
-  transform: rotate(90deg);
   position: relative;
 }
 /* line 14, sass/ui/homepage/_timeline.scss */
@@ -1516,7 +1515,7 @@ label {
   background: #527B8B;
 }
 /* line 15, sass/ui/homepage/_timeline.scss */
-.timeline__container a:hover > .timeline__period, .timeline__container a:hover > .timeline__period--left {
+.timeline__container a:hover > .timeline__period, .timeline__container a:hover > .timeline__period--active, .timeline__container a:hover > .timeline__period--left {
   background: #344E58;
 }
 @media (max-width: 48em) {
@@ -1531,17 +1530,23 @@ label {
     left: -70px;
   }
 }
-
-/* line 20, sass/ui/homepage/_timeline.scss */
-.timeline__phase {
-  height: 30px;
-  background: #344E58;
-  position: relative;
-  top: 100px;
+@media (min-width: 64em) {
+  /* line 13, sass/ui/homepage/_timeline.scss */
+  .timeline__container {
+    width: 74%;
+  }
 }
 
-/* line 21, sass/ui/homepage/_timeline.scss */
-.timeline__period, .timeline__period--left {
+/* line 23, sass/ui/homepage/_timeline.scss */
+.timeline__phase {
+  height: 30px;
+  /*background: #344E58;*/
+  position: relative;
+  top: 150px;
+}
+
+/* line 24, sass/ui/homepage/_timeline.scss */
+.timeline__period, .timeline__period--active, .timeline__period--left {
   background: #527B8B;
   height: 50px;
   width: 25%;
@@ -1552,51 +1557,54 @@ label {
   box-shadow: inset 1px 0px 0px white;
 }
 
-/* line 23, sass/ui/homepage/_timeline.scss */
+/* line 25, sass/ui/homepage/_timeline.scss */
+.timeline__period--active {
+  background: #344E58;
+}
+
+/* line 27, sass/ui/homepage/_timeline.scss */
 .timeline__tools-item, .timeline__tools-item--left {
   width: 46px;
   height: 40px;
   display: inline-block;
-  left: 104px;
+  left: 60px;
   top: -40px;
   position: absolute;
   float: left;
-  margin: 0 -41%;
+  margin: 0 14%;
   background-image: url(../../images/arrowv2.png);
 }
 
-/* line 24, sass/ui/homepage/_timeline.scss */
+/* line 28, sass/ui/homepage/_timeline.scss */
 .timeline__tools-item--left {
-  top: 83px;
+  top: 50px;
   left: 123px;
   transform: rotate(180deg);
 }
 
-/* line 25, sass/ui/homepage/_timeline.scss */
+/* line 29, sass/ui/homepage/_timeline.scss */
 .timeline__tools-item__description, .timeline__tools-item__description--left {
   width: 400px;
   height: 200px;
   background: #527B8B;
   color: white;
   border-radius: 3px;
-  top: -299px;
+  top: -200px;
   position: relative;
-  left: -170px;
+  left: -180px;
   line-height: 60px;
-  transform: rotate(-90deg);
 }
 @media (max-width: 48em) {
-  /* line 25, sass/ui/homepage/_timeline.scss */
+  /* line 29, sass/ui/homepage/_timeline.scss */
   .timeline__tools-item__description, .timeline__tools-item__description--left {
     transform: rotate(-90deg);
     transform: rotate(-90deg);
   }
 }
 
-/* line 30, sass/ui/homepage/_timeline.scss */
+/* line 34, sass/ui/homepage/_timeline.scss */
 .timeline__tools-item__description--left {
-  top: -299px;
-  transform: rotate(-270deg);
+  transform: rotate(180deg);
   left: -185px;
 }
 
@@ -2126,8 +2134,9 @@ svg.added {
 }
 /* line 38, sass/ui/homepage/_block-description.scss */
 .block-description--contained h3 {
+  line-height: 35px;
   color: white;
-  border-bottom: 5px solid #344E58;
+  border-bottom: 2px solid #344E58;
 }
 
 /*------------------------------------*\
