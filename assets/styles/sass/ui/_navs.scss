@@ -26,6 +26,7 @@
 	@include bp(med) {
 		top: 14px;
 	} 
+	@include fadeInLeftBig();
 }
 .nav__container-bar{ width: 100%;  height: 10px; margin:10px auto;background:white;
 	@include bp(med) {
