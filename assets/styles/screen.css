@@ -1584,15 +1584,15 @@ label {
 
 /* line 29, sass/ui/homepage/_timeline.scss */
 .timeline__tools-item__description, .timeline__tools-item__description--left {
-  width: 400px;
+  width: 370px;
   height: 200px;
+  position: relative;
+  top: -200px;
+  left: -166px;
+  line-height: 60px;
   background: #527B8B;
   color: white;
   border-radius: 3px;
-  top: -200px;
-  position: relative;
-  left: -180px;
-  line-height: 60px;
 }
 @media (max-width: 48em) {
   /* line 29, sass/ui/homepage/_timeline.scss */

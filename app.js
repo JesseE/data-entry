@@ -68,16 +68,16 @@ var router = express.Router();
 var exphbs = require('express3-handlebars');
 
 // a bot to prevent heroku from going to sleep
-// var minutes = 20, the_interval = minutes * 60 * 1000;
+var minutes = 20, the_interval = minutes * 60 * 1000;
 
-// setInterval(function() {
-//     var options = {
-//         host: 'www.jesseeikema.nl'
-//     };
-//     http.get(options, function (http_res) {
-//         console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-//     });
-// }, the_interval);
+setInterval(function() {
+    var options = {
+        host: 'www.jesseeikema.nl'
+    };
+    http.get(options, function (http_res) {
+        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
+    });
+}, the_interval);
 
 // modules
 var index = require('./assets/scripts/backend/index.js');

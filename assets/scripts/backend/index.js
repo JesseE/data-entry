@@ -130,7 +130,7 @@ module.exports.create = function(request, response){
         {"text":"Begonnen met het gebruiken van javascript op een hogere niveau. Importeren van library's en API's aanroepen. De concepten van OOP beginnen door te dringen."},
         {"text":"Tijdens het volgen van lessen over datavisualisatie leerde ik d3.js gebruiken. Hiermee kwam de concepten van het bouwen van visualisaties naar voren. Denk aan enter(), update() en exit()."},
         {"text":"Veel geleerd in deze periode over hoe handig GIT cli kan zijn. En de eerste stappen met SASS gemaakt. Denk hierbij aan het toepassen van SMACSS en BEM methodes voor gestructureerde en herbruikbare CSS."},
-        {"text":"Naarmate ik steeds grotere projecten ging doen, werd een betere stuctuur steeds  meer essentieel, daarom ben ik begonnen met een framework genaamd Express.js. Deze framework is erg fijn om grotere applicaties mee te bouwen."},
+        {"text":"Naarmate ik steeds grotere projecten ging doen, werd een betere stuctuur steeds  meer essentieel, daarom ben ik begonnen met een framework genaamd Express.js."},
     ];
     var name = [
         {'name': "GIT", 'score': 10},

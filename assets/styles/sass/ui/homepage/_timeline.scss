@@ -26,7 +26,7 @@
 .timeline__period--left{@extend .timeline__period;}
 .timeline__tools-item{width: 46px;height: 40px;display: inline-block;left: 60px;top: -40px;position: absolute;float: left;margin: 0 14%;background-image: url(../../images/arrowv2.png);}
 .timeline__tools-item--left{@extend .timeline__tools-item; top:50px; left: 123px;transform: rotate(180deg);}
-.timeline__tools-item__description{	width: 400px;height: 200px;background: #527B8B;color: white;border-radius: 3px;top: -200px;position: relative;left: -180px; line-height: 60px; 
+.timeline__tools-item__description{	width: 370px;height: 200px;position: relative;top: -200px;left: -166px; line-height: 60px; background: #527B8B;color: white;border-radius: 3px;
 	@include bp(med){
 		transform: rotate(-90deg); transform:rotate(-90deg);
 	}
