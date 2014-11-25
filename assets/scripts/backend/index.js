@@ -77,6 +77,9 @@ function getAllMessage () {
         }).headers(header).end(function(response){  
            // var object = {"comment" : response.body.commit.message};     
             var object = response.body.commit.message;
+            console.log('first : '+ object);
+            object = object.replace(/(\r\n|\n|\r)/gm,"");
+            console.log('second : '+ object);
             gitMessage.push(object); 
             completeReq();  
         });
@@ -90,11 +93,13 @@ function completeReq() {
 homePage = true;
 actionPage = false;
 contentPage = false;
+
 console.log('homepage = '+homePage, 'contentpage = '+contentPage, 'contentpage = '+ actionPage);
 
 //module index create function
 module.exports.create = function(request, response){ 
     //make sure you have values in github response
+    //console.log(gitMessage);
     var container = [];
     for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
         gitMessage[i];
