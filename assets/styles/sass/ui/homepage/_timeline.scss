@@ -1,0 +1,34 @@
+/*************************
+		timeline
+*************************/
+.timeline{ float:left; width: 100%;background: white;
+	@include bp(max-large){
+		display:none;
+		.banner-timeline{display:none;}
+	}
+	@include bp(med){
+		height: 620px;
+	}
+}
+.timeline__container{ height: 200px;width: 80%;margin: 24% auto 18% auto;position: relative;
+	a:hover > .timeline__phase{background:#527B8B;}
+	a:hover > .timeline__period{background:#344E58;}
+	@include bp(med){
+		transform: rotate(90deg); transform:rotate(90deg);margin: 212px auto;float: left; width: 100%; position: relative; left:-70px;
+	}
+	@include bp(large) {
+		width: 74%;
+	}
+}
+.timeline__phase{height: 30px;/*background: #344E58;*/position:relative;top:150px;}
+.timeline__period{background: #527B8B;height: 50px;width: 25%;position:relative;top: -90px;display:inline-block;float:left;box-shadow: inset 1px 0px 0px white;}	
+.timeline__period--active{@extend .timeline__period; background:#344E58;}
+.timeline__period--left{@extend .timeline__period;}
+.timeline__tools-item{width: 46px;height: 40px;display: inline-block;left: 60px;top: -40px;position: absolute;float: left;margin: 0 14%;background-image: url(../../images/arrowv2.png);}
+.timeline__tools-item--left{@extend .timeline__tools-item; top:50px; left: 123px;transform: rotate(180deg);}
+.timeline__tools-item__description{	width: 370px;height: 200px;position: relative;top: -200px;left: -166px; line-height: 60px; background: #527B8B;color: white;border-radius: 3px;
+	@include bp(med){
+		transform: rotate(-90deg); transform:rotate(-90deg);
+	}
+}
+.timeline__tools-item__description--left{@extend .timeline__tools-item__description; transform: rotate(180deg);left: -185px;}

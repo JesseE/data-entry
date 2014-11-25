@@ -5,9 +5,7 @@ module.exports = function (grunt) {
     require('time-grunt')(grunt);
     // load all grunt tasks
     require('load-grunt-tasks')(grunt);
-    grunt.loadNpmTasks('grunt-uncss');
     grunt.initConfig({
-
         // Watch Config
         watch: {
             files: ['views/**/*'],
@@ -24,8 +22,15 @@ module.exports = function (grunt) {
                     'assets/styles/**/*.css',
                 ],
             },
+            express: {
+                files:  [ 'app.js', '!**/node_modules/**', '!Gruntfile.js' ],
+                tasks:  [ 'express:dev' ],
+                options: {
+                    nospawn: true // Without this option specified express won't be reloaded
+                }
+            },
             sass: {
-                files: ['assets/styles/**/*.scss'],
+                files: ['assets/styles/sass/ui/homepage/*.scss'],
                 tasks: ['sass:dev']
             },
             images: {
@@ -33,13 +38,7 @@ module.exports = function (grunt) {
                     'assets/images/**/*.{png,jpg,jpeg,webp}',
                 ],
             },
-            express: {
-                files:  [ 'app.js', '!**/node_modules/**', '!Gruntfile.js' ],
-                tasks:  [ 'express:dev' ],
-                options: {
-                    nospawn: true // Without this option specified express won't be reloaded
-                }
-            }
+
         },
         scripts: {
                 files: [

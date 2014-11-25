@@ -1,5 +1,4 @@
 // datavisual content
-
 module.exports.create = function(request, response, next) {  
     var name = [
         {'name': "GIT", 'score': 10},
@@ -17,6 +16,12 @@ module.exports.create = function(request, response, next) {
         {"text":"Een datavisualisatie van de toevoegingen en verwijderingen van regels code die in repositories van Grrr staan. "},
         {"text":"Een indicatie maken van de actuele code veranderingen per project van Grrr. Het was de bedoeling om gegevens van de geschreven code te laten zien door contact te maken met de API van Bitbucket.com en deze gegevens werden dan gevisualiseerd met behulp van d3.js."}
     ];
+    
+    contentPage = true;
+    homePage = false;
+    actionPage = false;
+    console.log('homepage = '+homePage, 'contentpage = '+contentPage, 'contentpage = '+ actionPage);
+    
     response.render('partials/item' ,{
         img: imgEntry,
         text: textEntry,
@@ -29,17 +34,14 @@ module.exports.create = function(request, response, next) {
             links: function () { return ''},
             name: function () {
                 var nameBucket = [];
-
                 for (var i = 0, len = name.length; i < len; i ++){
                     name[i];
                     nameBucket.push(name[i].name);
-                  
                 }
                 return nameBucket;
             },
             score: function() {
                 var scoreBucket = [];
-
                 for (var i = 0, len = name.length; i < len; i ++){
                     name[i];
                     scoreBucket.push(name[i].score);

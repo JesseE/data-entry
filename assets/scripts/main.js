@@ -11,8 +11,6 @@ var value = 1;
 // if ( window.innerWidth < 1280 ) {
 //     $('.nav--off-window').hide();
 // };
-
-
 $('nav').click(function(){
 	switch (value) {
 		case 0 :
