@@ -1,91 +1,97 @@
-    //request js lib 
-    var unirest = require('unirest');
-    
-    //github request repos
-    var username = "JesseE";
-    var password = "Eikema22";
-    var header = {'user-agent': 'node.js'};
-    var repository = "data-entry";
-    var branch = "master";
-    var done = false;
-    
-    var commitsHash = [];
-    var commitContainer = [];
-    var checker = [];
-    var gitStats = [];
-    var gitMessage = [];
+//request js lib 
+var unirest = require('unirest');
 
-    commitsHash.length = 30;
-    var commitContainerNumber = {};
-    commitContainerNumber.length = 90;
+//github request repos
+var username = "JesseE";
+var password = "Eikema22";
+var header = {'user-agent': 'node.js'};
+var repository = "data-entry";
+var branch = "master";
+var done = false;
 
-    // get all commit hashes
-    getAllCommitPageOne();
-    function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=1>sha=master').auth({
-        user: username,
-        pass: password,
-        sendImmediately: true
-    }).headers(header).end(function(response){
-        for(var i = 0, len = commitsHash.length; i < len; ++i){
-            commitContainer.push(response.body[i].sha);
-        }
-        getAllCommitPageTwo();   
+var commitsHash = [];
+var commitContainer = [];
+var checker = [];
+var gitStats = [];
+var gitMessage = [];
+
+commitsHash.length = 30;
+var commitContainerNumber = {};
+commitContainerNumber.length = 90;
+
+// get all commit hashes
+getAllCommitPageOne();
+function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=1>sha=master').auth({
+    user: username,
+    pass: password,
+    sendImmediately: true
+}).headers(header).end(function(response){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
+        commitContainer.push(response.body[i].sha);
+    }
+    getAllCommitPageTwo();   
+    });
+};
+function getAllCommitPageTwo (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=2>sha=master').auth({
+    user: username,
+    pass: password,
+    sendImmediately: true
+}).headers(header).end(function(response){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
+        commitContainer.push(response.body[i].sha);
+    }
+    getAllCommitPageThree();
+    });
+};
+function getAllCommitPageThree (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=3>sha=master').auth({
+    user: username,
+    pass: password,
+    sendImmediately: true
+}).headers(header).end(function(response){
+    for(var i = 0, len = commitsHash.length; i < len; ++i){
+        commitContainer.push(response.body[i].sha);
+    }
+    getAllStats();  
+    });
+};
+//addtions deletions total adjustments in a commit
+function getAllStats () { 
+    for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
+        unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
+            user: username,
+            pass: password,
+            sendImmediately: true
+        }).headers(header).end(function(response){
+            gitStats.push(response.body.stats);   
         });
     };
-    function getAllCommitPageTwo (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=2>sha=master').auth({
-        user: username,
-        pass: password,
-        sendImmediately: true
-    }).headers(header).end(function(response){
-        for(var i = 0, len = commitsHash.length; i < len; ++i){
-            commitContainer.push(response.body[i].sha);
-        }
-        getAllCommitPageThree();
+    getAllMessage();
+};
+// commit comments
+function getAllMessage () { 
+    for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
+        unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
+            user: username,
+            pass: password,
+            sendImmediately: true
+        }).headers(header).end(function(response){  
+           // var object = {"comment" : response.body.commit.message};     
+            var object = response.body.commit.message;
+            gitMessage.push(object); 
+            completeReq();  
         });
-    };
-    function getAllCommitPageThree (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=3>sha=master').auth({
-        user: username,
-        pass: password,
-        sendImmediately: true
-    }).headers(header).end(function(response){
-        for(var i = 0, len = commitsHash.length; i < len; ++i){
-            commitContainer.push(response.body[i].sha);
-        }
-        getAllStats();  
-        });
-    };
-    //addtions deletions total adjustments in a commit
-    function getAllStats () { 
-        for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
-            unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
-                user: username,
-                pass: password,
-                sendImmediately: true
-            }).headers(header).end(function(response){
-                gitStats.push(response.body.stats);   
-            });
-        };
-        getAllMessage();
-    };
-    // commit comments
-    function getAllMessage () { 
-        for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
-            unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
-                user: username,
-                pass: password,
-                sendImmediately: true
-            }).headers(header).end(function(response){  
-               // var object = {"comment" : response.body.commit.message};     
-                var object = response.body.commit.message;
-                gitMessage.push(object); 
-                completeReq();  
-            });
 
-        };
     };
-    function completeReq() {
-        done = true;
-    };
+};
+function completeReq() {
+    done = true;
+};
+
+homePage = true;
+actionPage = false;
+contentPage = false;
+console.log('homepage = '+homePage, 'contentpage = '+contentPage, 'contentpage = '+ actionPage);
+
 //module index create function
 module.exports.create = function(request, response){ 
     //make sure you have values in github response
@@ -124,7 +130,7 @@ module.exports.create = function(request, response){
         {"text":"Begonnen met het gebruiken van javascript op een hogere niveau. Importeren van library's en API's aanroepen. De concepten van OOP beginnen door te dringen."},
         {"text":"Tijdens het volgen van lessen over datavisualisatie leerde ik d3.js gebruiken. Hiermee kwam de concepten van het bouwen van visualisaties naar voren. Denk aan enter(), update() en exit()."},
         {"text":"Veel geleerd in deze periode over hoe handig GIT cli kan zijn. En de eerste stappen met SASS gemaakt. Denk hierbij aan het toepassen van SMACSS en BEM methodes voor gestructureerde en herbruikbare CSS."},
-        {"text":"Naarmate ik steeds grotere projecten ging doen, werd een betere stuctuur steeds  meer essentieel, daarom ben ik begonnen met een framework genaamd Express.js. Deze framework is erg fijn om grotere applicaties mee te bouwen."},
+        {"text":"Naarmate ik steeds grotere projecten ging doen, werd een betere stuctuur steeds  meer essentieel, daarom ben ik begonnen met een framework genaamd Express.js."},
     ];
     var name = [
         {'name': "GIT", 'score': 10},
