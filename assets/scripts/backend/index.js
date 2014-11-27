@@ -111,37 +111,43 @@ module.exports.create = function(request, response){
                 "title": "Datavisualisatie",
                 "paragraph": "visualisatie van coding activiteit",
                 "img": "./assets/images/datavis-logo.png",
-                "mod-block": "odd"
+                "mod-block": "odd",
+                "link": "datavisualisatie"
             },
             {
                 "title": "Resizer",
                 "paragraph": "Pas de dimensies van je afbeelding aan",
                 "img": "./assets/images/og_grrr.png",
-                "mod-block": "even bla"
+                "mod-block": "even bla",
+                "link": "resizer"
             },
             {
                 "title": "Melkweg",
                 "paragraph": "SASS aanpassingen in de melkweg",
                 "img": "./assets/images/melkweg.png",
-                "mod-block": "odd blo"
+                "mod-block": "odd blo",
+                "link": "melkweg"
             },
             {
                 "title": "Score app",
                 "paragraph": "Toevoegen van actuele score's",
                 "img": "./assets/images/score-app-logo.png",
-                "mod-block": "even fourth"
+                "mod-block": "even fourth",
+                "link": "score-app"
             },
             {
                 "title": "Klassiekwijzer",
                 "paragraph": "Kom erachter welke klassieke muziek bij je past",
                 "img": "./assets/images/klassiekwijzer.png",
-                "mod-block": "odd fifth"
+                "mod-block": "odd fifth",
+                "link": "klassiekwijzer"
             },
             {
                 "title": "Pathogen",
                 "paragraph": "RTS game gemaakt met javascript",
                 "img": "./assets/images/pathogen_logo.png",
-                "mod-block": "even sixth"
+                "mod-block": "even sixth",
+                "link": "pathogen"
             },
         ]
     };
