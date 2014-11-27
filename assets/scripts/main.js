@@ -140,14 +140,13 @@ bartext.selectAll("div")
 // only load on screen larger than 500px
 
 if(window.innerWidth > 500){
-console.log("visual is calc"); 
 
 // fetched array's
 var gitBarHeight = 10;
 var gitData2 = {remove : removedData};
 var gitData = {add: addData};
 
-if(gitData.length = 90){ console.log(gitData.length);
+if(gitData.length = 90){ 
 
 Container.push(gitData);
 Container.push(gitData2);
@@ -160,8 +159,8 @@ Container.push(gitData2);
 var addedArray = Container[1].add;
 for (var i = 0, len = addedArray.length; i < len; i++ ){
     addedArray[i];
-    if( addedArray[i] > 1000 ){
-        addedArray[i] = 500;        
+    if( addedArray[i] > 400 ){
+        addedArray[i] = 400;        
     }
     if( addedArray[i] < 20 ){
         addedArray[i] = 25;
@@ -171,8 +170,8 @@ for (var i = 0, len = addedArray.length; i < len; i++ ){
 var removedArray = Container[2].remove;
 for (var i = 0, len = removedArray.length; i < len; i++ ){
     removedArray[i];
-    if( removedArray[i] > 1000 ){
-        removedArray[i] = 500;        
+    if( removedArray[i] > 400 ){
+        removedArray[i] = 400;        
     }
     if( removedArray[i] < 20 ){
         removedArray[i] = 25;
@@ -185,7 +184,7 @@ var x2 = d3.scale.linear()
     .range([0, 500]);
 
 var chartZ = d3.select(".git-feed .added")
-    .attr("width", 300)
+    .attr("width", 500)
     .attr("height", gitBarHeight * addedArray.length);
 
 var barB = chartZ.selectAll("g")
@@ -231,7 +230,7 @@ var x3 = d3.scale.linear()
     .range([0,500]);
 
 var chartX = d3.select(".git-feed .removed")
-    .attr("width", 300)
+    .attr("width", 500)
     .attr("height", gitBarHeight * removedArray.length);
 
 var barC = chartX.selectAll(".git-feed__description")
