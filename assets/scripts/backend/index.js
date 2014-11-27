@@ -216,6 +216,8 @@ module.exports.create = function(request, response){
         {'name': "D3.js", 'score': 16},
         {'name': "Node.js", 'score': 17},
         {'name': "Express.js", 'score': 18},
+        {'name': "Handlebars.js", 'score': 19}, 
+        {'name': "MongoDB", 'score': 14},
         {'name': "Heroku", 'score': 16},
         {'name': "Game Dev", 'score': 16},
         {'name': "Mobile Dev", 'score': 15}

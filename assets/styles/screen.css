@@ -1620,7 +1620,7 @@ label {
 }
 /* line 6, sass/ui/homepage/_skills.scss */
 .skills svg, .skills--secondary svg {
-  height: 425px;
+  height: 500px;
 }
 /* line 8, sass/ui/homepage/_skills.scss */
 .skills svg g rect, .skills--secondary svg g rect {
