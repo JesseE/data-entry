@@ -13,7 +13,13 @@ module.exports.create = function(request, response, next) {
         entry: [
             {
                 "title": "Datavisualisatie",     
-                "links" : ""
+                "links" : "",
+                "mod-description": "--reverse-color",
+            },
+        ],
+        datavis: [
+            {
+                "mod-description": "--reverse-full-width"
             },
         ],
         text : [

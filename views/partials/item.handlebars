@@ -7,17 +7,18 @@
 				</div>
 			{{/each}}
 			</div>	
-			<div class="block-description">
 			{{#each item.entry}}
+			<div class="block-description{{mod-description}}">
 				<h1>{{title}}</h1>
 					{{#each ../item.text}}	
 					<h3>{{this.sub-title}}</h3>
 						<p>{{this.text}}</p>
 					{{/each}}
 				<a href="{{links}}" target="_blank"><li>{{links}}</li></a>
-			{{/each}}
 			</div>
-			<div class="block-description">				
+			{{#each ../item.datavis}}
+			<div class="block-description{{mod-description}}">
+			{{/each}}
 				<h1>Tools</h1>
 				<div class="skills--secondary">
 					<div class="skills__text">
@@ -26,5 +27,6 @@
 					<svg class="block-list--tools-container"></svg>
 				</div>
 			</div>
+			{{/each}}
 		</div>
 	</section>

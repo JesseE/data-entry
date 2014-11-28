@@ -11,7 +11,13 @@ module.exports.create = function(request, response) {
         entry: [
             {
                 "title": "Pathogen",     
-                "links" : "/pathogen-prototype"
+                "links" : "/pathogen-prototype",
+                "mod-description": "--reverse-color",
+            },
+        ],
+        datavis: [
+            {
+                "mod-description": "--reverse-full-width"
             },
         ],
         text : [

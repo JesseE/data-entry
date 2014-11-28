@@ -12,7 +12,13 @@ module.exports.create = function(request,response){
         entry: [
             {
                 "title": "Resizer",     
-                "links" : "/resizer-prototype"
+                "links" : "/resizer-prototype",
+                "mod-description": "--reverse-color",
+            },
+        ],
+        datavis: [
+            {
+                "mod-description": "--reverse-full-width"
             },
         ],
         text : [

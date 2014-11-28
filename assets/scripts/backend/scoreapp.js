@@ -13,7 +13,13 @@ module.exports.create = function(request, response){
         entry: [
             {
                 "title": "Score webapp",     
-                "links" : "/score-app-prototype"
+                "links" : "/score-app-prototype",
+                "mod-description": "--reverse-color",
+            },
+        ],
+        datavis: [
+            {
+                "mod-description": "--reverse-full-width",
             },
         ],
         text : [
@@ -32,9 +38,6 @@ module.exports.create = function(request, response){
             },
             {
                 "img":"../assets/images/score-app_v2.png"
-            },
-            {
-                "img":"../assets/images/score-app_v3.png"
             },
         ] 
     };

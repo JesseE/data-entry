@@ -1794,7 +1794,7 @@ svg.added {
 
 /* line 12, sass/ui/homepage/_block-container.scss */
 .block-container__item-imagecontainer {
-  float: left;
+  float: right;
   width: 43%;
 }
 @media (max-width: 48em) {
@@ -2061,7 +2061,7 @@ svg.added {
 		block-description
 *************************/
 /* line 4, sass/ui/homepage/_block-description.scss */
-.block-description, .block-description--reverse, .block-description--introduction, .block-description--right, .block-description--contained {
+.block-description, .block-description--reverse, .block-description--reverse-color, .block-description--reverse-full-width, .block-description--introduction, .block-description--right, .block-description--contained {
   float: right;
   width: 50%;
   /*margin: 10px;height: 340px;*/
@@ -2070,22 +2070,22 @@ svg.added {
   line-height: 30px;
 }
 /* line 6, sass/ui/homepage/_block-description.scss */
-.block-description h1, .block-description--reverse h1, .block-description--introduction h1, .block-description--right h1, .block-description--contained h1 {
+.block-description h1, .block-description--reverse h1, .block-description--reverse-color h1, .block-description--reverse-full-width h1, .block-description--introduction h1, .block-description--right h1, .block-description--contained h1 {
   border-bottom: 5px solid #344E58;
 }
 /* line 7, sass/ui/homepage/_block-description.scss */
-.block-description h1, .block-description--reverse h1, .block-description--introduction h1, .block-description--right h1, .block-description--contained h1, .block-description h3, .block-description--reverse h3, .block-description--introduction h3, .block-description--right h3, .block-description--contained h3, .block-description p, .block-description--reverse p, .block-description--introduction p, .block-description--right p, .block-description--contained p {
+.block-description h1, .block-description--reverse h1, .block-description--reverse-color h1, .block-description--reverse-full-width h1, .block-description--introduction h1, .block-description--right h1, .block-description--contained h1, .block-description h3, .block-description--reverse h3, .block-description--reverse-color h3, .block-description--reverse-full-width h3, .block-description--introduction h3, .block-description--right h3, .block-description--contained h3, .block-description p, .block-description--reverse p, .block-description--reverse-color p, .block-description--reverse-full-width p, .block-description--introduction p, .block-description--right p, .block-description--contained p {
   color: #344E58;
 }
 /* line 9, sass/ui/homepage/_block-description.scss */
-.block-description a li, .block-description--reverse a li, .block-description--introduction a li, .block-description--right a li, .block-description--contained a li {
+.block-description a li, .block-description--reverse a li, .block-description--reverse-color a li, .block-description--reverse-full-width a li, .block-description--introduction a li, .block-description--right a li, .block-description--contained a li {
   list-style-type: none;
   color: #344E58;
   text-decoration: underline;
 }
 @media (max-width: 48em) {
   /* line 4, sass/ui/homepage/_block-description.scss */
-  .block-description, .block-description--reverse, .block-description--introduction, .block-description--right, .block-description--contained {
+  .block-description, .block-description--reverse, .block-description--reverse-color, .block-description--reverse-full-width, .block-description--introduction, .block-description--right, .block-description--contained {
     float: left;
     width: 88%;
     /*max-height: 270px;*/
@@ -2095,45 +2095,55 @@ svg.added {
 }
 
 /* line 15, sass/ui/homepage/_block-description.scss */
-.block-description--reverse {
+.block-description--reverse, .block-description--reverse-color, .block-description--reverse-full-width {
   float: left;
 }
 /* line 19, sass/ui/homepage/_block-description.scss */
-.block-description--reverse h1, .block-description--reverse p {
+.block-description--reverse h1, .block-description--reverse-color h1, .block-description--reverse-full-width h1, .block-description--reverse p, .block-description--reverse-color p, .block-description--reverse-full-width p {
   color: white;
 }
 
-/* line 21, sass/ui/homepage/_block-description.scss */
+/* line 23, sass/ui/homepage/_block-description.scss */
+.block-description--reverse-color h1, .block-description--reverse-full-width h1, .block-description--reverse-color h3, .block-description--reverse-full-width h3, .block-description--reverse-color p, .block-description--reverse-full-width p {
+  color: #344E58;
+}
+
+/* line 25, sass/ui/homepage/_block-description.scss */
+.block-description--reverse-full-width {
+  width: 100%;
+}
+
+/* line 29, sass/ui/homepage/_block-description.scss */
 .block-description--introduction {
   width: 100%;
   height: 340px;
 }
-/* line 24, sass/ui/homepage/_block-description.scss */
+/* line 32, sass/ui/homepage/_block-description.scss */
 .block-description--introduction h1, .block-description--introduction p {
   color: white;
 }
 
-/* line 26, sass/ui/homepage/_block-description.scss */
+/* line 34, sass/ui/homepage/_block-description.scss */
 .block-description--right, .block-description--contained {
   width: 49%;
 }
-/* line 30, sass/ui/homepage/_block-description.scss */
+/* line 38, sass/ui/homepage/_block-description.scss */
 .block-description--right h1, .block-description--contained h1, .block-description--right p, .block-description--contained p {
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 26, sass/ui/homepage/_block-description.scss */
+  /* line 34, sass/ui/homepage/_block-description.scss */
   .block-description--right, .block-description--contained {
     width: 88%;
   }
 }
 
-/* line 35, sass/ui/homepage/_block-description.scss */
+/* line 43, sass/ui/homepage/_block-description.scss */
 .block-description--contained {
   width: 90%;
   line-height: 20px;
 }
-/* line 38, sass/ui/homepage/_block-description.scss */
+/* line 46, sass/ui/homepage/_block-description.scss */
 .block-description--contained h3 {
   line-height: 35px;
   color: white;

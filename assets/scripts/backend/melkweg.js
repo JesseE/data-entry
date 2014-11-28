@@ -10,7 +10,13 @@ module.exports.create = function(request,response){
         entry: [
             {
                 "title": "Melkweg",     
-                "links" : "http://www.melkweg.nl/nl"
+                "links" : "http://www.melkweg.nl/nl",
+                "mod-description": "--reverse-color",
+            },
+        ],
+        datavis: [
+            {
+                "mod-description": "--reverse-full-width"
             },
         ],
         text : [

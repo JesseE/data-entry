@@ -10,7 +10,7 @@
 
 }
 .block-container__item-imagecontainer{
-	float: left;	width: 43%;
+	float: right;width: 43%;
 	@include bp(med){
 		width:100%;
 	}

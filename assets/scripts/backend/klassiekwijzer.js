@@ -12,7 +12,13 @@ module.exports.create = function(request, response){
         entry: [
             {
                 "title": "Klassiekwijzer",     
-                "links" : "http://klassiekwijzer.avro.nl/"
+                "links" : "http://klassiekwijzer.avro.nl/",
+                "mod-description": "--reverse-color",
+            },
+        ],
+        datavis: [
+            {
+                "mod-description": "--reverse-full-width"
             },
         ],
         text : [
