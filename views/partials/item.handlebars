@@ -1,20 +1,21 @@
 	<section class="block-container">
 		<div class="block-container__item">
 			<div class="block-container__item-imagecontainer">
-				{{#each img}}		
+			{{#each item.img}}		
 				<div class="block-container__item-image">
-					<img class="block-container__item__image"src="{{img}}"/>	
+					<img class="block-container__item__image"src="{{this.img}}"/>
 				</div>
-				{{/each}}
+			{{/each}}
 			</div>	
 			<div class="block-description">
+			{{#each item.entry}}
 				<h1>{{title}}</h1>
-					<h3>beschrijving</h3>
-						<p>{{text.[0].text}}</p>
-					<h3>doelstelling</h3>
-						<p>{{text.[1].text}}</p>
-						<p>{{name.[0].name}}</p>
-					<a href="{{links}}" target="_blank"><li>{{links}}</li></a>
+					{{#each ../item.text}}	
+					<h3>{{this.sub-title}}</h3>
+						<p>{{this.text}}</p>
+					{{/each}}
+				<a href="{{links}}" target="_blank"><li>{{links}}</li></a>
+			{{/each}}
 			</div>
 			<div class="block-description">				
 				<h1>Tools</h1>

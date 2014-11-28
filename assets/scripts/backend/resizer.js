@@ -8,24 +8,39 @@ module.exports.create = function(request,response){
         {'name': 'Javascript', 'score': 20},
         {'name': "JavaScript-Load-Image", 'score': 10}
     ];
-    var imgEntry = [
-        {"img":"../assets/images/resizer_v1.png"},
-        {"img":"../assets/images/resizer_v2.png"}
-    ];
-    var textEntry = [
-        {"text":"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeeldingen zullen je geschaalde afbeeldingen er nog goed uitzien. Download de afbeeldingen direct via een zip bestand. Je kunt als je wilt ook meedere afbeeldingen tegelijkertijd schalen."},
-        {"text":"Grrr heeft een CMS systeem voor hun klanten dat Garp heet. Zij zochten een toevoegingen waarbij je gemakkelijk meerdere afbeeldingen kan schalen. Hier werd mijn product dus voor gemaakt dat nu de Resizer heet."}
-    ];
+    var itemEntry = {  
+        entry: [
+            {
+                "title": "Resizer",     
+                "links" : "/resizer-prototype"
+            },
+        ],
+        text : [
+            {
+                "sub-title": "Omschrijving",
+                "text" :"Schaal je afbeeldingen naar je eigen gewenste dimensies. Samen met de Antialiasering van de afbeeldingen zullen je geschaalde afbeeldingen er nog goed uitzien. Download de afbeeldingen direct via een zip bestand. Je kunt als je wilt ook meedere afbeeldingen tegelijkertijd schalen.",
+            },
+            {
+                "sub-title": "Doelstelling",
+                "text" :"Grrr heeft een CMS systeem voor hun klanten dat Garp heet. Zij zochten een toevoegingen waarbij je gemakkelijk meerdere afbeeldingen kan schalen. Hier werd mijn product dus voor gemaakt dat nu de Resizer heet.",   
+            },    
+        ],
+        img : [
+            {
+                "img":"../assets/images/resizer_v1.png"
+            },
+            {
+                "img":"../assets/images/resizer_v2.png"
+            },
+        ] 
+    };
     response.render('partials/item',{
-        img: imgEntry,
-        text: textEntry,
+        item: itemEntry,
         normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
         helpers:{
-            title: function () { return 'Resizer'; },
-            links:function() {return '/resizer-prototype';},
             name: function () {
                 var nameBucket = [];
                 for (var i = 0, len = name.length; i < len; i ++){

@@ -6,24 +6,39 @@ module.exports.create = function(request,response){
         {'name': "SASS", 'score': 20},
         {'name': "HTML", 'score': 10},
     ];
-    var imgEntry = [
-        {"img":"../assets/images/melkweg_v1.png"},
-        {"img":"../assets/images/melkweg_v2.png"}
-    ];
-    var textEntry = [
-        {"text":"Het refactoren van de geschreven CSS/SASS code van de Melkweg."},
-        {"text":"Ik kreeg de taak om code te vereenvoudigen aan de hand van SMACCS en BEM methodes. Tijdens het herschrijven van de code, heb ik ook de suggestie gedaan om de gemoduleerde SASS bestanden in een subfolder te plaatsen. Dit zorgde voor een betere overzicht binnen de SASS structuur van de melkweg."}
-    ];
+    var itemEntry = {  
+        entry: [
+            {
+                "title": "Melkweg",     
+                "links" : "http://www.melkweg.nl/nl"
+            },
+        ],
+        text : [
+            {
+                "sub-title": "Omschrijving",
+                "text" :"Het refactoren van de geschreven CSS/SASS code van de Melkweg.",
+            },
+            {
+                "sub-title": "Doelstelling",
+                "text" :"Ik kreeg de taak om code te vereenvoudigen aan de hand van SMACCS en BEM methodes. Tijdens het herschrijven van de code, heb ik ook de suggestie gedaan om de gemoduleerde SASS bestanden in een subfolder te plaatsen. Dit zorgde voor een betere overzicht binnen de SASS structuur van de melkweg.",   
+            },    
+        ],
+        img : [
+            {
+                "img":"../assets/images/melkweg_v1.png"
+            },
+            {
+                "img":"../assets/images/melkweg_v2.png"
+            },
+        ] 
+    };
     response.render('partials/item',{
-        img: imgEntry,
-        text: textEntry,
+        item: itemEntry,
         normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
         helpers:{
-            title: function () { return 'Melkweg'; },
-            links: function () { return 'http://www.melkweg.nl/nl';},
             name: function () {  
                 var nameBucket = [];
 

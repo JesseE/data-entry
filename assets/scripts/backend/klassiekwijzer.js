@@ -8,24 +8,39 @@ module.exports.create = function(request, response){
         {'name': "GIT", 'score': 17},
         {'name': "PHP", 'score': 13}
     ];
-    var imgEntry = [
-        {"img":"../assets/images/klassiekwijzer_v1.png"},
-        {"img":"../assets/images/klassiekwijzer_v2.png"}
-    ];
-    var textEntry = [
-        {"text":"Dit is een vragen reeks die uiteindelijk moet laten zien wat voor klassiekemuziek het beste bij jou past."},
-        {"text":"Dit moest zowel op pc als op tablet en mobiel goed te gebruiken zijn. Verder moest er ook een stap terug in de vragen reeks mogelijk worden. Uiteindelijk kon je de resultaten delen via social media."}
-    ];
+    var itemEntry = {  
+        entry: [
+            {
+                "title": "Klassiekwijzer",     
+                "links" : "http://klassiekwijzer.avro.nl/"
+            },
+        ],
+        text : [
+            {
+                "sub-title": "Omschrijving",
+                "text" :"Dit moest zowel op pc als op tablet en mobiel goed te gebruiken zijn. Verder moest er ook een stap terug in de vragen reeks mogelijk worden. Uiteindelijk kon je de resultaten delen via social media.",
+            },
+            {
+                "sub-title": "Doelstelling",
+                "text" :"Dit is een vragen reeks die uiteindelijk moet laten zien wat voor klassiekemuziek het beste bij jou past.",   
+            },    
+        ],
+        img : [
+            {
+                "img":"../assets/images/klassiekwijzer_v1.png"
+            },
+            {
+                "img":"../assets/images/klassiekwijzer_v2.png"
+            },
+        ] 
+    };
     response.render('partials/item',{
-        img: imgEntry,
-        text: textEntry,
+        item: itemEntry,
         normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
         helpers:{
-            title: function () { return 'Klassiekwijzer'; },
-            links: function() { return "http://klassiekwijzer.avro.nl/"},
             name: function () {
                 var nameBucket = [];
 
