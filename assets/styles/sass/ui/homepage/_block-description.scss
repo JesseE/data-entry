@@ -2,7 +2,7 @@
 		block-description
 *************************/
 .block-description{
-	float: right; width: 50%;/*margin: 10px;height: 340px;*/ padding:0 15px; /*background: #527B8B;*/ line-height: 30px;
+	float: right; width: 100%;/*margin: 10px;height: 340px;*/ padding:0 15px; /*background: #527B8B;*/ line-height: 30px;
 	h1{border-bottom: 5px solid #344E58;}
 	h1,h3,p{color:#344E58;}
 	a{
@@ -21,6 +21,13 @@
 .block-description--reverse-color{
 	@extend .block-description--reverse;
 	h1,h3,p{color: #344E58;}
+}
+.block-description--reverse-color__paragraphs{
+	@extend .block-description--reverse-color;
+	width: 40%;
+	@include bp(med){
+		width: 90%;	
+	}
 }
 .block-description--reverse-full-width{
 	@extend .block-description--reverse-color;

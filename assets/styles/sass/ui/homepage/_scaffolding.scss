@@ -32,7 +32,7 @@ h5{color:white;}
 	@include bp(med){display:none;}
 }
 .container{
-	position: relative; float: left; margin: 0 auto 100px auto; width: 100%; background-color: white; 
+	position: relative; float: left; margin: 0 auto 0 auto; width: 100%; background-color: white; 
 	h1 { width: 100%; margin: 0 auto; color: white; }
 	@include bp(med){
 		margin: 0 auto;
