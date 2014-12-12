@@ -108,7 +108,7 @@ setInterval(function() {
 }, the_interval);
 
 //get finch forward working
-app.enable('trust proxy');
+// app.enable('trust proxy');
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
