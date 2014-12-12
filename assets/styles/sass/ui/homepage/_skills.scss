@@ -22,5 +22,5 @@
 	@include bp(med) { width: 26%;}
 }
 .skills__articletext {
-	@extend .skills__text;
+	@extend .skills__text; width: 30%;
 }

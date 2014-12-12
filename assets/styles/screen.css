@@ -1477,6 +1477,17 @@ label {
   }
 }
 
+/* line 43, sass/ui/homepage/_block-list.scss */
+.block-list--articletools-container__text {
+  text-align: left;
+  width: 63%;
+}
+
+/* line 44, sass/ui/homepage/_block-list.scss */
+.block-list--articletools-container {
+  width: 70%;
+}
+
 /*************************
 		timeline
 *************************/
@@ -1652,6 +1663,11 @@ label {
   .skills__text, .skills__articletext {
     width: 26%;
   }
+}
+
+/* line 24, sass/ui/homepage/_skills.scss */
+.skills__articletext {
+  width: 30%;
 }
 
 /*************************
