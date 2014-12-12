@@ -16,8 +16,6 @@ var app = angular.module('myApp', ["ngRoute"]).
   ]     
 );
 
-
-
 app.controller('ArticleController',["$scope", "$routeParams", function($scope, $routeParams) {      
    var articles = [];
     

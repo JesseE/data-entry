@@ -1704,7 +1704,7 @@ svg.added {
 /* line 5, sass/ui/homepage/_block-container.scss */
 .block-container__item, .block-container--visie__item {
   width: 78%;
-  margin: 61px auto;
+  margin: 0 auto 61px auto;
   height: 415px;
 }
 @media (max-width: 48em) {
@@ -1716,21 +1716,32 @@ svg.added {
 
 /* line 10, sass/ui/homepage/_block-container.scss */
 .block-container__item-thumb {
-  max-width: 400px;
-  min-width: 320px;
-  margin: auto;
+  float: left;
+  max-width: 5%;
+  min-width: 5%;
+  /* height: 50px; */
+  margin: 25px 10px;
 }
-/* line 12, sass/ui/homepage/_block-container.scss */
+/* line 11, sass/ui/homepage/_block-container.scss */
 .block-container__item-thumb img {
   max-width: 100%;
+}
+@media (max-width: 48em) {
+  /* line 10, sass/ui/homepage/_block-container.scss */
+  .block-container__item-thumb {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+    margin: auto;
+  }
 }
 
 /* line 14, sass/ui/homepage/_block-container.scss */
 .block-container__item-imagecontainer {
-  position: relative;
-  top: -500px;
-  margin-bottom: -500px;
   float: right;
+  position: relative;
+  top: -845px;
+  margin-bottom: -845px;
   width: 50%;
 }
 @media (max-width: 48em) {
@@ -1742,23 +1753,23 @@ svg.added {
   }
 }
 
-/* line 21, sass/ui/homepage/_block-container.scss */
+/* line 19, sass/ui/homepage/_block-container.scss */
 .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
   float: left;
   margin: 10px;
   width: 90%;
 }
-/* line 22, sass/ui/homepage/_block-container.scss */
+/* line 20, sass/ui/homepage/_block-container.scss */
 .block-container__item-image img, .block-container__item-image--reverse img, .block-container__item-image--left img {
   width: 250px;
 }
-/* line 23, sass/ui/homepage/_block-container.scss */
+/* line 21, sass/ui/homepage/_block-container.scss */
 .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
   width: 87%;
   border-radius: 4px;
 }
 @media (max-width: 48em) {
-  /* line 23, sass/ui/homepage/_block-container.scss */
+  /* line 21, sass/ui/homepage/_block-container.scss */
   .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
     min-width: 280px;
     max-width: 500px;
@@ -1766,25 +1777,25 @@ svg.added {
   }
 }
 @media (max-width: 48em) {
-  /* line 21, sass/ui/homepage/_block-container.scss */
+  /* line 19, sass/ui/homepage/_block-container.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
     width: 100%;
   }
 }
 @media (max-width: 30em) {
-  /* line 21, sass/ui/homepage/_block-container.scss */
+  /* line 19, sass/ui/homepage/_block-container.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
     width: 94%;
   }
 }
 
-/* line 31, sass/ui/homepage/_block-container.scss */
+/* line 29, sass/ui/homepage/_block-container.scss */
 .block-container__item-image--reverse, .block-container__item-image--left {
   float: right;
   border: none;
 }
 @media (max-width: 48em) {
-  /* line 31, sass/ui/homepage/_block-container.scss */
+  /* line 29, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--reverse, .block-container__item-image--left {
     display: block;
     max-height: 250px;
@@ -1793,110 +1804,110 @@ svg.added {
   }
 }
 
-/* line 38, sass/ui/homepage/_block-container.scss */
+/* line 36, sass/ui/homepage/_block-container.scss */
 .block-container__item-image--left {
   float: left;
   border: none;
   margin: auto;
 }
 @media (max-width: 48em) {
-  /* line 38, sass/ui/homepage/_block-container.scss */
+  /* line 36, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--left {
     float: none;
   }
 }
 @media (max-width: 30em) {
-  /* line 38, sass/ui/homepage/_block-container.scss */
+  /* line 36, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--left {
     float: left;
   }
 }
 
-/* line 48, sass/ui/homepage/_block-container.scss */
+/* line 46, sass/ui/homepage/_block-container.scss */
 .block-container--visie {
   background-color: #527B8B;
 }
 
-/* line 49, sass/ui/homepage/_block-container.scss */
+/* line 47, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item {
   width: 78%;
 }
 @media (max-width: 48em) {
-  /* line 49, sass/ui/homepage/_block-container.scss */
+  /* line 47, sass/ui/homepage/_block-container.scss */
   .block-container--visie__item {
     width: 93%;
   }
 }
 
-/* line 50, sass/ui/homepage/_block-container.scss */
+/* line 48, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right {
   float: left;
   width: 45%;
 }
-/* line 51, sass/ui/homepage/_block-container.scss */
+/* line 49, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right h1 {
   color: white;
   border-bottom: 5px solid #344E58;
 }
-/* line 52, sass/ui/homepage/_block-container.scss */
+/* line 50, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right p {
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 50, sass/ui/homepage/_block-container.scss */
+  /* line 48, sass/ui/homepage/_block-container.scss */
   .block-container--visie-description--right {
     width: 100%;
   }
 }
 
-/* line 56, sass/ui/homepage/_block-container.scss */
+/* line 54, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse {
   float: right;
   width: 45%;
 }
-/* line 57, sass/ui/homepage/_block-container.scss */
+/* line 55, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse h1 {
   color: white;
   border-bottom: 5px solid #344E58;
 }
-/* line 58, sass/ui/homepage/_block-container.scss */
+/* line 56, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse p {
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 56, sass/ui/homepage/_block-container.scss */
+  /* line 54, sass/ui/homepage/_block-container.scss */
   .block-container--visie-description--reverse {
     width: 100%;
   }
 }
 
-/* line 62, sass/ui/homepage/_block-container.scss */
+/* line 60, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--left {
   float: left;
   width: 45%;
 }
-/* line 63, sass/ui/homepage/_block-container.scss */
+/* line 61, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--left img {
   min-width: 250px;
 }
 @media (max-width: 48em) {
-  /* line 62, sass/ui/homepage/_block-container.scss */
+  /* line 60, sass/ui/homepage/_block-container.scss */
   .block-container--visie__item-image--left {
     width: 100%;
   }
 }
 
-/* line 69, sass/ui/homepage/_block-container.scss */
+/* line 67, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--reverse {
   float: right;
   width: 45%;
 }
-/* line 70, sass/ui/homepage/_block-container.scss */
+/* line 68, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--reverse img {
   min-width: 250px;
 }
 @media (max-width: 48em) {
-  /* line 69, sass/ui/homepage/_block-container.scss */
+  /* line 67, sass/ui/homepage/_block-container.scss */
   .block-container--visie__item-image--reverse {
     width: 100%;
   }
@@ -2209,6 +2220,17 @@ svg.added {
   .block-description--reverse-half-width {
     width: 88%;
   }
+}
+
+/* line 61, sass/ui/homepage/_block-description.scss */
+.block-description__item {
+  width: 100%;
+}
+
+/* line 62, sass/ui/homepage/_block-description.scss */
+.block-description__titles {
+  float: left;
+  width: 91%;
 }
 
 /*------------------------------------*\
