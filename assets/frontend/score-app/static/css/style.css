@@ -1,0 +1,471 @@
+/* General styles, mobile first */
+* {
+	box-sizing:border-box;
+}
+
+body {
+	font-size:100%;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+	font-weight: 300;
+	color:#333;
+	background-color: #fff;
+}
+h1 {
+	text-shadow: 1px 1px 1px #fff;
+	font-family: "Marker Felt";
+}
+p {
+
+}
+a {
+	font-weight:bold;
+	color:#0fa000;
+	-webkit-transition:all .5s ease;
+}
+a:hover {
+}
+ul {
+	list-style:none;
+	margin:0;
+	padding:0;
+}
+	ul li {
+		display: inline-block;
+
+	}
+		ul li a {
+			display:block;
+			border-color:#333;
+			border-style:solid;
+			border-width:1px 0 0;
+			
+			line-height:2;
+			text-decoration: none;
+			padding:0 2%;
+		}
+			ul li a strong {
+				display:block;
+				font-weight:normal;
+				color:#333;
+			}
+		ul li:last-child a {
+			border-bottom-width:1px;
+		}
+
+		ul li a:hover {
+			
+		}
+
+section img, video {
+	max-width: 100%;
+	border:10px solid #eee;
+	box-shadow:0 0 5px #aaa;
+	border-radius: 5px;
+	margin-bottom: 1em;
+}
+video {
+	width:100%;
+}
+figure {
+	margin:0;
+}
+figcaption {
+	font-size:.8em;
+	color:#666;
+	font-style: italic;
+}
+
+/* header section */
+header {
+	position:relative;
+	padding:0 0.5em;
+}
+	header img {
+		opacity:.3;
+		width:50px;
+		position:absolute;
+		
+		-webkit-transition:all 1s ease;
+	}
+	header img:hover {
+		opacity:1;
+	}
+	header h1 {
+		font-family: "Marker Felt";
+		color:#000;
+		font-size: 1.6em;
+		margin-left:2.5em;
+
+	}
+
+/* Content section */
+article#content {
+	clear:left;
+}
+	article > section {
+		display:none;
+	}
+	article > section.active {
+		display:block;
+	}
+	article h1 {
+		margin-bottom: .5em;
+	}
+
+	article ul {
+		display:inline-block;
+		list-style: none;
+	}
+/* Aside */
+aside {
+	text-align: center;
+}
+	aside h1 {
+		font-size:1.2em
+	}
+	aside img {
+		margin-bottom:1em;
+	}
+
+/* Jesse */
+h4:active, h4:visited{
+	background: #932B1C;
+}
+
+header ul li h4{
+	margin:auto;
+	width:100%;
+	color:white;
+	text-align: center;
+	padding:5px 0px;
+}
+html body{
+	background:#141414;
+}
+nav{
+	width: 100%;
+	margin-bottom: 3px !important;
+	margin:auto;
+	padding:0;
+}
+nav ul {
+	width: 100%;
+	margin: 0;	
+}
+nav ul li{
+	width: 33%;
+	margin:auto;
+
+}
+nav ul li a{
+	background:#d94935;
+	width: 100%;
+	margin:auto;
+}
+nav ul.headnav li a.active{
+	background: #932B1C;
+}
+.headtitle{
+	width:50%;
+	margin:auto;
+	height: 210px;
+}
+.title{
+	display:none;
+	padding-top:10px;
+	height:100px;
+	width:100%;
+	margin:auto;
+}
+.logo{
+	width:50%;
+	margin:auto;
+}
+.logo img{
+	text-align: center;
+	margin-top: 59px;
+	margin-left: 23%;
+	opacity: 1 !important;
+}
+.logo span{
+	display:none;
+}
+
+.addteam{
+	width: 50px;
+	height: 50px;
+	background: lightgrey;
+}
+article#content{
+	width:100%;
+}
+#ajaxloader{
+	background:white;
+	display:none;
+	padding:25px 75px;
+	width:200px;
+	height:115px;
+	margin:auto;
+}
+#gametemplate,#rankingtemplate,#scheduletemplate{
+	width:100%;
+	margin:0px;
+	
+}
+.gameFilter{
+	width:100%;
+	margin:0px;
+	margin-bottom: 3px !important;
+}
+
+
+.gameFilter li{
+	margin:auto;
+	width:33%;
+	background:white;
+	text-align: center;
+
+}
+.gamelist,.rankinglist,.schedulelist{
+	background: white;
+	margin-bottom: 3px !important;
+	width:100%;
+	margin:auto;
+	float:left;
+	
+}
+.gamelist li,.rankinglist li{
+	float:left;
+	padding-top: 25px;
+	text-align: center;
+	width: 20%;
+	height:100px;
+}
+.schedulelist li{
+	float:left;
+	padding-top: 25px;
+	text-align: center;
+	width: 14%;
+	height:100px;
+
+}
+nav ul li a h4{
+	
+	color: white;
+	text-align: center;
+
+
+}
+
+nav ul li a{
+	color: white;
+}
+a{
+	color:#333 !important;
+}
+a:hover{
+	text-decoration: none ;
+}
+ul li a{
+	border-style:none;
+}
+
+ul li{
+
+	border-top: 0px;
+	
+}
+.gamelist:hover,.rankinglist:hover, .schedulelist:hover, .gameFilter li:hover{
+	background:#E4E4E4;
+
+}
+#updatescore, #back{
+
+	width:33%;
+	margin:10px auto;
+	display:none;
+}
+#updatescore li{
+	width:41%;
+	height:50px;
+	border:none;
+	margin-bottom: 15px;
+}
+input[type="number"]{
+	width:100%;
+	height:50px;
+}
+
+#back li{
+	width:100%;
+	border:none;
+}
+.updateTeamScore, #back li button{
+	border:none;
+	height: 50px;
+	font-size: 21px;
+	color: white;
+	background: #d94935;
+	width:100%;
+}
+.updateTeamScore:hover, #back li button:hover{
+	background: #932B1C;
+}
+/* Dead Simple Grid (c) 2012 Vladimir Agafonkin */
+
+.col {
+	padding: 0 .5em;
+}
+.row .row {
+	margin: 0 -.5em;
+}
+
+.row:before, .row:after {
+	content: "";
+	display: table;
+}
+.row:after {
+	clear: both;
+}
+@media (max-width: 480px)  {
+	header nav ul.headnav li{
+		width:100%;
+		margin: 3px auto;
+	}
+	.logo img{
+		margin:0;
+		position: absolute;
+		width: 50%;
+		top:10px;
+	}
+	.logo{
+		width: 50%;
+	}
+	#back,#updatescore,#updatescore li, .updateTeam1Score,.updateTeam2Score{
+		width: 100%;
+	}
+	.schedulelist li{
+		width:50%;
+		height:0px;
+	}
+	.gamelist li{
+		width:17%;
+	}
+	.gamelist h5{
+		font-size: 12px;
+	}
+	.gameFilter li{
+		width:32%;
+	}
+}
+@media (min-width: 1024px){
+	#updatescore li:first-of-type{
+		margin-right:17%;
+	}
+}
+@media only screen {
+	.col {
+		float: left;
+		width: 100%;
+
+		-webkit-box-sizing: border-box;
+		   -moz-box-sizing: border-box;
+		        box-sizing: border-box;
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+	
+
+	
+
+
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen 
+and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+	/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+	/* Styles */
+	
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+	/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+	/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media
+only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio : 2) {
+	/* Styles */
+}
+
+@media
+only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio : 2) {
+	/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen 
+and (min-width : 1024px) {
+	
+
+/* Large screens ----------- */
+@media only screen 
+and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media
+only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media
+only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px)
+and (orientation : portrait)
+and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
