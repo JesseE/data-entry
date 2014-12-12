@@ -3,8 +3,12 @@
  */
 var express = require('express');
 var app = express(); 
+var path = require('path');     
+var port = 3000;
+var router = express.Router();
+var exphbs = require('express3-handlebars');
 // var fs = require('fs');
-// var imageData = [];
+// // var imageData = [];
 // var mongoClient = require('mongodb'),
 //     format = require('util').format;
 
@@ -62,12 +66,36 @@ var app = express();
 //     });   
 // });
 
-var path = require('path');     
-var port = 3000;
-var router = express.Router();
-var exphbs = require('express3-handlebars');
-    
-// a bot to prevent heroku from going to sleep
+//passport implementation
+var passport = require('passport');
+var mongoose = require('mongoose');
+var LocalStrategy = require('passport-local').Strategy;
+var Account = require('./assets/backend/scripts/account');
+//mongoose config
+
+// var Schema = mongoose.Schema;
+// var itemSchema = new Schema ({
+//     title: String
+//     // link: String,
+//     // mod_description: String,
+//     // mod_description_datavis: String,
+
+// });
+// var Items = mongoose.model('Item', itemSchema);
+// var Item_resizer = new Item({
+//     title: 'Resizer'
+// });
+// console.log(itemSchema);
+
+//passport config
+passport.use( new LocalStrategy(Account.authenticate()));
+passport.serializeUser(Account.serializeUser());
+passport.deserializeUser(Account.deserializeUser());
+
+//mongoose config
+mongoose.connect('mongodb://localhost/passport_local_mongoose');
+
+// a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
 var minutes = 20, the_interval = minutes * 60 * 1000;
 
 setInterval(function() {
@@ -79,90 +107,72 @@ setInterval(function() {
     });
 }, the_interval);
 
-// modules
-var index = require('./assets/scripts/backend/index.js');
-var datavisual = require('./assets/scripts/backend/datavisual.js'); 
-var resizer = require('./assets/scripts/backend/resizer.js'); 
-var melkweg = require('./assets/scripts/backend/melkweg.js');
-var scoreapp = require('./assets/scripts/backend/scoreapp.js');
-var pathogen = require('./assets/scripts/backend/pathogen.js');
-var klassiekwijzer = require('./assets/scripts/backend/klassiekwijzer.js');
+//get finch forward working
+app.enable('trust proxy');
 
-// page conditionals/booleans
-var homePage = {};
-var contentPage = {};
-var actionPage = {};
+app.set('views', __dirname + '/views');
+app.set('view engine', 'html');
+
+// modules
+var index = require('./assets/backend/scripts/index');
+
 // For gzip compression
 app.use(express.compress());
 
 app.engine('handlebars', exphbs({
     defaultLayout: 'main',
-    layoutsDir: 'views/layouts/',
-    partialsDir: 'views/partials/'
+    layoutsDir: 'views/handlebars/layouts/',
+    partialsDir: 'views/handlebars/partials/'   
 }));
 
 // Locate the views
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/views/handlebars');
 // Locate the assets
 app.use(express.static(__dirname + '/')); 
 app.use(express.static(__dirname + '/assets'));
-
 // Set Handlebars
 app.set('view engine', 'handlebars');
+
 /*
  * Routes
  */
+
+// ROUTING NOW DONE WITH ANGULAR TO CREATE SPA
+// STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
+
 // Index Page
-app.get('/', index.create);
-// posts page
-app.get('/datavisualisatie', datavisual.create);
-app.get('/datavis', function(request, response, next) {
-    response.render('partials/datavis' ,{
-        normal: true,
-        footer: true,
-        helpers:{
-            images: function() { return "../assets/images/placeholder-image.jpg"}
-    }});
+app.get('/', index.create, function(){
 });
-app.get('/resizer', resizer.create);
-app.get('/resizer-prototype', function(request, response, next) {
-    
-    contentPage = false;
-    homePage = false;
-    actionPage = true;
-    console.log('homepage = '+homePage, 'contentpage = '+contentPage, 'actionpage = '+ actionPage); 
-    
+// app.get('/resizer', resizer.create);
+app.get('/resizer-prototype', function(request, response, next) { 
     response.render('partials/resizer',{
         normal: true,
         footer: false,
-        resizer: true,
-        helpers:{
-            images: function() { return "../assets/images/placeholder-image-2.jpg"}
-    }}); 
+        resizer: true
+    }); 
 });
-app.get('/melkweg', melkweg.create);
-app.get('/score-app', scoreapp.create);
+// app.get('/melkweg', melkweg.create);
+// app.get('/score-app', scoreapp.create);
 app.get('/score-app-prototype', function(request, response, next) {
     response.render('layouts/score-app',{
         normal: false,
         nav_1: false,
         nav_2: false,
-        footer: false,
-        helpers:{
-    }}); 
+        footer: false
+    }); 
 });
-app.get('/pathogen', pathogen.create);
+// app.get('/pathogen', pathogen.create);
 app.get('/pathogen-prototype', function(request, response, next) {
     response.render('layouts/pathogen',{
         normal: false,
         nav_1: false,
         nav_2: false,
-        footer: false,
-        helpers:{
-            title: function () { return 'Score App'; }
-    }}); 
+        footer: false
+    }); 
 });
-app.get('/klassiekwijzer', klassiekwijzer.create);
+// ROUTING WITH EXPRESS & HANDLEBARS
+// var handlebars_routing = require('./assets/backend/scripts/handlebars_routing');
+
 /*
  * Start the server
  */

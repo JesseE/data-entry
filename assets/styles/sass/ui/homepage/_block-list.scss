@@ -40,3 +40,7 @@
 		width: 72%;
 	}
 }
+.block-list--articletools-container__text{@extend .block-list--tools-container__text;}
+.block-list--articletools-container{
+	@extend .block-list--tools-container;
+}

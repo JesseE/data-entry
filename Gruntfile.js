@@ -1,27 +1,14 @@
 'use strict';
 
 module.exports = function (grunt) {
+    grunt.loadNpmTasks('grunt-contrib-watch');
     // show elapsed time at the end
     require('time-grunt')(grunt);
-    // load all grunt tasks
+    // load all grunt tasks   
     require('load-grunt-tasks')(grunt);
     grunt.initConfig({
         // Watch Config
         watch: {
-            files: ['views/**/*'],
-            options: {
-                livereload: true
-            },
-            scripts: {
-                files: [
-                    'assets/scripts/**/*.js',                            
-                ],
-            },
-            css: {
-                files: [
-                    'assets/styles/**/*.css',
-                ],
-            },
             express: {
                 files:  [ 'app.js', '!**/node_modules/**', '!Gruntfile.js' ],
                 tasks:  [ 'express:dev' ],
@@ -29,6 +16,25 @@ module.exports = function (grunt) {
                     nospawn: true // Without this option specified express won't be reloaded
                 }
             },
+            files: ['views/**/*'],
+            options: {
+                reload: true
+            },
+            scripts: {
+                files: [
+                    'assets/scripts/**/*.js',                            
+                ],
+                options: {
+                    spawn:false,
+                    reload:true
+                }    
+            },
+            css: {
+                files: [
+                    'assets/styles/**/*.css',
+                ],
+            },
+            
             sass: {
                 files: ['assets/styles/sass/ui/homepage/*.scss'],
                 tasks: ['sass:dev']
@@ -38,7 +44,6 @@ module.exports = function (grunt) {
                     'assets/images/**/*.{png,jpg,jpeg,webp}',
                 ],
             },
-
         },
         scripts: {
                 files: [
@@ -251,21 +256,11 @@ module.exports = function (grunt) {
     
     // Register Tasks
     // Workon
-
+    grunt.registerTask('server', [ 'express:dev', 'watch' ])
     grunt.registerTask('run', 'Start working on this project.', [
         // 'jshint',
         'sass:dev',
         'express:dev',
-        // 'open:site',
-        // 'open:editor',
-        //'clean:dev',
-        //'concurrent:dev',
-        // 'useminPrepare',
-        // 'imagemin',
-        // 'cssmin',
-        // 'usemin',
-        // 'rev',
-        // 'concat',
         'watch'
     ]);
 
