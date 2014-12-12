@@ -4,7 +4,7 @@
 * {
 	font-family: "helvetica","Arial";
 }
-a.smarterwiki-linkify{ color: white;}
+a.smarterwiki-linkify{ color: white; text-decoration:none;}
 html,body{
 	width: 100%;margin: 0;
 }
@@ -60,3 +60,8 @@ h5{color:white;}
 .no-mob{
 	@include bp(phone){display:none;}
 }
+.button__standard{
+	display: block;	margin: 5px auto;	width: 90%;	height: 40px;	background: #344E58;	border: 1px solid #FFF;	outline: none;	border-radius: 6px;	color: #FFF;
+	span{font-size: 14px; }
+}
+a .button__standard{ span {text-decoration:none;}}

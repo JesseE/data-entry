@@ -2291,6 +2291,7 @@ svg.added {
 /* line 7, sass/ui/homepage/_scaffolding.scss */
 a.smarterwiki-linkify {
   color: white;
+  text-decoration: none;
 }
 
 /* line 8, sass/ui/homepage/_scaffolding.scss */
@@ -2447,6 +2448,28 @@ h5 {
   .no-mob {
     display: none;
   }
+}
+
+/* line 63, sass/ui/homepage/_scaffolding.scss */
+.button__standard {
+  display: block;
+  margin: 5px auto;
+  width: 90%;
+  height: 40px;
+  background: #344E58;
+  border: 1px solid #FFF;
+  outline: none;
+  border-radius: 6px;
+  color: #FFF;
+}
+/* line 65, sass/ui/homepage/_scaffolding.scss */
+.button__standard span {
+  font-size: 14px;
+}
+
+/* line 67, sass/ui/homepage/_scaffolding.scss */
+a .button__standard span {
+  text-decoration: none;
 }
 
 /*------------------------------------*\
