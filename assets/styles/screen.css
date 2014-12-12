@@ -2419,7 +2419,8 @@ h5 {
   width: 90%;
   height: 40px;
   background: #344E58;
-  border: 1px solid #FFF;
+  box-shadow: 1px 2px 5px grey;
+  border: 0px solid #FFF;
   outline: none;
   border-radius: 6px;
   color: #FFF;
