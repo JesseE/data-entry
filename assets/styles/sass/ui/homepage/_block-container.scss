@@ -20,7 +20,7 @@
 }
 .block-container__item-image{ float: left; margin: 10px; width: 90%;
 	img{ width: 250px;}	
-	.block-container__item__image{ width: 87%; border-radius: 4px;@include bp(med){min-width: 320px; max-width: 500px; margin:0 5%;}}
+	.block-container__item__image{ width: 87%; border-radius: 4px;@include bp(med){min-width: 280px; max-width: 500px; margin:0 5%;}}
 	@include bp(med) {
 		width: 100%;
 	}
@@ -46,7 +46,7 @@
 	}
 }
 .block-container--visie{@extend .block-container; background-color: #527B8B;}
-.block-container--visie__item{@extend .block-container__item; width: 78%;}
+.block-container--visie__item{@extend .block-container__item; width: 78%; @include bp(med) {width:93%;}}
 .block-container--visie-description--right{
 	h1 {color: white; border-bottom: 5px solid #344E58;}
 	p{ color: white;}

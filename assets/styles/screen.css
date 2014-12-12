@@ -1849,7 +1849,7 @@ svg.added {
 @media (max-width: 48em) {
   /* line 23, sass/ui/homepage/_block-container.scss */
   .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
-    min-width: 320px;
+    min-width: 280px;
     max-width: 500px;
     margin: 0 5%;
   }
@@ -1910,6 +1910,12 @@ svg.added {
 /* line 49, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item {
   width: 78%;
+}
+@media (max-width: 48em) {
+  /* line 49, sass/ui/homepage/_block-container.scss */
+  .block-container--visie__item {
+    width: 93%;
+  }
 }
 
 /* line 50, sass/ui/homepage/_block-container.scss */
