@@ -1,7 +1,7 @@
 <section >
 	<div class="container" id="assignments" name="assignments">
 	    <div class="banner" id="projects" ng-click="showView = !showView" >
-	    	<a href="/" style="text-decoration:none;">
+	    	<a href="/#projects" style="text-decoration:none;">
 	    		<h1 ng-hide="showView" >projects</h1>
 	    		<h1 ng-show="showView" >show projects</h1>
 	    	</a>
@@ -9,7 +9,7 @@
 	    <div class="block-list" ng-hide="showView">
 	    	{{#each item.entry}}	
 	    	<div class="block-image {{mod-block}}" ng-click="showView = !showView">
-    			<a href="/projects/{{link}}">
+    			<a href="/projects/{{link}}#projects">
     				<div class="pos"><img src="{{img}}"></div>
     				<div class="block-item" id="post-6">
 			    		<div class="block-text">

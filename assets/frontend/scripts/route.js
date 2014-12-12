@@ -12,13 +12,10 @@ var app = angular.module('myApp', ["ngRoute"]).
             controller: "ArticleController",
             controllerAs: "article"
         })
-        .otherwise({
-                redirectTo: '/'
-            });
     }
   ]     
 );
-  
+
 
 
 app.controller('ArticleController',["$scope", "$routeParams", function($scope, $routeParams) {      
