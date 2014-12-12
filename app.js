@@ -67,10 +67,10 @@ var exphbs = require('express3-handlebars');
 // });
 
 //passport implementation
-var passport = require('passport');
-var mongoose = require('mongoose');
-var LocalStrategy = require('passport-local').Strategy;
-var Account = require('./assets/backend/scripts/account');
+// var passport = require('passport');
+// var mongoose = require('mongoose');
+// var LocalStrategy = require('passport-local').Strategy;
+// var Account = require('./assets/backend/scripts/account');
 //mongoose config
 
 // var Schema = mongoose.Schema;
@@ -88,12 +88,12 @@ var Account = require('./assets/backend/scripts/account');
 // console.log(itemSchema);
 
 //passport config
-passport.use( new LocalStrategy(Account.authenticate()));
-passport.serializeUser(Account.serializeUser());
-passport.deserializeUser(Account.deserializeUser());
+// passport.use( new LocalStrategy(Account.authenticate()));
+// passport.serializeUser(Account.serializeUser());
+// passport.deserializeUser(Account.deserializeUser());
 
-//mongoose config
-mongoose.connect('mongodb://localhost/passport_local_mongoose');
+// //mongoose config
+// mongoose.connect('mongodb://localhost/passport_local_mongoose');
 
 // a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
 var minutes = 20, the_interval = minutes * 60 * 1000;
