@@ -2860,9 +2860,14 @@ body {
     font-size: 27px;
     text-align: center;
   }
+  /* line 18, sass/ui/homepage/_header.scss */
+  .header__bg h2 {
+    font-size: 22px;
+    text-align: center;
+  }
 }
 
-/* line 21, sass/ui/homepage/_header.scss */
+/* line 22, sass/ui/homepage/_header.scss */
 .header__brand {
   color: black;
   width: 100%;

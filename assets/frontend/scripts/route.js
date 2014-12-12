@@ -5,16 +5,21 @@ var articleDataScore = [];
 var app = angular.module('myApp', ["ngRoute"]).
   config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
-      $locationProvider.html5Mode(true);
+      $locationProvider.html5Mode(true).hashPrefix('!');
       $routeProvider
         .when("/projects/:primaryId", {
             templateUrl: "views/app.html",
             controller: "ArticleController",
             controllerAs: "article"
-        });
+        })
+        .otherwise({
+                redirectTo: '/'
+            });
     }
   ]     
 );
+  
+
 
 app.controller('ArticleController',["$scope", "$routeParams", function($scope, $routeParams) {      
    var articles = [];
@@ -219,6 +224,7 @@ app.controller('ArticleController',["$scope", "$routeParams", function($scope, $
             link: '/pathogen-prototype',
         },
     ]   
+
 
 // itemUri();
 
