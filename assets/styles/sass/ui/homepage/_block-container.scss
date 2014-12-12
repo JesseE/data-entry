@@ -30,7 +30,7 @@
 }
 .block-container__item-image--reverse{
 	@extend .block-container__item-image;
-	float: right; border: none; /*max-width: 250px; margin-top: 50px;*/
+	float: right; border: none; 
 	@include bp(med) {
 		display:block;max-height: 250px;margin: 50px auto;float:none;
 	}
