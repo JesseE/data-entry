@@ -8,18 +8,19 @@
 	}
 }
 .block-container__item-thumb{
-	max-width: 500px;min-width:320px;margin: auto;
+	max-width: 400px;min-width:320px;margin: auto;
 	img{ max-width: 100%;}
 }
 .block-container__item-imagecontainer{
+	position:relative; top:-500px;margin-bottom: -500px;
 	float: right;width: 50%;
 	@include bp(med){
-		width:100%; margin: 0 1%;
+		width:100%; margin: 0 1%; top:-50px;
 	}
 }
 .block-container__item-image{ float: left; margin: 10px; width: 90%;
 	img{ width: 250px;}	
-	.block-container__item__image{ width: 100%; border-radius: 4px;}
+	.block-container__item__image{ width: 87%; border-radius: 4px;@include bp(med){min-width: 320px; max-width: 500px; margin:0 5%;}}
 	@include bp(med) {
 		width: 100%;
 	}
@@ -47,26 +48,26 @@
 .block-container--visie{@extend .block-container; background-color: #527B8B;}
 .block-container--visie__item{@extend .block-container__item; width: 78%;}
 .block-container--visie-description--right{
-	h1 {color: white; border-bottom: 4px solid #344E58;}
+	h1 {color: white; border-bottom: 5px solid #344E58;}
 	p{ color: white;}
 	float:left; width: 45%;
 	@include bp(med){width: 100%;}
 }
 .block-container--visie-description--reverse{
-	h1 {color: white; border-bottom: 4px solid #344E58;}
+	h1 {color: white; border-bottom: 5px solid #344E58;}
 	p{color: white;}
 	float:right; width: 45%;
 	@include bp(med){width: 100%;}
 }
 .block-container--visie__item-image--left{
-	img{min-width: 200px;}
+	img{min-width: 250px;}
 	float:left; width: 45%;	
 	@include bp(med){width: 100%;}
 
 
 }
 .block-container--visie__item-image--reverse{
-	img{min-width: 200px;}
+	img{min-width: 250px;}
 	float:right;width:45%;
 	@include bp(med){width: 100%;}
 }

@@ -96,16 +96,16 @@ passport.deserializeUser(Account.deserializeUser());
 mongoose.connect('mongodb://localhost/passport_local_mongoose');
 
 // a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
-// var minutes = 20, the_interval = minutes * 60 * 1000;
+var minutes = 20, the_interval = minutes * 60 * 1000;
 
-// setInterval(function() {
-//     var options = {
-//         host: 'www.jesseeikema.nl'
-//     };
-//     http.get(options, function (http_res) {
-//         console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-//     });
-// }, the_interval);
+setInterval(function() {
+    var options = {
+        host: 'www.jesseeikema.nl'
+    };
+    http.get(options, function (http_res) {
+        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
+    });
+}, the_interval);
 
 //get finch forward working
 app.enable('trust proxy');
@@ -143,7 +143,33 @@ app.set('view engine', 'handlebars');
 // Index Page
 app.get('/*', index.create, function(){
 });
-
+// app.get('/resizer', resizer.create);
+app.get('/resizer-prototype', function(request, response, next) { 
+    response.render('partials/resizer',{
+        normal: true,
+        footer: false,
+        resizer: true
+    }); 
+});
+// app.get('/melkweg', melkweg.create);
+// app.get('/score-app', scoreapp.create);
+app.get('/score-app-prototype', function(request, response, next) {
+    response.render('layouts/score-app',{
+        normal: false,
+        nav_1: false,
+        nav_2: false,
+        footer: false
+    }); 
+});
+// app.get('/pathogen', pathogen.create);
+app.get('/pathogen-prototype', function(request, response, next) {
+    response.render('layouts/pathogen',{
+        normal: false,
+        nav_1: false,
+        nav_2: false,
+        footer: false
+    }); 
+});
 // ROUTING WITH EXPRESS & HANDLEBARS
 // var handlebars_routing = require('./assets/backend/scripts/handlebars_routing');
 
