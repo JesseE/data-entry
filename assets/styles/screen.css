@@ -2399,7 +2399,7 @@ h5 {
 }
 
 /* line 45, sass/ui/homepage/_scaffolding.scss */
-.banner, .banner--border-bottom {
+.banner, .banner--border-bottom, .banner--reverse-color {
   float: left;
   height: 100px;
   width: 100%;
@@ -2411,7 +2411,7 @@ h5 {
   text-align: center;
 }
 /* line 48, sass/ui/homepage/_scaffolding.scss */
-.banner h1, .banner--border-bottom h1 {
+.banner h1, .banner--border-bottom h1, .banner--reverse-color h1 {
   width: 100%;
   margin: 0 auto;
   color: #344E58;
@@ -2419,23 +2419,32 @@ h5 {
   line-height: 50px;
 }
 /* line 49, sass/ui/homepage/_scaffolding.scss */
-.banner p, .banner--border-bottom p {
+.banner p, .banner--border-bottom p, .banner--reverse-color p {
   padding: 20px;
 }
 @media (max-width: 48em) {
   /* line 51, sass/ui/homepage/_scaffolding.scss */
-  .banner h1, .banner--border-bottom h1 {
+  .banner h1, .banner--border-bottom h1, .banner--reverse-color h1 {
     padding: 0;
     line-height: 100px;
   }
 }
 
 /* line 55, sass/ui/homepage/_scaffolding.scss */
-.banner--border-bottom {
+.banner--border-bottom, .banner--reverse-color {
   /*border-bottom: 5px solid #344E58;*/
 }
 
 /* line 56, sass/ui/homepage/_scaffolding.scss */
+.banner--reverse-color {
+  background-color: #527B8B;
+}
+/* line 57, sass/ui/homepage/_scaffolding.scss */
+.banner--reverse-color h1 {
+  color: white;
+}
+
+/* line 59, sass/ui/homepage/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
@@ -2444,13 +2453,13 @@ h5 {
 }
 
 @media (max-width: 30em) {
-  /* line 60, sass/ui/homepage/_scaffolding.scss */
+  /* line 63, sass/ui/homepage/_scaffolding.scss */
   .no-mob {
     display: none;
   }
 }
 
-/* line 63, sass/ui/homepage/_scaffolding.scss */
+/* line 66, sass/ui/homepage/_scaffolding.scss */
 .button__standard {
   display: block;
   margin: 5px auto;
@@ -2462,12 +2471,12 @@ h5 {
   border-radius: 6px;
   color: #FFF;
 }
-/* line 65, sass/ui/homepage/_scaffolding.scss */
+/* line 68, sass/ui/homepage/_scaffolding.scss */
 .button__standard span {
   font-size: 14px;
 }
 
-/* line 67, sass/ui/homepage/_scaffolding.scss */
+/* line 70, sass/ui/homepage/_scaffolding.scss */
 a .button__standard span {
   text-decoration: none;
 }

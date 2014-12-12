@@ -2,7 +2,8 @@
 	<div class="container" id="assignments" name="assignments">
 	    <div class="banner" id="projects" ng-click="showView = !showView" >
 	    	<a href="/" style="text-decoration:none;">
-	    		<h1>projects</h1>
+	    		<h1 ng-hide="showView" >projects</h1>
+	    		<h1 ng-show="showView" >show projects</h1>
 	    	</a>
 	    </div>
 	    <div class="block-list" ng-hide="showView">
@@ -26,7 +27,7 @@
 <!-- Angular import view -->
 	<div class="about" id="visie" name="visie">
 		<div class="visie">
-			<div class="banner--border-bottom"><h1>visie</h1></div>
+			<div class="banner--reverse-color"><h1>visie</h1></div>
 			<section class="block-container--visie">
 				{{#each text.visie}}
 				<div class="block-container--visie__item">
@@ -72,7 +73,7 @@
 			</div>
 		</div>
 		<div class="git-activity">
-		<div class="banner--border-bottom" id="git-activiteit"><h1>Github repository stream</h1></div>
+		<div class="banner--reverse-color" id="git-activiteit"><h1>Github repository stream</h1></div>
 		<div class="git-feed__description">
 			<div class="git-feed__comment"></div>
 		</div>

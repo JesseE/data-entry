@@ -53,6 +53,9 @@ h5{color:white;}
 	}
 }
 .banner--border-bottom{ @extend .banner; /*border-bottom: 5px solid #344E58;*/}
+.banner--reverse-color{ @extend .banner--border-bottom; background-color:#527B8B;
+	h1{color: white;}
+}
 .about{
 	float:left; width: 100%; text-align:center; margin-top: 50px;
 	// h1 { margin: 30px auto;float:left;width:100%; color: white; }
