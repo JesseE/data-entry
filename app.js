@@ -141,7 +141,7 @@ app.set('view engine', 'handlebars');
 // STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
 
 // Index Page
-app.get('/', index.create, function(){
+app.get('/*', index.create, function(){
 });
 // app.get('/resizer', resizer.create);
 app.get('/resizer-prototype', function(request, response, next) { 
