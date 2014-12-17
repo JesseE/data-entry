@@ -107,15 +107,8 @@ setInterval(function() {
     });
 }, the_interval);
 
-//get finch forward working
-// 
-
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
-
-// modules
-var index = require('./assets/backend/scripts/index');
-
 // For gzip compression
 app.use(express.compress());
 
@@ -140,10 +133,21 @@ app.set('view engine', 'handlebars');
 // ROUTING NOW DONE WITH ANGULAR TO CREATE SPA
 // STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
 
+var index = require('./assets/backend/scripts/index');
+// var model_item = require('./assets/backend/scripts/model-item');
+// var gitFeed = require('./assets/backend/scripts/gitvisual_request')
+// var datavisual = require('./assets/backend/scripts/datavisual'); 
+// var resizer = require('./assets/backend/scripts/resizer'); 
+// var melkweg = require('./assets/backend/scripts/melkweg');
+// var scoreapp = require('./assets/backend/scripts/scoreapp');
+// var pathogen = require('./assets/backend/scripts/pathogen');
+// var klassiekwijzer = require('./assets/backend/scripts/klassiekwijzer');
 // Index Page
 app.get('/', index.create, function(){
 });
-// app.get('/resizer', resizer.create);
+app.get('/datavisualisatie',index.create);
+app.get('/klassiekwijzer',index.create);
+app.get('/resizer', index.create);
 app.get('/resizer-prototype', function(request, response, next) { 
     response.render('partials/resizer',{
         normal: true,
@@ -151,8 +155,8 @@ app.get('/resizer-prototype', function(request, response, next) {
         resizer: true
     }); 
 });
-// app.get('/melkweg', melkweg.create);
-// app.get('/score-app', scoreapp.create);
+app.get('/melkweg',index.create);
+app.get('/score-app',index.create);
 app.get('/score-app-prototype', function(request, response, next) {
     response.render('layouts/score-app',{
         normal: false,
@@ -161,7 +165,7 @@ app.get('/score-app-prototype', function(request, response, next) {
         footer: false
     }); 
 });
-// app.get('/pathogen', pathogen.create);
+app.get('/pathogen',index.create);
 app.get('/pathogen-prototype', function(request, response, next) {
     response.render('layouts/pathogen',{
         normal: false,
@@ -170,8 +174,9 @@ app.get('/pathogen-prototype', function(request, response, next) {
         footer: false
     }); 
 });
+
 // ROUTING WITH EXPRESS & HANDLEBARS
-// var handlebars_routing = require('./assets/backend/scripts/handlebars_routing');
+var handlebars_routing = require('./assets/backend/scripts/handlebars_routing');
 
 /*
  * Start the server

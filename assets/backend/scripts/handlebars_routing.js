@@ -11,15 +11,15 @@ var scoreapp = require('./scoreapp');
 var pathogen = require('./pathogen');
 var klassiekwijzer = require('./klassiekwijzer');
 
-// app.use('/', index.create);
-// app.get('/datavisualisatie', datavisual.create);
+app.use('/', index.create);
+app.get('/datavisualisatie', datavisual.create);
 app.get('/datavis', function(request, response, next) {
     response.render('partials/datavis' ,{
         normal: true,
         footer: true
     });
 });
-// app.get('/resizer', resizer.create);
+app.get('/resizer', resizer.create);
 app.get('/resizer-prototype', function(request, response, next) { 
     response.render('partials/resizer',{
         normal: true,
@@ -27,8 +27,8 @@ app.get('/resizer-prototype', function(request, response, next) {
         resizer: true
     }); 
 });
-// app.get('/melkweg', melkweg.create);
-// app.get('/score-app', scoreapp.create);
+app.get('/melkweg', melkweg.create);
+app.get('/score-app', scoreapp.create);
 app.get('/score-app-prototype', function(request, response, next) {
     response.render('layouts/score-app',{
         normal: false,
