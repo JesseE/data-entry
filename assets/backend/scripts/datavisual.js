@@ -9,29 +9,42 @@ module.exports.create = function(request, response, next) {
         {'name': "Node.js", 'score': 17},
         {'name': "unirest.js", 'score': 16}
     ];
-    var imgEntry = [
-        {"img":"../assets/images/datavis_v1.png"}
-    ];
-    var textEntry = [
-        {"text":"Een datavisualisatie van de toevoegingen en verwijderingen van regels code die in repositories van Grrr staan. "},
-        {"text":"Een indicatie maken van de actuele code veranderingen per project van Grrr. Het was de bedoeling om gegevens van de geschreven code te laten zien door contact te maken met de API van Bitbucket.com en deze gegevens werden dan gevisualiseerd met behulp van d3.js."}
-    ];
-    
-    contentPage = true;
-    homePage = false;
-    actionPage = false;
-    console.log('homepage = '+homePage, 'contentpage = '+contentPage, 'contentpage = '+ actionPage);
-    
+    var itemEntry = {  
+        entry: [
+            {
+                "title": "Datavisualisatie",     
+                "links" : "",
+                "mod-description": "--reverse-color",
+            },
+        ],
+        datavis: [
+            {
+                "mod-description": "--reverse-full-width"
+            },
+        ],
+        text : [
+            {
+                "sub-title": "Omschrijving",
+                "text" :"Een datavisualisatie van de toevoegingen en verwijderingen van regels code die in repositories van Grrr staan.",
+            },
+            {
+                "sub-title": "Doelstelling",
+                "text" :"Een indicatie maken van de actuele code veranderingen per project van Grrr. Het was de bedoeling om gegevens van de geschreven code te laten zien door contact te maken met de API van Bitbucket.com en deze gegevens werden dan gevisualiseerd met behulp van d3.js.",   
+            },    
+        ],
+        img : [
+            {
+                "img":"../assets/images/datavis_v1.png"
+            },
+        ] 
+    };
     response.render('partials/item' ,{
-        img: imgEntry,
-        text: textEntry,
+        item: itemEntry,
         normal: true,
         nav_1: true,
         nav_2: true,
         footer: true,
         helpers:{
-            title: function () { return 'Datavisualisatie'},
-            links: function () { return ''},
             name: function () {
                 var nameBucket = [];
                 for (var i = 0, len = name.length; i < len; i ++){

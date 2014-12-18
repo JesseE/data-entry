@@ -2,8 +2,8 @@
 		timeline
 *************************/
 .skills {
-	float:left;position: relative;width: 100%;background-color: white;
-	svg{ height: 425px;
+	float:left; position: relative;width: 100%;background-color: white;
+	svg{ height: 520px;
 		g{
 			rect{ width: 100%;}
 		}
@@ -20,4 +20,7 @@
 		}
 	}
 	@include bp(med) { width: 26%;}
+}
+.skills__articletext {
+	@extend .skills__text; width: 30%;
 }

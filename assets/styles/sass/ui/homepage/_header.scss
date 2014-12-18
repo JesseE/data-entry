@@ -12,9 +12,10 @@ header.menu-active{
 }
 .header__bg{
 	position:relative; top: 25%; width: 75%; height: 400px; margin: 7% 20%; /*background-color: black;*/color:black; 
-	h1 {font-size: 57px;}
+	h1 {font-size: 51px;}
 	@include bp (med) {	position: relative;top: 60px;width: 100%;height: 460px;margin: 0;
 		h1{font-size: 27px;text-align: center;}
+		h2{font-size: 22px;text-align: center;}
 	}
 //uhm
 }

@@ -4,7 +4,7 @@
 * {
 	font-family: "helvetica","Arial";
 }
-a.smarterwiki-linkify{ color: white;}
+a.smarterwiki-linkify{ color: white; text-decoration:none;}
 html,body{
 	width: 100%;margin: 0;
 }
@@ -32,7 +32,7 @@ h5{color:white;}
 	@include bp(med){display:none;}
 }
 .container{
-	position: relative; float: left; margin: 0 auto 100px auto; width: 100%; background-color: white; 
+	position: relative; float: left; margin: 0 auto 0 auto; width: 100%; background-color: white; 
 	h1 { width: 100%; margin: 0 auto; color: white; }
 	@include bp(med){
 		margin: 0 auto;
@@ -53,6 +53,9 @@ h5{color:white;}
 	}
 }
 .banner--border-bottom{ @extend .banner; /*border-bottom: 5px solid #344E58;*/}
+.banner--reverse-color{ @extend .banner--border-bottom; background-color:#527B8B;
+	h1{color: white;}
+}
 .about{
 	float:left; width: 100%; text-align:center; margin-top: 50px;
 	// h1 { margin: 30px auto;float:left;width:100%; color: white; }
@@ -60,3 +63,8 @@ h5{color:white;}
 .no-mob{
 	@include bp(phone){display:none;}
 }
+.button__standard{
+	display: block;	margin: 5px auto;	width: 90%;	height: 40px;	background: #344E58;box-shadow: 1px 2px 5px grey;	border: 0px solid #FFF;	outline: none;	border-radius: 6px;	color: #FFF;
+	span{font-size: 14px; }
+}
+a {text-decoration:none;}

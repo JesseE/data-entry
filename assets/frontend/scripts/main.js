@@ -72,7 +72,6 @@ var mode = 2;
 
 /*/////////////////////////////
     skills visualisation
-    my first datavisualisation template
 *//////////////////////////////
 var nameData = nameContainer[0];
 var scoreData = scoreContainer;
@@ -134,20 +133,20 @@ bartext.selectAll("div")
     .attr("fill", "#344E58")
     .text(function(d) { return d; });
 
+
 /*/////////////////////////////
  git activity visualisation
 *//////////////////////////////
 // only load on screen larger than 500px
 
 if(window.innerWidth > 500){
-console.log("visual is calc"); 
 
 // fetched array's
-var gitBarHeight = 10;
+var gitBarHeight = 9;
 var gitData2 = {remove : removedData};
 var gitData = {add: addData};
 
-if(gitData.length = 90){ console.log(gitData.length);
+if(gitData.length = 90){ 
 
 Container.push(gitData);
 Container.push(gitData2);
@@ -160,8 +159,8 @@ Container.push(gitData2);
 var addedArray = Container[1].add;
 for (var i = 0, len = addedArray.length; i < len; i++ ){
     addedArray[i];
-    if( addedArray[i] > 1000 ){
-        addedArray[i] = 500;        
+    if( addedArray[i] > 300 ){
+        addedArray[i] = 300;        
     }
     if( addedArray[i] < 20 ){
         addedArray[i] = 25;
@@ -171,8 +170,8 @@ for (var i = 0, len = addedArray.length; i < len; i++ ){
 var removedArray = Container[2].remove;
 for (var i = 0, len = removedArray.length; i < len; i++ ){
     removedArray[i];
-    if( removedArray[i] > 1000 ){
-        removedArray[i] = 500;        
+    if( removedArray[i] > 300 ){
+        removedArray[i] = 300;        
     }
     if( removedArray[i] < 20 ){
         removedArray[i] = 25;
@@ -181,8 +180,8 @@ for (var i = 0, len = removedArray.length; i < len; i++ ){
 
 //range and domain visual
 var x2 = d3.scale.linear()
-    .domain([0, 500])
-    .range([0, 500]);
+    .domain([0, 300])
+    .range([0, 300]);
 
 var chartZ = d3.select(".git-feed .added")
     .attr("width", 300)
@@ -209,7 +208,7 @@ var barB = chartZ.selectAll("g")
                     .style("color","#FFF")
                     .text(function(d){   
                         if( addedArray[i] <= 25 ){ return "less than 25 lines of code is added";}
-                        if( addedArray[i] >= 500 ){ return "more than 500 lines of code is added";}  
+                        if( addedArray[i] >= 300 ){ return "more than 300 lines of code is added";}  
                         return addedArray[i] + ' lines of code are added';})
                 d3.select('.git-feed__description')
                     .append("text")
@@ -227,8 +226,8 @@ barB.append("rect")
     .attr("height", gitBarHeight - 1);
 
 var x3 = d3.scale.linear()
-    .domain([0,500])
-    .range([0,500]);
+    .domain([0,300])
+    .range([0,300]);
 
 var chartX = d3.select(".git-feed .removed")
     .attr("width", 300)
@@ -255,7 +254,7 @@ var barC = chartX.selectAll(".git-feed__description")
                     .style("color","#FFF")
                     .text(function(d){   
                         if( removedArray[i] <= 25 ){ return "less than 25 lines of code is removed";}
-                        if( removedArray[i] >= 500 ){ return "more than 500 lines of code is removed";}  
+                        if( removedArray[i] >= 300 ){ return "more than 300 lines of code is removed";}  
                         return removedArray[i] + ' lines of code are removed';})
                 d3.select('.git-feed__description')
                     .append("text")
