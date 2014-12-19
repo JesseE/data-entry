@@ -3,8 +3,8 @@
  */
 var express = require('express');
 var app = express(); 
-var mongoClient = require('mongodb'),
-    format = require('util').format;
+// var mongoClient = require('mongodb'),
+//     format = require('util').format;
 var path = require('path');     
 var port = 3000;
 var exphbs = require('express3-handlebars');
@@ -98,16 +98,16 @@ var exphbs = require('express3-handlebars');
 // mongoose.connect('mongodb://localhost/passport_local_mongoose');
 
 // a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
-// var minutes = 20, the_interval = minutes * 60 * 1000;
+var minutes = 20, the_interval = minutes * 60 * 1000;
 
-// setInterval(function() {
-//     var options = {
-//         host: 'www.jesseeikema.nl'
-//     };
-//     http.get(options, function (http_res) {
-//         console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-//     });
-// }, the_interval);
+setInterval(function() {
+    var options = {
+        host: 'www.jesseeikema.nl'
+    };
+    http.get(options, function (http_res) {
+        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
+    });
+}, the_interval);
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
