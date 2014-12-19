@@ -1,0 +1,39 @@
+    <section  class="block-container">
+        <div class="block-container__item" ng-repeat = "article in article.items" >
+
+            <div class="block-description--reverse-color">
+                            
+                <div class="block-description__item">
+                    <div class="block-container__item-thumb">
+                        <img ng-src="{{article.image_thumb}}">    
+                    </div>
+                <div class="block-description__titles">
+                    <h1>{{article.title}}</h1>
+                    <h3>{{article.sub_title}}</h3>
+                </div>
+                </div>
+                <div class="block-description--reverse-color__paragraphs" >
+                    <p ng-repeat = "paragraph in article.paragraphs" >{{paragraph}}</p>   
+                    <a  href="{{article.link}}" target="_blank"><button class="button__standard"><span>Test prototype</span></button></a>
+                </div>
+            </div>
+        </div>        
+        <div class="block-container__item">
+            <div class="block-description--reverse-half-width" >
+                <h1>Tools</h1>
+                <div class="skills--secondary">
+                    <div class="skills__articletext">
+                        <div class="block-list--articletools-container__text"></div>
+                    </div>
+                <svg class="block-list--articletools-container"></svg>
+                </div> 
+            </div> 
+        </div> 
+        <div class="block-container__item-imagecontainer" >
+            <div class="block-container__item-image" ng-repeat = "article in article.items">
+                <img class="block-container__item__image" ng-repeat = "image_src in article.images_src" ng-src="{{image_src}}">
+            </div>
+        </div>         
+    </section>
+
+ 

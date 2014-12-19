@@ -1,0 +1,86 @@
+<section >
+	<div class="container" id="assignments" name="assignments">
+	    <div class="banner" id="projects" ng-click="showView = !showView" >
+	    	<a href="/#projects" style="text-decoration:none;">
+	    		<h1 ng-hide="showView" >projects</h1>
+	    		<h1 ng-show="showView" >show projects</h1>
+	    	</a>
+	    </div>
+	    <div class="block-list" ng-hide="showView">
+	    	{{#each item.entry}}	
+	    	<div class="block-image {{mod-block}}" ng-click="showView = !showView">
+    			<a href="/{{link}}#projects">
+    				<div class="pos"><img src="{{img}}"></div>
+    				<div class="block-item" id="post-6">
+			    		<div class="block-text">
+				    		<h1>{{title}}</h1>
+				    		<p>{{paragraph}}</p>				    		
+			    		</div>
+	    			</div>
+	    		</a>
+	    	</div>	
+	    	{{/each}}
+		</div>
+	</div>
+<!-- Angular import view -->	
+ <ng-view></ng-view> 
+<!-- Angular import view -->
+	<div class="about" id="visie" name="visie">
+		<div class="visie">
+			<div class="banner--reverse-color"><h1>visie</h1></div>
+			<section class="block-container--visie">
+				{{#each text.visie}}
+				<div class="block-container--visie__item">
+					<div class="block-container--visie__item-image--{{mod-container}}">
+						<img src="{{img}}" />	
+					</div>
+					<div class="block-container--visie-description--{{mod-description}}">
+						<h1>{{title}}</h1>
+						<p>{{text}}</p>
+					</div>
+				</div>
+				{{/each}}
+			</section>
+		</div>
+		<div class="skills">
+            <div class="banner" id="tools"><h1>skill in tools</h1></div>
+            <div class="skills__text">
+                <div class="block-list--tools-container__text"></div>
+            </div>
+            <svg class="block-list--tools-container"></svg>
+        </div>
+		<div class="timeline">
+			<div class="banner" id="tijdlijn"><h1>tijdlijn</h1></div>
+			<div class="timeline__container">
+				<div class="timeline__phase">	
+				<h5>Communicatie en Multimedia Design</h5>				
+				{{#each text.tijdlijn}}
+				<a href="{{link}}" target="_blank">
+					<div class="timeline__period{{mod-period}}">
+						<h5>{{title}}</h5>
+						<div class="timeline__tools-item{{mod-item}}">
+							<div class="timeline__tools-item__description{{mod-description}}">
+								<div class="block-description--contained">
+									<h3>{{sub-title}}</h3>
+									<p>{{text}}</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+				{{/each}}
+				</div>
+			</div>
+		</div>
+		<div class="git-activity">
+		<div class="banner--reverse-color" id="git-activiteit"><h1>Github repository stream</h1></div>
+		<div class="git-feed__description">
+			<div class="git-feed__comment"></div>
+		</div>
+		<div class="git-feed">
+			<svg class="removed"></svg>
+			<svg class="added"></svg>	
+		</div>
+		</div>
+	</div>
+</section>

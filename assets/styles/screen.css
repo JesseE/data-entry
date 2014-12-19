@@ -1477,6 +1477,17 @@ label {
   }
 }
 
+/* line 43, sass/ui/homepage/_block-list.scss */
+.block-list--articletools-container__text {
+  text-align: left;
+  width: 63%;
+}
+
+/* line 44, sass/ui/homepage/_block-list.scss */
+.block-list--articletools-container {
+  width: 70%;
+}
+
 /*************************
 		timeline
 *************************/
@@ -1654,6 +1665,11 @@ label {
   }
 }
 
+/* line 24, sass/ui/homepage/_skills.scss */
+.skills__articletext {
+  width: 30%;
+}
+
 /*************************
 		git-feed
 *************************/
@@ -1777,7 +1793,7 @@ svg.added {
 /* line 5, sass/ui/homepage/_block-container.scss */
 .block-container__item, .block-container--visie__item {
   width: 78%;
-  margin: 61px auto;
+  margin: 0 auto 61px auto;
   height: 415px;
 }
 @media (max-width: 48em) {
@@ -1789,21 +1805,32 @@ svg.added {
 
 /* line 10, sass/ui/homepage/_block-container.scss */
 .block-container__item-thumb {
-  max-width: 400px;
-  min-width: 320px;
-  margin: auto;
+  float: left;
+  max-width: 5%;
+  min-width: 5%;
+  /* height: 50px; */
+  margin: 25px 10px;
 }
-/* line 12, sass/ui/homepage/_block-container.scss */
+/* line 11, sass/ui/homepage/_block-container.scss */
 .block-container__item-thumb img {
   max-width: 100%;
+}
+@media (max-width: 48em) {
+  /* line 10, sass/ui/homepage/_block-container.scss */
+  .block-container__item-thumb {
+    width: 100%;
+    min-width: none;
+    max-width: none;
+    margin: auto;
+  }
 }
 
 /* line 14, sass/ui/homepage/_block-container.scss */
 .block-container__item-imagecontainer {
-  position: relative;
-  top: -500px;
-  margin-bottom: -500px;
   float: right;
+  position: relative;
+  top: -845px;
+  margin-bottom: -845px;
   width: 50%;
 }
 @media (max-width: 48em) {
@@ -1815,50 +1842,49 @@ svg.added {
   }
 }
 
-/* line 21, sass/ui/homepage/_block-container.scss */
+/* line 19, sass/ui/homepage/_block-container.scss */
 .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
   float: left;
   margin: 10px;
   width: 90%;
 }
-/* line 22, sass/ui/homepage/_block-container.scss */
+/* line 20, sass/ui/homepage/_block-container.scss */
 .block-container__item-image img, .block-container__item-image--reverse img, .block-container__item-image--left img {
   width: 250px;
 }
-/* line 23, sass/ui/homepage/_block-container.scss */
+/* line 21, sass/ui/homepage/_block-container.scss */
 .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
   width: 87%;
   border-radius: 4px;
 }
 @media (max-width: 48em) {
-  /* line 23, sass/ui/homepage/_block-container.scss */
+  /* line 21, sass/ui/homepage/_block-container.scss */
   .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
-    min-width: 320px;
+    min-width: 280px;
     max-width: 500px;
     margin: 0 5%;
   }
 }
 @media (max-width: 48em) {
-  /* line 21, sass/ui/homepage/_block-container.scss */
+  /* line 19, sass/ui/homepage/_block-container.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
     width: 100%;
   }
 }
 @media (max-width: 30em) {
-  /* line 21, sass/ui/homepage/_block-container.scss */
+  /* line 19, sass/ui/homepage/_block-container.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
     width: 94%;
   }
 }
 
-/* line 31, sass/ui/homepage/_block-container.scss */
+/* line 29, sass/ui/homepage/_block-container.scss */
 .block-container__item-image--reverse, .block-container__item-image--left {
   float: right;
   border: none;
-  /*max-width: 250px; margin-top: 50px;*/
 }
 @media (max-width: 48em) {
-  /* line 31, sass/ui/homepage/_block-container.scss */
+  /* line 29, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--reverse, .block-container__item-image--left {
     display: block;
     max-height: 250px;
@@ -1867,104 +1893,110 @@ svg.added {
   }
 }
 
-/* line 38, sass/ui/homepage/_block-container.scss */
+/* line 36, sass/ui/homepage/_block-container.scss */
 .block-container__item-image--left {
   float: left;
   border: none;
   margin: auto;
 }
 @media (max-width: 48em) {
-  /* line 38, sass/ui/homepage/_block-container.scss */
+  /* line 36, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--left {
     float: none;
   }
 }
 @media (max-width: 30em) {
-  /* line 38, sass/ui/homepage/_block-container.scss */
+  /* line 36, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--left {
     float: left;
   }
 }
 
-/* line 48, sass/ui/homepage/_block-container.scss */
+/* line 46, sass/ui/homepage/_block-container.scss */
 .block-container--visie {
   background-color: #527B8B;
 }
 
-/* line 49, sass/ui/homepage/_block-container.scss */
+/* line 47, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item {
   width: 78%;
 }
+@media (max-width: 48em) {
+  /* line 47, sass/ui/homepage/_block-container.scss */
+  .block-container--visie__item {
+    width: 93%;
+  }
+}
 
-/* line 50, sass/ui/homepage/_block-container.scss */
+/* line 48, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right {
   float: left;
   width: 45%;
 }
-/* line 51, sass/ui/homepage/_block-container.scss */
+/* line 49, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right h1 {
   color: white;
   border-bottom: 5px solid #344E58;
 }
-/* line 52, sass/ui/homepage/_block-container.scss */
+/* line 50, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right p {
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 50, sass/ui/homepage/_block-container.scss */
+  /* line 48, sass/ui/homepage/_block-container.scss */
   .block-container--visie-description--right {
     width: 100%;
   }
 }
 
-/* line 56, sass/ui/homepage/_block-container.scss */
+/* line 54, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse {
   float: right;
   width: 45%;
 }
-/* line 57, sass/ui/homepage/_block-container.scss */
+/* line 55, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse h1 {
   color: white;
   border-bottom: 5px solid #344E58;
 }
-/* line 58, sass/ui/homepage/_block-container.scss */
+/* line 56, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse p {
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 56, sass/ui/homepage/_block-container.scss */
+  /* line 54, sass/ui/homepage/_block-container.scss */
   .block-container--visie-description--reverse {
     width: 100%;
   }
 }
 
-/* line 62, sass/ui/homepage/_block-container.scss */
+/* line 60, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--left {
   float: left;
   width: 45%;
 }
-/* line 63, sass/ui/homepage/_block-container.scss */
+/* line 61, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--left img {
   min-width: 250px;
 }
 @media (max-width: 48em) {
-  /* line 62, sass/ui/homepage/_block-container.scss */
+  /* line 60, sass/ui/homepage/_block-container.scss */
   .block-container--visie__item-image--left {
     width: 100%;
   }
 }
 
-/* line 69, sass/ui/homepage/_block-container.scss */
+/* line 67, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--reverse {
   float: right;
   width: 45%;
 }
-/* line 70, sass/ui/homepage/_block-container.scss */
+/* line 68, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--reverse img {
   min-width: 250px;
 }
 @media (max-width: 48em) {
-  /* line 69, sass/ui/homepage/_block-container.scss */
+  /* line 67, sass/ui/homepage/_block-container.scss */
   .block-container--visie__item-image--reverse {
     width: 100%;
   }
@@ -2280,6 +2312,17 @@ svg.added {
   }
 }
 
+/* line 61, sass/ui/homepage/_block-description.scss */
+.block-description__item {
+  width: 100%;
+}
+
+/* line 62, sass/ui/homepage/_block-description.scss */
+.block-description__titles {
+  float: left;
+  width: 91%;
+}
+
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
@@ -2399,7 +2442,7 @@ h5 {
 }
 
 /* line 45, sass/ui/homepage/_scaffolding.scss */
-.banner, .banner--border-bottom {
+.banner, .banner--border-bottom, .banner--reverse-color {
   float: left;
   height: 100px;
   width: 100%;
@@ -2411,7 +2454,7 @@ h5 {
   text-align: center;
 }
 /* line 48, sass/ui/homepage/_scaffolding.scss */
-.banner h1, .banner--border-bottom h1 {
+.banner h1, .banner--border-bottom h1, .banner--reverse-color h1 {
   width: 100%;
   margin: 0 auto;
   color: #344E58;
@@ -2419,23 +2462,32 @@ h5 {
   line-height: 50px;
 }
 /* line 49, sass/ui/homepage/_scaffolding.scss */
-.banner p, .banner--border-bottom p {
+.banner p, .banner--border-bottom p, .banner--reverse-color p {
   padding: 20px;
 }
 @media (max-width: 48em) {
   /* line 51, sass/ui/homepage/_scaffolding.scss */
-  .banner h1, .banner--border-bottom h1 {
+  .banner h1, .banner--border-bottom h1, .banner--reverse-color h1 {
     padding: 0;
     line-height: 100px;
   }
 }
 
 /* line 55, sass/ui/homepage/_scaffolding.scss */
-.banner--border-bottom {
+.banner--border-bottom, .banner--reverse-color {
   /*border-bottom: 5px solid #344E58;*/
 }
 
 /* line 56, sass/ui/homepage/_scaffolding.scss */
+.banner--reverse-color {
+  background-color: #527B8B;
+}
+/* line 57, sass/ui/homepage/_scaffolding.scss */
+.banner--reverse-color h1 {
+  color: white;
+}
+
+/* line 59, sass/ui/homepage/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
@@ -2444,31 +2496,32 @@ h5 {
 }
 
 @media (max-width: 30em) {
-  /* line 60, sass/ui/homepage/_scaffolding.scss */
+  /* line 63, sass/ui/homepage/_scaffolding.scss */
   .no-mob {
     display: none;
   }
 }
 
-/* line 63, sass/ui/homepage/_scaffolding.scss */
+/* line 66, sass/ui/homepage/_scaffolding.scss */
 .button__standard {
   display: block;
   margin: 5px auto;
   width: 90%;
   height: 40px;
   background: #344E58;
-  border: 1px solid #FFF;
+  box-shadow: 1px 2px 5px grey;
+  border: 0px solid #FFF;
   outline: none;
   border-radius: 6px;
   color: #FFF;
 }
-/* line 65, sass/ui/homepage/_scaffolding.scss */
+/* line 68, sass/ui/homepage/_scaffolding.scss */
 .button__standard span {
   font-size: 14px;
 }
 
-/* line 67, sass/ui/homepage/_scaffolding.scss */
-a .button__standard span {
+/* line 70, sass/ui/homepage/_scaffolding.scss */
+a {
   text-decoration: none;
 }
 
@@ -2851,9 +2904,14 @@ body {
     font-size: 27px;
     text-align: center;
   }
+  /* line 18, sass/ui/homepage/_header.scss */
+  .header__bg h2 {
+    font-size: 22px;
+    text-align: center;
+  }
 }
 
-/* line 21, sass/ui/homepage/_header.scss */
+/* line 22, sass/ui/homepage/_header.scss */
 .header__brand {
   color: black;
   width: 100%;

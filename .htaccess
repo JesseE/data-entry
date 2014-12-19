@@ -33,3 +33,8 @@ Header set Cache-Control "max-age=600, private, must-revalidate"
 Header unset ETag
 Header unset Last-Modified
 </IfModule>
+
+SetEnvIfNoCase Referer darodar.com spambot=yes
+Order allow,deny
+Allow from all
+Deny from env=spambot
