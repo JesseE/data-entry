@@ -3,36 +3,26 @@
  */
 var express = require('express');
 var app = express(); 
-<<<<<<< HEAD
-var fs = require('fs');
-var imageDataBucket = [];
 var mongoClient = require('mongodb'),
     format = require('util').format;
-=======
 var path = require('path');     
 var port = 3000;
-var router = express.Router();
 var exphbs = require('express3-handlebars');
-// var fs = require('fs');
-// // var imageData = [];
-// var mongoClient = require('mongodb'),
-//     format = require('util').format;
->>>>>>> a7a6fe280a90046c7bc5b948c249fbb866e5c4cf
 
 // var mongoose = require('mongoose');
 mongoClient.connect('mongodb://localhost:27017', function(err, db) {
     // mongoose.connect('mongodb://localhost:27017', function(err, db) {
-    if(err){throw err;}
+    // if(err){throw err;}
     
-    var collection = db.collection('test_insert');
-    // collection.insert({a:2}, function(err, docs) {
-    //     collection.count(function(err, count) {
-    //         console.log(format("count = %s",count));   
-    //     });
-    // });  
-
-    //remove values
-    collection.remove({_id: null}, function(){});
+    // var collection = db.collection('test_insert');
+    // // collection.insert({a:2}, function(err, docs) {
+    // //     collection.count(function(err, count) {
+    // //         console.log(format("count = %s",count));   
+    // //     });
+    // // });  
+    // //remove values
+    
+    // collection.remove({_id: null}, function(){});
 
     // var imageData = fs.readFile(__dirname + '/assets/images/klassiekwijzer.png', function(err, results){
     //     if(err){throw err;}
@@ -52,33 +42,30 @@ mongoClient.connect('mongodb://localhost:27017', function(err, db) {
     //add new entries
     // collection.insert(article, {w: 1}, function(err, results){
     //     //console.log(results);
-    // });
-    console.log(imageDataBucket);
+    // });  
     //update values
-    collection.update(
-        { title: 'Datavisualisatie'},
-        {
-            $set: { title: 'Eikema'}
+//     collection.update(
+//         { title: 'Datavisualisatie'},
+//         {
+//             $set: { title: 'Eikema'}
 
-        }, 
-        { multi: true }, 
-        function( err, results ) { 
-            if( err ){  throw err; }
-        }
-    );
-    collection.remove({id : 2}, function(){});
-    collection.update(
-        { _id : 2},
-        { src : imageData}, function() {}
-    );
-    var image = {
-        name: 'image_1',
-        src: imageData
-    };
-    //locate all entries using find
-    collection.find().toArray(function(err, results){
-        console.log(results); 
-    });   
+//         }, 
+//         { multi: true }, 
+//         function( err, results ) { 
+//             if( err ){  throw err; }
+//         }
+//     );
+
+//     collection.remove({id : 2}, function(){});
+ 
+//     collection.update(
+//         { _id : 2}
+//     );
+
+//     //locate all entries using find
+//     collection.find().toArray(function(err, results){
+//         console.log(results); 
+//     });   
 });
 
 //passport implementation
@@ -111,16 +98,16 @@ mongoClient.connect('mongodb://localhost:27017', function(err, db) {
 // mongoose.connect('mongodb://localhost/passport_local_mongoose');
 
 // a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
-var minutes = 20, the_interval = minutes * 60 * 1000;
+// var minutes = 20, the_interval = minutes * 60 * 1000;
 
-setInterval(function() {
-    var options = {
-        host: 'www.jesseeikema.nl'
-    };
-    http.get(options, function (http_res) {
-        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-    });
-}, the_interval);
+// setInterval(function() {
+//     var options = {
+//         host: 'www.jesseeikema.nl'
+//     };
+//     http.get(options, function (http_res) {
+//         console.log("Sent http request to www.jesseeikema.nl to stay awake.");
+//     });
+// }, the_interval);
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');

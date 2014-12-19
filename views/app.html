@@ -5,7 +5,7 @@
                             
                 <div class="block-description__item">
                     <div class="block-container__item-thumb">
-                        <img src="{{article.image_thumb}}">    
+                        <img ng-src="{{article.image_thumb}}">    
                     </div>
                 <div class="block-description__titles">
                     <h1>{{article.title}}</h1>
@@ -31,7 +31,7 @@
         </div> 
         <div class="block-container__item-imagecontainer" >
             <div class="block-container__item-image" ng-repeat = "article in article.items">
-                <img class="block-container__item__image" ng-repeat = "image_src in article.images_src" src="{{image_src}}">
+                <img class="block-container__item__image" ng-repeat = "image_src in article.images_src" ng-src="{{image_src}}">
             </div>
         </div>         
     </section>
