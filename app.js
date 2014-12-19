@@ -10,7 +10,7 @@ var port = 3000;
 var exphbs = require('express3-handlebars');
 
 // var mongoose = require('mongoose');
-mongoClient.connect('mongodb://localhost:27017', function(err, db) {
+// mongoClient.connect('mongodb://localhost:27017', function(err, db) {
     // mongoose.connect('mongodb://localhost:27017', function(err, db) {
     // if(err){throw err;}
     
@@ -66,7 +66,7 @@ mongoClient.connect('mongodb://localhost:27017', function(err, db) {
 //     collection.find().toArray(function(err, results){
 //         console.log(results); 
 //     });   
-});
+// });
 
 //passport implementation
 // var passport = require('passport');
