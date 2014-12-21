@@ -2,6 +2,7 @@
 
 module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load all grunt tasks   
