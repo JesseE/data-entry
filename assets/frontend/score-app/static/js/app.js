@@ -29,11 +29,11 @@ var SCOREAPP = SCOREAPP || {};
                         //routie js finds the correct page by making a function for each page with corresponding page tag 
                         //and rendering it
                           routie({
-                            '': function(){
+                            '*': function(){
                             SCOREAPP.page.render('gamepage');
                             SCOREAPP.ajax.getGameDataObjects();
                             },
-                            '/gamepage': function() {
+                            'score-app-prototype/gamepage': function() {
                             //render gamepage  
                             SCOREAPP.page.render('gamepage');         
                             SCOREAPP.ajax.getGameDataObjects();
@@ -46,8 +46,7 @@ var SCOREAPP = SCOREAPP || {};
                             '/schedulepage': function() {
                             //render schedule page
                             SCOREAPP.page.render('schedulepage'); 
-                           SCOREAPP.ajax.getScheduleDataObjects();
-
+                            SCOREAPP.ajax.getScheduleDataObjects();
                             }
                         });
                 },
@@ -207,15 +206,14 @@ var SCOREAPP = SCOREAPP || {};
         //put the links in an array
         SCOREAPP.links = { 
                     links: [
-                            "http://www.jesseeikema.nl/test/index.html#/schedulepage", 
-                            "http://www.jesseeikema.nl/test/index.html#/rankingpage",
-                            "http://www.jesseeikema.nl/test/index.html#/gamepage"
-                                                   
+                            // "http://www.jesseeikema.nl/test/index.html#/schedulepage", 
+                            // "http://www.jesseeikema.nl/test/index.html#/rankingpage",
+                            // "http://www.jesseeikema.nl/test/index.html#/gamepage"                 
                     ],
                     files: [
-                            "file:///C:/Users/JESSE/Documents/IAM%20Studie%20Dossier/jaar%204/FED2/API/API%20leaguevine/index.html#/schedulepage",
-                            "file:///C:/Users/JESSE/Documents/IAM%20Studie%20Dossier/jaar%204/FED2/API/API%20leaguevine/index.html#/rankingpage",
-                            "file:///C:/Users/JESSE/Documents/IAM%20Studie%20Dossier/jaar%204/FED2/API/API%20leaguevine/index.html#/gamepage"    
+                            // "file:///C:/Users/JESSE/Documents/IAM%20Studie%20Dossier/jaar%204/FED2/API/API%20leaguevine/index.html#/schedulepage",
+                            // "file:///C:/Users/JESSE/Documents/IAM%20Studie%20Dossier/jaar%204/FED2/API/API%20leaguevine/index.html#/rankingpage",
+                            // "file:///C:/Users/JESSE/Documents/IAM%20Studie%20Dossier/jaar%204/FED2/API/API%20leaguevine/index.html#/gamepage"    
                         
                     ]    
                 }; 

@@ -16,9 +16,8 @@ var app = angular.module('myApp', ["ngRoute"]).
   ]     
 );
 
-app.controller('ArticleController',["$scope", "$routeParams", function($scope, $routeParams) {      
+app.controller('ArticleController',[ "$scope", "$routeParams", function($scope, $routeParams) {      
    var articles = [];
-    
     //check what itemId is requested in the routingParams
     for (var i = 0, len = articlesList.length; i < len; i++) {
         var articleItem = {},
@@ -219,29 +218,3 @@ app.controller('ArticleController',["$scope", "$routeParams", function($scope, $
             link: '/pathogen-prototype',
         },
     ]   
-
-
-// itemUri();
-
-// function itemUri () {
-//     var itemUri = [];
-//     itemsAttribute(itemUri);
-// };
-
-// function itemsAttribute (itemUri) {
-//     for (var i = 0, len = articlesList.length; i < len; i++) {
-//         articlesList[i];
-//         itemUri.push(articlesList[i].id);
-//     };
-//     logResults(itemUri);
-// };
-// function getCurrentItem () {
-
-// }
-
-
-// function logResults (itemUri){
-//     console.log(itemUri);
-// }
-
-

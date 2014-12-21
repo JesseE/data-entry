@@ -3,17 +3,31 @@
  */
 var express = require('express');
 var app = express(); 
-// var mongoClient = require('mongodb'),
-//     format = require('util').format;
 var path = require('path');     
 var port = 3000;
 var exphbs = require('express3-handlebars');
-
+var newrelic = require('newrelic');
+// var mongoClient = require('mongodb'),
+//     format = require('util').format;
 // var mongoose = require('mongoose');
+
 // mongoClient.connect('mongodb://localhost:27017', function(err, db) {
-    // mongoose.connect('mongodb://localhost:27017', function(err, db) {
-    // if(err){throw err;}
+// mongoose.connect('mongodb://localhost:27017', function(err, db) {
+//   if(err){throw err;}
+//     var Schema = mongoose.Schema;
+//     var itemSchema = new Schema ({
+//         id: String
+//         // link: String,
+//         // mod_description: String,
+//         // mod_description_datavis: String,
+//     });
+
+//     var Items = mongoose.model('Item', itemSchema);
+//     var item = new Items({id: 'melkweg'});
     
+
+    
+
     // var collection = db.collection('test_insert');
     // // collection.insert({a:2}, function(err, docs) {
     // //     collection.count(function(err, count) {
@@ -137,7 +151,7 @@ app.set('view engine', 'handlebars');
 
 var index = require('./assets/backend/scripts/index');
 // var model_item = require('./assets/backend/scripts/model-item');
-// var gitFeed = require('./assets/backend/scripts/gitvisual_request')
+
 // var datavisual = require('./assets/backend/scripts/datavisual'); 
 // var resizer = require('./assets/backend/scripts/resizer'); 
 // var melkweg = require('./assets/backend/scripts/melkweg');
@@ -145,8 +159,7 @@ var index = require('./assets/backend/scripts/index');
 // var pathogen = require('./assets/backend/scripts/pathogen');
 // var klassiekwijzer = require('./assets/backend/scripts/klassiekwijzer');
 // Index Page
-app.get('/', index.create, function(){
-});
+app.get('/', index.create);
 app.get('/datavisualisatie',index.create);
 app.get('/klassiekwijzer',index.create);
 app.get('/resizer', index.create);

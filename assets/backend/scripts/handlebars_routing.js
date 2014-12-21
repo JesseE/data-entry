@@ -3,7 +3,6 @@ var express = require('express');
 var app = express(); 
 var index = require('./index');
 var model_item = require('./model-item');
-var gitFeed = require('./gitvisual_request')
 var datavisual = require('./datavisual'); 
 var resizer = require('./resizer'); 
 var melkweg = require('./melkweg');
