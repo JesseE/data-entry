@@ -6,7 +6,7 @@ var app = express();
 var path = require('path');     
 var port = 3000;
 var exphbs = require('express3-handlebars');
-var newrelic = require('newrelic');
+require('newrelic');
 // var mongoClient = require('mongodb'),
 //     format = require('util').format;
 // var mongoose = require('mongoose');
