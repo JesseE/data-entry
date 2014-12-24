@@ -1,103 +1,18 @@
-//request js lib 
-var unirest = require('unirest');
+// get gitrequests 
+var git = require('./gitvisual');
 
-//github request repos
-var username = "JesseE";
-var password = "Eikema22";
-var header = {'user-agent': 'node.js'};
-var repository = "data-entry";
-var branch = "master";
-var done = false;
-
-var commitsHash = [];
-var commitContainer = [];
-var checker = [];
-var gitStats = [];
-var gitMessage = [];
-
-commitsHash.length = 30;
-var commitContainerNumber = {};
-commitContainerNumber.length = 90;
-
-// get all commit hashes
-getAllCommitPageOne();
-function getAllCommitPageOne (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=1>sha=master').auth({
-    user: username,
-    pass: password,
-    sendImmediately: true
-}).headers(header).end(function(response){
-    for(var i = 0, len = commitsHash.length; i < len; ++i){
-        commitContainer.push(response.body[i].sha);
-    }
-    getAllCommitPageTwo();   
-    });
-};
-function getAllCommitPageTwo (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=2>sha=master').auth({
-    user: username,
-    pass: password,
-    sendImmediately: true
-}).headers(header).end(function(response){
-    for(var i = 0, len = commitsHash.length; i < len; ++i){
-        commitContainer.push(response.body[i].sha);
-    }
-    getAllCommitPageThree();
-    });
-};
-function getAllCommitPageThree (){ unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits?page=3>sha=master').auth({
-    user: username,
-    pass: password,
-    sendImmediately: true
-}).headers(header).end(function(response){
-    for(var i = 0, len = commitsHash.length; i < len; ++i){
-        commitContainer.push(response.body[i].sha);
-    }
-    getAllStats();  
-    });
-};
-//addtions deletions total adjustments in a commit
-function getAllStats () { 
-    for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
-        unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
-            user: username,
-            pass: password,
-            sendImmediately: true
-        }).headers(header).end(function(response){
-            gitStats.push(response.body.stats);   
-        });
-    };
-    getAllMessage();
-};
-// commit comments
-function getAllMessage () { 
-    for(var i = 0, len = commitContainerNumber.length; i < len; ++i){
-        unirest.get('https://api.github.com/repos/JesseE/'+repository+'/commits/'+commitContainer[i]).auth({
-            user: username,
-            pass: password,
-            sendImmediately: true
-        }).headers(header).end(function(response){  
-           // var object = {"comment" : response.body.commit.message};     
-            var object = response.body.commit.message;
-            object = object.replace(/(\r\n|\n|\r)/gm,"");
-            gitMessage.push(object); 
-            completeReq();  
-        });
-
-    };
-};
-function completeReq() {
-    done = true;
-};
 //module index create function
 module.exports.create = function(request, response){ 
     //make sure you have values in github response
     //console.log(gitMessage);
     var container = [];
-    for ( var i = 0, len = gitMessage.length; i < len; i ++ ){
-        gitMessage[i];
-        var bucket = gitMessage[i];
+    for ( var i = 0, len = git.gitMessage.length; i < len; i ++ ){
+        git.gitMessage[i];
+        var bucket = git.gitMessage[i];
         JSON.parse("[\"bucket[i]\"]");  
         container.push(bucket);
     };
+    
     var itemEntry = {   
         entry: [
             {
@@ -235,10 +150,10 @@ module.exports.create = function(request, response){
         footer: true,
         helpers:{
             added: function() {
-                if(gitStats.length == 90) {
+                if(git.gitStats.length == 90) {
                     var added = [];
-                    for ( var i = 0, len = gitStats.length; i < len; i ++ ){
-                        added.push(gitStats[i].additions);
+                    for ( var i = 0, len = git.gitStats.length; i < len; i ++ ){
+                        added.push(git.gitStats[i].additions);
                     };
                     if(added.length == 90){
                         return added;
@@ -246,10 +161,10 @@ module.exports.create = function(request, response){
                 }
             },
             removed: function() {
-                if(gitStats.length == 90) {
+                if(git.gitStats.length == 90) {
                     var removed = [];
-                    for(var i = 0, len = gitStats.length; i < len; i ++ ){
-                        removed.push(gitStats[i].deletions);
+                    for(var i = 0, len = git.gitStats.length; i < len; i ++ ){
+                        removed.push(git.gitStats[i].deletions);
                     }
                     if(removed.length == 90) {
                         return removed;
@@ -257,7 +172,7 @@ module.exports.create = function(request, response){
                 }
             },
             comments: function() {
-                if(gitStats.length == 90){
+                if(git.gitStats.length == 90){
                      var comments = container;
                     return comments;       
                 }

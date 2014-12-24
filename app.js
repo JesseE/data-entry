@@ -6,122 +6,21 @@ var app = express();
 var path = require('path');     
 var port = 3000;
 var exphbs = require('express3-handlebars');
-require('newrelic');
-// var mongoClient = require('mongodb'),
-//     format = require('util').format;
-// var mongoose = require('mongoose');
-
-// mongoClient.connect('mongodb://localhost:27017', function(err, db) {
-// mongoose.connect('mongodb://localhost:27017', function(err, db) {
-//   if(err){throw err;}
-//     var Schema = mongoose.Schema;
-//     var itemSchema = new Schema ({
-//         id: String
-//         // link: String,
-//         // mod_description: String,
-//         // mod_description_datavis: String,
-//     });
-
-//     var Items = mongoose.model('Item', itemSchema);
-//     var item = new Items({id: 'melkweg'});
-    
-
-    
-
-    // var collection = db.collection('test_insert');
-    // // collection.insert({a:2}, function(err, docs) {
-    // //     collection.count(function(err, count) {
-    // //         console.log(format("count = %s",count));   
-    // //     });
-    // // });  
-    // //remove values
-    
-    // collection.remove({_id: null}, function(){});
-
-    // var imageData = fs.readFile(__dirname + '/assets/images/klassiekwijzer.png', function(err, results){
-    //     if(err){throw err;}
-    //     imageDataBucket = results;
-    //     // collection.update({'$pull': imageData});
-    //     // collection.update({'$push': imageData});
-    // });  
-
-
-    //initial document to be added
-    // var article = {
-    //     _id: 4, 
-    //     name: 'JesseE',
-    //     title: 'Datavisualisatie'
-    // };
-
-    //add new entries
-    // collection.insert(article, {w: 1}, function(err, results){
-    //     //console.log(results);
-    // });  
-    //update values
-//     collection.update(
-//         { title: 'Datavisualisatie'},
-//         {
-//             $set: { title: 'Eikema'}
-
-//         }, 
-//         { multi: true }, 
-//         function( err, results ) { 
-//             if( err ){  throw err; }
-//         }
-//     );
-
-//     collection.remove({id : 2}, function(){});
- 
-//     collection.update(
-//         { _id : 2}
-//     );
-
-//     //locate all entries using find
-//     collection.find().toArray(function(err, results){
-//         console.log(results); 
-//     });   
+var mongoose = require('mongoose');
+//require('newrelic');
+//var item_model = require('./assets/backend/scripts/modelItem');
+// var Item = require('db');
+// item_model('Item', function(Items){
+//     console.log(Items);
 // });
+var modelItem = require('./assets/backend/scripts/modelItem');
 
-//passport implementation
-// var passport = require('passport');
-// var mongoose = require('mongoose');
-// var LocalStrategy = require('passport-local').Strategy;
-// var Account = require('./assets/backend/scripts/account');
-//mongoose config
+// var peter = new modelItem();
 
-// var Schema = mongoose.Schema;
-// var itemSchema = new Schema ({
-//     title: String
-//     // link: String,
-//     // mod_description: String,
-//     // mod_description_datavis: String,
-
-// });
-// var Items = mongoose.model('Item', itemSchema);
-// var Item_resizer = new Item({
-//     title: 'Resizer'
-// });
-// console.log(itemSchema);
-
-//passport config
-// passport.use( new LocalStrategy(Account.authenticate()));
-// passport.serializeUser(Account.serializeUser());
-// passport.deserializeUser(Account.deserializeUser());
-
-// //mongoose config
-// mongoose.connect('mongodb://localhost/passport_local_mongoose');
-
-// a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
-var minutes = 20, the_interval = minutes * 60 * 1000;
-
-setInterval(function() {
-    var options = {
-        host: 'www.jesseeikema.nl'
-    };
-    http.get(options, function (http_res) {
-        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-    });
-}, the_interval);
+modelItem.find(function(err, items){
+    if(err) return console.error()        
+});
+// console.log(modelItem);
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
@@ -141,25 +40,20 @@ app.use(express.static(__dirname + '/'));
 app.use(express.static(__dirname + '/assets'));
 // Set Handlebars
 app.set('view engine', 'handlebars');
-
 /*
  * Routes
  */
-
 // ROUTING NOW DONE WITH ANGULAR TO CREATE SPA
 // STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
-
 var index = require('./assets/backend/scripts/index');
-// var model_item = require('./assets/backend/scripts/model-item');
-
-// var datavisual = require('./assets/backend/scripts/datavisual'); 
-// var resizer = require('./assets/backend/scripts/resizer'); 
-// var melkweg = require('./assets/backend/scripts/melkweg');
-// var scoreapp = require('./assets/backend/scripts/scoreapp');
-// var pathogen = require('./assets/backend/scripts/pathogen');
-// var klassiekwijzer = require('./assets/backend/scripts/klassiekwijzer');
 // Index Page
-app.get('/', index.create);
+app.get('/', index.create, function(req, res){
+    item_model.find(function(err, items){
+        if(err) return next(err)
+            console.log(items);
+        // res.json(items);
+    });
+});
 app.get('/datavisualisatie',index.create);
 app.get('/klassiekwijzer',index.create);
 app.get('/resizer', index.create);
@@ -189,10 +83,19 @@ app.get('/pathogen-prototype', function(request, response, next) {
         footer: false
     }); 
 });
+/*
+ * a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
+ */
+var minutes = 20, the_interval = minutes * 60 * 1000;
 
-// ROUTING WITH EXPRESS & HANDLEBARS
-var handlebars_routing = require('./assets/backend/scripts/handlebars_routing');
-
+setInterval(function() {
+    var options = {
+        host: 'www.jesseeikema.nl'
+    };
+    http.get(options, function (http_res) {
+        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
+    });
+}, the_interval);
 /*
  * Start the server
  */
