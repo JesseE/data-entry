@@ -1,0 +1,751 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"melwe",
+				"melkweg"
+			],
+			[
+				"model",
+				"modelItem"
+			],
+			[
+				"item",
+				"item_model"
+			],
+			[
+				"err",
+				"err"
+			],
+			[
+				"data",
+				"datavisual"
+			],
+			[
+				"$route",
+				"$routeProvider	AngularJS"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"backend",
+				"backend_routing"
+			],
+			[
+				"hand",
+				"handlebars_routing"
+			],
+			[
+				"block",
+				"block-container"
+			],
+			[
+				"log",
+				"logResults"
+			],
+			[
+				"uri",
+				"uriList"
+			],
+			[
+				"arti",
+				"articlesList"
+			],
+			[
+				"art",
+				"articlesList"
+			],
+			[
+				"article",
+				"articlesList"
+			],
+			[
+				"ar",
+				"articleDataScore"
+			],
+			[
+				"artic",
+				"articleDataName"
+			],
+			[
+				"articl",
+				"articleDataScore"
+			],
+			[
+				"skill",
+				"skills__text"
+			],
+			[
+				"articleDta",
+				"articleDataScore"
+			],
+			[
+				"datatool",
+				"dataToolName"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"fo",
+				"for	for (…) {…}"
+			],
+			[
+				"dat",
+				"datavisualisatie"
+			],
+			[
+				"resi",
+				"resizer"
+			],
+			[
+				"$location",
+				"$locationProvider	AngularJS(DI)"
+			],
+			[
+				"templa",
+				"templateUrl"
+			],
+			[
+				"$rout",
+				"$routeProvider	AngularJS"
+			],
+			[
+				"git",
+				"gitFeed"
+			],
+			[
+				"get",
+				"getAllStats"
+			],
+			[
+				"passpot",
+				"passportLocalMongoose"
+			],
+			[
+				"para",
+				"paragraphEntry"
+			],
+			[
+				"parag",
+				"paragraphEntry"
+			],
+			[
+				"title",
+				"titleEntry"
+			],
+			[
+				"imaged",
+				"imageDataBucket"
+			],
+			[
+				"style",
+				"styles"
+			],
+			[
+				"new",
+				"newArticles"
+			],
+			[
+				"Ne",
+				"newName"
+			],
+			[
+				"image",
+				"imageData"
+			],
+			[
+				"mongo",
+				"mongoose"
+			],
+			[
+				"imag",
+				"imageData"
+			],
+			[
+				"mon",
+				"mongoClient"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"nav--",
+				"nav--secundairy"
+			],
+			[
+				"handle",
+				"handlebars"
+			],
+			[
+				"nav",
+				"nav--secundairy"
+			],
+			[
+				"is",
+				"isFinished"
+			],
+			[
+				"check",
+				"checkIfFinished"
+			],
+			[
+				"timelin",
+				"timeline__period"
+			],
+			[
+				"gitf",
+				"git-feed__comment"
+			],
+			[
+				"sele",
+				"select"
+			],
+			[
+				"added",
+				"addedArray"
+			],
+			[
+				"aded",
+				"addedArray"
+			],
+			[
+				"removed",
+				"removedArray"
+			],
+			[
+				"remove",
+				"removedArray"
+			],
+			[
+				"remoe",
+				"removedArray"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"javas",
+				"javascript"
+			],
+			[
+				"score",
+				"scoreData"
+			],
+			[
+				"name",
+				"nameData"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"patho",
+				"pathogen"
+			],
+			[
+				"score-",
+				"score-app-prototype"
+			],
+			[
+				"Datavisualisatie",
+				"Datavisualisatie"
+			],
+			[
+				"selet",
+				"selectAll"
+			],
+			[
+				"GIT",
+				"gitMessage"
+			],
+			[
+				"Co",
+				"comments"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "assets/backend/scripts/index.js",
+			"settings":
+			{
+				"buffer_size": 7943,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/backend/scripts/gitvisual.js",
+			"settings":
+			{
+				"buffer_size": 3121,
+				"line_ending": "Unix",
+				"name": "gitvisual.js"
+			}
+		},
+		{
+			"file": "app.js",
+			"settings":
+			{
+				"buffer_size": 2843,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 306.0,
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: for (…) {…}"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/bot.js",
+		"/home/jazzcoder/Sites/jesseeikema/app.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/modelItem.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/passport-login.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/geetings.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/index.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/layouts/matthijsapp.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/Gruntfile.js",
+		"/home/jazzcoder/Sites/jesseeikema/package.json",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/score-app/static/js/app.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/layouts/score-app.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/index.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/layouts/main.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/route.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/main.js",
+		"/home/jazzcoder/Sites/jesseeikema/node_modules/newrelic/newrelic.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/app.html",
+		"/home/jazzcoder/Sites/develop/Gruntfile.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/handlebars_routing.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-description.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-container.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_scaffolding.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_header.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-list.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_skills.scss",
+		"/home/jazzcoder/Sites/jesseeikema/.htaccess",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/gitvisual_request.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/layouts/pathogen.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/controllers/articleController.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-image.scss",
+		"/home/jazzcoder/Sites/jesseeikema/views/index.html",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/pathogen.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/datavisual.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/resizer.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/klassiekwijzer.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/scoreapp.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/melkweg.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/routing.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/partials/item.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/main.js",
+		"/home/jazzcoder/.config/sublime-text-2/Packages/JavaScript/for-()-{}.sublime-snippet",
+		"/home/jazzcoder/.config/sublime-text-2/Packages/JavaScript/for-()-{}-(faster).sublime-snippet",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/datavisual.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/routes/index.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/resizer.html",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/index.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/route.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/main.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/controllers/articleController.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/melkweg.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/playground.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/scoreapp.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/routing/account.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/routing/routing.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/routing/index.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/controller.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/partials/itemPlayground.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/index.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/layouts/mainAng.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/layouts/main.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/gitvisual_request.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/resizer.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/model-item.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/account.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_navs.scss",
+		"/home/jazzcoder/Sites/jesseeikema/views/partials/item.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/pathogen.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/klassiekwijzer.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/routes.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/main.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_git-feed.scss",
+		"/home/jazzcoder/Sites/jesseeikema/views/layouts/pathogen.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_timeline.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/screen.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/screen.css",
+		"/home/jazzcoder/Sites/jesseeikema/README.md",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/_vars.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/_mixins.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_navs.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/_properties.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/_fading-exits/_fadeOutLeft.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/bower_components/animate.css-scss/README.md",
+		"/home/jazzcoder/Sites/jesseeikema/assets/bower_components/animate.css-scss/animate.css",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/_fading-entrances/_fadeIn.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/_fading-exits/fading-exits.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_skills.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_footer.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_block-container.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_block-image.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_block-list.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_timeline.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_scaffolding.scss",
+		"/home/jazzcoder/Sites/jesseeikema/dist/views/partials/resizer.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/dist/views/partials/item.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/css/all-old-ie.css",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/_grrr-mixins.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_git-feed.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_block-description.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_block-item.scss",
+		"/home/jazzcoder/Sites/jesseeikema/bower.json",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/css/slider.css",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/css/styles.css",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/js/app/common.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/resizer.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/backend/ext_request/github.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/dataviz.js",
+		"/home/jazzcoder/Sites/jesseeikema/Procfile",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_header.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_forms.scss",
+		"/home/jazzcoder/Sites/jesseeikema/views/head.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/layouts/nav.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/assets/bower_components/interface.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/bower_components/screens.js",
+		"/home/jazzcoder/Desktop/Pathogen_v0.9.3/index.html",
+		"/home/jazzcoder/Sites/jesseeikema/assets/js/app/interface/interface.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/partials/datavis.handlebars",
+		"/home/jazzcoder/Desktop/Pathogen_v0.9.3/debug.css",
+		"/home/jazzcoder/Desktop/Pathogen_v0.9.3/js/libraries/slider.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/js/app/interface/screens.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/pathogen/js/libraries/slider.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/pathogen/js/app/interface/interface.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/pathogen/js/app/game.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/layouts/score-app.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/partials/score-app.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/partials/pathogen.handlebars",
+		"/home/jazzcoder/Desktop/API leaguevine/index.html",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/_resizer-loader.scss",
+		"/home/jazzcoder/Sites/jesseeikema/views/partials/footer.handlebars"
+	],
+	"find":
+	{
+		"height": 50.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/home/jazzcoder/Sites/jesseeikema",
+			"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"mongooseSearch",
+			"imagemin",
+			"links",
+			"git",
+			"gitvisual",
+			"mongoose",
+			"mongoose\n\n\n",
+			"vehicles",
+			" <div class=\"block-container__item-imagecontainer\" >\n                <div class=\"block-container__item-image\" ng-repeat = \"article in article.items\">\n                    <img class=\"block-container__item__image\" ng-repeat = \"image_src in article.images_src\" src=\"{{image_src}}\">\n                </div>\n                </div>   ",
+			"div",
+			"showView",
+			"view",
+			"name",
+			"bucket",
+			"name",
+			"NAME",
+			"ng",
+			"sublime-completions",
+			"score-app",
+			"livereload",
+			"]\n",
+			"views",
+			"concat",
+			"console",
+			".\"},\n",
+			"\"\")};\n",
+			"merge tag",
+			"merge ",
+			"me",
+			">\n",
+			"point",
+			"scss",
+			"    //",
+			"gitstats",
+			"rev",
+			"clean",
+			"uglify",
+			"concat",
+			"ui",
+			"load",
+			"ie",
+			"additions",
+			"-webkit-",
+			"console.log",
+			"%;\n",
+			"bp-med",
+			"bp-phone-port",
+			"$",
+			"cmd",
+			"../images",
+			"images",
+			"bullet_boss",
+			"loader",
+			"gitstats",
+			"gitmessage",
+			"328",
+			"normal",
+			"gitstats",
+			"addeddArray",
+			"addData",
+			"width",
+			"lokaties",
+			"block-container__item-image--no-float",
+			"block-description",
+			"\";\n",
+			"block-item",
+			"block-item___",
+			"block-image",
+			"block-list",
+			"png",
+			"skills",
+			"block-description--reverse",
+			".block-list--tools-container__text",
+			"name",
+			"addData",
+			"start",
+			"slider",
+			"sounds",
+			"map",
+			"eikema ",
+			"eikema",
+			"\"},\n",
+			"block-list",
+			"console.log",
+			"message",
+			"hover",
+			"block-list",
+			"logo",
+			"loader",
+			"active",
+			"url(../../media/images",
+			"/\";",
+			"\n "
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"../../images",
+			"addedArray",
+			"locaties",
+			"block-container__item-image--left",
+			"url(../images",
+			""
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "assets/backend/scripts/index.js",
+					"settings":
+					{
+						"buffer_size": 7943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/backend/scripts/gitvisual.js",
+					"settings":
+					{
+						"buffer_size": 3121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								18,
+								18
+							]
+						],
+						"settings":
+						{
+							"auto_name": "gitvisual.js",
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app.js",
+					"settings":
+					{
+						"buffer_size": 2843,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								840,
+								840
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 540.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/jazzcoder/Sites/jesseeikema/portfolio.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 346.0,
+	"status_bar_visible": true
+}

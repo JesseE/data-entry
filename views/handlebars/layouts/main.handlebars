@@ -34,12 +34,12 @@
         </nav>
         <nav class="nav--secundairy">
             <ul>
-                <a href="/datavisualisatie#projects"  class="active" ng-click="showView"><li>Datavisualisatie</li></a>
-                <a href="/resizer#projects"  class="active" ng-click="showView"><li>Resizer</li></a>
-                <a href="/melkweg#projects"  class="active" ng-click="showView"><li>Melkweg</li></a>
-                <a href="/score-app#projects"  class="active" ng-click="showView"><li>Score App</li></a>
-                <a href="/pathogen#projects"  class="active" ng-click="showView"><li>Pathogen</li></a>
-                <a href="/klassiekwijzer#projects"  class="active" ng-click="showView"><li>Klassiekwijzer</li></a>
+                <a href="/project/datavisualisatie#projects"  class="active" ng-click="showView"><li>Datavisualisatie</li></a>
+                <a href="/project/resizer#projects"  class="active" ng-click="showView"><li>Resizer</li></a>
+                <a href="/project/melkweg#projects"  class="active" ng-click="showView"><li>Melkweg</li></a>
+                <a href="/project/score-app#projects"  class="active" ng-click="showView"><li>Score App</li></a>
+                <a href="/project/pathogen#projects"  class="active" ng-click="showView"><li>Pathogen</li></a>
+                <a href="/project/klassiekwijzer#projects"  class="active" ng-click="showView"><li>Klassiekwijzer</li></a>
             </ul>
         </nav>{{/if}}{{#if headbg}}
         <div class="header__bg">
@@ -75,9 +75,11 @@
     <script type="text/javascript" src="/assets/frontend/bower_components/angular/angular.min.js"></script>
     <script type="text/javascript" src="/assets/frontend/bower_components/angular-route/angular-route.min.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
-
-    <script type="text/javascript" src="/assets/frontend/scripts/route.js"></script>
+    
+    <script type="text/javascript" src="/assets/frontend/scripts/data/articleData.js"></script>
+    <script type="text/javascript" src="/assets/frontend/scripts/controllers/routeController.js"></script>
     <script type="text/javascript" src="/assets/frontend/scripts/controllers/articleController.js"></script>
+    
     <script type="text/javascript" src="/assets/frontend/scripts/main.js"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     

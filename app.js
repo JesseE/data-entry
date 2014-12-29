@@ -21,6 +21,8 @@ modelItem.find(function(err, items){
     if(err) return console.error()        
 });
 // console.log(modelItem);
+var bot = require('./assets/backend/scripts/bot');
+(function(){ bot();})();
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'html');
@@ -46,7 +48,6 @@ app.set('view engine', 'handlebars');
 // ROUTING NOW DONE WITH ANGULAR TO CREATE SPA
 // STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
 var index = require('./assets/backend/scripts/index');
-// Index Page
 app.get('/', index.create, function(req, res){
     item_model.find(function(err, items){
         if(err) return next(err)
@@ -54,9 +55,7 @@ app.get('/', index.create, function(req, res){
         // res.json(items);
     });
 });
-app.get('/datavisualisatie',index.create);
-app.get('/klassiekwijzer',index.create);
-app.get('/resizer', index.create);
+app.get('/project/:primaryID', index.create);
 app.get('/resizer-prototype', function(request, response, next) { 
     response.render('partials/resizer',{
         normal: true,
@@ -64,8 +63,6 @@ app.get('/resizer-prototype', function(request, response, next) {
         resizer: true
     }); 
 });
-app.get('/melkweg',index.create);
-app.get('/score-app',index.create);
 app.get('/score-app-prototype', function(request, response, next) {
     response.render('layouts/score-app',{
         normal: false,
@@ -74,7 +71,6 @@ app.get('/score-app-prototype', function(request, response, next) {
         footer: false
     }); 
 });
-app.get('/pathogen',index.create);
 app.get('/pathogen-prototype', function(request, response, next) {
     response.render('layouts/pathogen',{
         normal: false,
@@ -83,19 +79,6 @@ app.get('/pathogen-prototype', function(request, response, next) {
         footer: false
     }); 
 });
-/*
- * a bot to prevent heroku from going to sleep FOREVER! ~(^L^)~ 
- */
-var minutes = 20, the_interval = minutes * 60 * 1000;
-
-setInterval(function() {
-    var options = {
-        host: 'www.jesseeikema.nl'
-    };
-    http.get(options, function (http_res) {
-        console.log("Sent http request to www.jesseeikema.nl to stay awake.");
-    });
-}, the_interval);
 /*
  * Start the server
  */
