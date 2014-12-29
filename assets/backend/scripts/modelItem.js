@@ -27,7 +27,7 @@
     
 //     }); 
 var mongoose = require('mongoose');
-var db = mongoose.createConnection('localhost', 'test');
+var db = mongoose.createConnection('' , 'test');
 
 var schema = mongoose.Schema({ name: 'string' });
 

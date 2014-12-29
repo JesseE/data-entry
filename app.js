@@ -13,13 +13,13 @@ var mongoose = require('mongoose');
 // item_model('Item', function(Items){
 //     console.log(Items);
 // });
-var modelItem = require('./assets/backend/scripts/modelItem');
+// var modelItem = require('./assets/backend/scripts/modelItem');
 
-// var peter = new modelItem();
+// // var peter = new modelItem();
 
-modelItem.find(function(err, items){
-    if(err) return console.error()        
-});
+// modelItem.find(function(err, items){
+//     if(err) return console.error()        
+// });
 // console.log(modelItem);
 var bot = require('./assets/backend/scripts/bot');
 (function(){ bot();})();
