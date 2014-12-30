@@ -1,6 +1,7 @@
 app.controller('ArticleController',[ "$scope", "$routeParams", function($scope, $routeParams) {      
    var articles = [];
     //check what itemId is requested in the routingParams
+    console.log(articlesList);
     for (var i = 0, len = articlesList.length; i < len; i++) {
         var articleItem = {},
         articleItem = articlesList[i];
@@ -33,7 +34,7 @@ app.controller('ArticleController',[ "$scope", "$routeParams", function($scope, 
 
     /*/////////////////////////////
         tools visualisation
-    *//////////////////////////////
+    /////////////////////////////*/
 
     var xAr = d3.scale.linear()
         .domain([0, d3.max(articleDataScore)])

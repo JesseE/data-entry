@@ -1,43 +1,44 @@
-// var mongoose = require('mongoose');
-//     mongoose.connect('mongodb://localhost:27017/test', function(err, db) {
-        
-//         var db = mongoose.connection;
-        
-//         db.on('error',console.error.bind(console, 'connection error:'));
-//         db.once('open',function (callback){
-            
-//             var itemSchema = mongoose.Schema({
-//                 name: String
-//             })
-
-//             var Item = mongoose.model('Item', itemSchema)
-//             // var melkweg = new Item({name: 'Melkweg'})
-
-//             // melkweg.save(function(err, melkweg){
-//             //     if(err) return console.error(err);
-//             // });
-
-//             Item.find(function(err, items){
-//                 if(err) return console.error(err);
-//                 return items;
-//             })
-//             module.exports = Item;
-//             //Item.find({name: 'Melkweg'}).remove().exec();            
-//         });
-    
-//     }); 
 var mongoose = require('mongoose');
-var db = mongoose.createConnection('' , 'test');
+var db = mongoose.connect('mongodb://JAZZCODER:Eikema23@ds027521.mongolab.com:27521/jesseportfolio');
 
-var schema = mongoose.Schema({ name: 'string' });
+var schema = mongoose.Schema({ 
+	id: {type: String},
+	title: {type: String},
+	sub_title: {type: String},
+	paragraphs: {type: String},
+	image_thumb: {type: String},
+	images_src: {type: String},
+	name: {type: String},
+	link: {type: String}, 
+});
 
 var modelItem = db.model('ModelItem', schema);
 
-var melkweg = new modelItem({ name: "Melkweg"});
-    melkweg.save(function(err, melkweg){
+var articles = new modelItem(
+        {
+            id: 'melkweg',
+            title: 'Melkweg',
+            sub_title: 'Omschrijving',
+            paragraphs: [
+                "Het refactoren van de geschreven CSS/SASS code van de Melkweg.",
+                "Ik kreeg de taak om code te vereenvoudigen aan de hand van SMACCS en BEM methodes. Tijdens het herschrijven van de code, heb ik ook de suggestie gedaan om de gemoduleerde SASS bestanden in een subfolder te plaatsen. Dit zorgde voor een betere overzicht binnen de SASS structuur van de melkweg.",
+            ],
+            image_thumb: '../assets/images/melkweg.png',
+            images_src:[
+                '../assets/images/melkweg_v1.png',
+                '../assets/images/melkweg_v2.png',
+            ],
+            name : [
+                {'name': "GIT", 'score': 15},
+                {'name': "SASS", 'score': 20},
+                {'name': "HTML", 'score': 10},
+            ],
+            link: 'http://www.melkweg.nl/nl',
+        }
+    
+    );
+    
+    articles.save(function(err, articles){
         if(err) return console.error(err);
     });
-
-
-
 module.exports = modelItem; // this is what you want

@@ -5,23 +5,9 @@ var express = require('express');
 var app = express(); 
 var path = require('path');     
 var port = 3000;
-var exphbs = require('express3-handlebars');
-var mongoose = require('mongoose');
-//require('newrelic');
-//var item_model = require('./assets/backend/scripts/modelItem');
-// var Item = require('db');
-// item_model('Item', function(Items){
-//     console.log(Items);
-// });
-// var modelItem = require('./assets/backend/scripts/modelItem');
-
-// // var peter = new modelItem();
-
-// modelItem.find(function(err, items){
-//     if(err) return console.error()        
-// });
-// console.log(modelItem);
+var exphbs = require('express-handlebars');
 var bot = require('./assets/backend/scripts/bot');
+
 (function(){ bot();})();
 
 app.set('views', __dirname + '/views');
@@ -34,7 +20,6 @@ app.engine('handlebars', exphbs({
     layoutsDir: 'views/handlebars/layouts/',
     partialsDir: 'views/handlebars/partials/'   
 }));
-
 // Locate the views
 app.set('views', __dirname + '/views/handlebars');
 // Locate the assets
@@ -48,13 +33,7 @@ app.set('view engine', 'handlebars');
 // ROUTING NOW DONE WITH ANGULAR TO CREATE SPA
 // STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
 var index = require('./assets/backend/scripts/index');
-app.get('/', index.create, function(req, res){
-    item_model.find(function(err, items){
-        if(err) return next(err)
-            console.log(items);
-        // res.json(items);
-    });
-});
+app.get('/', index.create);
 app.get('/project/:primaryID', index.create);
 app.get('/resizer-prototype', function(request, response, next) { 
     response.render('partials/resizer',{

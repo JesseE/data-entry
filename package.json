@@ -3,8 +3,12 @@
   "version": "1.0.0",
   "description": "dependency jesseeikema",
   "main": "Gruntfile.js",
+  "enguine": {
+    "node": "0.10.x"
+  },
   "dependencies": {
     "angular": "^1.3.5",
+    "async": "^0.9.0",
     "blueimp-load-image": "^1.13.0",
     "body-parser": "^1.6.7",
     "cookie-parser": "^1.3.2",
@@ -59,6 +63,7 @@
   },
   "devDependencies": {
     "angular": "^1.3.5",
+    "async": "^0.9.0",
     "blueimp-load-image": "^1.13.0",
     "body-parser": "^1.6.7",
     "cookie-parser": "^1.3.2",
@@ -110,7 +115,7 @@
     "static-favicon": "^2.0.0-alpha",
     "time-grunt": "^0.1.2",
     "unirest": "^0.2.9"
-    },
+  },
   "scripts": {},
   "repository": {
     "type": "git",
