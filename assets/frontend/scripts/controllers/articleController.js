@@ -22,8 +22,7 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
     }).then(function(){     
         //collect data in article variable for usage in template
         article = $scope.article;
-        var articleData = article.name;
-        //console.log(article);
+        var articleData = article.datavisual;
         //push data into their respective containers
         for (var i = 0, len = articleData.length; i < len; i++) {
             articleData[i];
