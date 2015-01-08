@@ -24,7 +24,7 @@
 }
 .block-description--reverse-color__paragraphs{
 	@extend .block-description--reverse-color;
-	width: 40%;
+	width: 40%; padding-left:0;
 	@include bp(med){
 		width: 90%;	
 	}
@@ -59,4 +59,8 @@
 	@include bp(med){ width: 88%;}
 }
 .block-description__item{width: 100%;}
-.block-description__titles{float: left;width: 91%;}
+.block-description__titles{float: left;width: 91%;margin-top: 30px;
+	h1,h3 {
+		margin: 0px;
+	}
+}

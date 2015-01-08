@@ -2251,6 +2251,7 @@ svg.added {
 /* line 25, sass/ui/homepage/_block-description.scss */
 .block-description--reverse-color__paragraphs {
   width: 40%;
+  padding-left: 0;
 }
 @media (max-width: 48em) {
   /* line 25, sass/ui/homepage/_block-description.scss */
@@ -2321,6 +2322,11 @@ svg.added {
 .block-description__titles {
   float: left;
   width: 91%;
+  margin-top: 30px;
+}
+/* line 63, sass/ui/homepage/_block-description.scss */
+.block-description__titles h1, .block-description__titles h3 {
+  margin: 0px;
 }
 
 /*------------------------------------*\
@@ -2505,8 +2511,9 @@ h5 {
 /* line 66, sass/ui/homepage/_scaffolding.scss */
 .button__standard {
   display: block;
+  float: left;
   margin: 5px auto;
-  width: 90%;
+  width: 30%;
   height: 40px;
   background: #344E58;
   box-shadow: 1px 2px 5px grey;
