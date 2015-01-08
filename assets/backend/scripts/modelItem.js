@@ -13,7 +13,7 @@ var schema = mongoose.Schema({
 });
 
 var modelItem = db.model('ModelItem', schema);
-
+//creation of a model
 var articles = new modelItem(
 // {
 //             id: 'pathogen',
