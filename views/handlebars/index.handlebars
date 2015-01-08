@@ -6,10 +6,10 @@
 	    		<h1 ng-show="showView" >show projects</h1>
 	    	</a>
 	    </div>
-	    <div class="block-list" ng-hide="showView">
+	    <div class="block-list" ng-hide="showView" >
 	    	{{#each item.entry}}	
 	    	<div class="block-image {{mod-block}}" ng-click="showView = !showView">
-    			<a href="/project/{{link}}#projects">
+    			<a href="/project/{{link}}/#projects">
     				<div class="pos"><img src="{{img}}"></div>
     				<div class="block-item" id="post-6">
 			    		<div class="block-text">
@@ -23,7 +23,7 @@
 		</div>
 	</div>
 <!-- Angular import view -->	
- <ng-view></ng-view> 
+ <ng-view> </ng-view>
 <!-- Angular import view -->
 	<div class="about" id="visie" name="visie">
 		<div class="visie">

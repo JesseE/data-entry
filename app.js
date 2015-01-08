@@ -33,8 +33,11 @@ app.set('view engine', 'handlebars');
 // ROUTING NOW DONE WITH ANGULAR TO CREATE SPA
 // STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
 var index = require('./assets/backend/scripts/index');
+var data = require('./assets/backend/scripts/data');
+
 app.get('/', index.create);
 app.get('/project/:primaryID', index.create);
+app.get('/project/:primaryID/data', data.create);
 app.get('/resizer-prototype', function(request, response, next) { 
     response.render('partials/resizer',{
         normal: true,

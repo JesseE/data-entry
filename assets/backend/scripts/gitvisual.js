@@ -73,18 +73,15 @@ var unirest = require('unirest');
 	            user: git.username,
 	            pass: git.password,
 	            sendImmediately: true
-	        }).headers(git.header).end(function(response){  
-	           // var object = {"comment" : response.body.commit.message};     
+	        }).headers(git.header).end(function(response){    
 	            var object = response.body.commit.message;
 	            object = object.replace(/(\r\n|\n|\r)/gm,"");
 	            git.gitMessage.push(object); 
 	            completeReq();  
 	        });
-
 	    };
 	};
 	function completeReq() {
 	    done = true;
 	};
-
 module.exports = git;

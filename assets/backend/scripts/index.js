@@ -1,10 +1,8 @@
 // get gitrequests 
 var git = require('./gitvisual');
-// var modelItem = require('./modelItem');
-//module index create function
 module.exports.create = function(request, response){ 
-    //make sure you have values in github response
-    //console.log(gitMessage);
+    
+    //make sure you have values in github response    
     var container = [];
     for ( var i = 0, len = git.gitMessage.length; i < len; i ++ ){
         git.gitMessage[i];
@@ -12,11 +10,7 @@ module.exports.create = function(request, response){
         JSON.parse("[\"bucket[i]\"]");  
         container.push(bucket);
     };
-
-    // var articlesListEntry = new modelItem;
-
-    // console.log(articlesListEntry);
-
+    
     var itemEntry = {   
         entry: [
             {
@@ -141,9 +135,11 @@ module.exports.create = function(request, response){
         {'name': "Game Dev", 'score': 16},
         {'name': "Mobile Dev", 'score': 15}
     ];
+
+
+
     //if true start rendering
     response.render('index', { 
-        // articlesList: articlesListEntry,
         text: textEntry,
         item: itemEntry,
         datavisual: true,
@@ -204,4 +200,5 @@ module.exports.create = function(request, response){
             }
         }
     });
+
 };

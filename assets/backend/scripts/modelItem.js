@@ -1,44 +1,47 @@
 var mongoose = require('mongoose');
-var db = mongoose.connect('mongodb://JAZZCODER:Eikema23@ds027521.mongolab.com:27521/jesseportfolio');
+var db = mongoose.createConnection('mongodb://JAZZCODER:Eikema23@ds027521.mongolab.com:27521/jesseportfolio');
 
 var schema = mongoose.Schema({ 
-	id: {type: String},
-	title: {type: String},
-	sub_title: {type: String},
-	paragraphs: {type: String},
-	image_thumb: {type: String},
-	images_src: {type: String},
-	name: {type: String},
-	link: {type: String}, 
+	id: String,
+	title: String,
+	sub_title: String,
+	paragraphs: String,
+	image_thumb: String,
+	images_src: [{src: String}],
+	name: [{name: String , score: Number}],
+	link: String, 
 });
 
 var modelItem = db.model('ModelItem', schema);
 
 var articles = new modelItem(
-        {
-            id: 'melkweg',
-            title: 'Melkweg',
-            sub_title: 'Omschrijving',
-            paragraphs: [
-                "Het refactoren van de geschreven CSS/SASS code van de Melkweg.",
-                "Ik kreeg de taak om code te vereenvoudigen aan de hand van SMACCS en BEM methodes. Tijdens het herschrijven van de code, heb ik ook de suggestie gedaan om de gemoduleerde SASS bestanden in een subfolder te plaatsen. Dit zorgde voor een betere overzicht binnen de SASS structuur van de melkweg.",
-            ],
-            image_thumb: '../assets/images/melkweg.png',
-            images_src:[
-                '../assets/images/melkweg_v1.png',
-                '../assets/images/melkweg_v2.png',
-            ],
-            name : [
-                {'name': "GIT", 'score': 15},
-                {'name': "SASS", 'score': 20},
-                {'name': "HTML", 'score': 10},
-            ],
-            link: 'http://www.melkweg.nl/nl',
-        }
-    
-    );
-    
-    articles.save(function(err, articles){
-        if(err) return console.error(err);
-    });
-module.exports = modelItem; // this is what you want
+// {
+//             id: 'pathogen',
+//             title: 'Pathogen',
+//             sub_title: 'Omschrijving',
+//             paragraphs: [
+//                 'Pathogen is een realtime strategy game gemaakt met javascript. Je speelt in de game als de partij van het imuunsysteem en je vecht tegen de slechte bacteriën in verschillende locaties van het menselijk lichaam.',
+//                 'Je gaat de locaties af van het lichaam waar de ziektes zich bevinden. Jij bent een nanorobot die het gevecht aan gaat met de ziektes die in het lichaam zit. Je bouwt je imuunsysteem op en vecht met de antilichamen samen om het lichaam weer beter te maken.',
+//             ],
+//             image_thumb:'../assets/images/pathogen_logo.png',            
+//             images_src:[
+//                 {'src' :'../assets/images/pathogen_v1.png'},
+//                 {'src' :'../assets/images/pathogen_v2.png'},
+//             ],
+//             name : [
+//                 {'name': "Javascript", 'score': 20},
+//                 {'name': "HTML", 'score': 14},
+//                 {'name': "CSS", 'score': 13},
+//                 {'name': "Game Dev", 'score': 20}
+//             ],
+//             link: '/pathogen-prototype',
+//         }
+);
+
+// articles.save(function(err, articles){
+//     if(err) return console.error(err);
+//     return articles;      
+// });
+module.exports = {
+    modelItem : modelItem
+}

@@ -8,11 +8,12 @@ var app = angular.module('myApp', ["ngRoute"]).
     function($routeProvider, $locationProvider) {
       $locationProvider.html5Mode(true).hashPrefix('!');
       $routeProvider
-        .when("/project/:primaryId", {
-            templateUrl: "views/app.html",
+        .when("/project/:primaryID", {
+            templateUrl: "/views/app.html",
             controller: "ArticleController",
             controllerAs: "article"
         })
     }
   ]     
 );
+  
