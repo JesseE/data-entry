@@ -4,8 +4,28 @@
 		"selected_items":
 		[
 			[
+				"$route",
+				"$routeParams	AngularJS"
+			],
+			[
+				"ar",
+				"articleData"
+			],
+			[
+				"artice",
+				"articleDataName"
+			],
+			[
+				"artic",
+				"articleData"
+			],
+			[
 				"article",
 				"articleData"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
 			],
 			[
 				"arti",
@@ -14,14 +34,6 @@
 			[
 				"art",
 				"article"
-			],
-			[
-				"artic",
-				"articleItem"
-			],
-			[
-				"ar",
-				"articlesList"
 			],
 			[
 				"$rout",
@@ -42,10 +54,6 @@
 			[
 				"get",
 				"getArticles"
-			],
-			[
-				"artice",
-				"articles"
 			],
 			[
 				"module",
@@ -92,10 +100,6 @@
 				"datavisual"
 			],
 			[
-				"$route",
-				"$routeProvider	AngularJS"
-			],
-			[
 				"text",
 				"text-decoration"
 			],
@@ -130,10 +134,6 @@
 			[
 				"datatool",
 				"dataToolName"
-			],
-			[
-				"for",
-				"for	for (…) {…}"
 			],
 			[
 				"fo",
@@ -308,93 +308,26 @@
 	"buffers":
 	[
 		{
-			"file": "app.js",
-			"settings":
-			{
-				"buffer_size": 2237,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/frontend/scripts/controllers/articleController.js",
-			"settings":
-			{
-				"buffer_size": 2911,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/backend/scripts/index.js",
-			"settings":
-			{
-				"buffer_size": 7943,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/backend/scripts/data.js",
-			"settings":
-			{
-				"buffer_size": 306,
-				"line_ending": "Unix",
-				"name": "data.js"
-			}
-		},
-		{
-			"file": "assets/backend/scripts/modelItem.js",
-			"settings":
-			{
-				"buffer_size": 577,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/frontend/scripts/services/articleDataService.js",
-			"settings":
-			{
-				"buffer_size": 65,
-				"line_ending": "Unix",
-				"name": "articleData.js"
-			}
-		},
-		{
-			"file": "assets/frontend/scripts/controllers/routeController.js",
-			"settings":
-			{
-				"buffer_size": 500,
-				"line_ending": "Unix",
-				"name": "routeController.js"
-			}
-		},
-		{
-			"file": "views/handlebars/layouts/main.handlebars",
-			"settings":
-			{
-				"buffer_size": 6512,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "assets/frontend/scripts/data/articleData.js",
-			"settings":
-			{
-				"buffer_size": 7345,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "views/handlebars/index.handlebars",
-			"settings":
-			{
-				"buffer_size": 2750,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "views/app.html",
 			"settings":
 			{
-				"buffer_size": 1773,
+				"buffer_size": 1736,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/frontend/score-app/static/js/app.js",
+			"settings":
+			{
+				"buffer_size": 9750,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "views/handlebars/layouts/score-app.handlebars",
+			"settings":
+			{
+				"buffer_size": 3403,
 				"line_ending": "Unix"
 			}
 		}
@@ -431,20 +364,29 @@
 	},
 	"file_history":
 	[
-		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/partials/item.handlebars",
-		"/home/jazzcoder/Sites/jesseeikema/views/app.html",
-		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/data/articleData.js",
-		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/index.handlebars",
-		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/gitvisual.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_scaffolding.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-item.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-container.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-description.scss",
+		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_buttons.scss",
 		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/layouts/main.handlebars",
-		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/controllers/articleController.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/gitvisual.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/index.handlebars",
+		"/home/jazzcoder/Sites/jesseeikema/views/app.html",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/controllers/routeController.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/data.js",
 		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/index.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/modelItem.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/data/articleData.js",
+		"/home/jazzcoder/Sites/jesseeikema/app.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/controllers/articleController.js",
+		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/services/articleDataService.js",
+		"/home/jazzcoder/.local/share/Trash/files/articleData.js",
+		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/partials/item.handlebars",
 		"/home/jazzcoder/Sites/jesseeikema/package.json",
 		"/home/jazzcoder/Sites/jesseeikema/assets/frontend/scripts/route.js",
 		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/partials/footer.handlebars",
 		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/bot.js",
-		"/home/jazzcoder/Sites/jesseeikema/app.js",
-		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/modelItem.js",
 		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/passport-login.js",
 		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/geetings.js",
 		"/home/jazzcoder/Sites/jesseeikema/views/handlebars/layouts/matthijsapp.handlebars",
@@ -455,9 +397,6 @@
 		"/home/jazzcoder/Sites/jesseeikema/node_modules/newrelic/newrelic.js",
 		"/home/jazzcoder/Sites/develop/Gruntfile.js",
 		"/home/jazzcoder/Sites/jesseeikema/assets/backend/scripts/handlebars_routing.js",
-		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-description.scss",
-		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-container.scss",
-		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_scaffolding.scss",
 		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_header.scss",
 		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_block-list.scss",
 		"/home/jazzcoder/Sites/jesseeikema/assets/styles/sass/ui/homepage/_skills.scss",
@@ -552,13 +491,7 @@
 		"/home/jazzcoder/Sites/jesseeikema/views/partials/datavis.handlebars",
 		"/home/jazzcoder/Desktop/Pathogen_v0.9.3/debug.css",
 		"/home/jazzcoder/Desktop/Pathogen_v0.9.3/js/libraries/slider.js",
-		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/js/app/interface/screens.js",
-		"/home/jazzcoder/Sites/jesseeikema/assets/pathogen/js/libraries/slider.js",
-		"/home/jazzcoder/Sites/jesseeikema/assets/pathogen/js/app/interface/interface.js",
-		"/home/jazzcoder/Sites/jesseeikema/assets/pathogen/js/app/game.js",
-		"/home/jazzcoder/Sites/jesseeikema/views/layouts/score-app.handlebars",
-		"/home/jazzcoder/Sites/jesseeikema/views/partials/score-app.handlebars",
-		"/home/jazzcoder/Sites/jesseeikema/views/partials/pathogen.handlebars"
+		"/home/jazzcoder/Sites/jesseeikema/assets/scripts/js/app/interface/screens.js"
 	],
 	"find":
 	{
@@ -578,6 +511,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"modelItem",
 			");\n",
 			"items",
 			"        \n",
@@ -706,94 +640,10 @@
 			[
 				{
 					"buffer": 0,
-					"file": "app.js",
+					"file": "views/app.html",
 					"settings":
 					{
-						"buffer_size": 2237,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1501,
-								1501
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 399.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "assets/frontend/scripts/controllers/articleController.js",
-					"settings":
-					{
-						"buffer_size": 2911,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								1221,
-								1221
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "assets/backend/scripts/index.js",
-					"settings":
-					{
-						"buffer_size": 7943,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								53,
-								53
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 3,
-					"file": "assets/backend/scripts/data.js",
-					"settings":
-					{
-						"buffer_size": 306,
+						"buffer_size": 1736,
 						"regions":
 						{
 						},
@@ -802,204 +652,6 @@
 							[
 								0,
 								0
-							],
-							[
-								301,
-								301
-							]
-						],
-						"settings":
-						{
-							"auto_name": "data.js",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "assets/backend/scripts/modelItem.js",
-					"settings":
-					{
-						"buffer_size": 577,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2,
-								2
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 5,
-					"file": "assets/frontend/scripts/services/articleDataService.js",
-					"settings":
-					{
-						"buffer_size": 65,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								60,
-								60
-							]
-						],
-						"settings":
-						{
-							"auto_name": "articleData.js",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "assets/frontend/scripts/controllers/routeController.js",
-					"settings":
-					{
-						"buffer_size": 500,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								469,
-								469
-							]
-						],
-						"settings":
-						{
-							"auto_name": "routeController.js",
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "views/handlebars/layouts/main.handlebars",
-					"settings":
-					{
-						"buffer_size": 6512,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								5377,
-								5377
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 1156.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "assets/frontend/scripts/data/articleData.js",
-					"settings":
-					{
-						"buffer_size": 7345,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								112,
-								112
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "views/handlebars/index.handlebars",
-					"settings":
-					{
-						"buffer_size": 2750,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								297,
-								297
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 10,
-					"file": "views/app.html",
-					"settings":
-					{
-						"buffer_size": 1773,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								467,
-								467
 							]
 						],
 						"settings":
@@ -1007,6 +659,61 @@
 							"syntax": "Packages/AngularJS/AngularJS.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "assets/frontend/score-app/static/js/app.js",
+					"settings":
+					{
+						"buffer_size": 9750,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1093,
+								1093
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 3591.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "views/handlebars/layouts/score-app.handlebars",
+					"settings":
+					{
+						"buffer_size": 3403,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								613,
+								613
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Handlebars/Handlebars.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,

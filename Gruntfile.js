@@ -1,8 +1,6 @@
 'use strict';
 
 module.exports = function (grunt) {
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-sass');
     // show elapsed time at the end
     require('time-grunt')(grunt);
     // load all grunt tasks   
@@ -212,7 +210,23 @@ module.exports = function (grunt) {
                 }]
             }
         },
-
+        browserify: {
+            build: {
+                src: [
+                    'assets/frontend/bower_components/angular/angular.min.js',
+                    'assets/frontend/bower_components/angular-route/angular-route.min.js',
+                    'assets/frontend/scripts/controllers/*.js',
+                    'assets/frontend/scripts/main.js'    
+                ],
+                dest: 'assets/frontend/scripts/bundle.js'
+            }
+        },
+        uglify: {
+            build: {
+                src: 'assets/frontend/scripts/bundle.js',
+                dest:'assets/frontend/scripts/bundle.min.js'
+            } 
+        },
         // Copy Config
         // Put files not handled in other tasks here
         copy: {
@@ -257,9 +271,15 @@ module.exports = function (grunt) {
     
     // Register Tasks
     // Workon
+    grunt.loadNpmTasks('grunt-browserify');
+    grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.registerTask('server', [ 'express:dev', 'watch' ])
     grunt.registerTask('run', 'Start working on this project.', [
         // 'jshint',
+        'browserify',
+        'uglify',
         'sass:dev',
         'express:dev',
         'watch'

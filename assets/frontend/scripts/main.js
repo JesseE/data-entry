@@ -76,11 +76,10 @@ dataScore = data[1].score;
 dataName = data[0].name;
 
 // var width = 320,
-var width =  {},
+var width =  420,
     barHeight = 20;
     
 //mobile or desktop responsive visualisation
-    width = 420;
 if( window.innerWidth <= 1600 ){ 
     width = 330;
 };

@@ -33,17 +33,17 @@ var SCOREAPP = SCOREAPP || {};
                             SCOREAPP.page.render('gamepage');
                             SCOREAPP.ajax.getGameDataObjects();
                             },
-                            'score-app-prototype/gamepage': function() {
+                            '/score-app-prototype/gamepage': function() {
                             //render gamepage  
                             SCOREAPP.page.render('gamepage');         
                             SCOREAPP.ajax.getGameDataObjects();
                             },
-                            '/rankingpage': function() {
+                            '/score-app-prototype/rankingpage': function() {
                             //render rankingpage
                             SCOREAPP.page.render('rankingpage'); 
                             SCOREAPP.ajax.getRankingDataObjects();                           			
                             },         
-                            '/schedulepage': function() {
+                            '/score-app-prototype/schedulepage': function() {
                             //render schedule page
                             SCOREAPP.page.render('schedulepage'); 
                             SCOREAPP.ajax.getScheduleDataObjects();
@@ -206,6 +206,9 @@ var SCOREAPP = SCOREAPP || {};
         //put the links in an array
         SCOREAPP.links = { 
                     links: [
+                        // "/score-app-prototype/gamepage",
+                        // "/score-app-prototype/rankingpage",
+                        // "/score-app-prototype/schedulepage"
                             // "http://www.jesseeikema.nl/test/index.html#/schedulepage", 
                             // "http://www.jesseeikema.nl/test/index.html#/rankingpage",
                             // "http://www.jesseeikema.nl/test/index.html#/gamepage"                 

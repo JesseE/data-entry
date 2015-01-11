@@ -1,3 +1,22 @@
+var articleDataName = [];
+var articleDataScore = [];
+
+//spa routing with angular
+
+var app = angular.module('myApp', ["ngRoute"]).
+  config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
+      $locationProvider.html5Mode(true).hashPrefix('!');
+      $routeProvider
+        .when("/project/:primaryID", {
+            templateUrl: "/views/app.html",
+            controller: "ArticleController",
+            controllerAs: "article"
+        })
+    }
+  ]     
+);
+
 app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", function($scope, $routeParams, $http, $q) {
     //spa routing data request
     var first = $http.get('/project/'+$routeParams.primaryID+'/data');
@@ -32,6 +51,10 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
 
     }).then(function(){
         //tools d3 visualisation
+        var width = 400,
+            gitBarHeight = 9,
+            barHeight = 20;
+    
         var xAr = d3.scale.linear()
             .domain([0, d3.max(articleDataScore)])
             .range([0, width]);
