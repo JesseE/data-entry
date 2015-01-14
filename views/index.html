@@ -5,7 +5,7 @@
 			</div> -->
 	    	<div ng-repeat="indexArticle in indexArticles" class="block-image {{indexArticle.mod_block}}" ng-click="showView = !showView">
     			<a href="/project/{{indexArticle.link}}/#projects">
-    			 	<div class="pos"><img src="{{indexArticle.img}}"></div>
+    			 	<div class="pos"><img ng-src="{{indexArticle.img}}"></div>
     				<div class="block-item" id="post-6">
 			    		<div class="block-text">
 				    		<h1>{{indexArticle.title}}</h1>
