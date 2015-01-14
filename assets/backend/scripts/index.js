@@ -1,7 +1,7 @@
 // get gitrequests 
 var git = require('./gitvisual');
+
 module.exports.create = function(request, response){ 
-    
     //make sure you have values in github response    
     var container = [];
     for ( var i = 0, len = git.gitMessage.length; i < len; i ++ ){
@@ -11,52 +11,6 @@ module.exports.create = function(request, response){
         container.push(bucket);
     };
     
-    var itemEntry = {   
-        entry: [
-            {
-                "title": "Datavisualisatie",
-                "paragraph": "visualisatie van coding activiteit",
-                "img": "./assets/images/datavis-logo.png",
-                "mod-block": "odd",
-                "link": "datavisualisatie"
-            },
-            {
-                "title": "Resizer",
-                "paragraph": "Pas de dimensies van je afbeelding aan",
-                "img": "./assets/images/og_grrr.png",
-                "mod-block": "even bla",
-                "link": "resizer"
-            },
-            {
-                "title": "Melkweg",
-                "paragraph": "SASS aanpassingen in de melkweg",
-                "img": "./assets/images/melkweg.png",
-                "mod-block": "odd blo",
-                "link": "melkweg"
-            },
-            {
-                "title": "Score app",
-                "paragraph": "Toevoegen van actuele score's",
-                "img": "./assets/images/score-app-logo.png",
-                "mod-block": "even fourth",
-                "link": "score-app"
-            },
-            {
-                "title": "Klassiekwijzer",
-                "paragraph": "Kom erachter welke klassieke muziek bij je past",
-                "img": "./assets/images/klassiekwijzer.png",
-                "mod-block": "odd fifth",
-                "link": "klassiekwijzer"
-            },
-            {
-                "title": "Pathogen",
-                "paragraph": "RTS game gemaakt met javascript",
-                "img": "./assets/images/pathogen_logo.png",
-                "mod-block": "even sixth",
-                "link": "pathogen"
-            },
-        ]
-    };
     var textEntry = {
         visie: [
             {
@@ -136,12 +90,9 @@ module.exports.create = function(request, response){
         {'name': "Mobile Dev", 'score': 15}
     ];
 
-
-
     //if true start rendering
     response.render('index', { 
         text: textEntry,
-        item: itemEntry,
         datavisual: true,
         normal: true,
         nav_1: true,

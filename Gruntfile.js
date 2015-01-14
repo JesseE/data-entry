@@ -215,8 +215,9 @@ module.exports = function (grunt) {
                 src: [
                     'assets/frontend/bower_components/angular/angular.min.js',
                     'assets/frontend/bower_components/angular-route/angular-route.min.js',
+                    'assets/frontend/scripts/main.js',
                     'assets/frontend/scripts/controllers/*.js',
-                    'assets/frontend/scripts/main.js'    
+                      
                 ],
                 dest: 'assets/frontend/scripts/bundle.js'
             }
@@ -278,13 +279,12 @@ module.exports = function (grunt) {
     grunt.registerTask('server', [ 'express:dev', 'watch' ])
     grunt.registerTask('run', 'Start working on this project.', [
         // 'jshint',
-        'browserify',
-        'uglify',
+        // 'browserify',
+        // 'uglify',
         'sass:dev',
         'express:dev',
         'watch'
     ]);
-
 
     // Restart
     grunt.registerTask('restart', 'Restart the server.', [
@@ -292,17 +292,13 @@ module.exports = function (grunt) {
         'watch'
     ]);
     
-
     // Build
     grunt.registerTask('build', 'Build production ready assets and views.', [
-        'clean:dist',
-        'concurrent:dist',
-        'useminPrepare',
-        'imagemin',
-        'cssmin',
-        'copy:dist',
-        'rev',
-        'usemin',
+        'browserify',
+        'uglify',
+        'sass:dev',
+        'express:dev',
+        'watch'
     ]);
 
 };

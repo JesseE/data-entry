@@ -2329,6 +2329,36 @@ svg.added {
   margin: 0px;
 }
 
+/*************************
+		block-container
+*************************/
+/* line 4, sass/ui/homepage/_cms-tools.scss */
+.cms-tool {
+  position: absolute;
+  top: 0px;
+  float: left;
+  width: 50%;
+  margin: auto auto auto 100px;
+}
+
+/* line 5, sass/ui/homepage/_cms-tools.scss */
+.cms-tool__add-item {
+  width: 150px;
+  height: 150px;
+  float: left;
+  background-image: url(../images/pencil-icon.png);
+  background-repeat: no-repeat;
+}
+
+/* line 6, sass/ui/homepage/_cms-tools.scss */
+.cms-tool__remove-item {
+  width: 150px;
+  height: 150px;
+  float: left;
+  background-image: url(../images/trash-icon.png);
+  background-repeat: no-repeat;
+}
+
 /*------------------------------------*\
     $CONTENTS
 \*------------------------------------*/
@@ -2530,6 +2560,35 @@ h5 {
 /* line 70, sass/ui/homepage/_scaffolding.scss */
 a {
   text-decoration: none;
+}
+
+/* line 71, sass/ui/homepage/_scaffolding.scss */
+.add-item__form {
+  display: none;
+  width: 700px;
+  height: 700px;
+  position: absolute;
+  background: white;
+  box-shadow: 4px 5px 20px grey;
+  top: 400px;
+  left: 200px;
+}
+/* line 72, sass/ui/homepage/_scaffolding.scss */
+.add-item__form fieldset {
+  width: 55%;
+  margin: 70px;
+}
+
+/* line 74, sass/ui/homepage/_scaffolding.scss */
+.add-item__form-back {
+  background-image: url(../images/remove-icon.png);
+  background-repeat: no-repeat;
+  top: -60px;
+  left: -6px;
+  width: 150px;
+  height: 150px;
+  float: right;
+  position: relative;
 }
 
 /*------------------------------------*\

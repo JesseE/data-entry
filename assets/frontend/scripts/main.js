@@ -59,6 +59,12 @@ $('section').click(function(){
 $('.header').click(function(){ 
     $('.nav--secundairy').hide();
 });
+$('.cms-tool__add-item').on('click', function(){
+    $('.add-item__form').show();
+});
+$('.add-item__form-back').on('click', function(){
+    $('.add-item__form').hide();
+});
 var mode = 2;
 
 /*/////////////////////////////

@@ -34,8 +34,11 @@ app.set('view engine', 'handlebars');
 // STILL USING HANDLEBARS FOR STATIC FILE TEMPLATE INDEX PAGE
 var index = require('./assets/backend/scripts/index');
 var data = require('./assets/backend/scripts/data');
+var indexData = require('./assets/backend/scripts/indexData');
 
-app.get('/', index.create);
+
+app.get('/', index.create); 
+app.get('/data', indexData.create);
 app.get('/project/:primaryID', index.create);
 app.get('/project/:primaryID/data', data.create);
 app.get('/resizer-prototype', function(request, response, next) { 

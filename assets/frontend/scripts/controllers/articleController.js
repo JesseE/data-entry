@@ -13,9 +13,39 @@ var app = angular.module('myApp', ["ngRoute"]).
             controller: "ArticleController",
             controllerAs: "article"
         })
+        .when("/", {
+            templateUrl: "/views/index.html",
+            controller: "IndexController",
+            controllerAs: "indexArticles"
+        });
     }
   ]     
 );
+
+app.controller('IndexController', ['$scope','$http','$q', function($scope, $http, $q){
+    var indexReq = $http.get('/data');
+    $q.all([indexReq]).then(function(results){
+        var indexArticles = [];
+         
+        angular.forEach(results, function(response){
+            indexArticles.push(response.data);  
+        });
+
+        return indexArticles[0];
+    }).then(function(currentCollection){
+        $scope.indexArticles = currentCollection;
+
+    }).then(function(){
+        var indexArt = $scope.indexArticles;
+        var indexArticle = [];
+        for (var i = 0, len = indexArt.length; i < len; i++) {
+            var indexItem = indexArt[i];
+            indexArticle.push(indexItem);  
+        };     
+        indexArticles = $scope.indexArticles;
+    });
+        
+}]);
 
 app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", function($scope, $routeParams, $http, $q) {
     //spa routing data request
@@ -31,8 +61,7 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
         //return the response results
         angular.forEach(result, function(response) {
             article.push(response.data[0]);
-        }
-    );
+        });
        return article[0];
     }).then(function(tmpResult) {
         //save the temporary results
@@ -54,7 +83,16 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
         var width = 400,
             gitBarHeight = 9,
             barHeight = 20;
-    
+        //mobile or desktop responsive visualisation
+        if( window.innerWidth <= 1600 ){ 
+            width = 330;
+        };
+        if ( window.innerWidth <= 1280 ) {
+            width = 255;
+        };
+        if ( window.innerWidth <= 1000 ) {
+            width = 220;
+        };
         var xAr = d3.scale.linear()
             .domain([0, d3.max(articleDataScore)])
             .range([0, width]);

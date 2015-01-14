@@ -68,3 +68,7 @@ h5{color:white;}
 	span{font-size: 14px; }
 }
 a {text-decoration:none;}
+.add-item__form{ display:none; width: 700px; height: 700px; position: absolute; background: white; box-shadow: 4px 5px 20px grey; top: 400px; left: 200px;
+	fieldset{width:  55%;margin:70px;}
+}
+.add-item__form-back { background-image: url(../images/remove-icon.png); background-repeat:no-repeat; top: -60px; left: -6px;width: 150px; height:150px; float:right;position:relative;}
