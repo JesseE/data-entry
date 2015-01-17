@@ -10,8 +10,8 @@ $('nav').click(function(){
 			value = 1;
 			break;
 		case 1 :
-			// $('.nav--off-window').hide();
-            // $('.nav--secundairy').hide();
+			$('.nav--off-window').hide();
+            $('.nav--secundairy').hide();
 			$('header, section, footer').removeClass('menu-active');
 			value = 0;
 			break;
