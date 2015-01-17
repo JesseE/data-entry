@@ -1,7 +1,9 @@
 /*************************
 		block-container
 *************************/
-.block-container{width:100%;position:relative; float: left; margin:auto;background-color: white;}
+.block-container{width:100%;position:relative; float: left; margin:auto;background-color: white;
+	@include fadeInDown();
+}
 .block-container__item{width: 78%;margin:0 auto 61px auto;height: 415px; //350
 	@include bp(med){
 		width: 100%;
@@ -61,8 +63,6 @@
 	img{min-width: 250px;}
 	float:left; width: 45%;	
 	@include bp(med){width: 100%;}
-
-
 }
 .block-container--visie__item-image--reverse{
 	img{min-width: 250px;}

@@ -1377,6 +1377,36 @@ label {
 .block-list {
   width: 100%;
   height: 600px;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 0.45s;
+  -moz-animation-duration: 0.45s;
+  -ms-animation-duration: 0.45s;
+  -o-animation-duration: 0.45s;
+  animation-duration: 0.45s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 /* line 6, sass/ui/homepage/_block-list.scss */
 .block-list .block-text h1 {
@@ -1436,20 +1466,20 @@ label {
   }
 }
 
-/* line 29, sass/ui/homepage/_block-list.scss */
+/* line 30, sass/ui/homepage/_block-list.scss */
 .block-list--tools-container, .block-list--articletools-container {
   margin: 0 auto;
   width: 100%;
 }
 
-/* line 31, sass/ui/homepage/_block-list.scss */
+/* line 32, sass/ui/homepage/_block-list.scss */
 .block-list__tools-item div {
   height: 10px;
   margin: 10px;
   background: crimson;
 }
 
-/* line 33, sass/ui/homepage/_block-list.scss */
+/* line 34, sass/ui/homepage/_block-list.scss */
 .block-list--tools-container__text, .block-list--articletools-container__text {
   float: left;
   width: 90%;
@@ -1458,32 +1488,32 @@ label {
   line-height: 39px;
 }
 @media (max-width: 48em) {
-  /* line 33, sass/ui/homepage/_block-list.scss */
+  /* line 34, sass/ui/homepage/_block-list.scss */
   .block-list--tools-container__text, .block-list--articletools-container__text {
     width: 100%;
     text-align: center;
   }
 }
 
-/* line 38, sass/ui/homepage/_block-list.scss */
+/* line 39, sass/ui/homepage/_block-list.scss */
 .block-list--tools-container, .block-list--articletools-container {
   float: left;
   width: 50%;
 }
 @media (max-width: 48em) {
-  /* line 38, sass/ui/homepage/_block-list.scss */
+  /* line 39, sass/ui/homepage/_block-list.scss */
   .block-list--tools-container, .block-list--articletools-container {
     width: 72%;
   }
 }
 
-/* line 43, sass/ui/homepage/_block-list.scss */
+/* line 44, sass/ui/homepage/_block-list.scss */
 .block-list--articletools-container__text {
   text-align: left;
   width: 63%;
 }
 
-/* line 44, sass/ui/homepage/_block-list.scss */
+/* line 45, sass/ui/homepage/_block-list.scss */
 .block-list--articletools-container {
   width: 70%;
 }
@@ -1788,22 +1818,52 @@ svg.added {
   float: left;
   margin: auto;
   background-color: white;
+  -webkit-animation-name: fadeInDown;
+  -moz-animation-name: fadeInDown;
+  -ms-animation-name: fadeInDown;
+  -o-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 0.45s;
+  -moz-animation-duration: 0.45s;
+  -ms-animation-duration: 0.45s;
+  -o-animation-duration: 0.45s;
+  animation-duration: 0.45s;
+  -webkit-animation-delay: 0s;
+  -moz-animation-delay: 0s;
+  -ms-animation-delay: 0s;
+  -o-animation-delay: 0s;
+  animation-delay: 0s;
+  -webkit-animation-timing-function: ease;
+  -moz-animation-timing-function: ease;
+  -ms-animation-timing-function: ease;
+  -o-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  -moz-animation-fill-mode: both;
+  -ms-animation-fill-mode: both;
+  -o-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
-/* line 5, sass/ui/homepage/_block-container.scss */
+/* line 7, sass/ui/homepage/_block-container.scss */
 .block-container__item, .block-container--visie__item {
   width: 78%;
   margin: 0 auto 61px auto;
   height: 415px;
 }
 @media (max-width: 48em) {
-  /* line 5, sass/ui/homepage/_block-container.scss */
+  /* line 7, sass/ui/homepage/_block-container.scss */
   .block-container__item, .block-container--visie__item {
     width: 100%;
   }
 }
 
-/* line 10, sass/ui/homepage/_block-container.scss */
+/* line 12, sass/ui/homepage/_block-container.scss */
 .block-container__item-thumb {
   float: left;
   max-width: 5%;
@@ -1811,12 +1871,12 @@ svg.added {
   /* height: 50px; */
   margin: 25px 10px;
 }
-/* line 11, sass/ui/homepage/_block-container.scss */
+/* line 13, sass/ui/homepage/_block-container.scss */
 .block-container__item-thumb img {
   max-width: 100%;
 }
 @media (max-width: 48em) {
-  /* line 10, sass/ui/homepage/_block-container.scss */
+  /* line 12, sass/ui/homepage/_block-container.scss */
   .block-container__item-thumb {
     width: 100%;
     min-width: none;
@@ -1825,7 +1885,7 @@ svg.added {
   }
 }
 
-/* line 14, sass/ui/homepage/_block-container.scss */
+/* line 16, sass/ui/homepage/_block-container.scss */
 .block-container__item-imagecontainer {
   float: right;
   position: relative;
@@ -1834,7 +1894,7 @@ svg.added {
   width: 50%;
 }
 @media (max-width: 48em) {
-  /* line 14, sass/ui/homepage/_block-container.scss */
+  /* line 16, sass/ui/homepage/_block-container.scss */
   .block-container__item-imagecontainer {
     width: 100%;
     margin: 0 1%;
@@ -1842,23 +1902,23 @@ svg.added {
   }
 }
 
-/* line 19, sass/ui/homepage/_block-container.scss */
+/* line 21, sass/ui/homepage/_block-container.scss */
 .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
   float: left;
   margin: 10px;
   width: 90%;
 }
-/* line 20, sass/ui/homepage/_block-container.scss */
+/* line 22, sass/ui/homepage/_block-container.scss */
 .block-container__item-image img, .block-container__item-image--reverse img, .block-container__item-image--left img {
   width: 250px;
 }
-/* line 21, sass/ui/homepage/_block-container.scss */
+/* line 23, sass/ui/homepage/_block-container.scss */
 .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
   width: 87%;
   border-radius: 4px;
 }
 @media (max-width: 48em) {
-  /* line 21, sass/ui/homepage/_block-container.scss */
+  /* line 23, sass/ui/homepage/_block-container.scss */
   .block-container__item-image .block-container__item__image, .block-container__item-image--reverse .block-container__item__image, .block-container__item-image--left .block-container__item__image {
     min-width: 280px;
     max-width: 500px;
@@ -1866,25 +1926,25 @@ svg.added {
   }
 }
 @media (max-width: 48em) {
-  /* line 19, sass/ui/homepage/_block-container.scss */
+  /* line 21, sass/ui/homepage/_block-container.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
     width: 100%;
   }
 }
 @media (max-width: 30em) {
-  /* line 19, sass/ui/homepage/_block-container.scss */
+  /* line 21, sass/ui/homepage/_block-container.scss */
   .block-container__item-image, .block-container__item-image--reverse, .block-container__item-image--left {
     width: 94%;
   }
 }
 
-/* line 29, sass/ui/homepage/_block-container.scss */
+/* line 31, sass/ui/homepage/_block-container.scss */
 .block-container__item-image--reverse, .block-container__item-image--left {
   float: right;
   border: none;
 }
 @media (max-width: 48em) {
-  /* line 29, sass/ui/homepage/_block-container.scss */
+  /* line 31, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--reverse, .block-container__item-image--left {
     display: block;
     max-height: 250px;
@@ -1893,94 +1953,94 @@ svg.added {
   }
 }
 
-/* line 36, sass/ui/homepage/_block-container.scss */
+/* line 38, sass/ui/homepage/_block-container.scss */
 .block-container__item-image--left {
   float: left;
   border: none;
   margin: auto;
 }
 @media (max-width: 48em) {
-  /* line 36, sass/ui/homepage/_block-container.scss */
+  /* line 38, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--left {
     float: none;
   }
 }
 @media (max-width: 30em) {
-  /* line 36, sass/ui/homepage/_block-container.scss */
+  /* line 38, sass/ui/homepage/_block-container.scss */
   .block-container__item-image--left {
     float: left;
   }
 }
 
-/* line 46, sass/ui/homepage/_block-container.scss */
+/* line 48, sass/ui/homepage/_block-container.scss */
 .block-container--visie {
   background-color: #527B8B;
 }
 
-/* line 47, sass/ui/homepage/_block-container.scss */
+/* line 49, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item {
   width: 78%;
 }
 @media (max-width: 48em) {
-  /* line 47, sass/ui/homepage/_block-container.scss */
+  /* line 49, sass/ui/homepage/_block-container.scss */
   .block-container--visie__item {
     width: 93%;
   }
 }
 
-/* line 48, sass/ui/homepage/_block-container.scss */
+/* line 50, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right {
   float: left;
   width: 45%;
 }
-/* line 49, sass/ui/homepage/_block-container.scss */
+/* line 51, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right h1 {
   color: white;
   border-bottom: 5px solid #344E58;
 }
-/* line 50, sass/ui/homepage/_block-container.scss */
+/* line 52, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--right p {
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 48, sass/ui/homepage/_block-container.scss */
+  /* line 50, sass/ui/homepage/_block-container.scss */
   .block-container--visie-description--right {
     width: 100%;
   }
 }
 
-/* line 54, sass/ui/homepage/_block-container.scss */
+/* line 56, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse {
   float: right;
   width: 45%;
 }
-/* line 55, sass/ui/homepage/_block-container.scss */
+/* line 57, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse h1 {
   color: white;
   border-bottom: 5px solid #344E58;
 }
-/* line 56, sass/ui/homepage/_block-container.scss */
+/* line 58, sass/ui/homepage/_block-container.scss */
 .block-container--visie-description--reverse p {
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 54, sass/ui/homepage/_block-container.scss */
+  /* line 56, sass/ui/homepage/_block-container.scss */
   .block-container--visie-description--reverse {
     width: 100%;
   }
 }
 
-/* line 60, sass/ui/homepage/_block-container.scss */
+/* line 62, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--left {
   float: left;
   width: 45%;
 }
-/* line 61, sass/ui/homepage/_block-container.scss */
+/* line 63, sass/ui/homepage/_block-container.scss */
 .block-container--visie__item-image--left img {
   min-width: 250px;
 }
 @media (max-width: 48em) {
-  /* line 60, sass/ui/homepage/_block-container.scss */
+  /* line 62, sass/ui/homepage/_block-container.scss */
   .block-container--visie__item-image--left {
     width: 100%;
   }
@@ -3000,11 +3060,11 @@ body {
   width: 125px;
   height: 110px;
   background-color: #383d3f;
-  -webkit-animation-name: fadeInLeftBig;
-  -moz-animation-name: fadeInLeftBig;
-  -ms-animation-name: fadeInLeftBig;
-  -o-animation-name: fadeInLeftBig;
-  animation-name: fadeInLeftBig;
+  -webkit-animation-name: fadeInLeft;
+  -moz-animation-name: fadeInLeft;
+  -ms-animation-name: fadeInLeft;
+  -o-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
   -webkit-animation-duration: 0.45s;
   -moz-animation-duration: 0.45s;
   -ms-animation-duration: 0.45s;
@@ -3133,14 +3193,13 @@ body {
 .nav--secundairy {
   display: none;
   z-index: 2;
-  top: 0;
-  left: 148px;
+  top: 217px;
+  left: 0px;
   position: fixed;
-  width: 165px;
+  width: 148px;
   height: 100%;
   background: #383d3f;
   opacity: 1;
-  box-shadow: 1px 1px 5px grey;
   text-align: center;
   -webkit-animation-name: fadeInLeftBig;
   -moz-animation-name: fadeInLeftBig;
@@ -3176,16 +3235,18 @@ body {
 /* line 36, sass/ui/homepage/_navs.scss */
 .nav--secundairy ul {
   padding: 0;
+  margin: 0;
   text-align: center;
 }
 /* line 38, sass/ui/homepage/_navs.scss */
 .nav--secundairy ul li {
   display: inline-block;
-  width: 100%;
-  padding: 25px 0;
+  width: 75%;
+  padding: 24px 0;
   color: white;
   list-style-type: none;
   text-align: center;
+  border-bottom: 1px solid white;
 }
 /* line 40, sass/ui/homepage/_navs.scss */
 .nav--secundairy ul li:hover {
@@ -3211,6 +3272,7 @@ body {
     height: 100%;
     left: 21%;
     opacity: 0.9;
+    font-size: 11px;
   }
   /* line 47, sass/ui/homepage/_navs.scss */
   .nav--secundairy .nav__list {
@@ -3263,28 +3325,29 @@ body {
   -o-backface-visibility: hidden;
   backface-visibility: hidden;
 }
-/* line 53, sass/ui/homepage/_navs.scss */
+/* line 52, sass/ui/homepage/_navs.scss */
 .nav--off-window ul {
   margin: 100% 0;
   padding: 0;
   text-align: center;
 }
-/* line 55, sass/ui/homepage/_navs.scss */
+/* line 54, sass/ui/homepage/_navs.scss */
 .nav--off-window ul li {
   display: inline-block;
-  width: 100%;
+  width: 75%;
   padding: 25px 0;
   color: white;
   list-style-type: none;
   text-align: center;
+  border-bottom: 1px solid white;
 }
-/* line 57, sass/ui/homepage/_navs.scss */
+/* line 56, sass/ui/homepage/_navs.scss */
 .nav--off-window ul li:hover {
   background: white;
   color: grey;
   transition: background-color 0.5 ease;
 }
-/* line 58, sass/ui/homepage/_navs.scss */
+/* line 57, sass/ui/homepage/_navs.scss */
 .nav--off-window ul li a {
   text-decoration: none;
 }
@@ -3299,6 +3362,7 @@ body {
   .nav--off-window {
     float: left;
     width: 21%;
+    font-size: 14px;
   }
 }
 
