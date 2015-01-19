@@ -55,7 +55,7 @@
 
 .block-description--reverse-half-width{
 	@extend .block-description--reverse-color;
-	width: 45%;
+	width: 45%; height: 400px;
 	@include bp(med){ width: 88%;}
 }
 .block-description__item{width: 100%;}

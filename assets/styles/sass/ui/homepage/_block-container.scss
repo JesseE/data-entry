@@ -15,7 +15,7 @@
 }
 .block-container__item-imagecontainer{float: right; position:relative; top:-845px;margin-bottom: -845px;width: 50%;
 	@include bp(med){
-		width:100%; margin: 0 1%; top:-50px;
+		width:100%; margin:50px 1% 0 1%; top:-50px;
 	}
 }
 .block-container__item-image{ float: left; margin: 10px; width: 90%;

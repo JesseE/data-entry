@@ -78,49 +78,78 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
             articleDataName.push(articleData[i].name);
         };
 
-    }).then(function(){
+    }).then(
+    function creatPie (){
         //tools d3 visualisation
-        var width = 400,
-            gitBarHeight = 9,
-            barHeight = 20;
-        //mobile or desktop responsive visualisation
-        if( window.innerWidth <= 1600 ){ 
-            width = 330;
-        };
-        if ( window.innerWidth <= 1280 ) {
-            width = 255;
-        };
-        if ( window.innerWidth <= 1000 ) {
-            width = 220;
-        };
-        var xAr = d3.scale.linear()
-            .domain([0, d3.max(articleDataScore)])
-            .range([0, width]);
+        var width_pie = 250,
+            height_pie = 300,
+             outerRadius = 95,
+            radius = Math.min(width_pie, height_pie) / 2 - 5;
 
-        var chartAr = d3.select(".block-list--articletools-container")
-            .attr("width", width)
-            .attr("height", barHeight * articleDataScore.length);
+        var pieData = d3.range(articleDataScore.length).map(function(d,i){ return articleDataScore[i]; }).sort(d3.descending);
 
-        var barAr = chartAr.selectAll("g")
-            .data(articleDataScore)
+        var color = ['#344E58','#527B8B','#7FBFD7','#436471', '#ACD2D7','#6F878B','#3C494B'];
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius);
+
+        var pie = d3.layout.pie();
+
+        var svg = d3.select(".pie_container")
+            .datum(pieData)
+            .attr("width", width_pie)
+            .attr("height", height_pie)
+          .append("g")
+            .attr("transform", "translate(" + 175 + "," + 175 + ")");
+
+        var arcs = svg.selectAll("g.arc")
+            .data(pie)
           .enter().append("g")
-            .attr("transform", function(d, i) { return "translate(0," +i * barHeight*2 + ")"; })
-            .attr("fill", "#344E58");
-        
-        barAr.append("rect")
-            .attr("width", xAr)
-            .attr("height", barHeight - 1);
+            .attr("class", "arc");
 
-        var barArtext = d3.select('.skills__articletext').append("div");
 
-        barArtext.selectAll("div")
-            .data(articleDataName)
-            .enter().append("text") 
-            .attr("class", "block-list--articletools-container__text")
-            .attr("x", function(d) { return  width-500; })
-            .attr("y", barHeight / 2)
-            .attr("dy", ".35em")
-            .attr("fill", "#344E58")
-            .text(function(d) { return d; }); 
+        arcs.append("path")
+            .attr("fill", function(d, i) { return color[i]; })
+          .transition()
+            .duration(1000)
+            .attrTween("d", tweenPie);
+
+        arcs.append("svg:text")
+            .attr("transform", function(d) { //set the label's origin to the center of the arc
+             //we have to make sure to set these before calling arc.centroid
+                d.outerRadius = outerRadius + 90; // Set Outer Coordinate
+                d.innerRadius = outerRadius + 85; // Set Inner Coordinate
+                return "translate(" + arc.centroid(d) + ")";
+            })
+            .attr("text-anchor", "middle") //center the text on it's origin
+            .style("fill", "Black")
+            .style("font", "bold 12px Helvetica")
+            .text(function(d, i) { return articleDataName[i]; }); //get the label from our original data
+
+
+        function tweenPie(b) {
+            b.innerRadius = 75;
+            var i = d3.interpolate({startAngle: 0, endAngle: 0}, b);
+            return function(t) { return arc(i(t)); };
+        }
+
+        function tweenDonut(b) {
+            b.innterRadius = radius * .6;
+            var i = d3.interpolate({innerRadius: 0}, b);
+            return function(t) { return arc(i(t)); };
+        }
+
+        // var barArtext = d3.select('.skills__articletext').append("div");
+
+        //     barArtext.selectAll("div")
+        //         .data(articleDataName)
+        //         .enter().append("text") 
+        //         .attr("class", "block-list--articletools-container__text")
+        //         .attr("x", function(d) { return  width_pie-500; })
+        //         .attr("y", height_pie / 2)
+        //         .attr("dy", ".35em")
+        //         .attr("fill", function(d, i) {return color[i]; })
+        //         .text(function(d, i) { return ""+(i+1)+'.' + d; }); 
+
     });
 }]);

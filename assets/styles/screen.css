@@ -1670,7 +1670,10 @@ label {
 
 /* line 14, sass/ui/homepage/_skills.scss */
 .skills--secondary svg {
-  height: 285px;
+  height: 400px;
+  top: 0;
+  position: absolute;
+  width: 400px;
 }
 
 /* line 16, sass/ui/homepage/_skills.scss */
@@ -1698,6 +1701,25 @@ label {
 /* line 24, sass/ui/homepage/_skills.scss */
 .skills__articletext {
   width: 30%;
+  top: 100px;
+}
+@media (min-width: 64em) {
+  /* line 24, sass/ui/homepage/_skills.scss */
+  .skills__articletext {
+    top: 0px;
+  }
+}
+@media (max-width: 48em) {
+  /* line 24, sass/ui/homepage/_skills.scss */
+  .skills__articletext {
+    top: 0px;
+  }
+}
+@media (max-width: 30em) {
+  /* line 24, sass/ui/homepage/_skills.scss */
+  .skills__articletext {
+    top: 0px;
+  }
 }
 
 /*************************
@@ -1897,7 +1919,7 @@ svg.added {
   /* line 16, sass/ui/homepage/_block-container.scss */
   .block-container__item-imagecontainer {
     width: 100%;
-    margin: 0 1%;
+    margin: 50px 1% 0 1%;
     top: -50px;
   }
 }
@@ -2365,6 +2387,7 @@ svg.added {
 /* line 56, sass/ui/homepage/_block-description.scss */
 .block-description--reverse-half-width {
   width: 45%;
+  height: 400px;
 }
 @media (max-width: 48em) {
   /* line 56, sass/ui/homepage/_block-description.scss */

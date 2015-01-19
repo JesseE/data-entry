@@ -348,50 +348,79 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
             articleDataName.push(articleData[i].name);
         };
 
-    }).then(function(){
+    }).then(
+    function creatPie (){
         //tools d3 visualisation
-        var width = 400,
-            gitBarHeight = 9,
-            barHeight = 20;
-        //mobile or desktop responsive visualisation
-        if( window.innerWidth <= 1600 ){ 
-            width = 330;
-        };
-        if ( window.innerWidth <= 1280 ) {
-            width = 255;
-        };
-        if ( window.innerWidth <= 1000 ) {
-            width = 220;
-        };
-        var xAr = d3.scale.linear()
-            .domain([0, d3.max(articleDataScore)])
-            .range([0, width]);
+        var width_pie = 250,
+            height_pie = 300,
+             outerRadius = 95,
+            radius = Math.min(width_pie, height_pie) / 2 - 5;
 
-        var chartAr = d3.select(".block-list--articletools-container")
-            .attr("width", width)
-            .attr("height", barHeight * articleDataScore.length);
+        var pieData = d3.range(articleDataScore.length).map(function(d,i){ return articleDataScore[i]; }).sort(d3.descending);
 
-        var barAr = chartAr.selectAll("g")
-            .data(articleDataScore)
+        var color = ['#344E58','#527B8B','#7FBFD7','#436471', '#ACD2D7','#6F878B','#3C494B'];
+
+        var arc = d3.svg.arc()
+            .outerRadius(radius);
+
+        var pie = d3.layout.pie();
+
+        var svg = d3.select(".pie_container")
+            .datum(pieData)
+            .attr("width", width_pie)
+            .attr("height", height_pie)
+          .append("g")
+            .attr("transform", "translate(" + 175 + "," + 175 + ")");
+
+        var arcs = svg.selectAll("g.arc")
+            .data(pie)
           .enter().append("g")
-            .attr("transform", function(d, i) { return "translate(0," +i * barHeight*2 + ")"; })
-            .attr("fill", "#344E58");
-        
-        barAr.append("rect")
-            .attr("width", xAr)
-            .attr("height", barHeight - 1);
+            .attr("class", "arc");
 
-        var barArtext = d3.select('.skills__articletext').append("div");
 
-        barArtext.selectAll("div")
-            .data(articleDataName)
-            .enter().append("text") 
-            .attr("class", "block-list--articletools-container__text")
-            .attr("x", function(d) { return  width-500; })
-            .attr("y", barHeight / 2)
-            .attr("dy", ".35em")
-            .attr("fill", "#344E58")
-            .text(function(d) { return d; }); 
+        arcs.append("path")
+            .attr("fill", function(d, i) { return color[i]; })
+          .transition()
+            .duration(1000)
+            .attrTween("d", tweenPie);
+
+        arcs.append("svg:text")
+            .attr("transform", function(d) { //set the label's origin to the center of the arc
+             //we have to make sure to set these before calling arc.centroid
+                d.outerRadius = outerRadius + 90; // Set Outer Coordinate
+                d.innerRadius = outerRadius + 85; // Set Inner Coordinate
+                return "translate(" + arc.centroid(d) + ")";
+            })
+            .attr("text-anchor", "middle") //center the text on it's origin
+            .style("fill", "Black")
+            .style("font", "bold 12px Helvetica")
+            .text(function(d, i) { return articleDataName[i]; }); //get the label from our original data
+
+
+        function tweenPie(b) {
+            b.innerRadius = 75;
+            var i = d3.interpolate({startAngle: 0, endAngle: 0}, b);
+            return function(t) { return arc(i(t)); };
+        }
+
+        function tweenDonut(b) {
+            b.innterRadius = radius * .6;
+            var i = d3.interpolate({innerRadius: 0}, b);
+            return function(t) { return arc(i(t)); };
+        }
+
+        // var barArtext = d3.select('.skills__articletext').append("div");
+
+        //     barArtext.selectAll("div")
+        //         .data(articleDataName)
+        //         .enter().append("text") 
+        //         .attr("class", "block-list--articletools-container__text")
+        //         .attr("x", function(d) { return  width_pie-500; })
+        //         .attr("y", height_pie / 2)
+        //         .attr("dy", ".35em")
+        //         .attr("fill", function(d, i) {return color[i]; })
+        //         .text(function(d, i) { return ""+(i+1)+'.' + d; }); 
+
     });
 }]);
 },{}],4:[function(require,module,exports){
@@ -456,206 +485,210 @@ var mode = 2;
 /*/////////////////////////////
     skills visualisation
 *//////////////////////////////
-var nameData = nameContainer[0];
-var scoreData = scoreContainer;
+createSkillVisual();
+function createSkillVisual(){
+    var nameData = nameContainer[0];
+    var scoreData = scoreContainer;
 
-var data = [];
+    var data = [];
 
-data.push(nameData);
-data.push({score: scoreData});
+    data.push(nameData);
+    data.push({score: scoreData});
 
-dataScore = data[1].score;
-dataName = data[0].name;
+    dataScore = data[1].score;
+    dataName = data[0].name;
 
-// var width = 320,
-var width =  420,
-    barHeight = 20;
-    
-//mobile or desktop responsive visualisation
-if( window.innerWidth <= 1600 ){ 
-    width = 330;
+    // var width = 320,
+    var width =  420,
+        barHeight = 20;
+        
+    //mobile or desktop responsive visualisation
+    if( window.innerWidth <= 1600 ){ 
+        width = 330;
+    };
+    if ( window.innerWidth <= 1280 ) {
+        width = 255;
+    };
+    if ( window.innerWidth <= 1000 ) {
+        width = 220;
+    };
+    // if ( window.innerWidth <= 500 ) {
+    //     width = 230;
+    // };
+    // start d3 visual
+
+    var x = d3.scale.linear()
+        .domain([0, d3.max(dataScore)])
+        .range([0, width]);
+
+    var chart = d3.select(".block-list--tools-container")
+        .attr("width", width)
+        .attr("height", barHeight * dataScore.length);
+
+    var bar = chart.selectAll("g")
+        .data(dataScore)
+      .enter().append("g")
+        .attr("transform", function(d, i) { return "translate(0," +i * barHeight*2 + ")"; })
+        .attr("fill", "#344E58");
+
+    bar.append("rect")
+        .attr("width", x)
+        .attr("height", barHeight - 1);
+
+    var bartext = d3.select('.skills__text').append("div");
+
+    bartext.selectAll("div")
+        .data(dataName)
+        .enter().append("text") 
+        .attr("class", "block-list--tools-container__text")
+        .attr("x", function(d) { return  width-500; })
+        .attr("y", barHeight / 2)
+        .attr("dy", ".35em")
+        .attr("fill", "#344E58")
+        .text(function(d) { return d; });
 };
-if ( window.innerWidth <= 1280 ) {
-    width = 255;
-};
-if ( window.innerWidth <= 1000 ) {
-    width = 220;
-};
-// if ( window.innerWidth <= 500 ) {
-//     width = 230;
-// };
-// start d3 visual
-var x = d3.scale.linear()
-    .domain([0, d3.max(dataScore)])
-    .range([0, width]);
-
-var chart = d3.select(".block-list--tools-container")
-    .attr("width", width)
-    .attr("height", barHeight * dataScore.length);
-
-var bar = chart.selectAll("g")
-    .data(dataScore)
-  .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," +i * barHeight*2 + ")"; })
-    .attr("fill", "#344E58");
-
-bar.append("rect")
-    .attr("width", x)
-    .attr("height", barHeight - 1);
-
-var bartext = d3.select('.skills__text').append("div");
-
-bartext.selectAll("div")
-    .data(dataName)
-    .enter().append("text") 
-    .attr("class", "block-list--tools-container__text")
-    .attr("x", function(d) { return  width-500; })
-    .attr("y", barHeight / 2)
-    .attr("dy", ".35em")
-    .attr("fill", "#344E58")
-    .text(function(d) { return d; });
-
 
 /*/////////////////////////////
  git activity visualisation
 *//////////////////////////////
 // only load on screen larger than 500px
+createGitActivtyVisual();
+function createGitActivtyVisual () {
+    if(window.innerWidth > 500){
 
-if(window.innerWidth > 500){
+    // fetched array's
+    var gitBarHeight = 9;
+    var gitData2 = {remove : removedData};
+    var gitData = {add: addData};
 
-// fetched array's
-var gitBarHeight = 9;
-var gitData2 = {remove : removedData};
-var gitData = {add: addData};
+    if(gitData.length = 90){ 
 
-if(gitData.length = 90){ 
+    Container.push(gitData);
+    Container.push(gitData2);
 
-Container.push(gitData);
-Container.push(gitData2);
+    // console.log("add: "+Container[1].add);
+    // console.log("remove: "+ Container[2].remove);
+    // console.log("comments: "+ Container[0].comments);
 
-// console.log("add: "+Container[1].add);
-// console.log("remove: "+ Container[2].remove);
-// console.log("comments: "+ Container[0].comments);
+    // limiters
+    var addedArray = Container[1].add;
+    for (var i = 0, len = addedArray.length; i < len; i++ ){
+        addedArray[i];
+        if( addedArray[i] > 300 ){
+            addedArray[i] = 300;        
+        }
+        if( addedArray[i] < 20 ){
+            addedArray[i] = 25;
+        }
+    } 
 
-// limiters
-var addedArray = Container[1].add;
-for (var i = 0, len = addedArray.length; i < len; i++ ){
-    addedArray[i];
-    if( addedArray[i] > 300 ){
-        addedArray[i] = 300;        
-    }
-    if( addedArray[i] < 20 ){
-        addedArray[i] = 25;
-    }
-} 
+    var removedArray = Container[2].remove;
+    for (var i = 0, len = removedArray.length; i < len; i++ ){
+        removedArray[i];
+        if( removedArray[i] > 300 ){
+            removedArray[i] = 300;        
+        }
+        if( removedArray[i] < 20 ){
+            removedArray[i] = 25;
+        }
+    } 
 
-var removedArray = Container[2].remove;
-for (var i = 0, len = removedArray.length; i < len; i++ ){
-    removedArray[i];
-    if( removedArray[i] > 300 ){
-        removedArray[i] = 300;        
-    }
-    if( removedArray[i] < 20 ){
-        removedArray[i] = 25;
-    }
-} 
+    //range and domain visual
+    var x2 = d3.scale.linear()
+        .domain([0, 300])
+        .range([0, 300]);
 
-//range and domain visual
-var x2 = d3.scale.linear()
-    .domain([0, 300])
-    .range([0, 300]);
+    var chartZ = d3.select(".git-feed .added")
+        .attr("width", 300)
+        .attr("height", gitBarHeight * addedArray.length);
 
-var chartZ = d3.select(".git-feed .added")
-    .attr("width", 300)
-    .attr("height", gitBarHeight * addedArray.length);
+    var barB = chartZ.selectAll("g")
+        .data(addedArray)
+      .enter().append("g")
+        .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
+        .attr("fill", "#71B0C2")
+            .on("mouseover", function(d, i) {
+            d3.select(this)
+                .style("fill", "#A61B0C")
+            d3.selectAll("g div")
+                .remove()
+            d3.selectAll(".git-feed__comment text")
+                .remove()
+            d3.selectAll(".git-feed__description text")
+                .remove()
+            d3.select(this)
+                    .style("fill", "white")
+                    d3.select('.git-feed__comment')
+                        .append("text")
+                        .style("color","#FFF")
+                        .text(function(d){   
+                            if( addedArray[i] <= 25 ){ return "less than 25 lines of code is added";}
+                            if( addedArray[i] >= 300 ){ return "more than 300 lines of code is added";}  
+                            return addedArray[i] + ' lines of code are added';})
+                    d3.select('.git-feed__description')
+                        .append("text")
+                        .style("color", "#FFF")
+                        .text(function(d){   
+                            return "message: " + Container[0].comments[i];})
+        })
+        .on("mouseout", function(d) {
+            d3.select(this)
+                .style("fill", "#71B0C2")
+        });
 
-var barB = chartZ.selectAll("g")
-    .data(addedArray)
-  .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
-    .attr("fill", "#71B0C2")
-        .on("mouseover", function(d, i) {
-        d3.select(this)
-            .style("fill", "#A61B0C")
-        d3.selectAll("g div")
-            .remove()
-        d3.selectAll(".git-feed__comment text")
-            .remove()
-        d3.selectAll(".git-feed__description text")
-            .remove()
-        d3.select(this)
+    barB.append("rect")
+        .attr("width", x2)
+        .attr("height", gitBarHeight - 1);
+
+    var x3 = d3.scale.linear()
+        .domain([0,300])
+        .range([0,300]);
+
+    var chartX = d3.select(".git-feed .removed")
+        .attr("width", 300)
+        .attr("height", gitBarHeight * removedArray.length);
+
+    var barC = chartX.selectAll(".git-feed__description")
+        .data(removedArray)
+      .enter().append("g")
+        .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
+        .attr("fill", "#B53843")
+        .on("mouseover", function(d,i) {
+            d3.select(this)
+                .style("fill", "#A61B0C")
+            d3.selectAll("g div")
+                .remove()
+            d3.selectAll(".git-feed__comment text")
+                .remove()
+            d3.selectAll(".git-feed__description text")
+                .remove()
+            d3.select(this)
                 .style("fill", "white")
-                d3.select('.git-feed__comment')
-                    .append("text")
-                    .style("color","#FFF")
-                    .text(function(d){   
-                        if( addedArray[i] <= 25 ){ return "less than 25 lines of code is added";}
-                        if( addedArray[i] >= 300 ){ return "more than 300 lines of code is added";}  
-                        return addedArray[i] + ' lines of code are added';})
-                d3.select('.git-feed__description')
-                    .append("text")
-                    .style("color", "#FFF")
-                    .text(function(d){   
-                        return "message: " + Container[0].comments[i];})
-    })
-    .on("mouseout", function(d) {
-        d3.select(this)
-            .style("fill", "#71B0C2")
-    });
+               d3.select('.git-feed__comment')
+                        .append("text")
+                        .style("color","#FFF")
+                        .text(function(d){   
+                            if( removedArray[i] <= 25 ){ return "less than 25 lines of code is removed";}
+                            if( removedArray[i] >= 300 ){ return "more than 300 lines of code is removed";}  
+                            return removedArray[i] + ' lines of code are removed';})
+                    d3.select('.git-feed__description')
+                        .append("text")
+                        .style("color", "#FFF")
+                        .text(function(d){   
+                            return "message: " + Container[0].comments[i];})
+        })
+        .on("mouseout", function(d) {
+         d3.select(this)
+                .style("fill", "#B53843")
+        });
 
-barB.append("rect")
-    .attr("width", x2)
-    .attr("height", gitBarHeight - 1);
+    barC.append("rect")
+        .attr("width", x3)
+        .attr("height",gitBarHeight - 1);
 
-var x3 = d3.scale.linear()
-    .domain([0,300])
-    .range([0,300]);
-
-var chartX = d3.select(".git-feed .removed")
-    .attr("width", 300)
-    .attr("height", gitBarHeight * removedArray.length);
-
-var barC = chartX.selectAll(".git-feed__description")
-    .data(removedArray)
-  .enter().append("g")
-    .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
-    .attr("fill", "#B53843")
-    .on("mouseover", function(d,i) {
-        d3.select(this)
-            .style("fill", "#A61B0C")
-        d3.selectAll("g div")
-            .remove()
-        d3.selectAll(".git-feed__comment text")
-            .remove()
-        d3.selectAll(".git-feed__description text")
-            .remove()
-        d3.select(this)
-            .style("fill", "white")
-           d3.select('.git-feed__comment')
-                    .append("text")
-                    .style("color","#FFF")
-                    .text(function(d){   
-                        if( removedArray[i] <= 25 ){ return "less than 25 lines of code is removed";}
-                        if( removedArray[i] >= 300 ){ return "more than 300 lines of code is removed";}  
-                        return removedArray[i] + ' lines of code are removed';})
-                d3.select('.git-feed__description')
-                    .append("text")
-                    .style("color", "#FFF")
-                    .text(function(d){   
-                        return "message: " + Container[0].comments[i];})
-    })
-    .on("mouseout", function(d) {
-     d3.select(this)
-            .style("fill", "#B53843")
-    });
-
-barC.append("rect")
-    .attr("width", x3)
-    .attr("height",gitBarHeight - 1);
-
-    } else{
-        console.log("no vis calc! yey!");
+        } else{
+            console.log("no vis calc! yey!");
+        }
     }
-}
-
+};
 },{}]},{},[2,1,4,3]);

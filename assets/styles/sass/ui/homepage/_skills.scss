@@ -11,7 +11,7 @@
 }
 .skills--secondary { 
 	@extend .skills;
-	svg{ height: 285px;}
+	svg{ height: 400px; top: 0; position:absolute; width:400px;}
 }
 .skills__text { float:left;position: relative;width: 50%;background-color: white;
 	svg{ height: 285px;
@@ -22,5 +22,8 @@
 	@include bp(med) { width: 26%;}
 }
 .skills__articletext {
-	@extend .skills__text; width: 30%;
+	@extend .skills__text; width: 30%; top: 100px;
+	@include bp(large) {top: 0px;}
+	@include bp(med) {top:0px;}
+	@include bp(phone) { top: 0px;}
 }
