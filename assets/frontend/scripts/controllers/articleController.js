@@ -107,7 +107,6 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
           .enter().append("g")
             .attr("class", "arc");
 
-
         arcs.append("path")
             .attr("fill", function(d, i) { return color[i]; })
           .transition()
@@ -126,7 +125,6 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
             .style("font", "bold 12px Helvetica")
             .text(function(d, i) { return articleDataName[i]; }); //get the label from our original data
 
-
         function tweenPie(b) {
             b.innerRadius = 75;
             var i = d3.interpolate({startAngle: 0, endAngle: 0}, b);
@@ -138,18 +136,5 @@ app.controller('ArticleController',[ "$scope", "$routeParams", "$http", "$q", fu
             var i = d3.interpolate({innerRadius: 0}, b);
             return function(t) { return arc(i(t)); };
         }
-
-        // var barArtext = d3.select('.skills__articletext').append("div");
-
-        //     barArtext.selectAll("div")
-        //         .data(articleDataName)
-        //         .enter().append("text") 
-        //         .attr("class", "block-list--articletools-container__text")
-        //         .attr("x", function(d) { return  width_pie-500; })
-        //         .attr("y", height_pie / 2)
-        //         .attr("dy", ".35em")
-        //         .attr("fill", function(d, i) {return color[i]; })
-        //         .text(function(d, i) { return ""+(i+1)+'.' + d; }); 
-
     });
 }]);

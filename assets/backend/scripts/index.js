@@ -98,7 +98,7 @@ module.exports.create = function(request, response){
         nav_1: true,
         nav_2: true,
         headbg:true,
-        maps: true,
+        maps: false,
         footer: true,
         helpers:{
             added: function() {

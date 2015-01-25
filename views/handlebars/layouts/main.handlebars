@@ -74,13 +74,12 @@
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.1.4/zepto.min.js"></script>
     <script type="text/javascript">var addData = [{{added}}];var removedData = [{{removed}}];var commentContainer = ['{{comments}}'];var commentsString = commentContainer[0];var Container = [{comments: commentsString.split(',')}];var nameString = ['{{name}}'];var nameStringified = nameString[0];var nameContainer =  [{name: nameStringified.split(',')}];var scoreContainer = [{{score}}];</script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min.js"></script>
-    <script type="text/javascript" src="/assets/frontend/scripts/bundle.min.js"></script>
+{{!--     // <script type="text/javascript" src="/assets/frontend/scripts/bundle.min.js"></script> --}}
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-{{!--     // <script type="text/javascript" src="/assets/frontend/bower_components/angular/angular.min.js"></script> --}}
-{{!--     // <script type="text/javascript" src="/assets/frontend/bower_components/angular-route/angular-route.min.js"></script>
-    // <script type="text/javascript" src="/assets/frontend/scripts/controllers/articleController.js"></script>
-    // <script type="text/javascript" src="/assets/frontend/scripts/main.js"></script> --}}
-
+    <script type="text/javascript" src="/assets/frontend/bower_components/angular/angular.min.js"></script>
+    <script type="text/javascript" src="/assets/frontend/bower_components/angular-route/angular-route.min.js"></script>
+    <script type="text/javascript" src="/assets/frontend/scripts/controllers/articleController.js"></script>
+    <script type="text/javascript" src="/assets/frontend/scripts/main.js"></script> 
     {{/if}}
     {{#if resizer}}
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>

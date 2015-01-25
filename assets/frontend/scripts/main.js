@@ -140,10 +140,6 @@ function createGitActivtyVisual () {
     Container.push(gitData);
     Container.push(gitData2);
 
-    // console.log("add: "+Container[1].add);
-    // console.log("remove: "+ Container[2].remove);
-    // console.log("comments: "+ Container[0].comments);
-
     // limiters
     var addedArray = Container[1].add;
     for (var i = 0, len = addedArray.length; i < len; i++ ){
@@ -179,7 +175,7 @@ function createGitActivtyVisual () {
     var barB = chartZ.selectAll("g")
         .data(addedArray)
       .enter().append("g")
-        .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
+        .attr("transform", function(d, i) { return "translate(0," + (i * gitBarHeight)*4 +")"; })
         .attr("fill", "#71B0C2")
             .on("mouseover", function(d, i) {
             d3.select(this)
@@ -218,6 +214,28 @@ function createGitActivtyVisual () {
         .domain([0,300])
         .range([0,300]);
 
+   d3.select(".git-feed__legend")
+      .append("g")
+      .append("text")
+        .text(function(){ return "removed code";})      
+      .append("svg")
+      .attr('class', 'legenda')
+        .append("rect")
+        .attr("width", 25)
+        .attr("height", 25)
+        .attr("fill", "#A61B0C");    
+    
+   d3.select(".git-feed__legend")
+      .append("g")
+      .append("text")
+        .text(function(){ return "added code";})
+      .append("svg")
+      .attr('class', 'legenda')
+        .append("rect")
+        .attr("width", 25)
+        .attr("height", 25)
+        .attr("fill", "#71B0C2");    
+
     var chartX = d3.select(".git-feed .removed")
         .attr("width", 300)
         .attr("height", gitBarHeight * removedArray.length);
@@ -225,7 +243,7 @@ function createGitActivtyVisual () {
     var barC = chartX.selectAll(".git-feed__description")
         .data(removedArray)
       .enter().append("g")
-        .attr("transform", function(d, i) { return "translate(0," + i * gitBarHeight + ")"; })
+        .attr("transform", function(d, i) { return "translate(0," + (2+(i * gitBarHeight))*4 + ")"; })
         .attr("fill", "#B53843")
         .on("mouseover", function(d,i) {
             d3.select(this)
@@ -261,7 +279,7 @@ function createGitActivtyVisual () {
         .attr("height",gitBarHeight - 1);
 
         } else{
-            console.log("no vis calc! yey!");
+            // console.log("no vis calc! yey!");
         }
     }
 };

@@ -1462,7 +1462,7 @@ label {
   }
   /* line 24, sass/ui/homepage/_block-list.scss */
   .block-list .block-text h1 {
-    line-height: 115px;
+    line-height: 94px;
   }
 }
 
@@ -1727,6 +1727,7 @@ label {
 *************************/
 /* line 4, sass/ui/homepage/_git-feed.scss */
 .git-activity {
+  height: 800px;
   width: 100%;
   float: left;
   position: relative;
@@ -1743,7 +1744,9 @@ label {
 /* line 7, sass/ui/homepage/_git-feed.scss */
 .git-feed {
   /* float: left; width: 100%; height: 900px;*/
-  transform: rotate(270deg);
+  position: relative;
+  top: -130px;
+  left: -240px;
 }
 @media (max-width: 48em) {
   /* line 7, sass/ui/homepage/_git-feed.scss */
@@ -1757,7 +1760,7 @@ label {
   }
 }
 
-/* line 12, sass/ui/homepage/_git-feed.scss */
+/* line 13, sass/ui/homepage/_git-feed.scss */
 .git-feed__description {
   position: relative;
   z-index: 0;
@@ -1766,18 +1769,18 @@ label {
   line-height: 35px;
   height: 50px;
 }
-/* line 13, sass/ui/homepage/_git-feed.scss */
+/* line 14, sass/ui/homepage/_git-feed.scss */
 .git-feed__description text {
   position: relative;
   top: 100px;
 }
-/* line 14, sass/ui/homepage/_git-feed.scss */
+/* line 15, sass/ui/homepage/_git-feed.scss */
 .git-feed__description h3 {
   margin: 20px;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 14, sass/ui/homepage/_git-feed.scss */
+  /* line 15, sass/ui/homepage/_git-feed.scss */
   .git-feed__description h3 {
     margin: 10px;
     color: white;
@@ -1787,47 +1790,88 @@ label {
   }
 }
 @media (max-width: 48em) {
-  /* line 12, sass/ui/homepage/_git-feed.scss */
+  /* line 13, sass/ui/homepage/_git-feed.scss */
   .git-feed__description {
     transform: rotate(0deg);
   }
 }
 
-/* line 24, sass/ui/homepage/_git-feed.scss */
+/* line 25, sass/ui/homepage/_git-feed.scss */
 .git-feed__comment {
   margin: 110px 0 0 0;
 }
-/* line 26, sass/ui/homepage/_git-feed.scss */
+/* line 27, sass/ui/homepage/_git-feed.scss */
 .git-feed__comment text {
   position: relative;
   top: 100px;
   left: 0;
 }
 
-/* line 30, sass/ui/homepage/_git-feed.scss */
+/* line 31, sass/ui/homepage/_git-feed.scss */
+.git-feed__legend {
+  position: relative;
+  color: white;
+  left: 75%;
+  margin-top: 50px;
+}
+/* line 33, sass/ui/homepage/_git-feed.scss */
+.git-feed__legend g {
+  display: block;
+  width: 200px;
+}
+/* line 34, sass/ui/homepage/_git-feed.scss */
+.git-feed__legend text {
+  float: left;
+}
+
+/* line 36, sass/ui/homepage/_git-feed.scss */
 svg.removed {
+  /*transform: matrix(-1, 0, 0, 1, 0, 0);*/
+  position: relative;
+  left: 340px;
+  transform: rotate(270deg);
+}
+/* line 37, sass/ui/homepage/_git-feed.scss */
+svg.removed g {
   position: relative;
   z-index: 1;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
+  opacity: 0.75;
 }
 @media (max-width: 48em) {
-  /* line 30, sass/ui/homepage/_git-feed.scss */
+  /* line 36, sass/ui/homepage/_git-feed.scss */
   svg.removed {
     width: 40%;
   }
 }
 
-/* line 35, sass/ui/homepage/_git-feed.scss */
+/* line 42, sass/ui/homepage/_git-feed.scss */
 svg.added {
   position: relative;
+  /*transform: matrix(1, 0, 0, 1, 0, 0);*/
+  left: 35px;
+  transform: rotate(270deg);
+}
+/* line 43, sass/ui/homepage/_git-feed.scss */
+svg.added g {
+  position: relative;
   z-index: 1;
-  transform: matrix(1, 0, 0, 1, 0, 0);
 }
 @media (max-width: 48em) {
-  /* line 35, sass/ui/homepage/_git-feed.scss */
+  /* line 42, sass/ui/homepage/_git-feed.scss */
   svg.added {
     width: 40%;
   }
+}
+
+/* line 48, sass/ui/homepage/_git-feed.scss */
+svg.legenda {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  margin: 15px;
+  top: -19px;
+  left: -8px;
+  float: left;
 }
 
 /*************************
