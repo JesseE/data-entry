@@ -12,6 +12,10 @@
 .skills--secondary { 
 	@extend .skills;
 	svg{ height: 400px; top: 0; position:absolute; width:400px;}
+	@include bp(phone){
+		svg{ width: 320px;}
+		left: -25px;
+	}
 }
 .skills__text { float:left;position: relative;width: 50%;background-color: white;
 	svg{ height: 285px;

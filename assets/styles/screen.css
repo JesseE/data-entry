@@ -1675,48 +1675,58 @@ label {
   position: absolute;
   width: 400px;
 }
+@media (max-width: 30em) {
+  /* line 12, sass/ui/homepage/_skills.scss */
+  .skills--secondary {
+    left: -25px;
+  }
+  /* line 16, sass/ui/homepage/_skills.scss */
+  .skills--secondary svg {
+    width: 320px;
+  }
+}
 
-/* line 16, sass/ui/homepage/_skills.scss */
+/* line 20, sass/ui/homepage/_skills.scss */
 .skills__text, .skills__articletext {
   float: left;
   position: relative;
   width: 50%;
   background-color: white;
 }
-/* line 17, sass/ui/homepage/_skills.scss */
+/* line 21, sass/ui/homepage/_skills.scss */
 .skills__text svg, .skills__articletext svg {
   height: 285px;
 }
-/* line 19, sass/ui/homepage/_skills.scss */
+/* line 23, sass/ui/homepage/_skills.scss */
 .skills__text svg g rect, .skills__articletext svg g rect {
   width: 100%;
 }
 @media (max-width: 48em) {
-  /* line 16, sass/ui/homepage/_skills.scss */
+  /* line 20, sass/ui/homepage/_skills.scss */
   .skills__text, .skills__articletext {
     width: 26%;
   }
 }
 
-/* line 24, sass/ui/homepage/_skills.scss */
+/* line 28, sass/ui/homepage/_skills.scss */
 .skills__articletext {
   width: 30%;
   top: 100px;
 }
 @media (min-width: 64em) {
-  /* line 24, sass/ui/homepage/_skills.scss */
+  /* line 28, sass/ui/homepage/_skills.scss */
   .skills__articletext {
     top: 0px;
   }
 }
 @media (max-width: 48em) {
-  /* line 24, sass/ui/homepage/_skills.scss */
+  /* line 28, sass/ui/homepage/_skills.scss */
   .skills__articletext {
     top: 0px;
   }
 }
 @media (max-width: 30em) {
-  /* line 24, sass/ui/homepage/_skills.scss */
+  /* line 28, sass/ui/homepage/_skills.scss */
   .skills__articletext {
     top: 0px;
   }
@@ -2554,23 +2564,29 @@ h5 {
     margin: 0 25%;
   }
 }
+@media (max-width: 30em) {
+  /* line 29, sass/ui/homepage/_scaffolding.scss */
+  .ninja-icon img {
+    margin: 0 21%;
+  }
+}
 
-/* line 29, sass/ui/homepage/_scaffolding.scss */
+/* line 32, sass/ui/homepage/_scaffolding.scss */
 .made-with {
   float: right;
 }
-/* line 31, sass/ui/homepage/_scaffolding.scss */
+/* line 34, sass/ui/homepage/_scaffolding.scss */
 .made-with img {
   width: 180px;
 }
 @media (max-width: 48em) {
-  /* line 29, sass/ui/homepage/_scaffolding.scss */
+  /* line 32, sass/ui/homepage/_scaffolding.scss */
   .made-with {
     display: none;
   }
 }
 
-/* line 34, sass/ui/homepage/_scaffolding.scss */
+/* line 37, sass/ui/homepage/_scaffolding.scss */
 .container {
   position: relative;
   float: left;
@@ -2578,33 +2594,33 @@ h5 {
   width: 100%;
   background-color: white;
 }
-/* line 36, sass/ui/homepage/_scaffolding.scss */
+/* line 39, sass/ui/homepage/_scaffolding.scss */
 .container h1 {
   width: 100%;
   margin: 0 auto;
   color: white;
 }
 @media (max-width: 48em) {
-  /* line 34, sass/ui/homepage/_scaffolding.scss */
+  /* line 37, sass/ui/homepage/_scaffolding.scss */
   .container {
     margin: 0 auto;
   }
 }
 
-/* line 42, sass/ui/homepage/_scaffolding.scss */
+/* line 45, sass/ui/homepage/_scaffolding.scss */
 .block-text h1 {
   color: white;
   border-bottom: 1px solid white;
   line-height: 77px;
 }
-/* line 43, sass/ui/homepage/_scaffolding.scss */
+/* line 46, sass/ui/homepage/_scaffolding.scss */
 .block-text p {
   width: 70%;
   margin: auto;
   color: white;
 }
 
-/* line 45, sass/ui/homepage/_scaffolding.scss */
+/* line 48, sass/ui/homepage/_scaffolding.scss */
 .banner, .banner--border-bottom, .banner--reverse-color {
   float: left;
   height: 100px;
@@ -2616,7 +2632,7 @@ h5 {
   color: white;
   text-align: center;
 }
-/* line 48, sass/ui/homepage/_scaffolding.scss */
+/* line 51, sass/ui/homepage/_scaffolding.scss */
 .banner h1, .banner--border-bottom h1, .banner--reverse-color h1 {
   width: 100%;
   margin: 0 auto;
@@ -2624,33 +2640,33 @@ h5 {
   padding: 20px 0;
   line-height: 50px;
 }
-/* line 49, sass/ui/homepage/_scaffolding.scss */
+/* line 52, sass/ui/homepage/_scaffolding.scss */
 .banner p, .banner--border-bottom p, .banner--reverse-color p {
   padding: 20px;
 }
 @media (max-width: 48em) {
-  /* line 51, sass/ui/homepage/_scaffolding.scss */
+  /* line 54, sass/ui/homepage/_scaffolding.scss */
   .banner h1, .banner--border-bottom h1, .banner--reverse-color h1 {
     padding: 0;
     line-height: 100px;
   }
 }
 
-/* line 55, sass/ui/homepage/_scaffolding.scss */
+/* line 58, sass/ui/homepage/_scaffolding.scss */
 .banner--border-bottom, .banner--reverse-color {
   /*border-bottom: 5px solid #344E58;*/
 }
 
-/* line 56, sass/ui/homepage/_scaffolding.scss */
+/* line 59, sass/ui/homepage/_scaffolding.scss */
 .banner--reverse-color {
   background-color: #527B8B;
 }
-/* line 57, sass/ui/homepage/_scaffolding.scss */
+/* line 60, sass/ui/homepage/_scaffolding.scss */
 .banner--reverse-color h1 {
   color: white;
 }
 
-/* line 59, sass/ui/homepage/_scaffolding.scss */
+/* line 62, sass/ui/homepage/_scaffolding.scss */
 .about {
   float: left;
   width: 100%;
@@ -2659,13 +2675,13 @@ h5 {
 }
 
 @media (max-width: 30em) {
-  /* line 63, sass/ui/homepage/_scaffolding.scss */
+  /* line 66, sass/ui/homepage/_scaffolding.scss */
   .no-mob {
     display: none;
   }
 }
 
-/* line 66, sass/ui/homepage/_scaffolding.scss */
+/* line 69, sass/ui/homepage/_scaffolding.scss */
 .button__standard {
   display: block;
   float: left;
@@ -2679,17 +2695,17 @@ h5 {
   border-radius: 6px;
   color: #FFF;
 }
-/* line 68, sass/ui/homepage/_scaffolding.scss */
+/* line 71, sass/ui/homepage/_scaffolding.scss */
 .button__standard span {
   font-size: 14px;
 }
 
-/* line 70, sass/ui/homepage/_scaffolding.scss */
+/* line 73, sass/ui/homepage/_scaffolding.scss */
 a {
   text-decoration: none;
 }
 
-/* line 71, sass/ui/homepage/_scaffolding.scss */
+/* line 74, sass/ui/homepage/_scaffolding.scss */
 .add-item__form {
   display: none;
   width: 700px;
@@ -2700,13 +2716,13 @@ a {
   top: 400px;
   left: 200px;
 }
-/* line 72, sass/ui/homepage/_scaffolding.scss */
+/* line 75, sass/ui/homepage/_scaffolding.scss */
 .add-item__form fieldset {
   width: 55%;
   margin: 70px;
 }
 
-/* line 74, sass/ui/homepage/_scaffolding.scss */
+/* line 77, sass/ui/homepage/_scaffolding.scss */
 .add-item__form-back {
   background-image: url(../images/remove-icon.png);
   background-repeat: no-repeat;
